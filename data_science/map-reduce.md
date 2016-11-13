@@ -14,7 +14,19 @@
 - 6 Real World examples
 
 ## 1 Introduction
+Map Reduce is a programming model and concept which utilizes multiple 
+functions to find specific data in huge data sets. In past times
+such tasks have been very challenging due to the fact that searching
+for relevant data is ovely time and resource consuming. As datasets
+are ever growing, conventional methods have become insufficient in
+achiving such data science tasks.
+The Map Reduce model is able to fetch the relevant data fast 
+by applying multiple functions which can be run asynchronously
+on distributed clusters.
 
+The following chapters will deep dive into the concept of map reduce
+which is then round up by some real world examples map reduce
+has proven to be a good choice.
 
 ## 2 Functions
 ### 2.1 Map
