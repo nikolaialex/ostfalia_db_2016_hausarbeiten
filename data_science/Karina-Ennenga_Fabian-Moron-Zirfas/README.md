@@ -21,19 +21,19 @@ Data science - Die Analyse von großen Datenmengen wird immer wichtiger. Wie unt
 
 ### TOC
 
+
 1. Abstrakt  
 2. Was ist Data Science?  
 3. Data Science in der Anwendung  
-   a. Netflix  
-      i. Fallbeispiel House Of Cards  
-      ii. 2tes Netflix Beispiel? TBD ???  
-      iii. Technologien Stack  
-   b. Cambridge Analytica    
-      i. Fallbeispiel Leave, Cruz & Trump  
-      ii. Technologien Stack  
-   c. Predictive Policing (optional)   
-      i. Fallbeispiele  
-      ii. Technologien Stack  
+   1. Netflix  
+      1. Fallbeispiel House Of Cards  
+      2. 2tes Netflix Beispiel? TBD ???  
+      3. Technologien Stack  
+   2. Cambridge Analytica    
+      1. Fallbeispiel Leave, Cruz & Trump  
+      2. Technologien Stack  
+   3. Predictive Policing (optional)   
+      1. Fallbeispiele  
+      2. Technologien Stack  
 4. Ausblick  
 5. Quellen  
-
