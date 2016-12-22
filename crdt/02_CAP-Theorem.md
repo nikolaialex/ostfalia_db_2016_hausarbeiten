@@ -4,7 +4,7 @@ Das CAP-Theorem umfasst die folgenden Eigenschaften bezüglich einer Datenbank, 
 -	Die Verfügbarkeit (Availybility), die bei der Arbeit in einem Netzwerk (also in einem verteilten System) darauf abzielt, dass der Nutzer unterbrechungsfrei und mit annehmbaren Übertragungszeiten arbeiten kann.
 -	Die Ausfallsicherheit (Partition Tolerance), die darauf ausgerichtet ist, dass das Hinzufügen oder Trennen eines Knotens keinen Einfluss auf den Betrieb des Gesamtsystems hat.
 Das Theorem selbst geht auf die Vermutung von Eric Brewer von der Universität Berkeley zurück, welche er im Jahr 2000 auf einem Symposium vorstellte und die besagt, 
-> „... dass die drei Eigenschaften der Konsistenz (Consistency), der Verfügbarkeit (Availability) und der Ausfalltoleranz (Partition Tolerance) nicht gleichzeitig in einem massiv verteilten Rechnersystem gelten können.“ (Fasel und Meier 2016, S. 34)
+> „dass die drei Eigenschaften der Konsistenz (Consistency), der Verfügbarkeit (Availability) und der Ausfalltoleranz (Partition Tolerance) nicht gleichzeitig in einem massiv verteilten Rechnersystem gelten können.“ (Fasel und Meier 2016, S. 34)
 
 Letztlich resultiert aus der später wissenschaftlich bestätigten Vermutung Brewers, also dem CAP-Theorem lediglich die Möglichkeit, jeweils zwei der drei angesprochenen Eigenschaften in einem komplexen, verteilten System kombinieren zu können. Dabei muss man aber auf die dritte Eigenschaft verzichten. 
 > „Mit anderen Worten lassen sich [...] entweder Konsistenz mit Verfügbarkeit (CA) oder Konsistenz mit Ausfalltoleranz (CP) oder Verfügbarkeit mit Ausfalltoleranz (AP) kombinieren, alle drei sind nicht gleichzeitig zu haben.“ (Fasel und Meier 2016, S. 34)
