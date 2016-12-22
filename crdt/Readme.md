@@ -8,7 +8,11 @@ author:
 - Frank Achatz
 ---
 
-# Inhalt
+# CRDT
+
+## Idee und ausgewählte Typen
+
+### Inhalt
 1. Einleitung  
 2. CAP-Theorem  
 3. CRDT - Conflict-free Replicated Data Type  
