@@ -27,5 +27,4 @@ author:
     4. Konkrete Datentypen  
     5. Beispiel Last Writer Wins Register (LWW-Register)  
     6. Zusammenfassung  
-    7. Literaturverzeichnis  
-    8. Abbildungsverzeichnis  
+    7. Literaturverzeichnis
