@@ -23,7 +23,7 @@ author:
             3.1.3. Eventual Consistency  
             3.1.4. Strong Eventual Consistency  
        3.2. Convergent Replicated Data Type (CvRDT)  
-       3.3. Commutative Replicated Data Types (CmRDT)  
+       3.3. Commutative Replicated Data Type (CmRDT)  
     4. Konkrete Datentypen  
     5. Beispiel Last Writer Wins Register (LWW-Register)  
     6. Zusammenfassung  
