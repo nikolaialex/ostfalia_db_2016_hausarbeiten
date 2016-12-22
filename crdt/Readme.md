@@ -14,8 +14,6 @@ author:
 
 ### Inhalt
 
-[TOC]
-
     1. Einleitung  
     2. CAP-Theorem  
     3. CRDT - Conflict-free Replicated Data Type  
