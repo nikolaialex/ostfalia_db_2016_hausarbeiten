@@ -29,7 +29,7 @@ Damit ist klar, dass dieser Ansatz grundlegend für die Abarbeitung ohne externe
 In Wikipedia wird in diesem Zusammenhang noch auf die Problematik der Entstehung und Behandlung von Konflikten eingegangen. Auch (Shapiro et al. 2011b) thematisieren diese Probleme.
 > „Several EC systems will execute an update immediately, only to discover later that it conflicts with another, and to roll back to resolve this conflict [...]. This constitutes a waste of resources, and in general requires a consensus to ensure that all replicas arbitrate conflicts in the same way. To avoid this, we require a stronger condition“ (Shapiro et al. 2011b, S. 389)
 
-Sie verweisen in diesem Zusammenhang auf die Strong Eventual Consistency, um die Komplexität einer Konfliktlösung oder auch eines roll back zu vermeiden.
+Sie verweisen in diesem Zusammenhang auf die Strong Eventual Consistency, um die Komplexität einer Konfliktlösung oder auch eines „roll back“ zu vermeiden.
 ### 3.1.4. Strong Eventual Consistency
 Die Starke Konsistenz nach Vogels,
 > „Strong consistency. After the update completes, any subsequent access (by A, B, or C) will return the updated value.“ (Vogels 2008, S. 17),
