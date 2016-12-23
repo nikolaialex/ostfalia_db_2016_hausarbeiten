@@ -13,7 +13,7 @@ Wie eben angedeutet, ist bezüglich der Abkürzung „CRDT“ weiterhin darauf z
 > „Two general classes of CRDTs are known to exist. Although any CRDT of one class has an other-class equivalent, the classes differ in assumptions and performance characteristics.” (Wikipedia 2016)
 
 An wieder anderer Stelle wird von „Stilen“ bzw. „styles“ gesprochen (vgl. Shapiro et al. 2011a, S. 5)  Diese Typen, Klassen oder eben auch Stile verfolgen zwar unterschiedliche Ansätze im Umgang mir den Repliken, werden aber in der Literatur bzw. in Abhandlungen im Internet zuweilen ebenfalls nur mit CRDT angegeben. Es handelt sich dabei zum einen wie bereits erwähnt um „convergent replicated data types“ und zum anderen um „commutative replicated data types“. Dabei werden „convergent replicated data types“ präzisierend mit „CvRDT“ und „commutative replicated data types“ mit „CmRDT“ abgekürzt. Diese beiden unterschiedlichen Ansätze werden in den nächsten Abschnitten näher erläutert.
-Aufgrund dieser Ungereimtheiten erscheint es sinnvoll oder gar notwendig, eine entsprechende Festlegung bezüglich der Verwendung der Abkürzungen zu treffen. In der vorliegenden Arbeit werden sie also wie folgt verwendet:
+Aufgrund dieser Ungereimtheiten erscheint es jedoch sinnvoll oder gar notwendig, eine entsprechende Festlegung bezüglich der Verwendung der Abkürzungen zu treffen. In der vorliegenden Arbeit werden sie also wie folgt verwendet:
 -	CRDT - conflict-free replicated data type
 -	CvRDT - convergent replicated data type
 -	CmRDT - commutative replicated data type
