@@ -153,7 +153,7 @@ Das Objektorientierten Datenbankmanifest (TODO LINK) gibt dreizehn Regeln an, we
 Diese Teilen sich in acht Regeln aus dem Bereich der Objektorientierung und fünf aus Datenbankgrundsätzen [vgl. @rutner2002implementing] und werden im folgenden ausführlicher Vorgestellt.
 
 
-  * Acht Regeln der Objektorientierung
+  * **Acht Regeln der Objektorientierung**
      1. Objekte lassen sich zu **Klassen und Typen** abstrahieren um gleichartrige Objekttypen zu beschreiben.
      2. Jede Datenbankoperation muss **Vollständig** oder gar nicht durchgeführt werden und kann in einer geeigneten Sprache ausgedrückt werden.
      3. Klassen können um weitere Attribute ergänzt werden. Die Möglichkeit der **Erweiterbarkeit** bezieht sich auf alle relevanten Objekte.
@@ -162,7 +162,7 @@ Diese Teilen sich in acht Regeln aus dem Bereich der Objektorientierung und fün
      6. Verwendung von **Datenkapselung** um Details der Implementierung zu verbergen. Der Zugriff auf Eigeschaften erfolgt nur über Methoden (z. B. Get- und Set).    
      7. Ein OODBMS unterstützt **Komplexe Objekte**. Das sind Objekte deren Attribute nicht nur einfache Datentypen wie String, Integer oder Boolean sein können sondern wiederum aus anderen Objekten bestehen können.
      8. Jedes Objekt hat eine eigene **Objektidentität**, welche unabhängig von den Eigenschaftswerten ist. Eine solche ID wird wie bereits beschrieben als OID bezeichnet.
-   * Fünf Datenbankgrundsätze
+   * **Fünf Datenbankgrundsätze**
      1. Das OODBMS muss für **Persistenz** sorgen, dass der Zustand über die gesamte Laufzeit erhalten bleibt. Nur bewusste Änderungen der Daten sind erlaubt.
      2. Der Zugriff auf die Daten muss **Mehrbenutzerfähig** sein. Dazu gehören gleichzeitige Zugriffe, ein Transaktionskonzept um Datenbankinkonsistenz zu vermeiden.
      3. Über eine Abfragesprache lassen sich **Ad-hoc Abfragen** durchführen.
@@ -175,7 +175,7 @@ Der Struckturbereich beinhaltet die Objekte, deren Zustände, die Klassen, das S
 Im Operationsteil finden sich die Metaklassen, die Funktionen, Methoden, die Vererbung von Methoden sowie die Ausnahmen.
 
 ### 2.2.4 Modellierung und Datenabfrage
-Ähnlich wie bei SQL müssen die Enitäten der Datenbank bekannt gemacht werden.
+Ähnlich wie bei SQL müssen die Enitäten der Datenbank bekannt gemacht werden. (vgl. @nayak2013type) <!-- TODO Quelle -->
 Um Obejektorientierte Datenbanken zu modellieren kann die Sprache UML[^uml] verwendet werden.
 Diese wird von der Object Management Group (OMG) standatisiert und ist aktuell in der Version 2.5 aus dem Jahr 2015 vorhanden.
 Besonders geeignet sind Klassendiagramme um Objekte und deren Beziehungen zueinander darzustellen.
@@ -322,16 +322,110 @@ Wie in dem Beispiel das Attribut *Kinder*, welches eine Liste von weiteren Objek
 Anders als bei relationalen und objektorientierten Datenbanken sind Referenzen auf andere Dokumente nicht möglich.
 Jedes Dokument ist eine in sich geschlossene Einheit.
 Neben den Daten eines Dokuments besitzt dieses eine eindeutige ID (Dokument-ID), welche über die gesamte Datenbank hinweig eindeutig ist.
-Der Einsatz von XML ist nicht auf Dokumentdatenbanken begrenzt, es existiert eine eingene Klasse von XML-Datenbanken, welche nicht weiter betrachtet werden.
+Der Einsatz von XML ist nicht auf Dokumentdatenbanken begrenzt, es existiert eine eingene Klasse von XML-Datenbanken, welche in dieser Ausarbeitung nicht weiter betrachtet werden.
+
+Innerhalb einer Dokumentendatenbank können die Dokumente mittels Listen, Tags/Metadaten oder Hierarchien Groupiert werden.
 
 ### 2.3.2 Abfragen der Datenbank
-Anfragen an die Datenbank können über das Map/Reduce Verfahren parellel ablaufen und dadurch sehr effizient durchgeführt werden.
+Eine Dokumentdatenbanken unterstüzt die bekannte CRUD anfragen.
+Beim Eintragen von Dokumenten kann es spezifiziert sein, dass ein eindeutiger Key mit angegeben werden muss, alternativ wird dieser Key von dem Datenbanksystem vergeben.
+Die Suche nach Dokumenten kann über den Key oder nach Schlüsselworte aus dem Value Bereich oder nach Metadaten erfolgen.
+Dafür stellt die Datenbank eine API (z. B. RESTful) bereit, welche von der Programmiersprache verwendet wird.
+Die Syntax zur Suche von Einträge variiert von den jeweiligen Implementierungen.
+Um eine effizientere Suche zu ermöglichen versucht die Datenbank die Dokumente über Metadaten zu Klassifizieren.
+Das könnte Beispielsweise die Erkennung der fünf stellingen Postleitzahl sein wonach dann alle Dokumente Groupiert werden.
+
+Die Anfragen an die Datenbank können über das Map/Reduce Verfahren parellel ablaufen und dadurch sehr effizient durchgeführt werden.
 Im direkten Vergleich zu SQL steht Map für eine Gruppierung der Daten und Reduce für eine Aggregierung.
 Zuerste wird Map ausgeführt, wobei ein Index ensteht.
 Der entstehende Index ist ein assoziatives Array, welches aus einem oder mehreren Key-Value Paaren besteht.
 Der Vorteil ist, das dieser Schritt unabhängig von den restlichen Daten ausgeführt wird, sodass dies auf allen Knoten parallel ausgeführt wird.
 Die zweite Phase führt dann eine Reduzierung der Ergebnisse durch (Reduce) durchgeführt.
 Eine Ausführliche Beschreibung ist unter https://highlyscalable.wordpress.com/2012/02/01/mapreduce-patterns/ zu finden.
+
+### 2.3.3 Performace von Dokumentdatenbanken
+In @li2013performance wurden SQL und NoSQL-Datenbanken über die Performace miteinander verglichen.
+Dabei zeigt sich das Systeme wie CouchDB oder RavenDB im Vergleich zu der relationalen Datenbank MS SQL Express nicht performanter im Bereich CRUD verhalten.
+Andere Systeme hingegen wie Couchbase oder MongoDB sind deutlich performanter als die vergichene MS SQL Datenbank.
+Diese Auswertung zeigt, dass nicht das alleinige Konzept einer NoSQL-Datenbanken zu mehr Performance führt, vielmehr muss die konkrete Umsetzung den Vorteil auch tatsächlich liefern.
+
+Eine weitere Erkenntnis ist, dass NoSQL-Datenbanken bei trivialen Operationen sehr schnell sein können, bei komplexeren Operationen diese aber im Verhältnis deutlich länger brauchen.
+
+### 2.3.4 Beispiel MongoDB
+Im folgenden wird Exemplarisch die Dokumentdatenbank MongoDB betrachtet.(vgl. @redmond2012seven S. 135 ff.)
+Die erste Version dieser Datenbank ist aus dem Jahr 2009 und findet seit dem eine schnelle Verbreitung.
+Ziel war es eine skalierbare, performante Datenbank mit einfachem Zugriff zu designen.
+Abfragen lassen sich Ad-hoc auf den Datenbestand ausführen.
+Für die Ablage von Dokumenten wird kein Schema benötigt, sodass neue Typen von Dokumenten einfach hinterlegt werden können.
+Verwendet wird die Datenbank Beispielsweise von der Webseite bit.ly oder vom CERN um die Daten aus dem LHC zu sammeln.
+
+Die Dokumente werden in JSON Syntax abgelegt, intern werden diese dann in dem Binärformat BSON abgelegt.
+Durch die Schemafreie ablagen, kann die Datenbank während der Entwicklung mitwachsen ohne diese erneut anzulegen.
+Im folgenden werden die CRUD Operationen, welche sich über das mitgelieferte Command Line Interface ausführen lassen vorgestellt.
+Die Dokumente werden in Buckets gespeichert, welche ähnlich den Datenbanken in relationalen Datenbanksystemen sind.
+
+**Anlegen eines Buckets**
+```
+mongo book
+```
+
+**Anlegen eines Dokuments**
+```
+db.books.insert({
+  "title": "Harry Potter",
+  "year": 2002
+  });
+```
+
+Es ist erkennbar das innerhalb von *insert* die JSON Syntax zum Einsatz kommt.
+Um das ablegen vieler Dokumente zu vereinfachen ist es möglich JavaScript Funktionen zu hinterlegen, welche die nötigen Werte als Parameter entgegeben nehmen und intern *insert* aufrufen.
+
+**Suche aller Bücher**
+```
+db.books.find();
+```
+
+Das Ergebnis von *find()* liefert ein JSON-Array der abgelegten Bücher.
+Erkennbar ist ebenfalls das ein Attribu *_id* hinzugekommen ist, welches die eindeutige vom Systeme vergebene Dokument-ID ist.
+Der Algorithmus für die Generierung der Dokument-ID ist so implementiert, das dieser auf unterschiedlichen Maschienen ausgeführt nicht die selben IDs erzeugt.
+
+**Suche eines Buchs**
+```
+db.books.find({ "_id" : ObjectId("5a6bb81fbb30123365f39fa8") });
+```
+
+Die Suche nach einem bestimmten Objekt ist ebenfalls mittels der *find()* Methode möglich, der als Parameter die ID des DOkumentes übergeben wird.
+
+**Suche nach Kriterien**
+```
+db.books.find({ "year" : { $gt : 2000 } });
+```
+
+Innerhalb von *find()* lassen sich Kriterien angeben, es werden nur noch Dokumente zurückgegeben dessen Jahr größer als 2000 ist.
+
+**Suche über JS Funktionen**
+```
+db.books.find( function() {
+    return this.year > 2000 && this.year <= 2010;
+});
+```
+
+Eine weitere Möglichkeit ist die Benutzung von JS Funktionen um komplexere Anfragen durchzuführen.
+Nachteil dieser Variante ist das die Funktion für jedes Dokument in der Datenbank ausgeführt wird, durch die Schemafreiheit ist aber nicht Garantiert das dass Feld *year* auch in jedem Dokument existiert, sodass diese Abfrage fehlschlägt wenn das Feld nicht vorhanden ist.
+
+**Update eines Dokuments**
+```
+db.books.update(
+  { "_id" : ObjectId("5a6bb81fbb30123365f39fa8") },
+  { $set : { "year" : 2003 } }
+);
+```
+
+Über den Befehl *update* in der Kombination mit *\$set* können bestimmte Eigenschaften eines Dokuments verändert werden.
+Wird *\$set* nicht mit angegeben, wird das gesamte Dokument durch das neue ersetzt.
+Dabei gehen auch alle nicht mit angegeben Eigenschaften wie der Titel verloren.
+
+Das löschen eines Dokuments findet über den Befehl *delete()* statt, dem wie schon bei *find* die ID des Dokuments mitgegeben wird.
 
 # 3. Abgrenzung OODB zu Dokumentdatenbanken
 Lorem ipsum
@@ -341,13 +435,14 @@ Lorem ipsum
 
 # 5. Verbreitung von OODB
 Wie bereits in Kapitel 2.2 beschrieben versuchen Objektorientiere Datenbankmanagementsysteme die Objektorientierten Prinzipien bis zur Speicherung der Daten in einer Datenbank zu realisiern.
-Trotz der großen Verbreitung von Objektorientierten Programmiersprachen werden kaum Objektbasierte Datenbanken eingesetzt.
+Trotz der großen Verbreitung von Objektorientierten Programmiersprachen werden kaum Objektbasierte Datenbanken eingesetzt und besetzt eine Nischentechnologie.
 Vielmehr werden für gängige Client-Server Anwendungen weiterhin relationale Datenbanken verwendet und der Medienbruch wird durch die Objekt-Relationalen Mapper kompensiert.
 Trotzdem erleben viele NoSQL-Datenbanken in den letzten Jahren einen großen Aufwind, zu denen die Objektbasierten nicht gehören.
 
 Einige der größten Probleme von Objektdatenbanken sind:
 
   * Keine aktuelle Standatisierung von Modellierungs- und Abfragesprachen, da die ehemlige ODMG nicht mehr existiert und es keine weiteren Organisationen gibt, welche eine Standatisierung und Weiterentwicklung vorantreiben. Nur im Bereich der UML findet eine solche statt, da dies aber ein generische Modellansatz ist, muss noch zusätzlich eine eigene Modellierungssprache von der Datenbank angeboten werden. Die Sprachen ODL und OQL sind dafür nichts ausreichend. Daher implementieren neuere Datenbanksysteme meist eigene Sprachen, welche keiner Standatisierung unterliegen. Beispielsweise das OODBMS db4o bietet drei verschiedene Abfragesprachen. Das sind Query By Example (QBE), Simple Object Database Access (SODA) und native Abfragen. Native Abfragen basieren auf der verwendeten Programmiersprache, z. B. LINQ unter C#.
+  * Gescheiterte Standatisierung mit der Object Database Technology Working Group (ODBT WG), welche bis 2009 versucht hat einen neuen Standard zu etablieren. Durch die Eintstelung dieser Gruppe haben sich die Unternehmen, welche OODBMS-Systeme entwickelten, anderen Projekten zugewandt.
   * Starke Verbreitung von SQL. Das erlernen von SQL gehört heute zum Standard in jeder IT-Nahen Ausbildung. Im Grundstudium wird neben der allgemeinen Datenbanktheorie vorrangig SQL gelehrt, ebenfalls in den verwandten Ausbildungsberufen. Dadurch findet eine starkte Fokussierung statt, sodass ein späterer Wechsel selten vollzogen wird.
   * Ausgereifte ORM-Frameworks für beliebte Programmiersprachen. Für fast jede Programmiersprache exisieren meist mehrere ORM-Frameworks für den einfachen Zugriff auf relationale Datenbanken. Allein die Wikipedia führt 80 verschiende Frameworks für 14 verschiende Sprache auf.[^wikiorm] Viele davon stehen unter einer open source Lizenz sodass deren Einsatz meist unkompliziert möglich ist.
   * ORM integration in Webframework. Im Bereich der Webentwicklung enstehen viele Frameworks, welche bereits auf bestimmte ORM-Mapper aufsetzen und den Programmierer dazu anleiten dieses zu verwenden. Der einfache Austausch ist meist nicht vorgesehen, wodurch die Verwendung einer Objektdatenbank erschwert wird. Beispiele dafür sind das ASP.MVC Framework, welches auf das Entity Framework setzt oder das Vaadin-Framework, welches die JPA als generische Schnittstelle anbindet.
@@ -356,6 +451,19 @@ Einige der größten Probleme von Objektdatenbanken sind:
   * Durch den Einsatz von JSON als generisches Format ist die Umwandlung in ein natives Objekt der Programmiersprache sehr einfach. Da einer der größten Vorteile von Objektdatenbanken das direkte auslesen der Objekte ist, ist es im Bereich der NoSQL-Datenbanken einfacherer diese im JSON Format abzulegen, welches eine Programmiersprachen unabhängige Speicherung ermöglicht. Des weiteren lässt sich dieses Format leicht durchsuchen.
   * Ein Mangel an der Auswahl von Objektbasierten Datenbanken führt nicht zu Einsatz dieser Technik. Die Vorhandenen Datenbanken werden weitesgehd nicht gepflegt oder nur sehr selten angepasst. Das letzte Update von db4o stammt Beispielsweise vom April 2015[^db4o] und deren direkte Webpräsenz(https://sourceforge.net/projects/db4o/) ist zum aktuellen Zeitpunkt nicht erreichbar.
   * Auf der Codeplattform Github finden sich keine größeren Projekte zu Objekbasierten Datenbanken, was zu deren geringerer Verbreitung beiträgt.
+  * Objektdatenbanken eigenen sich nicht für sehr große Datenmengen, da eine Skalierung über mehrere Systeme schwierig ist. Daher ist der Einsatz durch den maximal Verfügbaren Speicher auf dem Hostsystem begrenzt.
+  * Der Einsatz lohnt sich nur bei sehr komplexen Objektbeziehungen und nicht für einfacherer Anwendunden. Wird eine Anwendunden iterativ entwickelt kann die Entscheidung zugunsten einer relationalen Datenbank bereits im frühen Stadium getroffen sein wo die Komplexität der Beziehungen noch überschaubar war.
+  * Datenbanken wie db4o unterstützen nicht den Import von formten wie JSON oder XML was den Einsatz dieser Datenbank für eine Anwendungsfälle unbrauchbar macht. Ebenfalls wird keine referenzielle Integrität geboten, auf dessen Verzicht nur nicht bei skalierbaren Datenbanken tragbar ist.
+
+
+Trotz dieser vielen Probleme gibt es einige interessante Einsatzgebiete für diese Art von Datenbank, dazu gehören:
+
+  * Geografische Informationssysteme für Dokumente, Photos
+  * CAD und CAM Systeme
+  * Patientensysteme in Krankenhäusern
+  * Finzanzeinrichtungen für den Bereich Data Mining
+
+Unternehmen wie BMW, Bosch, IBM, Intel und Seagate nutzen für interne Anwendung das OODBMS db4o. (vgl. @nayak2013type S. 3)
 
 
 # 6. Fazit
