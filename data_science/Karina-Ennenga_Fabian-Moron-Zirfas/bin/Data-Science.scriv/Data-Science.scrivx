@@ -1,0 +1,274 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ScrivenerProject Version="1.5" Creator="SCRMAC-2.8.1.2-26324" Device="Fabians-MacBook-Air" Modified="2017-01-09 08:09:02 +0100" ModID="205887FB-F05E-4AE4-9D5E-5612D9F732E3">
+    <Binder>
+        <BinderItem ID="16" UUID="6F129022-E261-4132-AF42-88D164377F8F" Type="Text" Created="2017-01-07 18:37:53 +0100" Modified="2017-01-07 18:37:53 +0100">
+            <Title>About</Title>
+            <MetaData>
+                <IncludeInCompile>Yes</IncludeInCompile>
+                <NotesTextSelection>0,0</NotesTextSelection>
+                <IconFileName>Information.tiff</IconFileName>
+            </MetaData>
+            <TextSettings>
+                <TextSelection>0,0</TextSelection>
+            </TextSettings>
+        </BinderItem>
+        <BinderItem ID="0" UUID="C1C24F95-1521-4F60-8BF1-695E6210ED0D" Type="DraftFolder" Created="2017-01-07 18:37:53 +0100" Modified="2017-01-07 18:37:53 +0100">
+            <Title>Draft</Title>
+            <MetaData>
+                <IncludeInCompile>Yes</IncludeInCompile>
+            </MetaData>
+            <CorkboardAndOutliner>
+                <SelectedSubdocumentIDs>3</SelectedSubdocumentIDs>
+            </CorkboardAndOutliner>
+            <Children>
+                <BinderItem ID="3" UUID="9BFBD343-BA02-4E24-A268-9CB681BF28D8" Type="Text" Created="2017-01-07 18:37:53 +0100" Modified="2017-01-08 11:38:33 +0100">
+                    <Title>Title</Title>
+                    <MetaData>
+                        <IncludeInCompile>Yes</IncludeInCompile>
+                        <CompileAsIs>Yes</CompileAsIs>
+                        <NotesTextSelection>0,0</NotesTextSelection>
+                    </MetaData>
+                    <TextSettings>
+                        <TextSelection>23,0</TextSelection>
+                    </TextSettings>
+                </BinderItem>
+                <BinderItem ID="29" UUID="3DB88E38-BBC2-490C-ABF1-B1D339C4C24B" Type="Text" Created="2016-11-23 11:17:12 +0100" Modified="2017-01-08 11:41:47 +0100">
+                    <Title>Abstrakt</Title>
+                    <MetaData>
+                        <IncludeInCompile>Yes</IncludeInCompile>
+                        <NotesTextSelection>0,0</NotesTextSelection>
+                    </MetaData>
+                    <TextSettings>
+                        <TextSelection>0,0</TextSelection>
+                        <Target Type="Words" Notify="Yes">100</Target>
+                    </TextSettings>
+                </BinderItem>
+                <BinderItem ID="30" UUID="DF3AC5D0-572C-48D7-A375-71CF413E8CE8" Type="Text" Created="2016-11-23 11:17:12 +0100" Modified="2017-01-08 17:14:45 +0100">
+                    <Title>Was ist Data Science?</Title>
+                    <MetaData>
+                        <IncludeInCompile>Yes</IncludeInCompile>
+                        <NotesTextSelection>0,0</NotesTextSelection>
+                    </MetaData>
+                    <TextSettings>
+                        <TextSelection>2970,0</TextSelection>
+                        <Target Type="Words" Notify="Yes">500</Target>
+                    </TextSettings>
+                </BinderItem>
+                <BinderItem ID="31" UUID="473B9863-DD91-4C44-B8F6-F37AAF01ED95" Type="Text" Created="2016-12-11 15:45:47 +0100" Modified="2017-01-08 17:15:33 +0100">
+                    <Title>Data Science In der Anwendung</Title>
+                    <MetaData>
+                        <IncludeInCompile>Yes</IncludeInCompile>
+                        <NotesTextSelection>0,0</NotesTextSelection>
+                    </MetaData>
+                    <TextSettings>
+                        <TextSelection>34,0</TextSelection>
+                        <Target Type="Words" Notify="Yes">200</Target>
+                    </TextSettings>
+                    <Children>
+                        <BinderItem ID="32" UUID="DBC7FA2C-CB7C-4A21-8732-25F9F86CBFFB" Type="Text" Created="2016-12-11 15:45:47 +0100" Modified="2017-01-08 16:51:30 +0100">
+                            <Title>Netflix</Title>
+                            <MetaData>
+                                <IncludeInCompile>Yes</IncludeInCompile>
+                                <NotesTextSelection>0,0</NotesTextSelection>
+                            </MetaData>
+                            <TextSettings>
+                                <TextSelection>0,0</TextSelection>
+                                <Target Type="Words" Notify="Yes">3000</Target>
+                            </TextSettings>
+                        </BinderItem>
+                        <BinderItem ID="33" UUID="4B55A380-BAC9-47CE-8BFC-2582A85051BE" Type="Text" Created="2016-12-11 15:45:47 +0100" Modified="2017-01-08 17:21:43 +0100">
+                            <Title>Camebridge-Analytica</Title>
+                            <MetaData>
+                                <IncludeInCompile>Yes</IncludeInCompile>
+                                <NotesTextSelection>0,0</NotesTextSelection>
+                            </MetaData>
+                            <TextSettings>
+                                <TextSelection>410,0</TextSelection>
+                                <Target Type="Words" Notify="Yes">3000</Target>
+                            </TextSettings>
+                        </BinderItem>
+                    </Children>
+                </BinderItem>
+                <BinderItem ID="34" UUID="B3C01F86-D570-4002-8D43-9B303CA594D3" Type="Text" Created="2016-11-23 11:17:12 +0100" Modified="2017-01-08 16:52:27 +0100">
+                    <Title>Ausblick</Title>
+                    <MetaData>
+                        <IncludeInCompile>Yes</IncludeInCompile>
+                        <NotesTextSelection>0,0</NotesTextSelection>
+                    </MetaData>
+                    <TextSettings>
+                        <TextSelection>0,0</TextSelection>
+                        <Target Type="Words" Notify="No">100</Target>
+                    </TextSettings>
+                </BinderItem>
+                <BinderItem ID="8" UUID="944B5433-6E6B-4DCA-AFEB-DA7DD22B2F11" Type="Text" Created="2017-01-07 18:37:53 +0100" Modified="2017-01-08 16:52:27 +0100">
+                    <Title>Quellen</Title>
+                    <MetaData>
+                        <PageBreakBefore>Yes</PageBreakBefore>
+                        <IncludeInCompile>Yes</IncludeInCompile>
+                        <NotesTextSelection>0,0</NotesTextSelection>
+                    </MetaData>
+                    <TextSettings>
+                        <TextSelection>0,0</TextSelection>
+                    </TextSettings>
+                </BinderItem>
+            </Children>
+        </BinderItem>
+        <BinderItem ID="1" UUID="56E46145-6A0E-4A98-BE5F-D1FE65D60405" Type="ResearchFolder" Created="2017-01-07 18:37:53 +0100" Modified="2017-01-07 18:37:53 +0100">
+            <Title>Research</Title>
+            <MetaData>
+                <IncludeInCompile>Yes</IncludeInCompile>
+            </MetaData>
+            <Children>
+                <BinderItem ID="27" UUID="E25525CF-641D-4603-981D-BC6DB482EE1B" Type="Folder" Created="2017-01-07 18:37:53 +0100" Modified="2017-01-07 18:37:53 +0100">
+                    <Title>MLA Format Notes</Title>
+                    <MetaData>
+                        <IncludeInCompile>Yes</IncludeInCompile>
+                        <NotesTextSelection>0,0</NotesTextSelection>
+                    </MetaData>
+                    <TextSettings>
+                        <TextSelection>0,0</TextSelection>
+                    </TextSettings>
+                    <Children>
+                        <BinderItem ID="26" UUID="FAA47C81-F394-46C9-B654-62361F0BFAF0" Type="PDF" Created="2017-01-07 18:37:53 +0100" Modified="2017-01-07 18:37:53 +0100">
+                            <Title>Example Essay</Title>
+                            <MetaData>
+                                <IncludeInCompile>Yes</IncludeInCompile>
+                                <FileExtension>pdf</FileExtension>
+                                <NotesTextSelection>0,0</NotesTextSelection>
+                            </MetaData>
+                            <MediaSettings>
+                                <CurrentPDFPage>0</CurrentPDFPage>
+                            </MediaSettings>
+                        </BinderItem>
+                        <BinderItem ID="19" UUID="92862D46-9B32-4E43-9902-C1E7BFD5F201" Type="Text" Created="2017-01-07 18:37:53 +0100" Modified="2017-01-07 18:37:53 +0100">
+                            <Title>Note on MLA Guidelines</Title>
+                            <MetaData>
+                                <IncludeInCompile>Yes</IncludeInCompile>
+                                <NotesTextSelection>0,0</NotesTextSelection>
+                            </MetaData>
+                            <TextSettings>
+                                <TextSelection>0,0</TextSelection>
+                            </TextSettings>
+                        </BinderItem>
+                    </Children>
+                </BinderItem>
+            </Children>
+        </BinderItem>
+        <BinderItem ID="25" UUID="D6F5F9F7-D8F0-43EC-AB83-C9518B9032BF" Type="Folder" Created="2017-01-07 18:37:53 +0100" Modified="2017-01-07 18:37:53 +0100">
+            <Title>Notes</Title>
+            <MetaData>
+                <IncludeInCompile>Yes</IncludeInCompile>
+                <NotesTextSelection>0,0</NotesTextSelection>
+                <IconFileName>Notes (Blue Notepad).tiff</IconFileName>
+            </MetaData>
+            <TextSettings>
+                <TextSelection>0,0</TextSelection>
+            </TextSettings>
+        </BinderItem>
+        <BinderItem ID="28" UUID="5595FB5A-3BED-42E3-BAAF-7FAE148FDAB9" Type="Folder" Created="2017-01-07 18:37:53 +0100" Modified="2017-01-07 18:37:53 +0100">
+            <Title>Ideas</Title>
+            <MetaData>
+                <IncludeInCompile>Yes</IncludeInCompile>
+                <NotesTextSelection>0,0</NotesTextSelection>
+                <IconFileName>Light Bulb.tiff</IconFileName>
+            </MetaData>
+            <TextSettings>
+                <TextSelection>0,0</TextSelection>
+            </TextSettings>
+        </BinderItem>
+        <BinderItem ID="2" UUID="AD579F43-7E6B-44F5-8E36-1E45E55A782F" Type="TrashFolder" Created="2017-01-07 18:37:53 +0100" Modified="2017-01-07 18:37:53 +0100">
+            <Title>Trash</Title>
+            <MetaData>
+                <IncludeInCompile>Yes</IncludeInCompile>
+            </MetaData>
+            <Children>
+                <BinderItem ID="35" UUID="BA0C4CE2-11E3-4A65-BDFC-6284356A280A" Type="Text" Created="2016-11-23 11:17:12 +0100" Modified="2016-11-23 11:17:12 +0100">
+                    <Title>05_Quellen</Title>
+                    <MetaData>
+                        <IncludeInCompile>Yes</IncludeInCompile>
+                        <NotesTextSelection>0,0</NotesTextSelection>
+                    </MetaData>
+                    <TextSettings>
+                        <TextSelection>0,0</TextSelection>
+                    </TextSettings>
+                </BinderItem>
+                <BinderItem ID="10" UUID="E50729E5-9643-46A9-90DA-10B17A25C752" Type="Folder" Created="2017-01-07 18:37:53 +0100" Modified="2017-01-07 18:39:22 +0100">
+                    <Title>Body</Title>
+                    <MetaData>
+                        <IncludeInCompile>Yes</IncludeInCompile>
+                        <NotesTextSelection>0,0</NotesTextSelection>
+                        <IconFileName>Notes (White Notepad).tiff</IconFileName>
+                    </MetaData>
+                    <TextSettings>
+                        <TextSelection>0,0</TextSelection>
+                        <Target Type="Words" Notify="Yes">10000</Target>
+                    </TextSettings>
+                </BinderItem>
+                <BinderItem ID="24" UUID="8CFBD72A-FC62-4362-8F44-E002E959A4C6" Type="Text" Created="2017-01-07 18:37:53 +0100" Modified="2017-01-08 16:47:35 +0100">
+                    <Title>Works Cited</Title>
+                    <MetaData>
+                        <PageBreakBefore>Yes</PageBreakBefore>
+                        <IncludeInCompile>Yes</IncludeInCompile>
+                        <CompileAsIs>Yes</CompileAsIs>
+                        <NotesTextSelection>0,0</NotesTextSelection>
+                    </MetaData>
+                    <TextSettings>
+                        <TextSelection>0,0</TextSelection>
+                    </TextSettings>
+                </BinderItem>
+                <BinderItem ID="9" UUID="962C8728-DCB2-4AC3-A7C3-2F46439294BA" Type="Folder" Created="2017-01-07 18:37:53 +0100" Modified="2017-01-08 11:39:03 +0100">
+                    <Title>Body</Title>
+                    <MetaData>
+                        <NotesTextSelection>0,0</NotesTextSelection>
+                        <IconFileName>Notes (White Notepad).tiff</IconFileName>
+                    </MetaData>
+                    <TextSettings>
+                        <TextSelection>0,0</TextSelection>
+                    </TextSettings>
+                </BinderItem>
+            </Children>
+        </BinderItem>
+    </Binder>
+    <Collections>
+        <Collection Type="Binder" ID="4C2F914B-7D10-4841-A6C9-435502CC55BF" Color="0.962266 0.962266 0.962266">
+            <Title>Binder</Title>
+        </Collection>
+        <Collection Type="RecentSearch" ID="ED9F42CB-8CEB-4870-9E2B-055AE0543F3E" Color="0.922 0.91 0.98">
+            <Title>Search Results</Title>
+        </Collection>
+    </Collections>
+    <LabelSettings>
+        <Title>Label</Title>
+        <DefaultLabelID>-1</DefaultLabelID>
+        <Labels>
+            <Label ID="-1">No Label</Label>
+            <Label ID="0" Color="0.9 0.92 0.95">Concept</Label>
+            <Label ID="1" Color="0.985 0.875 0.85">Chapter</Label>
+        </Labels>
+    </LabelSettings>
+    <StatusSettings>
+        <Title>Status</Title>
+        <DefaultStatusID>-1</DefaultStatusID>
+        <StatusItems>
+            <Status ID="-1">No Status</Status>
+            <Status ID="0">To Do</Status>
+            <Status ID="1">First Draft</Status>
+            <Status ID="2">Revised Draft</Status>
+            <Status ID="3">Final Draft</Status>
+            <Status ID="4">Done</Status>
+        </StatusItems>
+    </StatusSettings>
+    <ProjectProperties>
+        <ProjectTitle>Data Science </ProjectTitle>
+        <AbbreviatedTitle></AbbreviatedTitle>
+        <FullName>Karina Ennenga, Fabian Morón Zirfas</FullName>
+        <LastName></LastName>
+        <FirstName></FirstName>
+    </ProjectProperties>
+    <ProjectTargets Notify="Yes">
+        <DraftTarget Type="Words" CountIncludedOnly="Yes" CurrentCompileGroupOnly="Yes" Deadline="2017-01-29 13:28:32 +0100" IgnoreDeadline="No">10000</DraftTarget>
+        <SessionTarget Type="Words" CountDraftOnly="No" AllowNegatives="Yes" ResetType="Midnight" DeterminedFromDeadline="Yes" WritingDays="1-7" CanWriteOnDeadlineDate="No">500</SessionTarget>
+        <PreviousSession Words="0" Characters="0" Date="2017-01-09 08:07:11 +0100"></PreviousSession>
+    </ProjectTargets>
+    <PrintSettings PaperSize="595.0,842.0" LeftMargin="72.0" RightMargin="72.0" TopMargin="90.0" BottomMargin="90.0" PaperType="iso-a4" Orientation="Portrait" HorizontalPagination="Clip" VerticalPagination="Auto" ScaleFactor="1.0" HorizontallyCentered="Yes" VerticallyCentered="Yes" Collates="Yes" PagesAcross="1" PagesDown="1"></PrintSettings>
+</ScrivenerProject>
