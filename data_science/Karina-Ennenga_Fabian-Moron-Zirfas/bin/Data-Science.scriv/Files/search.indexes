@@ -9,6 +9,9 @@
             <Synopsis>Zusammenfassung der Anwendungen</Synopsis>
             <Text>Wie findet Data Science Anwendung?</Text>
         </Document>
+        <Document ID="25">
+            <Title>Notes</Title>
+        </Document>
         <Document ID="19">
             <Title>Note on MLA Guidelines</Title>
             <Text>GENERAL GUIDELINES
@@ -35,9 +38,6 @@ http://www.csus.edu/owl/index/mla/mla_format.htm
 
 Citation Guidelines
 http://www.swccd.edu/~library/Pdfs/MLA6thEd.pdf</Text>
-        </Document>
-        <Document ID="9">
-            <Title>Body</Title>
         </Document>
         <Document ID="26">
             <Title>Example Essay</Title>
@@ -203,8 +203,8 @@ Any footnotes you created in your paper will get inserted here upon Compile (thi
         <Document ID="35">
             <Title>05_Quellen</Title>
         </Document>
-        <Document ID="25">
-            <Title>Notes</Title>
+        <Document ID="9">
+            <Title>Body</Title>
         </Document>
     </Documents>
 </SearchIndexes>
