@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<ScrivenerProject Version="1.5" Creator="SCRMAC-2.8.1.2-26324" Device="Fabians-MacBook-Air" Modified="2017-01-11 20:09:56 +0100" ModID="9A9AE45C-93C9-4D23-8316-33DEF9D53C1D">
+<ScrivenerProject Version="1.5" Creator="SCRMAC-2.8.1.2-26324" Device="Fabians-MacBook-Air" Modified="2017-01-11 21:17:10 +0100" ModID="4949F51E-164A-4ED0-8F27-F42522F1D528">
     <Binder>
         <BinderItem ID="16" UUID="6F129022-E261-4132-AF42-88D164377F8F" Type="Text" Created="2017-01-07 18:37:53 +0100" Modified="2017-01-07 18:37:53 +0100">
             <Title>About</Title>
@@ -18,7 +18,7 @@
                 <IncludeInCompile>Yes</IncludeInCompile>
             </MetaData>
             <CorkboardAndOutliner>
-                <SelectedSubdocumentIDs>3</SelectedSubdocumentIDs>
+                <SelectedSubdocumentIDs>8</SelectedSubdocumentIDs>
             </CorkboardAndOutliner>
             <Children>
                 <BinderItem ID="3" UUID="9BFBD343-BA02-4E24-A268-9CB681BF28D8" Type="Text" Created="2017-01-07 18:37:53 +0100" Modified="2017-01-09 21:45:55 +0100">
@@ -76,15 +76,15 @@
                                 <Target Type="Words" Notify="Yes">3000</Target>
                             </TextSettings>
                         </BinderItem>
-                        <BinderItem ID="33" UUID="4B55A380-BAC9-47CE-8BFC-2582A85051BE" Type="Text" Created="2016-12-11 15:45:47 +0100" Modified="2017-01-09 21:52:17 +0100">
+                        <BinderItem ID="33" UUID="4B55A380-BAC9-47CE-8BFC-2582A85051BE" Type="Text" Created="2016-12-11 15:45:47 +0100" Modified="2017-01-11 21:17:03 +0100">
                             <Title>Cambridge Analytica</Title>
                             <MetaData>
                                 <IncludeInCompile>Yes</IncludeInCompile>
                                 <NotesTextSelection>0,0</NotesTextSelection>
                             </MetaData>
                             <TextSettings>
-                                <TextSelection>1604,0</TextSelection>
-                                <Target Type="Words" Notify="Yes">3000</Target>
+                                <TextSelection>2746,0</TextSelection>
+                                <Target Type="Words" Notify="Yes">1500</Target>
                             </TextSettings>
                         </BinderItem>
                     </Children>
@@ -303,7 +303,7 @@
     <ProjectTargets Notify="Yes">
         <DraftTarget Type="Words" CountIncludedOnly="Yes" CurrentCompileGroupOnly="Yes" Deadline="2017-01-29 13:28:32 +0100" IgnoreDeadline="No">6000</DraftTarget>
         <SessionTarget Type="Words" CountDraftOnly="No" AllowNegatives="Yes" ResetType="Midnight" DeterminedFromDeadline="Yes" WritingDays="1-7" CanWriteOnDeadlineDate="No">267</SessionTarget>
-        <PreviousSession Words="0" Characters="0" Date="2017-01-11 20:07:04 +0100"></PreviousSession>
+        <PreviousSession Words="161" Characters="1150" Date="2017-01-11 20:07:04 +0100"></PreviousSession>
     </ProjectTargets>
     <PrintSettings PaperSize="595.275574,841.889771" LeftMargin="72.0" RightMargin="72.0" TopMargin="90.0" BottomMargin="90.0" PaperType="iso-a4" Orientation="Portrait" HorizontalPagination="Clip" VerticalPagination="Auto" ScaleFactor="1.0" HorizontallyCentered="Yes" VerticallyCentered="Yes" Collates="Yes" PagesAcross="1" PagesDown="1"></PrintSettings>
 </ScrivenerProject>
