@@ -14,13 +14,15 @@ author:
 Karina Ennenga, Fabian Morón Zirfas
 Nikolai Alex
 Datenbanktechnologien (FHBSWF MIM 12 W16)
-11. Januar 2017
+15. Januar 2017
 Data Science 
 
 ----
 
   
-# Abstrakt #  
+# Abstrakt #
+
+In der folgende Arbeit setzen wir, die Autoren Karina Ennenga und Fabian Morón Zirfas für das Seminar Datenbanktechnologien (FHBSWF MIM 12 W16) betreut durch Nikolai Alex, uns mit „Data Science in der Anwendung “ auseinander. Im ersten Kapitel „Was ist Data Science?“ versuchen wir kurz zu umreißen was unter dem Titel Data Science zu verstehen ist und wo es sich von zum Beispiel Statistik abgrenzt. Im zweiten Kapitel „Data Science in der Anwendung“ und seinen Unterkapiteln  „Netflix“ und „Cambridge Analytica“ betrachten wir exemplarisch diese zwei Unternehmen, um anhand dieser darstellen zu können was Data Science für Firmen bedeutet. Im dritten Kapitel folgt ein kurzer „Ausblick“ in die Zukunft um im „Fazit“, dem vierten Kapitel, zu Enden.   
 # Was ist Data Science? #
 
 Der Begriff „Data Science“ ist seit einigen Jahren ein Buzz Word, welches immer wieder im Zusammenhang mit anderen wie „Big Data“ und „Artificial Intelligence“ auftauchen. Aber was ist dieses „Data Science“ überhaupt? Wer sind diese Daten Wissenschaftler und was machen sie?  
@@ -29,10 +31,15 @@ Geboren wurde diese neue Art von Stellenbeschreibung wohl zusammen mit dem Aufko
 >> Every time you open Facebook, one of the world’s most influential, controversial, and misunderstood algorithms springs into action. It scans and collects everything posted in the past week by each of your friends, everyone you follow, each group you belong to, and every Facebook page you’ve liked. For the average Facebook user, that’s more than 1,500 posts. If you have several hundred friends, it could be as many as 10,000. Then, according to a closely guarded and constantly shifting formula, Facebook’s news feed algorithm ranks them all, in what it believes to be the precise order of how likely you are to find each post worthwhile. Most users will only ever see the top few hundred. [^cf1]
 > And someone needs to write an algorithm to power those features. Facebook could take all that historical data and hand it off to a very talented statistician. And she would put her immense knowledge and experience to use, diving into R and producing an excellent model that infers the relationship between all of these variables. And that would, no doubt, yield valuable insights into which ads would perform best in different situations. [^cf2]
 
-Für viele Unternehmen wird es immer wichtiger aus den bei ihnen anfallenden Daten auch Schlüsse zu ziehen. Hier kommt der Daten Wissenschaftler ins Spiel. Sei es, wie oben beschrieben, zu errechnen was jemand sehen will, um vorauszusagen welche Produkte auch interessant sein könnten, wann der Fahrstuhl gewartet werden muss oder um vorauszusagen wer der nächste Präsident der Vereinigten Staaten von Amerika wird. Für all diese Tätigkeiten kommen heut zu Tage Daten Wissenschafter zum Einsatz. Daher wurde von glassdoor.com auch die Stellenbeschreibung des „Data Scientist“ als der Top Job in 2016[^cf3] gekürt und von Harvard Business Review (hbr.org) sogar zum „Sexiest Job of the 21st Century“[^cf4]. Ob diese Voraussage sich hält werden wir in einigen Jahren sehen. Sicher ist jedoch, dass in Zeiten in denen wir in Petabytes oder sogar Exabytes denken jemand da sein muss die/der aus all dem gesammelten einen Sinn zieht. Sonst müsste es doch auch nicht gesammelt werden.  
+Für viele Unternehmen wird es immer wichtiger aus den bei ihnen anfallenden Daten auch Schlüsse zu ziehen. Hier kommt der Daten Wissenschaftler ins Spiel. Sei es, wie oben beschrieben, zu errechnen was jemand sehen will, um vorauszusagen welche Produkte auch interessant sein könnten, wann der Fahrstuhl gewartet werden muss oder um vorauszusagen wer der nächste Präsident der Vereinigten Staaten von Amerika wird. Für all diese Tätigkeiten kommen heut zu Tage Daten Wissenschafter zum Einsatz. Daher wurde von glassdoor.com auch die Stellenbeschreibung des „Data Scientist“ als der Top Job in 2016[^cf3] gekürt und von Harvard Business Review (hbr.org) sogar zum „Sexiest Job of the 21st Century“[^cf4]. Ob diese Voraussage sich hält werden wir in einigen Jahren sehen. Sicher ist jedoch, dass in Zeiten in denen eine Boeing 737 pro Turbine innerhalb von 30 Minuten 10 terabyte Daten produziert[^cf5], wir in Petabytes[^cf6] oder Exabytes denken, sich ein neues Feld von Beschäftigungen eröffnet. Diese Personen sind mehr als nur digitale Bibliothekare/innen. Sie müssen in der Lage sein große Datenmengen aus inkonsistenten Daten, von Video, über Text, bis Tweet und Animated GIF, zu bändigen um aus ihnen einen Schlüsse ziehen zu können.   
 # Data Science In der Anwendung #
 
-Wie findet Data Science Anwendung?  
+Wie bereits im vorherigen Kapitel erwähnt, werden unglaubliche Datenmengen von Unternehmen gesammelt, gebündelt und ausgewertet. Es wird „getracked“ und gespeichert wo es nur geht. Ein Unternehmen wie Google, _wenn es überhaupt noch ein zweites Unternehmen wie Google gibt_, sammelt über jede Art von Dienst den es zur Verfügung stellt, um so viele Data Points wie möglich über Nutzer/innen zu erhalten. Die offensichtlichen Punkte wo über uns gesammelt wird sind Google Suchhistorie, Tracking Cookies, Adsense, Analytics, Youtube, Google+, Gmail, Google Drive, Google Documents, Android und viele mehr.[^cf7]
+Nicht so offensichtlich jedoch auch vorstellbar als Methode uns als Einzelperson zu identifizieren sind Dinge wie Anschlagdynamik bei der Eingabe mit der Tastatur oder die Art wie wir uns verschreiben. Was Google damit macht, ist uns allen bekannt. Besser Werbung platzieren. Doch wie sieht es für die anderen Unternehmen aus? Besonders von denen, die nicht ihr Geld mit dem platzieren von Werbung verdienen, ist unser Bild noch nebulös. Welchen Sinn macht es diese Unmengen an Daten zu sammeln, zu speichern, vorzuhalten und wie kann daraus Gewinn geschlagen werden?
+
+Oder um es einfacher zu sagen: „Wie findet Data Science Anwendung?“  
+
+In den folgenden beiden Unterabschnitten werden wir die Unternehmen Netflix und Cambridge Analytica betrachten, um zwei weitere Modelle aufzuzeigen in den „Big Data“ eine zentrale Rolle spielt.    
 ## Netflix ##
 
 1. Datenerhebung
@@ -65,20 +72,23 @@ Dies gelang Ihnen, indem sie Menschen engagiert haben, die Filme schauen und die
   
 ## Cambridge Analytica ##
 
-Zum Grauen vieler zog zu Beginn des Dezembers 2016 ein Artikel mit dem Titel „Ich habe nur gezeigt, dass es die Bombe gibt“[^cf5] seine Runde durch die verschiedensten Sozialen Medien. In ihm wird erläutert wie psychologische Methoden und öffentlich und zugänglich oder erwerbbare Daten von der Firma [„Cambridge Analytica“ (CA)](https://cambridgeanalytica.org/)  genutzt wurden um Donald Trump zum Sieg über Hillary Clinton in den Präsidentschaftswahlen der U.S.A. von 2016  zu verhelfen. Ob dies wirklich  eins zu eins so statt fand soll an dieser Stelle bezweifelt werden. (Siehe WDR Blog[^cf6], Spiegel Online[^cf7], wired.com[^cf8], bloomberg.com[^cf9] oder spektrum.de[^cf10])Es gibt einige Tatsachen die dagegen sprechen. Dennoch erweckt dies so sehr die Aufmerksamkeit der Autoren, dass hier einmal die Methoden und der Technologie Stack  dieser Firma so weit es geht unter die Lupe genommen werden.  
+Zum Grauen vieler zog zu Beginn des Dezembers 2016 ein Artikel mit dem Titel „Ich habe nur gezeigt, dass es die Bombe gibt“[^cf8] seine Runde durch die verschiedensten Sozialen Medien. In ihm wird erläutert wie psychologische Methoden und öffentlich und zugänglich oder erwerbbare Daten von der Firma [„Cambridge Analytica“ (CA)](https://cambridgeanalytica.org/) genutzt wurden um Donald Trump zum Sieg über Hillary Clinton in den Präsidentschaftswahlen der U.S.A. von 2016  zu verhelfen. Ob dies wirklich eins zu eins so statt fand soll an dieser Stelle bezweifelt werden. (Siehe WDR Blog[^cf9], Spiegel Online[^cf10], wired.com[^cf11], bloomberg.com[^cf12] oder spektrum.de[^cf13])Es gibt einige Tatsachen die dagegen sprechen. Dennoch erweckt dies so sehr die Aufmerksamkeit der Autoren, dass hier einmal die Methoden und der Technologie Stack dieser Firma so weit es geht unter die Lupe genommen werden soll.   
 
-### Die Behauptung.
+### Die Behauptung.  
 
-To be defiend
+Nach eigenen Aussagen kann die Firma CA hinzugezogen werden um auf eine neue Weise Kontakt zu seinem Publikum aufzunehmen. Auf ihrer Website versprechen sie bis zu 5000 Daten Punkten pro Person (derzeit nur US Bürger) zu sammeln und deren Verhalten auf Grund von verschiedenen Modellen vorauszusagen. 
+> ## 5,000 data points per person  
+> We collect up to 5,000 data points on over 220 million Americans, and use more than 100 data variables to model target audience groups and predict the behavior of like-minded people.[^cf14]
 
-### Technologie Stack
+### Technologie Stack  
 
-Natürlich lässt eine Firma wie CA sich nicht direkt in die Karten schauen. Aus den Stellenangeboten für Data Engineers und besonders für Data Scientists auf ihrer Seite lassen sich jedoch einige Schlüsse ziehen. Bei Datenbanken werden Erfahrungen und Fähigkeiten im Umgang mit  MySQL und, aus dem Sektor der NoSQL Datenbanken, MongoDB erwünscht. Im Bereich Big Data scheinen die Frameworks Spark und Hadoop zum Einsatz zu kommen und die gewünschten Sprachen sind Python, Java oder Scala und entsprechenden Objekt Orientierten Programmier Paradigmen. Des weiteren natürlich der Umgang mit Versions Kontroll Systemen.  
+Natürlich lässt eine Firma wie CA sich nicht direkt in die Karten schauen. Aus den Stellenangeboten für Data Engineers und besonders für Data Scientists auf ihrer Seite lassen sich jedoch einige Schlüsse ziehen. Bei Datenbanken werden Erfahrungen und Fähigkeiten im Umgang mit  MySQL und, aus dem Sektor der NoSQL Datenbanken, MongoDB erwünscht. Im Bereich Big Data scheinen die Frameworks Spark und Hadoop zum Einsatz zu kommen und die gewünschten Sprachen sind Python, Java oder Scala und entsprechenden Objekt Orientierten Programmier Paradigmen. Des weiteren natürlich der Umgang mit Versions Kontroll Systemen.   
 
 #### Datenbanken
 
-Wenn die Behauptung der Firma CA stimmt ist es offensichtlich, dass ein relationale Datenbank nicht ausreicht um diese 4000 Datenpunkte zu speichern. Auch die Analyse kann nicht auf einer einzelnen Maschine stattfinden. Hier kommt das Hadoop Distributed File System (HDFS) zum Einsatz. Hadoop ist ein Open Source (Java) Projekt, welches von Googles proprietären Google File System (GFS) und dem MapReduce Framework inspiriert wurde.  Mit diesem System können sehr große Datensätze zuverlässig gespeichert werden und mit hoher Bandbreite an Anwendungen, sogenannte HDFS Clients, übertragen werden. Die HDFS Architektur besteht aus einem einzelnen NameNode, vielen DataNodes und dem HDFS Client. Der NameNode organisiert die Anfragen und die Ablage von Daten von den DataNodes durch die Clients. Das Hadoop MapReduce Framework wurde entworfen um Speicherung- und Berechnungsaufgaben über viele tausend Server zu verteilen und bei Bedarf zu skalieren.[^cf11] Das Hadoop System ist die Infrastruktur zum handhaben dieser Datenmengen. Zur Analyse dieser Daten könnte dann, wie ebenfalls aus den Anforderungen der Stellenbeschreibung hervorgeht, das Spark Framework verwendet werden. WAS IST SPARK  
-# Ausblick #
+Wenn die Behauptung der Firma CA stimmt ist es offensichtlich, dass ein relationale Datenbank nicht ausreicht um diese 4000 Datenpunkte zu speichern. Auch die Analyse kann nicht auf einer einzelnen Maschine stattfinden. Hier kommt das Hadoop Distributed File System (HDFS) zum Einsatz. Hadoop ist ein Open Source (Java) Projekt, welches von Googles proprietären Google File System (GFS) und dem MapReduce Framework inspiriert wurde.  Mit diesem System können sehr große Datensätze zuverlässig gespeichert werden und mit hoher Bandbreite an Anwendungen, sogenannte HDFS Clients, übertragen werden. Die HDFS Architektur besteht aus einem einzelnen NameNode, vielen DataNodes und dem HDFS Client. Der NameNode organisiert die Anfragen und die Ablage von Daten von den DataNodes durch die Clients. Das Hadoop MapReduce Framework wurde entworfen um Speicherung- und Berechnungsaufgaben über viele tausend Server zu verteilen und bei Bedarf zu skalieren.[^cf15] Das Hadoop System ist die Infrastruktur zum handhaben dieser Datenmengen. Zur Analyse dieser Daten könnte dann, wie ebenfalls aus den Anforderungen der Stellenbeschreibung hervorgeht, das Spark Framework verwendet werden. WAS IST SPARK  
+# Ausblick #  
+# Fazit #
 
 ----
 
@@ -94,16 +104,24 @@ Quellen
 
 [^cf4]: Harvard Business Review. "Data Scientist: The Sexiest Job of the 21st Century." Harvard Business Review. 1 Oct. 2012. Web. 8 Jan. 2017. <https://hbr.org/2012/10/data-scientist-the-sexiest-job-of-the-21st-century>
 
-[^cf5]: Von Hannes Grassegger Und Mikael Krogerus. "Ich habe nur gezeigt, dass es die Bombe gibt - Das Magazin." Das Magazin. 3 Dec. 2016. Web. 8 Jan. 2017. <https://www.dasmagazin.ch/2016/12/03/ich-habe-nur-gezeigt-dass-es-die-bombe-gibt/>
+[^cf5]: Stacey Higginbotham. "Sensor Networks Top Social Networks for Big Data." Gigaom.com. 13 Sept. 2010. Web. 15 Jan. 2017. <https://gigaom.com/2010/09/13/sensor-networks-top-social-networks-for-big-data-2/>
 
-[^cf6]: Horn, Dennis. "Hat wirklich der große Big-Data-Zauber Trump zum Präsidenten gemacht?." Digitalistan. 5 Dec. 2016. Web. 9 Jan. 2017. <https://blog.wdr.de/digitalistan/hat-wirklich-der-grosse-big-data-zauber-trump-zum-praesidenten-gemacht/>
+[^cf6]: A Petabyte is approximately 1,000 Terabytes or one million Gigabytes. It's hard to visualize what a Petabyte could hold. 1 Petabyte could hold approximately 20 million 4-door filing cabinets full of text. It could hold 500 billion pages of standard printed text. It would take about 500 million floppy disks to store the same amount of data. N.a. "Megabytes, Gigabytes, Terabytes - What Are They?." Whatsabyte.com. n.d. Web. 15 Jan. 2017. <http://www.whatsabyte.com/>
 
-[^cf7]: Spiegel Online, Hamburg, Germany. "US-Wahl und Daten-Ingenieure: Ich ganz allein habe Trump ins Amt gebracht - SPIEGEL ONLINE - Netzwelt." SPIEGEL ONLINE. 5 Dec. 2016. Web. 9 Jan. 2017. <http://www.spiegel.de/netzwelt/netzpolitik/donald-trump-und-die-daten-ingenieure-endlich-eine-erklaerung-mit-der-alles-sinn-ergibt-a-1124439.html>
+[^cf7]: Long, Moe. "How Much Does Google Really Know About You?." MakeUseOf. n.d. Web. 15 Jan. 2017. <http://www.makeuseof.com/tag/how-much-google-know-about-you/>
 
-[^cf8]: Issie Lapowsky. "A Lot of People Are Saying Trump’s New Data Team Is Shady." WIRED. 15 Aug. 2016. Web. 9 Jan. 2017. <https://www.wired.com/2016/08/trump-cambridge-analytica/>
+[^cf8]: Von Hannes Grassegger Und Mikael Krogerus. "Ich habe nur gezeigt, dass es die Bombe gibt - Das Magazin." Das Magazin. 3 Dec. 2016. Web. 8 Jan. 2017. <https://www.dasmagazin.ch/2016/12/03/ich-habe-nur-gezeigt-dass-es-die-bombe-gibt/>
 
-[^cf9]: Bershidsky, Leonid. "No, Big Data Didn't Win the U.S. Election." Bloomberg View. 8 Dec. 2016. Web. 9 Jan. 2017. <https://www.bloomberg.com/view/articles/2016-12-08/no-big-data-didn-t-win-the-u-s-election>
+[^cf9]: Horn, Dennis. "Hat wirklich der große Big-Data-Zauber Trump zum Präsidenten gemacht?." Digitalistan. 5 Dec. 2016. Web. 9 Jan. 2017. <https://blog.wdr.de/digitalistan/hat-wirklich-der-grosse-big-data-zauber-trump-zum-praesidenten-gemacht/>
 
-[^cf10]: Eva Wolfangel. "Big Data: Haben psychologische Facebookdaten Trumps Sieg verursacht?." Spektrum.de. n.d. Web. 9 Jan. 2017. <http://www.spektrum.de/kolumne/haben-psychologische-facebookdaten-trumps-sieg-verursacht/1431745>
+[^cf10]: Spiegel Online, Hamburg, Germany. "US-Wahl und Daten-Ingenieure: Ich ganz allein habe Trump ins Amt gebracht - SPIEGEL ONLINE - Netzwelt." SPIEGEL ONLINE. 5 Dec. 2016. Web. 9 Jan. 2017. <http://www.spiegel.de/netzwelt/netzpolitik/donald-trump-und-die-daten-ingenieure-endlich-eine-erklaerung-mit-der-alles-sinn-ergibt-a-1124439.html>
 
-[^cf11]: Shvachko, Konstantin, et al. "The hadoop distributed file system." 2010 IEEE 26th symposium on mass storage systems and technologies (MSST). IEEE, 2010.
+[^cf11]: Issie Lapowsky. "A Lot of People Are Saying Trump’s New Data Team Is Shady." WIRED. 15 Aug. 2016. Web. 9 Jan. 2017. <https://www.wired.com/2016/08/trump-cambridge-analytica/>
+
+[^cf12]: Bershidsky, Leonid. "No, Big Data Didn't Win the U.S. Election." Bloomberg View. 8 Dec. 2016. Web. 9 Jan. 2017. <https://www.bloomberg.com/view/articles/2016-12-08/no-big-data-didn-t-win-the-u-s-election>
+
+[^cf13]: Eva Wolfangel. "Big Data: Haben psychologische Facebookdaten Trumps Sieg verursacht?." Spektrum.de. n.d. Web. 9 Jan. 2017. <http://www.spektrum.de/kolumne/haben-psychologische-facebookdaten-trumps-sieg-verursacht/1431745>
+
+[^cf14]: N.a. "Cambridge Analytica – About Us." Cambridgeanalytica.org. 10 Jan. 2017. Web. 15 Jan. 2017. <https://cambridgeanalytica.org/about>
+
+[^cf15]: Shvachko, Konstantin, et al. "The hadoop distributed file system." 2010 IEEE 26th symposium on mass storage systems and technologies (MSST). IEEE, 2010.
