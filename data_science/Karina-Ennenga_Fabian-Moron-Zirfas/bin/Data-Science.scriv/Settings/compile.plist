@@ -387,7 +387,7 @@ p.shot {text-align:left; text-indent:0; margin: 12pt 0pt 0pt 0pt; text-transform
 	<key>SCRCompileFootnotesStyleKey</key>
 	<integer>0</integer>
 	<key>SCRCompileFormatKey</key>
-	<integer>30</integer>
+	<integer>3</integer>
 	<key>SCRCompileFountainHeadersUsesBinderIndentsKey</key>
 	<false/>
 	<key>SCRCompileFountainTitlePageMetaDataKey</key>
@@ -485,7 +485,7 @@ p.shot {text-align:left; text-indent:0; margin: 12pt 0pt 0pt 0pt; text-transform
 	<key>SCRCompileMarkEndOfTextKey</key>
 	<false/>
 	<key>SCRCompileMultiMarkdownAddFormatCompleteKey</key>
-	<true/>
+	<false/>
 	<key>SCRCompileMultiMarkdownLaTeXBeginDocumentStringKey</key>
 	<string></string>
 	<key>SCRCompileMultiMarkdownLaTeXDocumentClassKey</key>
@@ -501,7 +501,7 @@ p.shot {text-align:left; text-indent:0; margin: 12pt 0pt 0pt 0pt; text-transform
 	<key>SCRCompileMultiMarkdownUsesHTMLMarkdownCompatibilityKey</key>
 	<false/>
 	<key>SCRCompileMultiMarkdownUsesMMD2SyntaxKey</key>
-	<true/>
+	<false/>
 	<key>SCRCompileMultiMarkdownshowPDFLogKey</key>
 	<false/>
 	<key>SCRCompileNoHeaderAfterPageBreaksKey</key>

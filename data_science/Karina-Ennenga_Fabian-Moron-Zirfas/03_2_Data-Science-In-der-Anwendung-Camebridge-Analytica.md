@@ -1,0 +1,26 @@
+Cambridge Analytica
+
+Zum Grauen vieler zog zu Beginn des Dezembers 2016 ein Artikel mit dem Titel „Ich habe nur gezeigt, dass es die Bombe gibt“[1] seine Runde durch die verschiedensten Sozialen Medien. In ihm wird erläutert wie psychologische Methoden und öffentlich und zugänglich oder erwerbbare Daten von der Firma [„Cambridge Analytica“ (CA)](https://cambridgeanalytica.org/) genutzt wurden um Donald Trump zum Sieg über Hillary Clinton in den Präsidentschaftswahlen der U.S.A. von 2016  zu verhelfen. Ob dies wirklich eins zu eins so statt fand soll an dieser Stelle bezweifelt werden. (Siehe WDR Blog[2], Spiegel Online[3], wired.com[4], bloomberg.com[5] oder spektrum.de[6])Es gibt einige Tatsachen die dagegen sprechen. Dennoch erweckt dies so sehr die Aufmerksamkeit der Autoren, dass hier einmal die Methoden und der Technologie Stack dieser Firma so weit es geht unter die Lupe genommen werden soll.   
+
+### Die Dienstleistung.  
+
+Nach eigenen Aussagen kann die Firma CA hinzugezogen werden um auf eine neue Weise Kontakt zu seinem Publikum aufzunehmen. Auf ihrer Website versprechen sie bis zu 5000 Daten Punkten pro Person (derzeit nur US Bürger) zu sammeln und deren Verhalten auf Grund von verschiedenen Modellen vorauszusagen. 
+> ## 5,000 data points per person  
+> We collect up to 5,000 data points on over 220 million Americans, and use more than 100 data variables to model target audience groups and predict the behavior of like-minded people.[7]
+
+### Der Technologie Stack  
+
+Natürlich lässt eine Firma wie CA sich nicht direkt in die Karten schauen. Aus den Stellenangeboten für Data Engineers und besonders für Data Scientists auf ihrer Seite lassen sich jedoch einige Schlüsse ziehen. Bei Datenbanken werden Erfahrungen und Fähigkeiten im Umgang mit  MySQL und, aus dem Sektor der NoSQL Datenbanken, MongoDB erwünscht. Im Bereich Big Data scheinen die Frameworks Spark und Hadoop zum Einsatz zu kommen und die gewünschten Sprachen sind Python, Java oder Scala und entsprechenden Objekt Orientierten Programmier Paradigmen. Des weiteren natürlich der Umgang mit Versions Kontroll Systemen.   
+
+#### Datenbanken
+
+Wenn die Behauptung der Firma CA stimmt ist es offensichtlich, dass ein relationale Datenbank nicht ausreicht um diese 4000 Datenpunkte zu speichern. Auch die Analyse kann nicht auf einer einzelnen Maschine stattfinden. Hier kommt das Hadoop Distributed File System (HDFS) zum Einsatz. Hadoop ist ein Open Source (Java) Projekt, welches von Googles proprietären Google File System (GFS) und dem MapReduce Framework inspiriert wurde.  Mit diesem System können sehr große Datensätze zuverlässig gespeichert werden und mit hoher Bandbreite an Anwendungen, sogenannte HDFS Clients, übertragen werden. Die HDFS Architektur besteht aus einem einzelnen NameNode, vielen DataNodes und dem HDFS Client. Der NameNode organisiert die Anfragen und die Ablage von Daten von den DataNodes durch die Clients. Das Hadoop MapReduce Framework wurde entworfen um Speicherung- und Berechnungsaufgaben über viele tausend Server zu verteilen und bei Bedarf zu skalieren.[8] Das Hadoop System ist die Infrastruktur zum handhaben dieser Datenmengen. Zur Analyse dieser Daten könnte dann, wie ebenfalls aus den Anforderungen der Stellenbeschreibung hervorgeht, das Spark Framework verwendet werden. WAS IST SPARK
+
+[1] Von Hannes Grassegger Und Mikael Krogerus. "Ich habe nur gezeigt, dass es die Bombe gibt - Das Magazin." Das Magazin. 3 Dec. 2016. Web. 8 Jan. 2017. <https://www.dasmagazin.ch/2016/12/03/ich-habe-nur-gezeigt-dass-es-die-bombe-gibt/>
+[2] Horn, Dennis. "Hat wirklich der große Big-Data-Zauber Trump zum Präsidenten gemacht?." Digitalistan. 5 Dec. 2016. Web. 9 Jan. 2017. <https://blog.wdr.de/digitalistan/hat-wirklich-der-grosse-big-data-zauber-trump-zum-praesidenten-gemacht/>
+[3] Spiegel Online, Hamburg, Germany. "US-Wahl und Daten-Ingenieure: Ich ganz allein habe Trump ins Amt gebracht - SPIEGEL ONLINE - Netzwelt." SPIEGEL ONLINE. 5 Dec. 2016. Web. 9 Jan. 2017. <http://www.spiegel.de/netzwelt/netzpolitik/donald-trump-und-die-daten-ingenieure-endlich-eine-erklaerung-mit-der-alles-sinn-ergibt-a-1124439.html>
+[4] Issie Lapowsky. "A Lot of People Are Saying Trump’s New Data Team Is Shady." WIRED. 15 Aug. 2016. Web. 9 Jan. 2017. <https://www.wired.com/2016/08/trump-cambridge-analytica/>
+[5] Bershidsky, Leonid. "No, Big Data Didn't Win the U.S. Election." Bloomberg View. 8 Dec. 2016. Web. 9 Jan. 2017. <https://www.bloomberg.com/view/articles/2016-12-08/no-big-data-didn-t-win-the-u-s-election>
+[6] Eva Wolfangel. "Big Data: Haben psychologische Facebookdaten Trumps Sieg verursacht?." Spektrum.de. n.d. Web. 9 Jan. 2017. <http://www.spektrum.de/kolumne/haben-psychologische-facebookdaten-trumps-sieg-verursacht/1431745>
+[7] N.a. "Cambridge Analytica – About Us." Cambridgeanalytica.org. 10 Jan. 2017. Web. 15 Jan. 2017. <https://cambridgeanalytica.org/about>
+[8] Shvachko, Konstantin, et al. "The hadoop distributed file system." 2010 IEEE 26th symposium on mass storage systems and technologies (MSST). IEEE, 2010.

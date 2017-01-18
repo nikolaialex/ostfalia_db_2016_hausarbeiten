@@ -1,0 +1,3 @@
+# Abstrakt
+
+In der folgende Arbeit setzen wir, die Autoren Karina Ennenga und Fabian Morón Zirfas für das Seminar Datenbanktechnologien (FHBSWF MIM 12 W16) betreut durch Nikolai Alex, uns mit „Data Science in der Anwendung “ auseinander. Im ersten Kapitel „Was ist Data Science?“ versuchen wir kurz zu umreißen was unter dem Titel Data Science zu verstehen ist und wo es sich von zum Beispiel Statistik abgrenzt. Im zweiten Kapitel „Data Science in der Anwendung“ und seinen Unterkapiteln  „Netflix“ und „Cambridge Analytica“ betrachten wir exemplarisch diese zwei Unternehmen, um anhand dieser darstellen zu können was Data Science für Firmen bedeutet. Im dritten Kapitel folgt ein kurzer „Ausblick“ in die Zukunft um im „Fazit“, dem vierten Kapitel, zu Enden. 

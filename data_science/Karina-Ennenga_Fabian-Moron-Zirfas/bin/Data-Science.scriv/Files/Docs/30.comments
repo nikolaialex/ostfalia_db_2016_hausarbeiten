@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Comments>
-    <Comment ID="BAA1C076-1E96-4DED-9FE2-E448CDAF1864" Footnote="Yes" Number="1" Color="0.85 0.85 0.85"><![CDATA[{\rtf1\ansi\ansicpg1252\cocoartf1504\cocoasubrtf760
+    <Comment ID="BAA1C076-1E96-4DED-9FE2-E448CDAF1864" Footnote="Yes" Color="0.85 0.85 0.85"><![CDATA[{\rtf1\ansi\ansicpg1252\cocoartf1504\cocoasubrtf760
 {\fonttbl\f0\fnil\fcharset0 Vollkorn-Regular;}
 {\colortbl;\red255\green255\blue255;\red38\green38\blue38;\red255\green255\blue255;}
 {\*\expandedcolortbl;;\cssrgb\c20000\c20000\c20000;\cssrgb\c100000\c100000\c100000;}
@@ -9,7 +9,7 @@
 
 \f0\fs24 \cf2 \cb3 \expnd0\expndtw0\kerning0
 Oremus, Will. "Who Really Controls What You See in Your Facebook Feed\'97and Why They Keep Changing It   ." Slate Magazine. Slate.com, 03 Jan. 2016. Web. 08 Jan. 2017. <http://www.slate.com/articles/technology/cover_story/2016/01/how_facebook_s_news_feed_algorithm_works.html>.}]]></Comment>
-    <Comment ID="C78BC8E8-0E48-4C3A-8911-D4EF444A0E36" Footnote="Yes" Number="2" Color="0.85 0.85 0.85"><![CDATA[{\rtf1\ansi\ansicpg1252\cocoartf1504\cocoasubrtf760
+    <Comment ID="C78BC8E8-0E48-4C3A-8911-D4EF444A0E36" Footnote="Yes" Color="0.85 0.85 0.85"><![CDATA[{\rtf1\ansi\ansicpg1252\cocoartf1504\cocoasubrtf760
 {\fonttbl\f0\fnil\fcharset0 Vollkorn-Regular;}
 {\colortbl;\red255\green255\blue255;\red52\green52\blue52;\red255\green255\blue255;}
 {\*\expandedcolortbl;;\cssrgb\c26667\c26667\c26667;\cssrgb\c100000\c100000\c100000;}
@@ -20,7 +20,7 @@ Oremus, Will. "Who Really Controls What You See in Your Facebook Feed\'97and Why
 The Signal. "What is data science vs. statistics? - The Signal." 
 \i \cb1 The Signal
 \i0 \cb3 . 30 Mar. 2016. Web. 8 Jan. 2017. <https://blog.mixpanel.com/2016/03/30/this-is-the-difference-between-statistics-and-data-science/>}]]></Comment>
-    <Comment ID="ABB7F84B-F070-4C6C-935B-3B49DCEC8F6C" Footnote="Yes" Number="3" Color="0.85 0.85 0.85"><![CDATA[{\rtf1\ansi\ansicpg1252\cocoartf1504\cocoasubrtf760
+    <Comment ID="ABB7F84B-F070-4C6C-935B-3B49DCEC8F6C" Footnote="Yes" Color="0.85 0.85 0.85"><![CDATA[{\rtf1\ansi\ansicpg1252\cocoartf1504\cocoasubrtf760
 {\fonttbl\f0\fnil\fcharset0 HelveticaNeue;}
 {\colortbl;\red255\green255\blue255;\red52\green52\blue52;\red255\green255\blue255;}
 {\*\expandedcolortbl;;\cssrgb\c26667\c26667\c26667;\cssrgb\c100000\c100000\c100000;}
@@ -31,7 +31,7 @@ The Signal. "What is data science vs. statistics? - The Signal."
 Glassdoor. " Best Jobs in America ." 
 \i \cb1 Glassdoor
 \i0 \cb3 . n.d. Web. 8 Jan. 2017. <https://www.glassdoor.com/List/Best-Jobs-in-America-LST_KQ0,20.htm>}]]></Comment>
-    <Comment ID="96BB3910-9162-4343-B9EF-8C3DD9779B2A" Footnote="Yes" Number="4" Color="0.85 0.85 0.85"><![CDATA[{\rtf1\ansi\ansicpg1252\cocoartf1504\cocoasubrtf760
+    <Comment ID="96BB3910-9162-4343-B9EF-8C3DD9779B2A" Footnote="Yes" Color="0.85 0.85 0.85"><![CDATA[{\rtf1\ansi\ansicpg1252\cocoartf1504\cocoasubrtf760
 {\fonttbl\f0\fnil\fcharset0 HelveticaNeue;}
 {\colortbl;\red255\green255\blue255;\red52\green52\blue52;\red255\green255\blue255;}
 {\*\expandedcolortbl;;\cssrgb\c26667\c26667\c26667;\cssrgb\c100000\c100000\c100000;}
@@ -40,7 +40,7 @@ Glassdoor. " Best Jobs in America ."
 
 \f0\fs24 \cf2 \cb3 \expnd0\expndtw0\kerning0
 Harvard Business Review. "Data Scientist: The Sexiest Job of the 21st Century." Harvard Business Review. 1 Oct. 2012. Web. 8 Jan. 2017. <https://hbr.org/2012/10/data-scientist-the-sexiest-job-of-the-21st-century>}]]></Comment>
-    <Comment ID="E1A67569-8AEC-465A-B0F6-E8D655AB0D2C" Footnote="Yes" Number="5" Color="0.85 0.85 0.85"><![CDATA[{\rtf1\ansi\ansicpg1252\cocoartf1504\cocoasubrtf760
+    <Comment ID="E1A67569-8AEC-465A-B0F6-E8D655AB0D2C" Footnote="Yes" Color="0.85 0.85 0.85"><![CDATA[{\rtf1\ansi\ansicpg1252\cocoartf1504\cocoasubrtf760
 {\fonttbl\f0\fnil\fcharset0 HelveticaNeue;}
 {\colortbl;\red255\green255\blue255;\red52\green52\blue52;\red255\green255\blue255;}
 {\*\expandedcolortbl;;\cssrgb\c26667\c26667\c26667;\cssrgb\c100000\c100000\c100000;}
@@ -48,10 +48,10 @@ Harvard Business Review. "Data Scientist: The Sexiest Job of the 21st Century." 
 \pard\pardeftab720\sl280
 
 \f0\fs24 \cf2 \cb3 \expnd0\expndtw0\kerning0
-\outl0\strokewidth0 \strokec2 Stacey Higginbotham. "Sensor Networks Top Social Networks for Big Data." 
+Stacey Higginbotham. "Sensor Networks Top Social Networks for Big Data." 
 \i \cb1 Gigaom.com
 \i0 \cb3 . 13 Sept. 2010. Web. 15 Jan. 2017. <https://gigaom.com/2010/09/13/sensor-networks-top-social-networks-for-big-data-2/>}]]></Comment>
-    <Comment ID="F4DD58FA-FA66-4736-B40D-3AF5838113AD" Footnote="Yes" Number="6" Color="0.85 0.85 0.85"><![CDATA[{\rtf1\ansi\ansicpg1252\cocoartf1504\cocoasubrtf760
+    <Comment ID="F4DD58FA-FA66-4736-B40D-3AF5838113AD" Footnote="Yes" Color="0.85 0.85 0.85"><![CDATA[{\rtf1\ansi\ansicpg1252\cocoartf1504\cocoasubrtf760
 {\fonttbl\f0\fswiss\fcharset0 ArialMT;\f1\fnil\fcharset0 HelveticaNeue;}
 {\colortbl;\red255\green255\blue255;\red0\green0\blue0;\red255\green255\blue255;\red52\green52\blue52;
 }
@@ -61,8 +61,8 @@ Harvard Business Review. "Data Scientist: The Sexiest Job of the 21st Century." 
 \pard\pardeftab720\sl280
 
 \f0\fs24 \cf2 \cb3 \expnd0\expndtw0\kerning0
-\outl0\strokewidth0 \strokec2 A Petabyte is approximately 1,000 Terabytes or one million Gigabytes. It's hard to visualize what a Petabyte could hold. 1 Petabyte could hold approximately 20 million 4-door filing cabinets full of text. It could hold 500 billion pages of standard printed text. It would take about 500 million floppy disks to store the same amount of data. 
-\f1 \cf4 \strokec4 N.a. "Megabytes, Gigabytes, Terabytes - What Are They?." 
+A Petabyte is approximately 1,000 Terabytes or one million Gigabytes. It's hard to visualize what a Petabyte could hold. 1 Petabyte could hold approximately 20 million 4-door filing cabinets full of text. It could hold 500 billion pages of standard printed text. It would take about 500 million floppy disks to store the same amount of data. 
+\f1 \cf4 \cb3 N.a. "Megabytes, Gigabytes, Terabytes - What Are They?." 
 \i \cb1 Whatsabyte.com
 \i0 \cb3 . n.d. Web. 15 Jan. 2017. <http://www.whatsabyte.com/>}]]></Comment>
 </Comments>
