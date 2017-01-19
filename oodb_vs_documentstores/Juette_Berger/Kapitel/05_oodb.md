@@ -29,3 +29,5 @@ Trotz dieser vielen Probleme gibt es einige interessante Einsatzgebiete für die
   * Finanzeinrichtungen für den Bereich Data Mining
 
 Unternehmen wie BMW, Bosch, IBM, Intel und Seagate nutzen für interne Anwendung das OODBMS db4o. (vgl. @nayak2013type S. 3)
+
+TODO: http://db-engines.com/de/ranking als Quelle, welche die Verbreitung belegt.
