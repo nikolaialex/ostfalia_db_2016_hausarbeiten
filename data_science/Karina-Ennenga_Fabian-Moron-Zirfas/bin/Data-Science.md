@@ -1,5 +1,4 @@
 Language: german
-Format: complete
 
 ---
 title: "Daten Wissenschaft"
@@ -14,12 +13,21 @@ author:
 Karina Ennenga, Fabian Morón Zirfas
 Nikolai Alex
 Datenbanktechnologien (FHBSWF MIM 12 W16)
-15. Januar 2017
+22. Januar 2017
 Data Science 
 
 ----
 
-  
+## Inhalt
+
+1. Abstrakt
+2. Was ist Data Science?
+3. Data Science In der Anwendung
+    1. Netflix
+    2. Cambridge Analytica
+4. Ausblick
+5. Fazit
+6. Quellen  
 # Abstrakt #
 
 In der folgende Arbeit setzen wir, die Autoren Karina Ennenga und Fabian Morón Zirfas für das Seminar Datenbanktechnologien (FHBSWF MIM 12 W16) betreut durch Nikolai Alex, uns mit „Data Science in der Anwendung “ auseinander. Im ersten Kapitel „Was ist Data Science?“ versuchen wir kurz zu umreißen was unter dem Titel Data Science zu verstehen ist und wo es sich von zum Beispiel Statistik abgrenzt. Im zweiten Kapitel „Data Science in der Anwendung“ und seinen Unterkapiteln  „Netflix“ und „Cambridge Analytica“ betrachten wir exemplarisch diese zwei Unternehmen, um anhand dieser darstellen zu können was Data Science für Firmen bedeutet. Im dritten Kapitel folgt ein kurzer „Ausblick“ in die Zukunft um im „Fazit“, dem vierten Kapitel, zu Enden.   
@@ -54,47 +62,101 @@ Das Herzstück von Netflix ist sein Empfehlungsmechanismus. Dieser basiert auf d
 
 Letztendlich gewann ein Team, das eine Verbesserung von 8,43% geschafft hat. Das Team habe 2000 Stunden Arbeit damit verbracht, um einen Kombination aus 107 Algorithmen zu präsentieren.
 Um den Algorithmus einsetzen zu können, mussten einige Anpassungen vorgenommen werden. So konnte beispielweise der ursprüngliche Algorithmus nicht mehr als 100 Millionen Bewertungen händeln, wobei zu dem Zeitpunkt bereits 5 Milliarden Bewertungen vorhanden waren.
-In 2012 wurden 75% der Filme und Serien aufgrund des Empfehlungssystems geschaut.
+In 2012 wurden bereits 75% der Filme und Serien aufgrund des Empfehlungssystems geschaut.
+
 
 2. Speicherung / Algorithmus
 
-In Anbetracht der Tatsache, dass Netflix mehr als 85 Millionen Abonnenten hat (stand von Oktober 2016 laut http://www.wiwo.de/unternehmen/it/netflix-in-deutschland-mehr-abonnenten-als-einwohner/14702184.html), wird klar, dass sie ein riesiges Repertoire an “personalisierten Genres” haben.
+In Anbetracht der Tatsache, dass Netflix mehr als 85 Millionen Abonnenten hat (Stand von Oktober 2016 laut http://www.wiwo.de/unternehmen/it/netflix-in-deutschland-mehr-abonnenten-als-einwohner/14702184.html), wird klar, dass sie ein riesiges Repertoire an “personalisierten Genres” haben.
 
-In dem Artikel *How Netflix Reverse Engineered Hollywood* vom 02.01.2014 beschreibt das Magazin The Atlantic ihre Recherchearbeiten zum Algorithmus von Netflix.
-Sie haben herausgefunden, dass Netflix zu diesem Zeitpunkt 76.897 Genres besitzt, um Filmtypen zu beschreiben. Zum heutigen Zeitpunkt sind es mehr als 93.000 (https://docs.google.com/spreadsheets/d/1eISFvq42Sll10xekyV-XQdwoG7_gjZpreNG40Pz8G0k/edit#gid=2125244376).
+In dem Artikel *How Netflix Reverse Engineered Hollywood* vom 02.01.2014 beschreibt das Magazin *The Atlantic* ihre Recherchearbeiten zum Algorithmus von Netflix.
+Sie haben herausgefunden, dass Netflix zu diesem Zeitpunkt 76.897 Genres besitzt, um Filmtypen zu beschreiben. Zum heutigen Zeitpunkt sind es fast 93.000 (https://docs.google.com/spreadsheets/d/1eISFvq42Sll10xekyV-XQdwoG7_gjZpreNG40Pz8G0k/edit#gid=2125244376).
 
-Zu den neuesten zählen “Golden Globe Award-winning Understated Comedies” und “Critically-acclaimed Biographical Drug Documentaries”.
+Zu den neuesten zählen Genres wie “Golden Globe Award-winning Understated Comedies” und “Critically-acclaimed Biographical Drug Documentaries”.
 
-The Atlantic habe herausgefunden, dass Netflix jeden einzelnen denkbaren Film und jede Serie analysiert hat und sich somit eine enorme Datenbasis aufgebaut hat.
-Dies gelang Ihnen, indem sie Menschen engagiert haben, die Filme schauen und diese mit sämtlichen Metadaten zu beschreiben.
+*The Atlantic* hat herausgefunden, dass Netflix jeden einzelnen denkbaren Film und jede Serie analysiert hat und sich somit eine enorme Datenbasis aufgebaut hat.
+Dies gelang Ihnen, indem sie Menschen engagiert haben, die Filme schauen und diese mit unterschiedlichsten Metadaten beschreiben. Dazu gehören der Romantiklevel, wie blutrünstig ein Film ist und erzählerische Daten, wie zum Beispiel die Schlüssigkeit der Handlung.
+Die ausgebildeten Filmeschauer bewerten dutzende von Eigenschaften, darunter auch den Moralstatus der Charaktere. Diese Eigenschaften werden mit den Gewohnheiten der Netflix User kombiniert, woraus ein großer Wettbewerbsvorteil für Netflix entsteht.
 
-3. Visualisierung
+
+![Alternativer Text](bild1)
+
+Durch den Alghorithmus hat Netflix eine neue Form des Empfehlens geschaffen.
+
+Früher liefen Empfehlungen laut Atlantic überwiegend nach dem kollaborativen Empfehlungssystems ab. Für das kollaborative Filtern werden auch andere Benutzer berücksichtigt. Wenn zum Beispiel Anna Film 1 mit 3 Sternen, Film 3 mit 4 Sternen und Film 5 mit 2 Sternen bewertet hat und Julia Film 1 mit 2 Sternen, Film 3 mit 5 Sternen, Film 4 mit 4 Sternen und Film 5 mit 1 Stern bewertet hat, dann scheinen die beiden Benutzer Anna und Julia ähnlich zu sein und Anna kann der Film 4 vorgeschlagen werden, den sie noch nicht gesehen hat.
+
+![Alternativer Text](images/kollaborativesFiltern)
+
+Bei dem kollaborativen Empfehlungssystem wurde versucht vorherzusagen, wie viele Sterne man einem Film geben würde. Dafür musste man möglichst viele Filme bewerten, um daraus überhaupt eine Tendenz und ein Profil des Nutzers erstellen zu können.
+
+Eine Aussage im Atlantic Artikel besagt, dass Netflix ein System gebaut habe, welches wirklich nur mit einem in der Technologie-Welt vergleichbar ist, und zwar dem NewsFeed von Facebook.
+
+3. Visualisierung/Analyse der Daten
+
+Um Schlussfolgerungen aus Datenerhebungen zu ziehen, muss zuerst eine gewisse Menge an Daten zur Analyse bereit stehen.
+Erst wenn genug Menschen beispielsweise an einer bestimmten Stelle Pause gedrückt oder vorgespult haben, kann man anfangen, Schlussfolgerungen aus diesem Verhalten zu ziehen.
+Wenn ständig an der gleichen Stelle Pause gedrückt wird, könnte die Handlung zu langwierig oder langweilig geworden sein um das Interesse der Zuschauer zu halten. Es könnte auch sein, dass der Plot zu kompliziert wurde. Wenn genug Nutzer nach der Pause nie weiter schauen, könnte die Annahme getroffen werden, dass die Sendung schlecht ist.
+Natürlich sind das alles aber nur Annahmen. Trotz der gigantischen gesammelten Datenmenge kann Netflix nicht mit 100%iger Sicherheit sagen, was dieses Verhalten der User bedeutet.
+
+
+4. Nutzung der Daten
+
+Laut Salon arbeitet Netflix seit 2012 daran, insofern Nutzen aus ihrer Big Date Kapazität zu ziehen, als dass sie versuchen damit ihre Programmauswahl zu beeinflussen. Konkret bedeutet es, dass sie Serien aufgrund ihrere Analyseergebnisse kaufen oder produzieren.
+Das Pilot-Projekt dieser Strategie ist die Serie *House Of Cards*. *House Of Cards* war ursprünglich eine britische Miniserie, die 1990 auf dem britischen Kanal BBC ausgestrahlt wurde. Die Serie bestand nur aus vier Episoden und handelt von einem Politiker, der zusammen mit seiner Ehefrau Rachepläne ausübt, nachdem er vom Premierminister hintergangen wurde.
+
+Aufgrund der Big Data-Analyse von Netflix wurde die Entscheidung getroffen, eine Neuauflage der britischen Serie *House Of Cards* zu produzieren.
+Den Analyseergebnissen konnte man entnehmen, dass dieselben Personen, die das britische Original von *House Of Cards* liebten, ebenfalls Filme lieben, bei denen Kevin Spacey mitspielt oder die unter der Regie von David Fincher entstanden sind.
+
+Die Argumente waren also:
+- Die britische Version von *House of Cards* hatte ein großes Publikum,
+- *The Social Network*, bei dem David Fincher Regie geführt hat, hatte ein großes Publikum,
+- Nutzer, die die britische Version von *House Of Cards* geschaut haben, schauten oft auch Filme mit Kevin Spacey und/oder Filem, die unter der Regie von David Fincher entstanden sind.
+
+Somit sollte das Remake der Serie, die für 13 Episoden 100 Millionen Dollar gekostet hat, ein Kinderspiel werden.
+
+Verglichen zu traditionellen Studios, die außer den verkauften Tickets und DVDs kein Feedback ihrer Kunden bekommen, ist Netflix, was das Feedback und die Analyse angeht, Welten voraus. Netflix muss vor der Produktion eines Film oder einer Serie nicht mehr ahnen, was die Nutzer sehen wollen, sondern stützt sich auf ihre Analysen. Sie können die Daten sogar bis auf die Postleitzahl herunterbrechen und herausfinden, welche Shows mit welchen Schauspielern die Nutzer gerne sehen.
+
+Die traditionellen Studios haben einen großen Nachteil. Einer der größten Posten bei den Kosten einer Filmproduktion ist das Marketing. Es gibt aber keine Möglichkeit herauszufinden, welche der Marketingstragien erfolreich waren und welche nicht und ob es das Marketing überhaupt etwas bringt. Es können auch Millionen ins Marketing fließen und der Film wird trotzdem ein Flop.
+
+Netflix hat es geschafft, eine Brücke zwischen Nutzern und Produzenten zu bauen. Das Team, das entscheidet, was produziert wird, kann sich ganz einfach an den Daten der Nutzer orientieren.
+
   
 ## Cambridge Analytica ##
 
-Zum Grauen vieler zog zu Beginn des Dezembers 2016 ein Artikel mit dem Titel „Ich habe nur gezeigt, dass es die Bombe gibt“[^cf8] seine Runde durch die verschiedensten Sozialen Medien. In ihm wird erläutert wie psychologische Methoden und öffentlich und zugänglich oder erwerbbare Daten von der Firma [„Cambridge Analytica“ (CA)](https://cambridgeanalytica.org/) genutzt wurden um Donald Trump zum Sieg über Hillary Clinton in den Präsidentschaftswahlen der U.S.A. von 2016  zu verhelfen. Ob dies wirklich eins zu eins so statt fand soll an dieser Stelle bezweifelt werden. (Siehe WDR Blog[^cf9], Spiegel Online[^cf10], wired.com[^cf11], bloomberg.com[^cf12] oder spektrum.de[^cf13])Es gibt einige Tatsachen die dagegen sprechen. Dennoch erweckt dies so sehr die Aufmerksamkeit der Autoren, dass hier einmal die Methoden und der Technologie Stack dieser Firma so weit es geht unter die Lupe genommen werden soll.   
+Zum Grauen vieler zog zu Beginn des Dezembers 2016 ein Artikel mit dem Titel „Ich habe nur gezeigt, dass es die Bombe gibt“[^cf8] seine Runde durch die verschiedensten Sozialen Medien. In ihm wird erläutert wie psychologische Methoden und öffentlich und zugänglich oder erwerbbare Daten von der Firma [„Cambridge Analytica“ (CA)](https://cambridgeanalytica.org/) genutzt wurden um Donald Trump zum Sieg über Hillary Clinton in den Präsidentschaftswahlen der U.S.A. von 2016  zu verhelfen. Ob dies wirklich eins zu eins so statt fand soll an dieser Stelle bezweifelt werden. (Siehe WDR Blog[^cf9], Spiegel Online[^cf10], wired.com[^cf11], bloomberg.com[^cf12] oder spektrum.de[^cf13])Es gibt einige Tatsachen die dagegen sprechen. So ist ein Artikel dessen gesamte Beweisführung sich auf die Aussagen von zwei Personen stützt, von denen eine noch ein großes Interesse daran hat genau so wahrgenommen zu werden, wenig fundiert. Ebenfalls trifft der Artikel einen bestimmten Nerv, schlägt genau in die Richtige Kerbe zum Richtigen Zeitpunkt. Nach einem langen und schmutzigen Wahlkampf, gewinnt der von dem es die wenigsten geglaubt hätten. Da ist es nur recht und billig einen Sündenbock zu finden. Nicht soziale Spannung die wir uns nicht vorstellen können war es, es muss eine neue bisher unbekannte Technologie (vielleicht eine künstliche Intelligenz?) gewesen sein und irgendwie spielen unsere Daten die Facebook über uns sammelt da mit .  
+Dennoch erweckt dies so sehr die Aufmerksamkeit der Autoren, dass hier einmal die Methoden und der Technologie Stack dieser Firma so weit es geht unter die Lupe genommen werden soll.   
 
-### Die Behauptung.  
+### Die Dienstleistung  
 
 Nach eigenen Aussagen kann die Firma CA hinzugezogen werden um auf eine neue Weise Kontakt zu seinem Publikum aufzunehmen. Auf ihrer Website versprechen sie bis zu 5000 Daten Punkten pro Person (derzeit nur US Bürger) zu sammeln und deren Verhalten auf Grund von verschiedenen Modellen vorauszusagen. 
 > ## 5,000 data points per person  
 > We collect up to 5,000 data points on over 220 million Americans, and use more than 100 data variables to model target audience groups and predict the behavior of like-minded people.[^cf14]
 
-### Technologie Stack  
+Laut Angaben von Alexander Nix (CEO CA) auf dem 2016 Concordia Summit[^cf15], werden Demographische Daten Verbraucher-Daten und Daten aus dem Bereich Lifestyle mit psychographischen Daten von Unternehmen wie [acxiom](http://www.acxiom.com/), [infogroup](http://www.infogroup.com/), [Experian](http://www.experian.com/), [data trust](http://thedatatrust.com/), [Facebook](https://www.facebook.com/), [L2](http://www.l2political.com/), [Aristotle](http://aristotle.com/), GOP, MRI , [Nielsen](http://www.nielsen.com/), [Magellan strategies](http://magellanstrategies.com/) verbunden.  
+
+### Der Technologie Stack  
 
 Natürlich lässt eine Firma wie CA sich nicht direkt in die Karten schauen. Aus den Stellenangeboten für Data Engineers und besonders für Data Scientists auf ihrer Seite lassen sich jedoch einige Schlüsse ziehen. Bei Datenbanken werden Erfahrungen und Fähigkeiten im Umgang mit  MySQL und, aus dem Sektor der NoSQL Datenbanken, MongoDB erwünscht. Im Bereich Big Data scheinen die Frameworks Spark und Hadoop zum Einsatz zu kommen und die gewünschten Sprachen sind Python, Java oder Scala und entsprechenden Objekt Orientierten Programmier Paradigmen. Des weiteren natürlich der Umgang mit Versions Kontroll Systemen.   
 
-#### Datenbanken
+#### Speicherung
 
-Wenn die Behauptung der Firma CA stimmt ist es offensichtlich, dass ein relationale Datenbank nicht ausreicht um diese 4000 Datenpunkte zu speichern. Auch die Analyse kann nicht auf einer einzelnen Maschine stattfinden. Hier kommt das Hadoop Distributed File System (HDFS) zum Einsatz. Hadoop ist ein Open Source (Java) Projekt, welches von Googles proprietären Google File System (GFS) und dem MapReduce Framework inspiriert wurde.  Mit diesem System können sehr große Datensätze zuverlässig gespeichert werden und mit hoher Bandbreite an Anwendungen, sogenannte HDFS Clients, übertragen werden. Die HDFS Architektur besteht aus einem einzelnen NameNode, vielen DataNodes und dem HDFS Client. Der NameNode organisiert die Anfragen und die Ablage von Daten von den DataNodes durch die Clients. Das Hadoop MapReduce Framework wurde entworfen um Speicherung- und Berechnungsaufgaben über viele tausend Server zu verteilen und bei Bedarf zu skalieren.[^cf15] Das Hadoop System ist die Infrastruktur zum handhaben dieser Datenmengen. Zur Analyse dieser Daten könnte dann, wie ebenfalls aus den Anforderungen der Stellenbeschreibung hervorgeht, das Spark Framework verwendet werden. WAS IST SPARK  
-# Ausblick #  
+Wenn die Behauptung der Firma CA stimmt ist es offensichtlich, dass ein relationale Datenbank nicht ausreicht um diese 4000 Datenpunkte zu speichern. Auch die Analyse kann nicht auf einer einzelnen Maschine stattfinden. Hier kommt das Hadoop Distributed File System (HDFS) zum Einsatz. Hadoop ist ein Open Source (Java) Projekt, welches von Googles proprietären Google File System (GFS) und dem MapReduce Framework inspiriert wurde.  Mit diesem System können sehr große Datensätze zuverlässig gespeichert werden und mit hoher Bandbreite an Anwendungen, sogenannte HDFS Clients, übertragen werden. Die HDFS Architektur besteht aus einem einzelnen NameNode, vielen DataNodes und dem HDFS Client. Der NameNode organisiert die Anfragen und die Ablage von Daten von den DataNodes durch die Clients. Das Hadoop MapReduce Framework wurde entworfen um Speicherung- und Berechnungsaufgaben über viele tausend Server zu verteilen und bei Bedarf zu skalieren.[^cf16] 
+
+#### Analyse  
+
+Das Hadoop System ist die Infrastruktur zum handhaben dieser Datenmengen. Zur Analyse dieser Daten könnte dann, wie ebenfalls aus den Anforderungen der Stellenbeschreibung hervorgeht, das Apache Spark Framework verwendet werden. Mit Spark können Daten aus einer vielen verschiedenen Quellen verarbeitet werden. Zum Beispiel auch aus dem HDFS, aber auch aus NoSQL Datenbank Systemen oder relationalen  Datenbanken. Mit Spark können Daten aus dem HDFS schneller verarbeitet werden und es existieren flexiblere Alternativen zum Hadoop MapReduce Verfahren.
+MapReduce ist ein Verfahren welches von Google für große Datenmengen entworfen wurde. Map: Daten werden über einen Cluster von Rechner verteilt nach einer bestimmten Funktion abgearbeitet. Reduce: Die einzelnen Teile des Clusters liefern nur einen Wert zurück.[^cf17] wirdSpark kommt gebündelt mit einer Bibliothek für maschinelles Lernen (MLib), was immer iterative Prozesses bedeutet, hat eine REPL (Read Eval Print Listen) Schnittstelle und kann ähnlich wir R oder Python explorativ für statistische Aufgaben verwendet werden.[^cf18] Seid Anfang 2014 gilt Spark als Top Level Project bei der Apache Foundation[^cf19]  
+# Ausblick #
+
+Algorithmen, maschinelles Lernen und Künstliche Intelligenz halten Einzug in jeden Bereich unseres Lebens. Automatisiertes Handel ist schon seit Jahren üblich. Daten Wissenschaften sind ein neues Feld von Studien. Wo mag uns dies alles hin leiten?  
+Es ist schwer abzusehen was in den nächsten 5, 10, 15 Jahren auf diesen Feldern passieren wird. Eines ist jedoch klar. Die Mengen an Daten werden nicht geringer. Mit dem Bereich des „Internet of Things“ (IoT) kommen laut Gartner bis  im Jahr 2020 mehr als 20 Milliarde Geräte ans Netz.[^cf20] Ältere Voraussagen gingen noch von 75 Milliarde Geräte[^cf21]. All diese Objekte werden Daten erzeugen, an einen Server spielen oder sie durch ihn hin druchleiten und dann? Genauso werden die Sozialen Netzwerke versuchen immer weiter in unser Leben einzudringen. Die Idee von Facebook solargetriebene Flugzeuge, die Internet Zugang bis in die entlegensten Winkel der Welt bringen, zu bauen, ist bestimmt nicht aus reinem Altruismus geboren.[^cf22] Wer das Netz liefert kann auch sehen was gesehen wird. Basierend auf diesen Informationen werden für alle Bereiche des Lebens Modelle unseres Verhaltens und unserer Vorlieben entwickelt um uns noch besser kontrollieren zu können. Sei es um uns Serien zu liefern die genau unseren Interessen entsprechen, oder um die richtige Partie zu wählen.   
 # Fazit #
 
 ----
 
 # Quellen #
 
-Quellen
+Ende
 
 [^cf1]: Oremus, Will. "Who Really Controls What You See in Your Facebook Feed—and Why They Keep Changing It   ." Slate Magazine. Slate.com, 03 Jan. 2016. Web. 08 Jan. 2017. <http://www.slate.com/articles/technology/cover_story/2016/01/how_facebook_s_news_feed_algorithm_works.html>.
 
@@ -124,4 +186,18 @@ Quellen
 
 [^cf14]: N.a. "Cambridge Analytica – About Us." Cambridgeanalytica.org. 10 Jan. 2017. Web. 15 Jan. 2017. <https://cambridgeanalytica.org/about>
 
-[^cf15]: Shvachko, Konstantin, et al. "The hadoop distributed file system." 2010 IEEE 26th symposium on mass storage systems and technologies (MSST). IEEE, 2010.
+[^cf15]: YouTube. "The Power of Big Data and Psychographics." YouTube. 27 Sept. 2016. Web. 22 Jan. 2017. <https://www.youtube.com/watch?v=n8Dd5aVXLCc>
+
+[^cf16]: Shvachko, Konstantin, et al. "The hadoop distributed file system." 2010 IEEE 26th symposium on mass storage systems and technologies (MSST). IEEE, 2010.
+
+[^cf17]: Dean, Jeffrey, and Sanjay Ghemawat. "MapReduce: simplified data processing on large clusters." Communications of the ACM 51.1 (2008): 107-113.
+
+[^cf18]: Sean Owen. "Why Apache Spark is a Crossover Hit for Data Scientists - Cloudera Engineering Blog." Cloudera Engineering Blog. 3 Mar. 2014. Web. 22 Jan. 2017. <http://blog.cloudera.com/blog/2014/03/why-apache-spark-is-a-crossover-hit-for-data-scientists/>
+
+[^cf19]: N.a. "The Apache Software Foundation Announces Apache™ Spark™ as a Top-Level Project : The Apache Software Foundation Blog." Blogs.apache.org. 20 Jan. 2017. Web. 22 Jan. 2017. <https://blogs.apache.org/foundation/entry/the_apache_software_foundation_announces50>
+
+[^cf20]: N.a. "Gartner Says 6.4 Billion Connected ." Gartner.com. n.d. Web. 22 Jan. 2017. <http://www.gartner.com/newsroom/id/3165317>
+
+[^cf21]: Tony Danova. "Morgan Stanley: 75 Billion Devices Will Be Connected To The Internet Of Things By 2020." Business Insider. 2 Oct. 2013. Web. 22 Jan. 2017. <http://www.businessinsider.com/75-billion-devices-will-be-connected-to-the-internet-by-2020-2013-10>
+
+[^cf22]: Larry Dignan. "Facebook's 10-year roadmap outlined, eyes AI, VR, Internet access infrastructure | ZDNet." ZDNet. 12 Apr. 2016. Web. 22 Jan. 2017. <http://www.zdnet.com/article/facebooks-10-year-roadmap-outlined-eyes-ai-vr-internet-access-infrastructure/>

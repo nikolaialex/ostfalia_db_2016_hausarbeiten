@@ -86,21 +86,29 @@ Netflix hat es geschafft, eine Brücke zwischen Nutzern und Produzenten zu bauen
         </Document>
         <Document ID="33">
             <Title>Cambridge Analytica</Title>
-            <Text>Zum Grauen vieler zog zu Beginn des Dezembers 2016 ein Artikel mit dem Titel „Ich habe nur gezeigt, dass es die Bombe gibt“ seine Runde durch die verschiedensten Sozialen Medien. In ihm wird erläutert wie psychologische Methoden und öffentlich und zugänglich oder erwerbbare Daten von der Firma [„Cambridge Analytica“ (CA)](https://cambridgeanalytica.org/) genutzt wurden um Donald Trump zum Sieg über Hillary Clinton in den Präsidentschaftswahlen der U.S.A. von 2016  zu verhelfen. Ob dies wirklich eins zu eins so statt fand soll an dieser Stelle bezweifelt werden. (Siehe WDR Blog, Spiegel Online, wired.com, bloomberg.com oder spektrum.de)Es gibt einige Tatsachen die dagegen sprechen. Dennoch erweckt dies so sehr die Aufmerksamkeit der Autoren, dass hier einmal die Methoden und der Technologie Stack dieser Firma so weit es geht unter die Lupe genommen werden soll.   
+            <Text>Zum Grauen vieler zog zu Beginn des Dezembers 2016 ein Artikel mit dem Titel „Ich habe nur gezeigt, dass es die Bombe gibt“ seine Runde durch die verschiedensten Sozialen Medien. In ihm wird erläutert wie psychologische Methoden und öffentlich und zugänglich oder erwerbbare Daten von der Firma [„Cambridge Analytica“ (CA)](https://cambridgeanalytica.org/) genutzt wurden um Donald Trump zum Sieg über Hillary Clinton in den Präsidentschaftswahlen der U.S.A. von 2016  zu verhelfen. Ob dies wirklich eins zu eins so statt fand soll an dieser Stelle bezweifelt werden. (Siehe WDR Blog, Spiegel Online, wired.com, bloomberg.com oder spektrum.de)Es gibt einige Tatsachen die dagegen sprechen. So ist ein Artikel dessen gesamte Beweisführung sich auf die Aussagen von zwei Personen stützt, von denen eine noch ein großes Interesse daran hat genau so wahrgenommen zu werden, wenig fundiert. Ebenfalls trifft der Artikel einen bestimmten Nerv, schlägt genau in die Richtige Kerbe zum Richtigen Zeitpunkt. Nach einem langen und schmutzigen Wahlkampf, gewinnt der von dem es die wenigsten geglaubt hätten. Da ist es nur recht und billig einen Sündenbock zu finden. Nicht soziale Spannung die wir uns nicht vorstellen können war es, es muss eine neue bisher unbekannte Technologie (vielleicht eine künstliche Intelligenz?) gewesen sein und irgendwie spielen unsere Daten die Facebook über uns sammelt da mit .  
+Dennoch erweckt dies so sehr die Aufmerksamkeit der Autoren, dass hier einmal die Methoden und der Technologie Stack dieser Firma so weit es geht unter die Lupe genommen werden soll.   
 
-### Die Dienstleistung.  
+### Die Dienstleistung  
 
 Nach eigenen Aussagen kann die Firma CA hinzugezogen werden um auf eine neue Weise Kontakt zu seinem Publikum aufzunehmen. Auf ihrer Website versprechen sie bis zu 5000 Daten Punkten pro Person (derzeit nur US Bürger) zu sammeln und deren Verhalten auf Grund von verschiedenen Modellen vorauszusagen. 
 &gt; ## 5,000 data points per person  
 &gt; We collect up to 5,000 data points on over 220 million Americans, and use more than 100 data variables to model target audience groups and predict the behavior of like-minded people.
 
+Laut Angaben von Alexander Nix (CEO CA) auf dem 2016 Concordia Summit, werden Demographische Daten Verbraucher-Daten und Daten aus dem Bereich Lifestyle mit psychographischen Daten von Unternehmen wie [acxiom](http://www.acxiom.com/), [infogroup](http://www.infogroup.com/), [Experian](http://www.experian.com/), [data trust](http://thedatatrust.com/), [Facebook](https://www.facebook.com/), [L2](http://www.l2political.com/), [Aristotle](http://aristotle.com/), GOP, MRI , [Nielsen](http://www.nielsen.com/), [Magellan strategies](http://magellanstrategies.com/) verbunden.  
+
 ### Der Technologie Stack  
 
 Natürlich lässt eine Firma wie CA sich nicht direkt in die Karten schauen. Aus den Stellenangeboten für Data Engineers und besonders für Data Scientists auf ihrer Seite lassen sich jedoch einige Schlüsse ziehen. Bei Datenbanken werden Erfahrungen und Fähigkeiten im Umgang mit  MySQL und, aus dem Sektor der NoSQL Datenbanken, MongoDB erwünscht. Im Bereich Big Data scheinen die Frameworks Spark und Hadoop zum Einsatz zu kommen und die gewünschten Sprachen sind Python, Java oder Scala und entsprechenden Objekt Orientierten Programmier Paradigmen. Des weiteren natürlich der Umgang mit Versions Kontroll Systemen.   
 
-#### Datenbanken
+#### Speicherung
 
-Wenn die Behauptung der Firma CA stimmt ist es offensichtlich, dass ein relationale Datenbank nicht ausreicht um diese 4000 Datenpunkte zu speichern. Auch die Analyse kann nicht auf einer einzelnen Maschine stattfinden. Hier kommt das Hadoop Distributed File System (HDFS) zum Einsatz. Hadoop ist ein Open Source (Java) Projekt, welches von Googles proprietären Google File System (GFS) und dem MapReduce Framework inspiriert wurde.  Mit diesem System können sehr große Datensätze zuverlässig gespeichert werden und mit hoher Bandbreite an Anwendungen, sogenannte HDFS Clients, übertragen werden. Die HDFS Architektur besteht aus einem einzelnen NameNode, vielen DataNodes und dem HDFS Client. Der NameNode organisiert die Anfragen und die Ablage von Daten von den DataNodes durch die Clients. Das Hadoop MapReduce Framework wurde entworfen um Speicherung- und Berechnungsaufgaben über viele tausend Server zu verteilen und bei Bedarf zu skalieren. Das Hadoop System ist die Infrastruktur zum handhaben dieser Datenmengen. Zur Analyse dieser Daten könnte dann, wie ebenfalls aus den Anforderungen der Stellenbeschreibung hervorgeht, das Spark Framework verwendet werden. WAS IST SPARK</Text>
+Wenn die Behauptung der Firma CA stimmt ist es offensichtlich, dass ein relationale Datenbank nicht ausreicht um diese 4000 Datenpunkte zu speichern. Auch die Analyse kann nicht auf einer einzelnen Maschine stattfinden. Hier kommt das Hadoop Distributed File System (HDFS) zum Einsatz. Hadoop ist ein Open Source (Java) Projekt, welches von Googles proprietären Google File System (GFS) und dem MapReduce Framework inspiriert wurde.  Mit diesem System können sehr große Datensätze zuverlässig gespeichert werden und mit hoher Bandbreite an Anwendungen, sogenannte HDFS Clients, übertragen werden. Die HDFS Architektur besteht aus einem einzelnen NameNode, vielen DataNodes und dem HDFS Client. Der NameNode organisiert die Anfragen und die Ablage von Daten von den DataNodes durch die Clients. Das Hadoop MapReduce Framework wurde entworfen um Speicherung- und Berechnungsaufgaben über viele tausend Server zu verteilen und bei Bedarf zu skalieren. 
+
+#### Analyse  
+
+Das Hadoop System ist die Infrastruktur zum handhaben dieser Datenmengen. Zur Analyse dieser Daten könnte dann, wie ebenfalls aus den Anforderungen der Stellenbeschreibung hervorgeht, das Apache Spark Framework verwendet werden. Mit Spark können Daten aus einer vielen verschiedenen Quellen verarbeitet werden. Zum Beispiel auch aus dem HDFS, aber auch aus NoSQL Datenbank Systemen oder relationalen  Datenbanken. Mit Spark können Daten aus dem HDFS schneller verarbeitet werden und es existieren flexiblere Alternativen zum Hadoop MapReduce Verfahren.
+MapReduce ist ein Verfahren welches von Google für große Datenmengen entworfen wurde. Map: Daten werden über einen Cluster von Rechner verteilt nach einer bestimmten Funktion abgearbeitet. Reduce: Die einzelnen Teile des Clusters liefern nur einen Wert zurück. wirdSpark kommt gebündelt mit einer Bibliothek für maschinelles Lernen (MLib), was immer iterative Prozesses bedeutet, hat eine REPL (Read Eval Print Listen) Schnittstelle und kann ähnlich wir R oder Python explorativ für statistische Aufgaben verwendet werden. Seid Anfang 2014 gilt Spark als Top Level Project bei der Apache Foundation</Text>
             <Comments>Von Hannes Grassegger Und Mikael Krogerus. "Ich habe nur gezeigt, dass es die Bombe gibt - Das Magazin." Das Magazin. 3 Dec. 2016. Web. 8 Jan. 2017. &lt;https://www.dasmagazin.ch/2016/12/03/ich-habe-nur-gezeigt-dass-es-die-bombe-gibt/&gt;
 Horn, Dennis. "Hat wirklich der große Big-Data-Zauber Trump zum Präsidenten gemacht?." Digitalistan. 5 Dec. 2016. Web. 9 Jan. 2017. &lt;https://blog.wdr.de/digitalistan/hat-wirklich-der-grosse-big-data-zauber-trump-zum-praesidenten-gemacht/&gt;
 Spiegel Online, Hamburg, Germany. "US-Wahl und Daten-Ingenieure: Ich ganz allein habe Trump ins Amt gebracht - SPIEGEL ONLINE - Netzwelt." SPIEGEL ONLINE. 5 Dec. 2016. Web. 9 Jan. 2017. &lt;http://www.spiegel.de/netzwelt/netzpolitik/donald-trump-und-die-daten-ingenieure-endlich-eine-erklaerung-mit-der-alles-sinn-ergibt-a-1124439.html&gt;
@@ -108,7 +116,11 @@ Issie Lapowsky. "A Lot of People Are Saying Trump’s New Data Team Is Shady." W
 Bershidsky, Leonid. "No, Big Data Didn't Win the U.S. Election." Bloomberg View. 8 Dec. 2016. Web. 9 Jan. 2017. &lt;https://www.bloomberg.com/view/articles/2016-12-08/no-big-data-didn-t-win-the-u-s-election&gt;
 Eva Wolfangel. "Big Data: Haben psychologische Facebookdaten Trumps Sieg verursacht?." Spektrum.de. n.d. Web. 9 Jan. 2017. &lt;http://www.spektrum.de/kolumne/haben-psychologische-facebookdaten-trumps-sieg-verursacht/1431745&gt;
 N.a. "Cambridge Analytica – About Us." Cambridgeanalytica.org. 10 Jan. 2017. Web. 15 Jan. 2017. &lt;https://cambridgeanalytica.org/about&gt;
-Shvachko, Konstantin, et al. "The hadoop distributed file system." 2010 IEEE 26th symposium on mass storage systems and technologies (MSST). IEEE, 2010.</Comments>
+YouTube. "The Power of Big Data and Psychographics." YouTube. 27 Sept. 2016. Web. 22 Jan. 2017. &lt;https://www.youtube.com/watch?v=n8Dd5aVXLCc&gt;
+Shvachko, Konstantin, et al. "The hadoop distributed file system." 2010 IEEE 26th symposium on mass storage systems and technologies (MSST). IEEE, 2010.
+Dean, Jeffrey, and Sanjay Ghemawat. "MapReduce: simplified data processing on large clusters." Communications of the ACM 51.1 (2008): 107-113.
+Sean Owen. "Why Apache Spark is a Crossover Hit for Data Scientists - Cloudera Engineering Blog." Cloudera Engineering Blog. 3 Mar. 2014. Web. 22 Jan. 2017. &lt;http://blog.cloudera.com/blog/2014/03/why-apache-spark-is-a-crossover-hit-for-data-scientists/&gt;
+N.a. "The Apache Software Foundation Announces Apache™ Spark™ as a Top-Level Project : The Apache Software Foundation Blog." Blogs.apache.org. 20 Jan. 2017. Web. 22 Jan. 2017. &lt;https://blogs.apache.org/foundation/entry/the_apache_software_foundation_announces50&gt;</Comments>
         </Document>
         <Document ID="26">
             <Title>Example Essay</Title>
@@ -228,6 +240,9 @@ http://www.swccd.edu/~library/Pdfs/MLA6thEd.pdf</Text>
         <Document ID="27">
             <Title>MLA Format Notes</Title>
         </Document>
+        <Document ID="42">
+            <Title>Cambridge Analytica-1</Title>
+        </Document>
         <Document ID="35">
             <Title>05_Quellen</Title>
         </Document>
@@ -298,7 +313,7 @@ Quelle 2016 Concordia Summit, Alexander Nix, [youtube](https://www.youtube.com/w
 | Education                          | Lifestyle Data                          |
 | Income                             | Buying Styles/Patterns                  |
 | Home-owner                         | Civic / Political Engagement Segments   |
-| socio-economicstatus               | Cellular / Mobil Opinions               |
+| socio-economic status               | Cellular / Mobil Opinions               |
 | Geographic factors                 | x                                       |
 
 Firmen von denen Daten aggregiert werden: [acxiom](http://www.acxiom.com/), [infogroup](http://www.infogroup.com/), [Experian](http://www.experian.com/), [data trust](http://thedatatrust.com/), [Facebook](https://www.facebook.com/), [L2](http://www.l2political.com/), [Aristotle](http://aristotle.com/), GOP, MRI , [Nielsen](http://www.nielsen.com/), [Magellan strategies](http://magellanstrategies.com/)  
@@ -413,6 +428,11 @@ Scrivener project templates are flexible and are not intended to restrict you to
         </Document>
         <Document ID="39">
             <Title>Ausblick</Title>
+            <Text>Algorithmen, maschinelles Lernen und Künstliche Intelligenz halten Einzug in jeden Bereich unseres Lebens. Automatisiertes Handel ist schon seit Jahren üblich. Daten Wissenschaften sind ein neues Feld von Studien. Wo mag uns dies alles hin leiten?  
+Es ist schwer abzusehen was in den nächsten 5, 10, 15 Jahren auf diesen Feldern passieren wird. Eines ist jedoch klar. Die Mengen an Daten werden nicht geringer. Mit dem Bereich des „Internet of Things“ (IoT) kommen laut Gartner bis  im Jahr 2020 mehr als 20 Milliarde Geräte ans Netz. Ältere Voraussagen gingen noch von 75 Milliarde Geräte. All diese Objekte werden Daten erzeugen, an einen Server spielen oder sie durch ihn hin druchleiten und dann? Genauso werden die Sozialen Netzwerke versuchen immer weiter in unser Leben einzudringen. Die Idee von Facebook solargetriebene Flugzeuge, die Internet Zugang bis in die entlegensten Winkel der Welt bringen, zu bauen, ist bestimmt nicht aus reinem Altruismus geboren. Wer das Netz liefert kann auch sehen was gesehen wird. Basierend auf diesen Informationen werden für alle Bereiche des Lebens Modelle unseres Verhaltens und unserer Vorlieben entwickelt um uns noch besser kontrollieren zu können. Sei es um uns Serien zu liefern die genau unseren Interessen entsprechen, oder um die richtige Partie zu wählen. </Text>
+            <Comments>N.a. "Gartner Says 6.4 Billion Connected ." Gartner.com. n.d. Web. 22 Jan. 2017. &lt;http://www.gartner.com/newsroom/id/3165317&gt;
+Tony Danova. "Morgan Stanley: 75 Billion Devices Will Be Connected To The Internet Of Things By 2020." Business Insider. 2 Oct. 2013. Web. 22 Jan. 2017. &lt;http://www.businessinsider.com/75-billion-devices-will-be-connected-to-the-internet-by-2020-2013-10&gt;
+Larry Dignan. "Facebook's 10-year roadmap outlined, eyes AI, VR, Internet access infrastructure | ZDNet." ZDNet. 12 Apr. 2016. Web. 22 Jan. 2017. &lt;http://www.zdnet.com/article/facebooks-10-year-roadmap-outlined-eyes-ai-vr-internet-access-infrastructure/&gt;</Comments>
         </Document>
         <Document ID="31">
             <Title>Data Science In der Anwendung</Title>

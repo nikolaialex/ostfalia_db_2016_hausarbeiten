@@ -27,13 +27,13 @@ Dies gelang Ihnen, indem sie Menschen engagiert haben, die Filme schauen und die
 Die ausgebildeten Filmeschauer bewerten dutzende von Eigenschaften, darunter auch den Moralstatus der Charaktere. Diese Eigenschaften werden mit den Gewohnheiten der Netflix User kombiniert, woraus ein großer Wettbewerbsvorteil für Netflix entsteht.
 
 
-![Alternativer Text](bild1)
+![adjectives](./images/adjectives.png)  
 
 Durch den Alghorithmus hat Netflix eine neue Form des Empfehlens geschaffen.
 
 Früher liefen Empfehlungen laut Atlantic überwiegend nach dem kollaborativen Empfehlungssystems ab. Für das kollaborative Filtern werden auch andere Benutzer berücksichtigt. Wenn zum Beispiel Anna Film 1 mit 3 Sternen, Film 3 mit 4 Sternen und Film 5 mit 2 Sternen bewertet hat und Julia Film 1 mit 2 Sternen, Film 3 mit 5 Sternen, Film 4 mit 4 Sternen und Film 5 mit 1 Stern bewertet hat, dann scheinen die beiden Benutzer Anna und Julia ähnlich zu sein und Anna kann der Film 4 vorgeschlagen werden, den sie noch nicht gesehen hat.
 
-![Alternativer Text](images/kollaborativesFiltern)
+![kollaboratives Filtern](./images/kollaborativesFiltern.png)  
 
 Bei dem kollaborativen Empfehlungssystem wurde versucht vorherzusagen, wie viele Sterne man einem Film geben würde. Dafür musste man möglichst viele Filme bewerten, um daraus überhaupt eine Tendenz und ein Profil des Nutzers erstellen zu können.
 
