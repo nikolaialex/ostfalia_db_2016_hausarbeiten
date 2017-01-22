@@ -18,3 +18,5 @@
 [^db4o]: https://sourceforge.net/projects/db4o/
 [^mcobject]: http://www.mcobject.com/
 [^wikiorm]: https://en.wikipedia.org/wiki/List_of_object-relational_mapping_software
+
+<!-- Footer Heiko -->

@@ -28,7 +28,7 @@ Das Entity Relationship-Modell sieht für Entitäten ferner auch das Konzept der
 -	Disjunkte Subentitätsmengen
 -	Disjunkt-vollständige Subentitätsmengen
 
-. Diese Formen der Mengendarstellung müssen von der Transformation zum Relationalen Modell berücksichtigt werden. (vgl. @meier2016nosql S.33)
+. Diese Formen der Mengendarstellung müssen von der Transformation zum Relationalen Modell berücksichtigt werden. (vgl. @meier2016nosql S. 33)
 
 Zwischen den Entitätsmengen können unterschiedliche Beziehungen (engl. relationships) existieren. Die Beziehungen bilden eine Beziehungsmenge, die wiederum durch  Merkmale näher charakterisiert werden können. Beziehungen werden durch Assoziationen näher beschrieben, die wiederum durch Assoziationstypen spezifiziert werden. Die nachstehenden Assoziationstypen sind im ER-Modell definiert:
 
