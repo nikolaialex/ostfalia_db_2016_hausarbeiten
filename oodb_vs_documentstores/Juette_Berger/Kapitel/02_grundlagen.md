@@ -4,7 +4,152 @@ Zuerst werden Relationale Datenbankmanagementsysteme betrachtet, da diese aktuel
 In Kapitel 2.2 werden die Objektorientierten Datenbanken vorgestellt und in 2.3 die Dokumentdatenbanken.
 
 ## 2.1 Relationale Datenbankmanagementsysteme
-HIER FEHLT NOCH DER INHALT VON HEIKO.
+
+Das Unterkapitel 2.1 soll grundlegende Informationen zur Organisation und Speicherung von Daten nach dem relationalen Ansatz darlegen. Dazu werden das Entity Relationship- und das Relationale Modell betrachtet. Es werden somit ausschließlich diejenigen Aspekte thematisiert, die eine Einflussnahme auf die Modellierung der Datenrepräsentation haben. Konkret bezieht sich dieses Kapitel  auf die konzeptionelle und logische Ebene der Datenabbildung durch das RDBMS.    
+
+Die Modellierung der Daten für eine relationale Abbildung erfolgt in drei Schritten. Diese bestehen aus der Datenanalyse, dem Entwurf des Entity Relationship-Modell und den Transfer in das relationale Modell. Das physische Modell dient der Beschreibung der Transition des konzeptionellen Datenmodells auf die Datenbankebene. Schlussendlich liegt das relationale Datenmodell in die DB-spezifische Ausprägung vor. @@ QUELLE Die Abbildung 1 stellt den Ablauf der Modellierungsschritte dar und ordnet den jeweiligen allgemeingültigen Ebenenbegriff des Datenbankmodells zu.
+
+![Abbildung 1: Schematische Darstellung des relationalen Modellierungsprozesses][kap2_abb1_prozess]
+
+### 2.1.1	Das Entity Relationship Modell
+
+Das Entity Relationship Modell (ER) ist die initiale Abbildung der zu modellierenden Daten und deren Abhängigkeiten oder Zugehörigkeiten untereinander. Im Kontext des ER-Modells werden die Termini  
+-	Entität
+-	Entitätsmenge
+
+eingeführt. „Unter Entität (engl. entity) versteht man ein bestimmtes, d.h. von anderen wohlunterscheidbares Objekt der realen Welt oder unserer Vorstellung. Dabei kann es sich um ein Individuum, um einen Gegenstand, um einen abstrakten Begriff oder um ein Ereignis handeln (@meier2016nosql S. 20)". Dementgegen definiert sich der Begriff Entitätsmenge wie folgt: „Entitäten des gleichen Typs werden zu Entitätsmengen zusammengefasst und durch Merkmale weiter charakterisiert (@meier2016nosql S. 20)“.
+
+Um eine Entität in der Entitätsmenge identifizieren zu können, ist ein Merkmal oder Merkmalskombination zu bestimmen, welches als Identifikationsschlüssel fungiert. Der dazu bestimmte Schlüssel muss das Kriterium der Eindeutig erfüllen. Sobald ein Identitätsschlüssel für eine Entitätsmenge zwei Entitäten zugeordnet werden kann, besteht keine Eindeutigkeit.
+
+Das Entity Relationship-Modell sieht für Entitäten ferner auch das Konzept der Generalisierung und Aggregation vor, indem Daten vom Detail ausgehend abstrahiert werden oder durch Submengenbildung als Spezialisierungen gelten können. Für die Generalisierung existieren mehrere Formen auf:
+
+-	Überlappende Subentitätsmengen
+-	Überlappend-vollständige Subentitätsmengen
+-	Disjunkte Subentitätsmengen
+-	Disjunkt-vollständige Subentitätsmengen
+
+. Diese Formen der Mengendarstellung müssen von der Transformation zum Relationalen Modell berücksichtigt werden. (vgl. @meier2016nosql S.33)
+
+Zwischen den Entitätsmengen können unterschiedliche Beziehungen (engl. relationships) existieren. Die Beziehungen bilden eine Beziehungsmenge, die wiederum durch  Merkmale näher charakterisiert werden können. Beziehungen werden durch Assoziationen näher beschrieben, die wiederum durch Assoziationstypen spezifiziert werden. Die nachstehenden Assoziationstypen sind im ER-Modell definiert:
+
+-	einfache Assoziation (genau ein Tupel)
+-	konditionelle Assoziationen (kein oder genau ein Tupel)
+-	multiple Assoziationen (mindestens ein Tupel)
+-	multiple-konditionelle Assoziationen (beliebig viele Tupel)
+
+. Die o.g. Assoziationstypen ermöglichen unterschiedliche Arten von Beziehungen. Grundsätzlich existiert zu jeder Assoziation eine Gegenassoziation. Man spricht von einer Beziehung, wenn zwei Assoziationen miteinander kombiniert werden. Es können hierarchische, konditionelle oder netzwerkförmige Beziehungen definiert werden. Über Entitätsblockdiagramme werden die Beziehungen visualisiert. Die Abbildung 2 und Abbildung 3 sind Beispiele für die Blockdiagramme. (vgl. @steiner2006rdbs S. 19)
+
+![Abbildung 2: Blockdiagramm Assoziationstypen zwischen zwei Relationen (vgl. @steiner2006rdbs S. 19)][kap2_abb2_blockdiagramm]
+
+![Abbildung 3: Blockdiagramm Beziehung zwischen zwei Relationen][kap2_abb3_blockdiagramm]
+
+Das ER-Modell beschreibt die Beziehung der Entitäten untereinander auf einer konzeptionellen Ebene. Die konkrete Umsetzung in einem RDBMS ist dadurch noch nicht erfolgt, da im konzeptionellen ER-Modell z.B. noch keine einzelnen Attribute berücksichtigt werden. Dazu muss das konzeptionelle Modell letztendlich in ein physikalisches Modell umgewandelt werden. Der Zwischenschritt erfolgt über das logische Modell, der relationalen Umsetzung des logischen Datenmodells, in diesem Fall vom Entity Relationship-Modell ausgehend.
+
+Je nach Beziehungstyp der Entitäten muss die logische Entsprechung als Relationen in der Form von Tabellen im physischen Datenmodell realisiert werden. Beispielsweise müssen m-m-Beziehungen über eine Zwischen-tabelle abgebildet werden, da sonst eine redundanzfreie Speicherung von Daten in der Detailtabelle nicht umsetzbar wäre. Das physische Datenmodell setzt die Relationen gemäß der Syntax des DBMS um. (vgl. @steiner2006rdbs S. 15)
+
+### 2.1.2	Das Relationale Datenmodell
+
+Relationale Datenbankmanagementsysteme wurden im Jahr 1970 von Edgar Frank Codd entwickelt (vgl. @meier2016nosql S. 133). Dieses Konzept zur Verwaltung und Speicherung von Daten ist bis heute weit verbreitet. Relationale Datenbanken wurden vom ursprünglichen Konzept aus erweitert, indem beispielsweise neue Formen der Datenorganisation im XML-Format oder andere Betriebsaspekte wie einer Cloud-Infrastruktur für eine Datenspeicherung integriert werden. Der Fokus der anschließenden Betrachtung soll sich lediglich auf das grundlegende relationale Modell beschränken, um zu verdeutlichen, wie Informationen in einem RDBMS gespeichert werden.
+
+Das relationale Modell setzt sich aus Objekten, Operationen und Regeln zusammen. Zu den Objekten zählen beispielweise Domains (Wertebereiche), Relationen (Tabellen), Attribute (Spalten), Tupel (Datensätze), Primary-Keys (Primärschlüssel) oder Foreign-Keys (Fremdschlüssel). Zentrale Regeln im Kontext des relationalen Modells sind die Entitätenintegrität und die referenzielle Integrität. Zu den Operationen gehören beispielsweise Restrictionens, Projections, Unions oder Joins. (vgl. @unterstein2012rdbms S. 30)
+
+Wie der Name des Modells bereits vermuten lässt, sieht als Kernprinzip eine Speicherung von Informationen in Relationen (Tabellen) vor. Dieses Modell beruht auf mathematischen Grundprinzipien der Mengenlehre. So kann eine Relation als eine Teilmenge beschreiben werden. Eine Relation besteht aus Indizes die als Attribute bezeichnet werden. Diese besitzen wiederum Namen, um das mentale Modell des Menschen zu unterstützen. Diese Mengen können aus unterschiedlichen Elementen bestehen. Beispielhaft seien an dieser Stelle Zahlen, Zeichenketten oder Datumsangaben genannt. Hierbei wird der Begriff der Domäne verwendet.  Eine Domäne ist der Wertebereich, aus dem Attribute ihre Werte beziehen können. Um die Daten in eine repräsentative und verständliche  Form zu bringen, werden Relationen in einer tabellarischen Form dargestellt. (vgl. @unterstein2012rdbms S. 30)
+
+<table>
+<tr>
+  <th>TITEL</th>
+  <th>AUTOR</th>
+  <th>GENRE</th>
+  <th>ISBN</th>
+  <th>VERÖFFENTLICHUNG</th>
+</tr>
+<tr>
+  <td>Frequenz</td>
+  <td>Lincoln Child</td>
+  <td>Belletristik</td>
+  <td>978-3805250955</td>
+  <td>22.07.2016</td>
+</tr>
+<tr>
+  <td>Der Schwarm</td>
+  <td>Frank Schätzing</td>
+  <td>Belletristik</td>
+  <td>978-3596164530</td>
+  <td>01.11.2005</td>
+</tr>
+<tr>
+  <td>Die Zwölf</td>
+  <td>Justin Cronin</td>
+  <td>Belletristik</td>
+  <td>978-3442469352</td>
+  <td>21.04.2014</td>
+</tr>
+<tr>
+  <td>Die Spiegelstadt</td>
+  <td>Justin Cronin</td>
+  <td>Belletristik</td>
+  <td>978-3442311804</td>
+  <td>31.10.2016</td>
+</tr>
+</table>						
+
+Tabelle 1:  Die Relation Buch
+
+Die Attribute/Spaltennamen der in der Tabelle 1 abgebildeten Relation Buch heißen TITEL, AUTOR, GENRE, ISBN und VERÖFFENTLICHUNG, diese bilden zusammen die Attributmenge der Relation. Eine Zeile ist ein Tupel/Datensatz, ein Attributwert bzw. ein Feld eines Datensatzes beinhaltet einen konkreten Wert. An dieser Stelle wird nochmals deutlich, dass eine Relation sich unterschiedlichen Datentypen der Attribute zusammensetzen kann.
+
+Zwischen den Attributen einer Relation können funktionale und voll funktionale Abhängigkeiten existieren. Funktionale Abhängigkeiten liegen vor, wenn Attributwerte der Komponente A die Attributwerte der Komponente B eindeutig bestimmen (der Titel des Buches ist funktional abhängig von der ISBN-Nummer). Voll funktionale Abhängigkeiten liegen vor, wenn zwischen Attributwerten von Komponenten eine funktionale Abhängigkeit existiert (B ist abhängig von A) und wenn C eine echte Teilmenge von A ist und C wiederum funktional B bedingt (B ist abhängig von C).
+
+Das relationale Datenmodell greift die Anforderung einer redundanzfreien Speicherung von Daten auf, indem eine definierte Abfolge von Normalisierungsschritten durchlaufen wird. Jede Normalisierungsform stellt bestimmte Anforderungen an die Beschaffenheit der Daten und deren Abhängigkeiten untereiner, wie im vorherigen Abschnitt angedeutet. Aufgrund der Wichtigkeit der Normalisierung der Daten, werden die Normformen aus Gründen der Vollständigkeit mit der jeweils erforderlichen Qualitätsanforderung tabellarisch aufgelistet.
+
+<table>
+<tr>
+  <th>Normalform</th>
+  <th>Anforderung</th>
+</tr>
+<tr>
+  <td>1. Normalform
+  (1NF)	</td>
+  <td>
+    -	Atomare Wertebereiche
+    -	jedes Merkmal bezieht Werte aus einem unstrukturierten Wertebereich bezieht. -> keine Mengen, Aufzählungen oder Wiederholungsgruppen in den einzelnen Merkmalen
+  </td>
+</tr>
+<tr>
+  <td>2. Normalform (2NF)</td>
+  <td>
+    -	Bedingungen der ersten NF erfüllt
+    -	jedes Nichtschlüsselmerkmal von jedem Schlüssel voll funktional abhängig
+  </td>
+</tr>
+<tr>
+  <td>3. Normalform
+  (3NF)</td>
+  <td>
+    -	Bedingungen der zweiten NF erfüllt
+    -	kein Nichtschlüsselmerkmal ist von irgendeinem Schlüssel transitiv abhängig
+  </td>
+</tr>
+<tr>
+  <td>4. Normalform
+  (4NF)	</td>
+  <td>
+    -	keine zwei echte und voneinander verschiedene mehrwertige Abhängigkeiten in ein und derselben Tabelle vorliegen
+  </td>
+</tr>
+<tr>
+  <td>5. Normalform
+  (5NF)</td>
+  <td>
+  -	wenn Tabelle keine Verbundabhängigkeit aufweist
+  </td>
+</tr>
+</table>
+
+Tabelle 2: Normalform des relationalen Datenmodells (vgl. @meier2016nosql S. 36ff)
+
+Zur eindeutigen Identifikation von Tupeln/Datensätzen werden Primary Keys verwendet. Die Wahl des Primary Keys wird anhand der Charakteristik der Attribute gewählt. Ein Primary Key sollte eine entsprechende Effizienz besitzen, indem er nur aus wenigen Attributen besteht. Über die eindeutige Identifikation der Tupel mittels eines Primary Keys und den Primary Keys einer zweiten Relation lassen sich die darin abgelegten Informationen in eine Beziehung (Relation) bringen. (vgl. @unterstein2012rdbms S. XX)
+
+Wie bereits im Kapitel 2.1.1 erwähnt, werden Beziehungen zwischen Relationen über die Attributausprägungen realisiert. Das Konstrukt der Primär- und Fremdschlüssel ermöglicht Relationen miteinander zu verknüpfen und im Fall einer Selektion, auf die Datenbestände der in einer  Beziehung stehenden Relationen zugreifen zu können. Ein Primärschlüssel muss einen Tupel in einer Relation eindeutig identifizieren können. Je nach Charakteristik der Datenabbildung können gewisse Entitäten bereits über ein eindeutiges Schlüsselattribut verfügen. Ein Fremdschlüssel in der Detailrelation bezieht sich auf die Schlüsselwerte des Primärschlüssels. Weiterhin bedingt die Charakteristik des Primärschlüssels gleichermaßen die Charakteristik des Sekundärschlüssels. Sollte der Primärschlüssel mehrere eine Kombination aus mehreren Attributen aufweisen, so ist dies auch beim Fremdschlüssel der Fall. Für eine Fremdschlüsselbeziehung wird die Eigenschaft der referenziellen Integrität gefordert. Gemäß dieser Anforderung muss der enthaltende Fremdschlüssel in der Primärtabelle als Primärschlüssel enthalten sein. Die Forderung der Eindeutigkeit für Primärschlüssel gilt nicht für die Fremdschlüssel, da mehre Datensätze einer Fremdtabelle einem Datensatz in einer Primärtabelle zugeordnet sein können. (vgl. @unterstein2012rdbms S. 31)
 
 ## 2.2 Objektorientierte Datenbankmanagementsysteme
 Bei den Objektorientierten Datenbanken handelt es sich Systeme, welche den Anspruch erheben, die Objekte aus der Objektorientierten Programmierung, mit allen Eigenschaften und Vorteilen die diese besitzen, speichern zu können.
