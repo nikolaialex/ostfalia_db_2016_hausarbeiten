@@ -200,7 +200,7 @@ p.shot {text-align:left; text-indent:0; margin: 12pt 0pt 0pt 0pt; text-transform
 	<key>SCRCompileEPUBUseFlatTOCKey</key>
 	<false/>
 	<key>SCRCompileEndOfTextMarkerKey</key>
-	<string>Ends</string>
+	<string>Ende</string>
 	<key>SCRCompileEndnotesStyleKey</key>
 	<integer>3</integer>
 	<key>SCRCompileExportInlineFootnotesAsEndnotesKey</key>
@@ -387,7 +387,7 @@ p.shot {text-align:left; text-indent:0; margin: 12pt 0pt 0pt 0pt; text-transform
 	<key>SCRCompileFootnotesStyleKey</key>
 	<integer>0</integer>
 	<key>SCRCompileFormatKey</key>
-	<integer>3</integer>
+	<integer>30</integer>
 	<key>SCRCompileFountainHeadersUsesBinderIndentsKey</key>
 	<false/>
 	<key>SCRCompileFountainTitlePageMetaDataKey</key>
@@ -483,7 +483,7 @@ p.shot {text-align:left; text-indent:0; margin: 12pt 0pt 0pt 0pt; text-transform
 	<key>SCRCompileLeftHeaderStringKey</key>
 	<string></string>
 	<key>SCRCompileMarkEndOfTextKey</key>
-	<false/>
+	<true/>
 	<key>SCRCompileMultiMarkdownAddFormatCompleteKey</key>
 	<false/>
 	<key>SCRCompileMultiMarkdownLaTeXBeginDocumentStringKey</key>
@@ -501,7 +501,7 @@ p.shot {text-align:left; text-indent:0; margin: 12pt 0pt 0pt 0pt; text-transform
 	<key>SCRCompileMultiMarkdownUsesHTMLMarkdownCompatibilityKey</key>
 	<false/>
 	<key>SCRCompileMultiMarkdownUsesMMD2SyntaxKey</key>
-	<false/>
+	<true/>
 	<key>SCRCompileMultiMarkdownshowPDFLogKey</key>
 	<false/>
 	<key>SCRCompileNoHeaderAfterPageBreaksKey</key>

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<ScrivenerProject Version="1.5" Creator="SCRMAC-2.8.1.2-26324" Device="Fabians-MacBook-Air" Modified="2017-01-18 08:49:03 +0100" ModID="2D6DD4B0-88B4-482E-8C6E-83D7ADA8E9CC">
+<ScrivenerProject Version="1.5" Creator="SCRMAC-2.8.1.2-26324" Device="Fabians-MacBook-Air" Modified="2017-01-19 11:29:16 +0100" ModID="05B7858B-963D-4A58-B579-E8BC7843C90C">
     <Binder>
         <BinderItem ID="16" UUID="6F129022-E261-4132-AF42-88D164377F8F" Type="Text" Created="2017-01-07 18:37:53 +0100" Modified="2017-01-07 18:37:53 +0100">
             <Title>About</Title>
@@ -21,10 +21,21 @@
                 <SelectedSubdocumentIDs>40</SelectedSubdocumentIDs>
             </CorkboardAndOutliner>
             <Children>
+                <BinderItem ID="41" UUID="82ADFECB-B8A4-4B65-91D3-63B604E76811" Type="Text" Created="2017-01-18 08:57:38 +0100" Modified="2017-01-18 08:57:42 +0100">
+                    <Title>Meta-Data</Title>
+                    <MetaData>
+                        <IncludeInCompile>Yes</IncludeInCompile>
+                        <NotesTextSelection>0,0</NotesTextSelection>
+                    </MetaData>
+                    <TextSettings>
+                        <TextSelection>0,0</TextSelection>
+                    </TextSettings>
+                </BinderItem>
                 <BinderItem ID="3" UUID="9BFBD343-BA02-4E24-A268-9CB681BF28D8" Type="Text" Created="2017-01-07 18:37:53 +0100" Modified="2017-01-18 08:44:04 +0100">
                     <Title>Title</Title>
                     <MetaData>
                         <LabelID>1</LabelID>
+                        <IncludeInCompile>Yes</IncludeInCompile>
                         <CompileAsIs>Yes</CompileAsIs>
                         <NotesTextSelection>0,0</NotesTextSelection>
                     </MetaData>
@@ -117,7 +128,6 @@
                     <Title>Quellen</Title>
                     <MetaData>
                         <PageBreakBefore>Yes</PageBreakBefore>
-                        <IncludeInCompile>Yes</IncludeInCompile>
                         <NotesTextSelection>0,0</NotesTextSelection>
                     </MetaData>
                     <TextSettings>
@@ -326,8 +336,8 @@
     </ProjectProperties>
     <ProjectTargets Notify="Yes">
         <DraftTarget Type="Words" CountIncludedOnly="Yes" CurrentCompileGroupOnly="Yes" Deadline="2017-01-29 13:28:32 +0100" IgnoreDeadline="No">6000</DraftTarget>
-        <SessionTarget Type="Words" CountDraftOnly="No" AllowNegatives="Yes" ResetType="Midnight" DeterminedFromDeadline="Yes" WritingDays="1-7" CanWriteOnDeadlineDate="No">316</SessionTarget>
-        <PreviousSession Words="25" Characters="154" Date="2017-01-18 08:27:17 +0100"></PreviousSession>
+        <SessionTarget Type="Words" CountDraftOnly="No" AllowNegatives="Yes" ResetType="Midnight" DeterminedFromDeadline="Yes" WritingDays="1-7" CanWriteOnDeadlineDate="No">592</SessionTarget>
+        <PreviousSession Words="0" Characters="0" Date="2017-01-19 11:29:14 +0100"></PreviousSession>
     </ProjectTargets>
     <PrintSettings PaperSize="595.275574,841.889771" LeftMargin="72.0" RightMargin="72.0" TopMargin="90.0" BottomMargin="90.0" PaperType="iso-a4" Orientation="Portrait" HorizontalPagination="Clip" VerticalPagination="Auto" ScaleFactor="1.0" HorizontallyCentered="Yes" VerticallyCentered="Yes" Collates="Yes" PagesAcross="1" PagesDown="1"></PrintSettings>
 </ScrivenerProject>
