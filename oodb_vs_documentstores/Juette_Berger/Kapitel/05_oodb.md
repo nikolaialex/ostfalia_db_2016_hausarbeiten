@@ -1,4 +1,6 @@
+
 # 5. Verbreitung von OODB
+
 Wie bereits in Kapitel 2.2 beschrieben versuchen Objektorientiere Datenbankmanagementsysteme die Objektorientierten Prinzipien bis zur Speicherung der Daten in einer Datenbank zu realisieren.
 Trotz der großen Verbreitung von Objektorientierten Programmiersprachen werden kaum Objektbasierte Datenbanken eingesetzt und sind eine Nischentechnologie.
 Vielmehr werden für gängige Client-Server Anwendungen weiterhin relationale Datenbanken verwendet und der Medienbruch wird durch die Objekt-Relationalen Mapper kompensiert.

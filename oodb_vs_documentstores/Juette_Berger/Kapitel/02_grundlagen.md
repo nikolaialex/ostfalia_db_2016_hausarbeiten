@@ -1,4 +1,6 @@
+
 # 2. Grundlagen
+
 Dieses Kapitel behandelt die Grundlegenden Konzepte verschiedener Datenbanksystem.
 Zuerst werden Relationale Datenbankmanagementsysteme betrachtet, da diese aktuell am verbreitesten sind und die anderen Datenbanksysteme damit verglichen werden.
 In Kapitel 2.2 werden die Objektorientierten Datenbanken vorgestellt und in 2.3 die Dokumentdatenbanken.
@@ -9,13 +11,14 @@ Das Unterkapitel 2.1 soll grundlegende Informationen zur Organisation und Speich
 
 Die Modellierung der Daten für eine relationale Abbildung erfolgt in drei Schritten. Diese bestehen aus der Datenanalyse, dem Entwurf des Entity Relationship-Modell und den Transfer in das relationale Modell. Das physische Modell dient der Beschreibung der Transition des konzeptionellen Datenmodells auf die Datenbankebene. Schlussendlich liegt das relationale Datenmodell in die DB-spezifische Ausprägung vor. @@ QUELLE Die Abbildung 1 stellt den Ablauf der Modellierungsschritte dar und ordnet den jeweiligen allgemeingültigen Ebenenbegriff des Datenbankmodells zu.
 
-![Abbildung 1: Schematische Darstellung des relationalen Modellierungsprozesses][kap2_abb1_prozess]
+![Schematische Darstellung des relationalen Modellierungsprozesses](Kapitel/images/kap2_abb1_prozess.png)
 
 ### 2.1.1	Das Entity Relationship Modell
 
 Das Entity Relationship Modell (ER) ist die initiale Abbildung der zu modellierenden Daten und deren Abhängigkeiten oder Zugehörigkeiten untereinander. Im Kontext des ER-Modells werden die Termini  
--	Entität
--	Entitätsmenge
+
+  *	Entität
+  *	Entitätsmenge
 
 eingeführt. „Unter Entität (engl. entity) versteht man ein bestimmtes, d.h. von anderen wohlunterscheidbares Objekt der realen Welt oder unserer Vorstellung. Dabei kann es sich um ein Individuum, um einen Gegenstand, um einen abstrakten Begriff oder um ein Ereignis handeln (@meier2016nosql S. 20)". Dementgegen definiert sich der Begriff Entitätsmenge wie folgt: „Entitäten des gleichen Typs werden zu Entitätsmengen zusammengefasst und durch Merkmale weiter charakterisiert (@meier2016nosql S. 20)“.
 
@@ -23,25 +26,25 @@ Um eine Entität in der Entitätsmenge identifizieren zu können, ist ein Merkma
 
 Das Entity Relationship-Modell sieht für Entitäten ferner auch das Konzept der Generalisierung und Aggregation vor, indem Daten vom Detail ausgehend abstrahiert werden oder durch Submengenbildung als Spezialisierungen gelten können. Für die Generalisierung existieren mehrere Formen auf:
 
--	Überlappende Subentitätsmengen
--	Überlappend-vollständige Subentitätsmengen
--	Disjunkte Subentitätsmengen
--	Disjunkt-vollständige Subentitätsmengen
+  *	Überlappende Subentitätsmengen
+  *	Überlappend-vollständige Subentitätsmengen
+  *	Disjunkte Subentitätsmengen
+  * Disjunkt-vollständige Subentitätsmengen
 
-. Diese Formen der Mengendarstellung müssen von der Transformation zum Relationalen Modell berücksichtigt werden. (vgl. @meier2016nosql S. 33)
+Diese Formen der Mengendarstellung müssen von der Transformation zum Relationalen Modell berücksichtigt werden. (vgl. @meier2016nosql S. 33)
 
 Zwischen den Entitätsmengen können unterschiedliche Beziehungen (engl. relationships) existieren. Die Beziehungen bilden eine Beziehungsmenge, die wiederum durch  Merkmale näher charakterisiert werden können. Beziehungen werden durch Assoziationen näher beschrieben, die wiederum durch Assoziationstypen spezifiziert werden. Die nachstehenden Assoziationstypen sind im ER-Modell definiert:
 
--	einfache Assoziation (genau ein Tupel)
--	konditionelle Assoziationen (kein oder genau ein Tupel)
--	multiple Assoziationen (mindestens ein Tupel)
--	multiple-konditionelle Assoziationen (beliebig viele Tupel)
+  * einfache Assoziation (genau ein Tupel)
+  * konditionelle Assoziationen (kein oder genau ein Tupel)
+  * multiple Assoziationen (mindestens ein Tupel)
+  * multiple-konditionelle Assoziationen (beliebig viele Tupel)
 
-. Die o.g. Assoziationstypen ermöglichen unterschiedliche Arten von Beziehungen. Grundsätzlich existiert zu jeder Assoziation eine Gegenassoziation. Man spricht von einer Beziehung, wenn zwei Assoziationen miteinander kombiniert werden. Es können hierarchische, konditionelle oder netzwerkförmige Beziehungen definiert werden. Über Entitätsblockdiagramme werden die Beziehungen visualisiert. Die Abbildung 2 und Abbildung 3 sind Beispiele für die Blockdiagramme. (vgl. @steiner2006rdbs S. 19)
+Die o.g. Assoziationstypen ermöglichen unterschiedliche Arten von Beziehungen. Grundsätzlich existiert zu jeder Assoziation eine Gegenassoziation. Man spricht von einer Beziehung, wenn zwei Assoziationen miteinander kombiniert werden. Es können hierarchische, konditionelle oder netzwerkförmige Beziehungen definiert werden. Über Entitätsblockdiagramme werden die Beziehungen visualisiert. Die Abbildung 2 und Abbildung 3 sind Beispiele für die Blockdiagramme. (vgl. @steiner2006rdbs S. 19)
 
-![Abbildung 2: Blockdiagramm Assoziationstypen zwischen zwei Relationen (vgl. @steiner2006rdbs S. 19)][kap2_abb2_blockdiagramm]
+![Blockdiagramm Assoziationstypen zwischen zwei Relationen (vgl. @steiner2006rdbs S. 19)](Kapitel/images/kap2_abb2_blockdiagramm.png)
 
-![Abbildung 3: Blockdiagramm Beziehung zwischen zwei Relationen][kap2_abb3_blockdiagramm]
+![Blockdiagramm Beziehung zwischen zwei Relationen](Kapitel/images/kap2_abb3_blockdiagramm.png)
 
 Das ER-Modell beschreibt die Beziehung der Entitäten untereinander auf einer konzeptionellen Ebene. Die konkrete Umsetzung in einem RDBMS ist dadurch noch nicht erfolgt, da im konzeptionellen ER-Modell z.B. noch keine einzelnen Attribute berücksichtigt werden. Dazu muss das konzeptionelle Modell letztendlich in ein physikalisches Modell umgewandelt werden. Der Zwischenschritt erfolgt über das logische Modell, der relationalen Umsetzung des logischen Datenmodells, in diesem Fall vom Entity Relationship-Modell ausgehend.
 
@@ -55,97 +58,33 @@ Das relationale Modell setzt sich aus Objekten, Operationen und Regeln zusammen.
 
 Wie der Name des Modells bereits vermuten lässt, sieht als Kernprinzip eine Speicherung von Informationen in Relationen (Tabellen) vor. Dieses Modell beruht auf mathematischen Grundprinzipien der Mengenlehre. So kann eine Relation als eine Teilmenge beschreiben werden. Eine Relation besteht aus Indizes die als Attribute bezeichnet werden. Diese besitzen wiederum Namen, um das mentale Modell des Menschen zu unterstützen. Diese Mengen können aus unterschiedlichen Elementen bestehen. Beispielhaft seien an dieser Stelle Zahlen, Zeichenketten oder Datumsangaben genannt. Hierbei wird der Begriff der Domäne verwendet.  Eine Domäne ist der Wertebereich, aus dem Attribute ihre Werte beziehen können. Um die Daten in eine repräsentative und verständliche  Form zu bringen, werden Relationen in einer tabellarischen Form dargestellt. (vgl. @unterstein2012rdbms S. 30)
 
-<table>
-<tr>
-  <th>TITEL</th>
-  <th>AUTOR</th>
-  <th>GENRE</th>
-  <th>ISBN</th>
-  <th>VERÖFFENTLICHUNG</th>
-</tr>
-<tr>
-  <td>Frequenz</td>
-  <td>Lincoln Child</td>
-  <td>Belletristik</td>
-  <td>978-3805250955</td>
-  <td>22.07.2016</td>
-</tr>
-<tr>
-  <td>Der Schwarm</td>
-  <td>Frank Schätzing</td>
-  <td>Belletristik</td>
-  <td>978-3596164530</td>
-  <td>01.11.2005</td>
-</tr>
-<tr>
-  <td>Die Zwölf</td>
-  <td>Justin Cronin</td>
-  <td>Belletristik</td>
-  <td>978-3442469352</td>
-  <td>21.04.2014</td>
-</tr>
-<tr>
-  <td>Die Spiegelstadt</td>
-  <td>Justin Cronin</td>
-  <td>Belletristik</td>
-  <td>978-3442311804</td>
-  <td>31.10.2016</td>
-</tr>
-</table>						
-
+| TITEL | AUTOR | GENRE  | ISBN | DATUM |
+| ------------- |-------------| -----| -----| -----|
+| Frequenz | Lincoln Child | Belletristik | 978-3805250955 | 22.07.2016 |
+| Der Schwarm | Frank Schätzing | Belletristik | 978-3596164530 | 01.11.2005 |
+| Die Zwölf | Justin Cronin | Belletristik | 978-3442469352 | 21.04.2014 |
+| Die Spiegelstadt | Justin Cronin | Belletristik | 978-3442311804 | 31.10.2016 |
 Tabelle 1:  Die Relation Buch
 
-Die Attribute/Spaltennamen der in der Tabelle 1 abgebildeten Relation Buch heißen TITEL, AUTOR, GENRE, ISBN und VERÖFFENTLICHUNG, diese bilden zusammen die Attributmenge der Relation. Eine Zeile ist ein Tupel/Datensatz, ein Attributwert bzw. ein Feld eines Datensatzes beinhaltet einen konkreten Wert. An dieser Stelle wird nochmals deutlich, dass eine Relation sich unterschiedlichen Datentypen der Attribute zusammensetzen kann.
+Die Attribute/Spaltennamen der in der Tabelle 1 abgebildeten Relation Buch heißen TITEL, AUTOR, GENRE, ISBN und DATUM, diese bilden zusammen die Attributmenge der Relation. Eine Zeile ist ein Tupel/Datensatz, ein Attributwert bzw. ein Feld eines Datensatzes beinhaltet einen konkreten Wert. An dieser Stelle wird nochmals deutlich, dass eine Relation sich unterschiedlichen Datentypen der Attribute zusammensetzen kann.
 
 Zwischen den Attributen einer Relation können funktionale und voll funktionale Abhängigkeiten existieren. Funktionale Abhängigkeiten liegen vor, wenn Attributwerte der Komponente A die Attributwerte der Komponente B eindeutig bestimmen (der Titel des Buches ist funktional abhängig von der ISBN-Nummer). Voll funktionale Abhängigkeiten liegen vor, wenn zwischen Attributwerten von Komponenten eine funktionale Abhängigkeit existiert (B ist abhängig von A) und wenn C eine echte Teilmenge von A ist und C wiederum funktional B bedingt (B ist abhängig von C).
 
-Das relationale Datenmodell greift die Anforderung einer redundanzfreien Speicherung von Daten auf, indem eine definierte Abfolge von Normalisierungsschritten durchlaufen wird. Jede Normalisierungsform stellt bestimmte Anforderungen an die Beschaffenheit der Daten und deren Abhängigkeiten untereiner, wie im vorherigen Abschnitt angedeutet. Aufgrund der Wichtigkeit der Normalisierung der Daten, werden die Normformen aus Gründen der Vollständigkeit mit der jeweils erforderlichen Qualitätsanforderung tabellarisch aufgelistet.
+Das relationale Datenmodell greift die Anforderung einer redundanzfreien Speicherung von Daten auf, indem eine definierte Abfolge von Normalisierungsschritten durchlaufen wird. Jede Normalisierungsform stellt bestimmte Anforderungen an die Beschaffenheit der Daten und deren Abhängigkeiten untereiner, wie im vorherigen Abschnitt angedeutet. Aufgrund der Wichtigkeit der Normalisierung der Daten, werden die Normformen aus Gründen der Vollständigkeit mit der jeweils erforderlichen Qualitätsanforderung tabellarisch aufgelistet.(vgl. @meier2016nosql S. 36ff)
 
-<table>
-<tr>
-  <th>Normalform</th>
-  <th>Anforderung</th>
-</tr>
-<tr>
-  <td>1. Normalform
-  (1NF)	</td>
-  <td>
-    -	Atomare Wertebereiche
-    -	jedes Merkmal bezieht Werte aus einem unstrukturierten Wertebereich bezieht. -> keine Mengen, Aufzählungen oder Wiederholungsgruppen in den einzelnen Merkmalen
-  </td>
-</tr>
-<tr>
-  <td>2. Normalform (2NF)</td>
-  <td>
-    -	Bedingungen der ersten NF erfüllt
-    -	jedes Nichtschlüsselmerkmal von jedem Schlüssel voll funktional abhängig
-  </td>
-</tr>
-<tr>
-  <td>3. Normalform
-  (3NF)</td>
-  <td>
-    -	Bedingungen der zweiten NF erfüllt
-    -	kein Nichtschlüsselmerkmal ist von irgendeinem Schlüssel transitiv abhängig
-  </td>
-</tr>
-<tr>
-  <td>4. Normalform
-  (4NF)	</td>
-  <td>
-    -	keine zwei echte und voneinander verschiedene mehrwertige Abhängigkeiten in ein und derselben Tabelle vorliegen
-  </td>
-</tr>
-<tr>
-  <td>5. Normalform
-  (5NF)</td>
-  <td>
-  -	wenn Tabelle keine Verbundabhängigkeit aufweist
-  </td>
-</tr>
-</table>
-
-Tabelle 2: Normalform des relationalen Datenmodells (vgl. @meier2016nosql S. 36ff)
+  * **1. Normalform (1NF)**
+    1. Atomare Wertebereiche
+    2. jedes Merkmal bezieht Werte aus einem unstrukturierten Wertebereich bezieht. -> keine Mengen, Aufzählungen oder Wiederholungsgruppen in den einzelnen Merkmalen
+  * **2. Normalform (2NF)**
+    1. Bedingungen der ersten NF erfüllt
+    2. jedes Nichtschlüsselmerkmal von jedem Schlüssel voll funktional abhängig
+  * **3. Normalform (3NF)**
+    1. Bedingungen der zweiten NF erfüllt
+    2. kein Nichtschlüsselmerkmal ist von irgendeinem Schlüssel transitiv abhängig
+  * **4. Normalform (4NF)**
+    1. keine zwei echte und voneinander verschiedene mehrwertige Abhängigkeiten in ein und derselben Tabelle vorliegen
+  * **5. Normalform (5NF)**
+    1. wenn Tabelle keine Verbundabhängigkeit aufweist
 
 Zur eindeutigen Identifikation von Tupeln/Datensätzen werden Primary Keys verwendet. Die Wahl des Primary Keys wird anhand der Charakteristik der Attribute gewählt. Ein Primary Key sollte eine entsprechende Effizienz besitzen, indem er nur aus wenigen Attributen besteht. Über die eindeutige Identifikation der Tupel mittels eines Primary Keys und den Primary Keys einer zweiten Relation lassen sich die darin abgelegten Informationen in eine Beziehung (Relation) bringen. (vgl. @unterstein2012rdbms S. XX)
 
@@ -168,7 +107,7 @@ Diese beschreibt Personen für einen geeigneten Kontext ausreichend genau.
 Sind weitere Eigenschaften oder Methoden nötig so muss die Klasse um solche erweitert werden.
 Die Abbildung 1 zeigt die Klasse in der Notation eines UML Klassendiagramms.
 
-![OO Modell einer Person][person]
+![Modell einer Person](Kapitel/images/person.png)
 
 <!-- Eigenschaten und Methoden -->
 Die konkrete Instanz einer Klasse heisst Objekt.
@@ -189,7 +128,7 @@ Für die Realisierung von Schnittstellen eigenen sich Interfaces, welche nur den
 Schnittstellen eigenen sich besonders gut wenn über die eigenen Systemgrenzen hinweg Daten ausgetauscht werden müssen.
 Die folgende Abbildung zeigt die Verwendung der abstrakten Klasse *Lebewesen* mit der Schnittstelle *ILebewesen*.
 
-![Abstrakte Klasse und Interface][personAI]
+![Abstrakte Klasse und Interface](Kapitel/images/Person_Ai.png)
 
 Hierbei spielt das Prinzip der Vererbung eine große Rolle.
 Die Klasse *Person* erbt alle Eigenschaften und Methoden von *Lebewesen*.

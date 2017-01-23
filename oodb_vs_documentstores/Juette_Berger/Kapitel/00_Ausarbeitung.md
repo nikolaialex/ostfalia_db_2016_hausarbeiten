@@ -1,7 +1,3 @@
-<!-- Images -->
-[person]: Kapitel/images/person.png "OO Modell einer Person"
-[personAI]: Kapitel/images/Person_Ai.png "Abstrakte Klasse und Interface"
-
 <!-- Footnotes -->
 [^msql]: https://www.mysql.de/
 [^mariadb]: https://mariadb.org/

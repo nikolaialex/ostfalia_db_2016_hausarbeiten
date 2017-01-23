@@ -1,3 +1,4 @@
+
 # 4. Gegenüberstellung RDBMS zu OODB
 
 Dieses Kapitel stellt Relationale Datenbanksysteme Objektorientierten Datenbanksystemen gegenüber. Dazu werden essentielle Charakteristiken beider Datenbanksystemansätze verglichen.
@@ -17,7 +18,7 @@ Unabhängig von den unterschiedlichen konzeptionellen Ansätzen beider DBS, gibt
   *	Transaktionsmanagement
   *	Implementierung eine Abfragesprache zur Selektion oder Manipulation der Daten
 
-(vgl. @ketabchi1990analysis S. 528). Die essentiellen Unterschiede beider Datenbanktechnologien sind im Detail zu eruieren, was der primäre Betrachtungsgegenstand im nachfolgenden Kapitel ist.  
+(vgl. @obasanjo2003exploration S. 528). Die essentiellen Unterschiede beider Datenbanktechnologien sind im Detail zu eruieren, was der primäre Betrachtungsgegenstand im nachfolgenden Kapitel ist.  
 
 ## 4.2	spezifische Unterschiede beider Datenbankkonzepte
 
@@ -37,15 +38,13 @@ Parallel zu den Konzepten, verfolgen die Sprachkonstrukte beider Systeme untersc
 
 *Objektrelationale Datenbank Management Systeme*
 
-Gegenüber den o.g. Datenbankmanagementsystemen existieren Objektrelationale Daten-bank Management Systeme (ORDBMS), welche die Produktattribute der RDBMS und OODMS kombinieren. Dadurch sollen bestimmte Defizite einer ausschließlichen Nutzung eines RDBMS kompensiert werden, indem z.B. der Vorrat an einfachen Datentypen durch die Möglichkeit erweitert wird, komplexe Datentypen zu definieren. Die komplexen Datentypen lassen sich hierbei über Typenkonstruktoren zusammensetzen. Diese können wiederum von Tabellen als Datentypen genutzt werden. Überdies können ORDBMS Funktionen aufnehmen, die wiederum komplexe Datentypen als Parameter verwenden können. Das Konstrukt der Informationsvernetzung zwischen den Tabellen durch Referenzen (Verweise auf Tupel) eröffnen hierarchische Datenstrukturen ohne Join-Operationen. Jedoch beschränkt sich das Konzept eines ORDBMS nicht ausschließlich auf die diese Charakteristiken. Vielmehr fassen ORDBMS weitere Produkteigenschaften eines OODBMS in die Speicherstruktur eines RDBMS:
+Gegenüber den o.g. Datenbankmanagementsystemen existieren Objektrelationale Daten-bank Management Systeme (ORDBMS), welche die Produktattribute der RDBMS und OODMS kombinieren. Dadurch sollen bestimmte Defizite einer ausschließlichen Nutzung eines RDBMS kompensiert werden, indem z.B. der Vorrat an einfachen Datentypen durch die Möglichkeit erweitert wird, komplexe Datentypen zu definieren. Die komplexen Datentypen lassen sich hierbei über Typenkonstruktoren zusammensetzen. Diese können wiederum von Tabellen als Datentypen genutzt werden. Überdies können ORDBMS Funktionen aufnehmen, die wiederum komplexe Datentypen als Parameter verwenden können. Das Konstrukt der Informationsvernetzung zwischen den Tabellen durch Referenzen (Verweise auf Tupel) eröffnen hierarchische Datenstrukturen ohne Join-Operationen. Jedoch beschränkt sich das Konzept eines ORDBMS nicht ausschließlich auf die diese Charakteristiken. Vielmehr fassen ORDBMS weitere Produkteigenschaften eines OODBMS in die Speicherstruktur eines RDBMS (vgl. @mahnke2000ordbms):
 
--	Vererbung, Vererbungshierarchien und Polymorphie
--	Regeln (Erweitertes Konzept zum RDBMS)
--	Zugriff auf externe Daten
--	Einsatz als Integrationsplattform
--	Plug-Ins
-
-. (vgl. @mahnke2000ordbms)
+  * Vererbung, Vererbungshierarchien und Polymorphie
+  * Regeln (Erweitertes Konzept zum RDBMS)
+  * Zugriff auf externe Daten
+  * Einsatz als Integrationsplattform
+  * Plug-Ins
 
 In der Praxis ist es mittlerweile üblich, dass renommierte und am Markt etablierte Datenbankhersteller wie z.B. Oracle @@ Fußnote ihre Technologien nicht ausschließlich auf den relationalen Datenbankansatz ausrichten. Datenbanksysteme der Version 11g oder 12c können objektrelationale Daten speichern und bieten folglich mehr Möglichkeiten für eine Abbildung der Persistenz der Anwendungen oder Software-Systeme.  
 Wie dieses Kapitel darlegt, kann durch das Vergleichen der Spezifik beider Konzepte keine als generell vorteilig oder nachteilig eingestuft werden, was ein Konzept klar prädestinieren würde.  
@@ -54,11 +53,11 @@ Wie dieses Kapitel darlegt, kann durch das Vergleichen der Spezifik beider Konze
 
 Eine direkte Gegenüberstellung der Datenbanktechnologien erscheint angesichts der unterschiedlichen Ausrichtungen auf die dialektischen Entwicklungsansätze schwierig (siehe 4.2). Dies äußert sich in den unterschiedlichen Einsatzgebieten der Datenbankmanagementsysteme. Aus dieser Begründung heraus fokussiert dieses Kapitel Aspekte, die eine Abwägung der Vor- und Nachteile zulassen, um einen Erklärungsansatz für die Verbreitung der unterschiedlichen Datenbanktechnologien zu liefern.
 
-*Modellierung*
+**Modellierung**
 
 Zunächst sind die pragmatisch gelagerten Aspekte beider Technologien gegenüber zustellen. Die Präferenz eines DBS ist unmittelbar vom eigentlichen Anwendungsszenario abhängig und somit auch die Beurteilung der Vor- und Nachteile. Während RDBMS für die Verwaltung großer Datenmengen prädestiniert erscheinen, eignen sich OODMS insbesondere bei modernen Programmierparadigmen. Abstrahiert man beide Systeme von dieser Betrachtung, besitzt das OODMS hinsichtlich der Datenmodellierung eine höhere Flexibilität. Der relationale Ansatz gilt gegenüber der objekt-orientierten Speicherung von Daten als aufwändiger, da eine Datenrepräsentation auf das Modell von Relationen umgesetzt und mittels der dafür spezifischen Sprache SQL syntaktisch unterlegt und verwaltet werden muss. Dazu sind die Daten durch Normalisierungsregeln den Ansprüchen einer redundanzfreien Speicherung umzuwandeln. Folglich kann die reale Welt schwieriger abgebildet werden, da relationale Modellierung nur bedingt mit den gegebenen Möglichkeiten die oftmals vorherrschende  Komplexität der Objektekonstellationen umgehen kann. OODBS können demgegenüber auf die Klassendefinitionen zurückgreifen. Das Schema eines OODBS kommt der einsatzbezogenen Charakteristik der Anwendung entgegen, was als Vorteil zu werten ist. Auch ist man in der Modellierung konkreter Objekte klar an die Restriktionen des RDMBS gebunden, was dialektisch dazu, dem OODB gestalterisch mehr Freiräume eröffnet (vgl. @bartels1992genwechsel). Als Beispiel sei hier die persistente Abbildung eines Dokuments genannt, welches aus diversen Teilabschnitten mit eigenen Attributen bestehen kann.
 
-*Performance*
+**Performance**
 
 Parallel zu den bereits durch die Konzeption ersichtlichen Unterschieden beider Technologien bedingen Betriebsaspekte über eine vorteilige oder nachteilige Bewertung. Die Performance ist für komplexe Anwendungssysteme ein entscheidender Faktor bezogen auf die Präferenz eines Systems, um eine flüssiges Nutzungserlebnis der Software zu begünstigen. Eine Beurteilung der Performance für z.B. Lese- und Schreibzugriffe unterschiedlicher Datendimensionen erfordert, die Perspektive einer hersteller-spezifischen Abstraktion zu verlassen. Damit ein grundlegender Eindruck der Leistungsfähigkeit beider Technologien gewonnen werden kann, wird auf das Ergebnis eines Performance-Vergleichs der Datenbanksysteme Db4o (TODO Fußnote) und SQL Server 2008  (TODO Fußnote) Bezug genommen. Die Projektgruppe @@ Saxena hat essenzielle Aspekte der Lese- und Schreib-Performance einer Datenbank identifiziert und dazu korrespondierende Leistungs-ermittlungen durchgeführt. Es wurde die Reaktionszeit gemessen, Datenobjekte zu schreiben, abzurufen oder zu ändern. Hierbei wurden die genannten Datenbankoperationen aggregiert nach Testreihe durchgeführt und unterschiedlich viele Datenobjekte abgerufen. Die Abbildung 3 visualisiert die Reaktionszeit für die Schreiboperationen auf eine DB zusammen. Demnach weist DB4O eine höhere Reaktionszeit als der SQL Server auf. Auffällig ist die Zugriffskalierung des SQL Servers bei einer zunehmenden Anzahl an Datenobjekten ab ca. 30.000 Einheiten, welche sich der anfänglich größeren Verzögerung des DB4O-Systems annähert. Dieses Ergebnis lässt keine Schlussfolgerung zu, ob mit einer zunehmenden Anzahl an Datensätzen die Zugriffszeit des SQL Servers höher ist, als bei DB4O. (vgl. @saxena2013performance S. 6ff)  
 

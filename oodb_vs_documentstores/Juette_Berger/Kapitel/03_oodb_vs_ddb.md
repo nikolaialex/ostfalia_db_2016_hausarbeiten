@@ -1,3 +1,4 @@
+
 # 3. Abgrenzung OODB zu Dokumentdatenbanken
 
 Wie bereits im Kapitel 2.2 und 2.3 dargelegt, handelt es sich bei Objektorientierten Datenbanken und Dokumentendatenbanken um Vertreter der Kategorie schemafreie Datenbanken. Gemäß der Struktur von Objekten können in einer OODB Objektdaten nach einer vorab definierten Klassen-definition abgelegt werden. Demnach findet eine schemabasierte Speicherung der Daten statt. Dem gegenüber verzeichnen Dokumentendatenbanken keine schemabasierten Datenstrukturen. Die als hierarchisch zusammengesetzten, respektive rekursiv verschachtelten, Attribut-Wert-Paare (Key-Value-Pairs) formen in beliebiger Ausprägung die Dokumente. Je Dokument kann infolgedessen der interne Aufbau ab der zweiten Hierarchieebene variieren. Aus der Perspektive der Validierung der Daten betrachtet, wird diese an unterschiedlichen Stellen vorgenommen. Die OODB besitzt eine Modellierungssprache, auf der Basis von der Unified Modeling Language (UML). Daten die in die Datenbank gelangen sollen, müssen dem vorab definierten Datenmodell bzw. Objektmodell entsprechen. Die Datenbank übernimmt die Schemaverantwortung, indem neue Objektedaten nur in die OODB eingefügt werden können, wenn sie dem Schema entsprechen. Dokumentdatenbanken delegieren diese Aufgabe aufgrund ihrer Eigenschaft der schemafreien Speicherung von Inhalten der an die Ebene der Geschäftslogik. Der Entwickler trägt hierbei die Verantwortung über entsprechende Methoden einen konsistenten Datenbestand zu gewährleisten.
@@ -16,49 +17,15 @@ Neben den technologischen Unterschieden von OODB und Dokumentendatenbanken lasse
 
 Die Tabelle 2 fasst die wesentlichen Charakteristiken der Datenbanksysteme zusammen.
 
-<table>
-<tr>
-  <th>Merkmal</th>
-  <th>OODB</th>
-  <th>Dokumentendatenbank</th>
-</tr>
-<tr>
-  <td>Grundeigenschaften</td>
-  <td>Weiterführung des Applikations-Modells der objektorientierten Programmierung</td>
-  <td>Optimiert für Webtechnologien, horizontal skalierbar</td>
-</tr>
-<tr>
-  <td>Schemata</td>
-  <td>Objektbasiertes Datenbankschema</td>
-  <td>Kein definiertes Datenschema</td>
-</tr>
-<tr>
-  <td>Datenkonsistenz</td>
-  <td>Infolge der schema-basierten Struktur von Klassen gegeben</td>
-  <td>Nicht vorhanden bzw. auf Entwickler ausgelagert</td>
-</tr>
-<tr>
-  <td>Einsatzszenarien</td>
-  <td>Normalisierte objektorientierte Datenbestände</td>
-  <td>Heterogene Datenbestände, die schematisch vorab nicht exakt definierbar sind</td>
-</tr>
-<tr>
-  <td>Datentypen</td>
-  <td>komplex</td>
-  <td>komplex</td>
-</tr>
-<tr>
-  <td>Hierarchien</td>
-  <td>Abbildbar durch das Vererbungs-konstrukt von Objekten</td>
-  <td>Abbildbar durch Verschachtelung der Dokumente</td>
-</tr>
-<tr>
-  <td>Abfragesprache</td>
-  <td>Object Query Language (OQL)</td>
-  <td>@@</td>
-</tr>
-</table>
-
+| Merkmal | OODB | Dokumentendatenbank |
+| ----- | ------- | -------- |
+| Grundeigenschaften | Weiterführung des Applikations-Modells der objektorientierten Programmierung | Optimiert für Webtechnologien, horizontal skalierbar |
+| Schemata | Objektbasiertes Datenbankschema | Kein definiertes Datenschema |
+| Datenkonsistenz | Infolge der schema-basierten Struktur von Klassen gegeben | Nicht vorhanden bzw. auf Entwickler ausgelagert |
+| Einsatzszenarien | Normalisierte objektorientierte Datenbestände | Heterogene Datenbestände, die schematisch vorab nicht exakt definierbar sind |
+| Datentypen | komplex | komplex |
+| Hierarchien | Abbildbar durch das Vererbungs-konstrukt von Objekten | Abbildbar durch Verschachtelung der Dokumente |
+| Abfragesprache | Object Query Language (OQL) | @@ JSON, XML |
 Tabelle 3: Charakteristik von OODB und Dokumentendatenbanken
 
-Infolge der Spezifik beider Datenbanksysteme lässt sich eine klare Abgrenzung einer Dokumenten-datenbank gegenüber einer OODB vornehmen.
+Infolge der Spezifik beider Datenbanksysteme lässt sich eine klare Abgrenzung einer Dokumentendatenbank gegenüber eines OODB vornehmen.
