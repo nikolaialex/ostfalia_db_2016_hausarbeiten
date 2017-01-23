@@ -11,7 +11,7 @@ Das Unterkapitel 2.1 soll grundlegende Informationen zur Organisation und Speich
 
 Die Modellierung der Daten für eine relationale Abbildung erfolgt in drei Schritten. Diese bestehen aus der Datenanalyse, dem Entwurf des Entity Relationship-Modell und den Transfer in das relationale Modell. Das physische Modell dient der Beschreibung der Transition des konzeptionellen Datenmodells auf die Datenbankebene. Schlussendlich liegt das relationale Datenmodell in die DB-spezifische Ausprägung vor. @@ QUELLE Die Abbildung 1 stellt den Ablauf der Modellierungsschritte dar und ordnet den jeweiligen allgemeingültigen Ebenenbegriff des Datenbankmodells zu.
 
-![Schematische Darstellung des relationalen Modellierungsprozesses](Kapitel/images/kap2_abb1_prozess.png)
+![Schematische Darstellung des relationalen Modellierungsprozesses](images/kap2_abb1_prozess.png)
 
 ### 2.1.1	Das Entity Relationship Modell
 
@@ -42,9 +42,9 @@ Zwischen den Entitätsmengen können unterschiedliche Beziehungen (engl. relatio
 
 Die o.g. Assoziationstypen ermöglichen unterschiedliche Arten von Beziehungen. Grundsätzlich existiert zu jeder Assoziation eine Gegenassoziation. Man spricht von einer Beziehung, wenn zwei Assoziationen miteinander kombiniert werden. Es können hierarchische, konditionelle oder netzwerkförmige Beziehungen definiert werden. Über Entitätsblockdiagramme werden die Beziehungen visualisiert. Die Abbildung 2 und Abbildung 3 sind Beispiele für die Blockdiagramme. (vgl. @steiner2006rdbs S. 19)
 
-![Blockdiagramm Assoziationstypen zwischen zwei Relationen (vgl. @steiner2006rdbs S. 19)](Kapitel/images/kap2_abb2_blockdiagramm.png)
+![Blockdiagramm Assoziationstypen zwischen zwei Relationen (vgl. @steiner2006rdbs S. 19)](images/kap2_abb2_blockdiagramm.png)
 
-![Blockdiagramm Beziehung zwischen zwei Relationen](Kapitel/images/kap2_abb3_blockdiagramm.png)
+![Blockdiagramm Beziehung zwischen zwei Relationen](images/kap2_abb3_blockdiagramm.png)
 
 Das ER-Modell beschreibt die Beziehung der Entitäten untereinander auf einer konzeptionellen Ebene. Die konkrete Umsetzung in einem RDBMS ist dadurch noch nicht erfolgt, da im konzeptionellen ER-Modell z.B. noch keine einzelnen Attribute berücksichtigt werden. Dazu muss das konzeptionelle Modell letztendlich in ein physikalisches Modell umgewandelt werden. Der Zwischenschritt erfolgt über das logische Modell, der relationalen Umsetzung des logischen Datenmodells, in diesem Fall vom Entity Relationship-Modell ausgehend.
 
@@ -107,7 +107,7 @@ Diese beschreibt Personen für einen geeigneten Kontext ausreichend genau.
 Sind weitere Eigenschaften oder Methoden nötig so muss die Klasse um solche erweitert werden.
 Die Abbildung 1 zeigt die Klasse in der Notation eines UML Klassendiagramms.
 
-![Modell einer Person](Kapitel/images/person.png)
+![Modell einer Person](images/person.png)
 
 <!-- Eigenschaten und Methoden -->
 Die konkrete Instanz einer Klasse heisst Objekt.
@@ -128,7 +128,7 @@ Für die Realisierung von Schnittstellen eigenen sich Interfaces, welche nur den
 Schnittstellen eigenen sich besonders gut wenn über die eigenen Systemgrenzen hinweg Daten ausgetauscht werden müssen.
 Die folgende Abbildung zeigt die Verwendung der abstrakten Klasse *Lebewesen* mit der Schnittstelle *ILebewesen*.
 
-![Abstrakte Klasse und Interface](Kapitel/images/Person_Ai.png)
+![Abstrakte Klasse und Interface](images/Person_Ai.png)
 
 Hierbei spielt das Prinzip der Vererbung eine große Rolle.
 Die Klasse *Person* erbt alle Eigenschaften und Methoden von *Lebewesen*.
