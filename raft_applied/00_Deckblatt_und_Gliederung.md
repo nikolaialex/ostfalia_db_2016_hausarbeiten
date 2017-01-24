@@ -5,13 +5,13 @@ Wintersemester 2016/2017
 **Raft Applied**
 
 Tom Barth  
-E-Mail: tom.barth\@th-brandenburg.de  
+E-Mail: tom.barth@th-brandenburg.de  
 Hochschule: Technische Hochschule Brandenburg  
 Matrikel Nr.: 20139504
 
 Timo Krause  
-E-Mail: info\@timokrause.de  
-Matrikel Nr.: 2015049
+E-Mail: info@timokrause.de  
+Matrikel Nr.: 7008581
 
 Datum: 18.01.2017
 
