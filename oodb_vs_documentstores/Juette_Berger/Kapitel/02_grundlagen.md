@@ -107,7 +107,7 @@ Diese beschreibt Personen für einen geeigneten Kontext ausreichend genau.
 Sind weitere Eigenschaften oder Methoden nötig so muss die Klasse um solche erweitert werden.
 Die Abbildung 1 zeigt die Klasse in der Notation eines UML Klassendiagramms.
 
-![Modell einer Person](images/person.png)
+![Modell einer Person](images/Person.png)
 
 <!-- Eigenschaten und Methoden -->
 Die konkrete Instanz einer Klasse heisst Objekt.
