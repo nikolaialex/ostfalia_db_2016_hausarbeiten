@@ -11,7 +11,7 @@ author:
 Karina Ennenga, Fabian Morón Zirfas
 Nikolai Alex
 Datenbanktechnologien (FHBSWF MIM 12 W16)
-22. Januar 2017
+25. Januar 2017
 Data Science 
 
 ----
@@ -25,4 +25,4 @@ Data Science
     2. Cambridge Analytica
 4. Ausblick
 5. Fazit
-6. Quellen  
+6. Quellen

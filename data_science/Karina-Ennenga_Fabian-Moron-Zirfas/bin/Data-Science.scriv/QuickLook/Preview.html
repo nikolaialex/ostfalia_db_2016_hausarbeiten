@@ -74,22 +74,23 @@ Diese riesige Menge an Daten wird von Algorithmen beobachtet. Laut dem amerikani
 The Atlantic hat recherchiert, wie die Algorithmen funktionieren. Auf die Funktio...</p>
 </li>
 <li>
-<p class="binderItem"><strong>Cambridge Analytica</strong><br/>Zum Grauen vieler zog zu Beginn des Dezembers 2016 ein Artikel mit dem Titel „Ich habe nur gezeigt, dass es die Bombe gibt“ seine Runde durch die verschiedensten Sozialen Medien. In ihm wird erläutert wie psychologische Methoden und öffentlich und zugänglich oder erwerbbare Daten von der Firma [„Cambridge Analytica“ (CA)](https://cambridgeanalytica.org/) genutzt wurden um Donald Trump zum Sieg über Hillary Clinton in den Präsidentschaftswahlen der U.S.A. von 2016  zu verhelfen. Ob dies wirklich ...</p>
+<p class="binderItem"><strong>Cambridge Analytica</strong><br/>Zum Grauen vieler zog zu Beginn des Dezembers 2016 ein Artikel mit dem Titel „Ich habe nur gezeigt, dass es die Bombe gibt“ seine Runde durch die verschiedensten Sozialen Medien. In ihm wird erläutert wie die psychologische Methode des Abgleichens von Facebook Daten mit Psychometrik Umfragen, entworfen von Michal Kosinski et. Al., im großen Stil mit öffentlich und zugänglich oder erwerbbare Daten von der Firma [„Cambridge Analytica“ (CA)](https://cambridgeanalytica.org/) genutzt wurden, um Donal...</p>
 </li>
 <hr/>
 <ul>
 <li>
-<p class="binderItem"><strong>Die Dienstleistung</strong><br/>Nach eigenen Aussagen kann die Firma CA hinzugezogen werden um auf eine neue Weise Kontakt zu seinem Publikum aufzunehmen. Auf ihrer Website versprechen sie bis zu 5000 Daten Punkten pro Person (derzeit nur US Bürger) zu sammeln und deren Verhalten auf Grund von verschiedenen Modellen vorauszusagen. <br/>
+<p class="binderItem"><strong>Die Dienstleistung</strong><br/>Nach eigenen Aussagen kann die Firma Cambrige Analytica hinzugezogen werden um auf eine neue Weise Kontakt zu seinem Publikum aufzunehmen. Auf ihrer Website versprechen sie bis zu 5000 Daten Punkten pro Person (derzeit nur US Bürger) zu sammeln und deren Verhalten auf Grund von verschiedenen Modellen vorauszusagen. <br/>
+<br/>
 > ## 5,000 data points per person  <br/>
-> We collect up to 5,000 data points on over 220 million Americans, and use more than 100 data variables to model target audience groups and predict the behavior ...</p>
+> We collect up to 5,000 data points on over 220 million Americans, and use more than 100 data variables to model target audience groups and pred...</p>
 </li>
 <li>
-<p class="binderItem"><strong>Der Technologie Stack</strong><br/>Natürlich lässt eine Firma wie CA sich nicht direkt in die Karten schauen. Aus den Stellenangeboten für Data Engineers und besonders für Data Scientists auf ihrer Seite lassen sich jedoch einige Schlüsse ziehen. Bei Datenbanken werden Erfahrungen und Fähigkeiten im Umgang mit  MySQL und, aus dem Sektor der NoSQL Datenbanken, MongoDB erwünscht. Im Bereich Big Data scheinen die Frameworks Spark und Hadoop zum Einsatz zu kommen und die gewünschten Sprachen sind Python, Java oder Scala und entsprech...</p>
+<p class="binderItem"><strong>Der Technologie Stack</strong><br/>Natürlich lässt eine Firma wie Cambridge Analytica sich nicht direkt in die Karten schauen.Daher mussten wir einen andere Weg finden um eine Idee zu bekommen mit welchen Technologien bei CA gearbeitet wird. Unser Ansatz ist, dass sich aus den aktuellen Stellenangeboten der Firma ein ungefähre Schätzung möglich ist, welche Technologien dort in den Alltagsgebrauch gehören. Zum aktuellen Zeitpunkt wurden dort zwei Stellen ausgeschrieben aus denen wir Schlüsse ziehen konnten. Es gab ein Stellenangeb...</p>
 </li>
 <hr/>
 <ul>
 <li>
-<p class="binderItem"><strong>Speicherung</strong><br/>Wenn die Behauptung der Firma CA stimmt ist es offensichtlich, dass ein relationale Datenbank nicht ausreicht um diese 4000 Datenpunkte zu speichern. Auch die Analyse kann nicht auf einer einzelnen Maschine stattfinden. Hier kommt das Hadoop Distributed File System (HDFS) zum Einsatz. Hadoop ist ein Open Source (Java) Projekt, welches von Googles proprietären Google File System (GFS) und dem MapReduce Framework inspiriert wurde. Mit diesem System können sehr große Datensätze zuverlässig gespeich...</p>
+<p class="binderItem"><strong>Speicherung</strong><br/>Wenn die Aussagen der Firma Cambridge Analytica über die von ihnen gesammelten Datenmengen der Bewohner der Vereinigten Staaten von Amerika stimmen, ist es offensichtlich, dass ein einzelne relationale Datenbank nicht ausreicht um diese 5000 Datenpunkte zu speichern. Diese Daten können aus unterschiedlichsten Typen bestehen, man spricht auch von einer Datenvielfalt in diesem Zusammenhang. Es können Bilddaten, Text, Video, Audio Informationen sein. Die von bereits geordneten Informationen in eine...</p>
 </li>
 <li>
 <p class="binderItem"><strong>Analyse</strong><br/>Das Hadoop System ist die Infrastruktur zum handhaben dieser Datenmengen. Zur Analyse dieser Daten könnte dann, wie ebenfalls aus den Anforderungen der Stellenbeschreibung hervorgeht, das Apache Spark Framework verwendet werden. Mit Spark können Daten aus einer vielen verschiedenen Quellen verarbeitet werden. Zum Beispiel auch aus dem HDFS, aber auch aus NoSQL Datenbank Systemen oder relationalen  Datenbanken. Mit Spark können Daten aus dem HDFS schneller verarbeitet werden und es existieren fle...</p>
@@ -99,8 +100,7 @@ The Atlantic hat recherchiert, wie die Algorithmen funktionieren. Auf die Funkti
 </ul>
 <hr/>
 <li>
-<p class="binderItem"><strong>Ausblick</strong><br/>Algorithmen, maschinelles Lernen und Künstliche Intelligenz halten Einzug in jeden Bereich unseres Lebens. Automatisiertes Handel ist schon seit Jahren üblich. Daten Wissenschaften sind ein neues Feld von Studien. Wo mag uns dies alles hin leiten?  <br/>
-Es ist schwer abzusehen was in den nächsten 5, 10, 15 Jahren auf diesen Feldern passieren wird. Eines ist jedoch klar. Die Mengen an Daten werden nicht geringer. Mit dem Bereich des „Internet of Things“ (IoT) kommen laut Gartner bis im Jahr 2020 mehr...</p>
+<p class="binderItem"><strong>Ausblick</strong><br/>Algorithmen, maschinelles Lernen und Künstliche Intelligenz halten Einzug in jeden Bereich unseres Lebens. Automatisiertes Handel ist schon seit Jahren üblich. „Big Data“ ist ein Interessen Feld für viele Unternehmen. Daten Wissenschaften sind ein neues Feld von Studien von dem wir noch nicht sagen können wo es uns hin führen wird. Denn es ist schwer abzusehen was in den nächsten 5, 10, 15 Jahren auf diesen Feldern passieren wird. Eines ist jedoch klar. Die Mengen an Daten werden nicht geringer....</p>
 </li>
 <li>
 <p class="binderItem"><strong>Fazit</strong></p>

@@ -13,7 +13,7 @@ author:
 Karina Ennenga, Fabian Morón Zirfas
 Nikolai Alex
 Datenbanktechnologien (FHBSWF MIM 12 W16)
-22. Januar 2017
+25. Januar 2017
 Data Science 
 
 ----
@@ -27,10 +27,16 @@ Data Science
     2. Cambridge Analytica
 4. Ausblick
 5. Fazit
-6. Quellen  
+6. Quellen
+
+----
+
 # Abstrakt #
 
-In der folgende Arbeit setzen wir, die Autoren Karina Ennenga und Fabian Morón Zirfas für das Seminar Datenbanktechnologien (FHBSWF MIM 12 W16) betreut durch Nikolai Alex, uns mit „Data Science in der Anwendung “ auseinander. Im ersten Kapitel „Was ist Data Science?“ versuchen wir kurz zu umreißen was unter dem Titel Data Science zu verstehen ist und wo es sich von zum Beispiel Statistik abgrenzt. Im zweiten Kapitel „Data Science in der Anwendung“ und seinen Unterkapiteln  „Netflix“ und „Cambridge Analytica“ betrachten wir exemplarisch diese zwei Unternehmen, um anhand dieser darstellen zu können was Data Science für Firmen bedeutet. Im dritten Kapitel folgt ein kurzer „Ausblick“ in die Zukunft um im „Fazit“, dem vierten Kapitel, zu Enden.   
+In der folgende Arbeit setzen wir, die Autoren Karina Ennenga und Fabian Morón Zirfas für das Seminar Datenbanktechnologien (FHBSWF MIM 12 W16) betreut durch Nikolai Alex, uns mit „Data Science in der Anwendung “ auseinander. Im ersten Kapitel „Was ist Data Science?“ versuchen wir kurz zu umreißen was unter dem Titel Data Science zu verstehen ist und wo es sich von zum Beispiel Statistik abgrenzt. Im zweiten Kapitel „Data Science in der Anwendung“ und seinen Unterkapiteln  „Netflix“ und „Cambridge Analytica“ betrachten wir exemplarisch diese zwei Unternehmen, um anhand dieser darstellen zu können was Data Science für Firmen bedeutet. Im dritten Kapitel folgt ein kurzer „Ausblick“ in die Zukunft um im „Fazit“, dem vierten Kapitel, zu Enden. 
+
+----
+
 # Was ist Data Science? #
 
 Der Begriff „Data Science“ ist seit einigen Jahren ein Buzz Word, welches immer wieder im Zusammenhang mit anderen wie „Big Data“ und „Artificial Intelligence“ auftauchen. Aber was ist dieses „Data Science“ überhaupt? Wer sind diese Daten Wissenschaftler und was machen sie?  
@@ -39,7 +45,10 @@ Geboren wurde diese neue Art von Stellenbeschreibung wohl zusammen mit dem Aufko
 >> Every time you open Facebook, one of the world’s most influential, controversial, and misunderstood algorithms springs into action. It scans and collects everything posted in the past week by each of your friends, everyone you follow, each group you belong to, and every Facebook page you’ve liked. For the average Facebook user, that’s more than 1,500 posts. If you have several hundred friends, it could be as many as 10,000. Then, according to a closely guarded and constantly shifting formula, Facebook’s news feed algorithm ranks them all, in what it believes to be the precise order of how likely you are to find each post worthwhile. Most users will only ever see the top few hundred. [^cf1]
 > And someone needs to write an algorithm to power those features. Facebook could take all that historical data and hand it off to a very talented statistician. And she would put her immense knowledge and experience to use, diving into R and producing an excellent model that infers the relationship between all of these variables. And that would, no doubt, yield valuable insights into which ads would perform best in different situations. [^cf2]
 
-Für viele Unternehmen wird es immer wichtiger aus den bei ihnen anfallenden Daten auch Schlüsse zu ziehen. Hier kommt der Daten Wissenschaftler ins Spiel. Sei es, wie oben beschrieben, zu errechnen was jemand sehen will, um vorauszusagen welche Produkte auch interessant sein könnten, wann der Fahrstuhl gewartet werden muss oder um vorauszusagen wer der nächste Präsident der Vereinigten Staaten von Amerika wird. Für all diese Tätigkeiten kommen heut zu Tage Daten Wissenschafter zum Einsatz. Daher wurde von glassdoor.com auch die Stellenbeschreibung des „Data Scientist“ als der Top Job in 2016[^cf3] gekürt und von Harvard Business Review (hbr.org) sogar zum „Sexiest Job of the 21st Century“[^cf4]. Ob diese Voraussage sich hält werden wir in einigen Jahren sehen. Sicher ist jedoch, dass in Zeiten in denen eine Boeing 737 pro Turbine innerhalb von 30 Minuten 10 terabyte Daten produziert[^cf5], wir in Petabytes[^cf6] oder Exabytes denken, sich ein neues Feld von Beschäftigungen eröffnet. Diese Personen sind mehr als nur digitale Bibliothekare/innen. Sie müssen in der Lage sein große Datenmengen aus inkonsistenten Daten, von Video, über Text, bis Tweet und Animated GIF, zu bändigen um aus ihnen einen Schlüsse ziehen zu können.   
+Für viele Unternehmen wird es immer wichtiger aus den bei ihnen anfallenden Daten auch Schlüsse zu ziehen. Hier kommt der Daten Wissenschaftler ins Spiel. Sei es, wie oben beschrieben, zu errechnen was jemand sehen will, um vorauszusagen welche Produkte auch interessant sein könnten, wann der Fahrstuhl gewartet werden muss oder um vorauszusagen wer der nächste Präsident der Vereinigten Staaten von Amerika wird. Für all diese Tätigkeiten kommen heut zu Tage Daten Wissenschafter zum Einsatz. Daher wurde von glassdoor.com auch die Stellenbeschreibung des „Data Scientist“ als der Top Job in 2016[^cf3] gekürt und von Harvard Business Review (hbr.org) sogar zum „Sexiest Job of the 21st Century“[^cf4]. Ob diese Voraussage sich hält werden wir in einigen Jahren sehen. Sicher ist jedoch, dass in Zeiten in denen eine Boeing 737 pro Turbine innerhalb von 30 Minuten 10 terabyte Daten produziert[^cf5], wir in Petabytes[^cf6] oder Exabytes denken, sich ein neues Feld von Beschäftigungen eröffnet. Diese Personen sind mehr als nur digitale Bibliothekare/innen. Sie müssen in der Lage sein große Datenmengen aus inkonsistenten Daten, von Video, über Text, bis Tweet und Animated GIF, zu bändigen um aus ihnen einen Schlüsse ziehen zu können. 
+
+----
+
 # Data Science In der Anwendung #
 
 Wie bereits im vorherigen Kapitel erwähnt, werden unglaubliche Datenmengen von Unternehmen gesammelt, gebündelt und ausgewertet. Es wird „getracked“ und gespeichert wo es nur geht. Ein Unternehmen wie Google, _wenn es überhaupt noch ein zweites Unternehmen wie Google gibt_, sammelt über jede Art von Dienst den es zur Verfügung stellt, um so viele Data Points wie möglich über Nutzer/innen zu erhalten. Die offensichtlichen Punkte wo über uns gesammelt wird sind Google Suchhistorie, Tracking Cookies, Adsense, Analytics, Youtube, Google+, Gmail, Google Drive, Google Documents, Android und viele mehr.[^cf7]
@@ -47,7 +56,10 @@ Nicht so offensichtlich jedoch auch vorstellbar als Methode uns als Einzelperson
 
 Oder um es einfacher zu sagen: „Wie findet Data Science Anwendung?“  
 
-In den folgenden beiden Unterabschnitten werden wir die Unternehmen Netflix und Cambridge Analytica betrachten, um zwei weitere Modelle aufzuzeigen in den „Big Data“ eine zentrale Rolle spielt.    
+In den folgenden beiden Unterabschnitten werden wir die Unternehmen Netflix und Cambridge Analytica betrachten, um zwei weitere Modelle aufzuzeigen in den „Big Data“ eine zentrale Rolle spielt.  
+
+----
+
 ## Netflix ##
 
 1. Datenerhebung
@@ -120,34 +132,84 @@ Die traditionellen Studios haben einen großen Nachteil. Einer der größten Pos
 
 Netflix hat es geschafft, eine Brücke zwischen Nutzern und Produzenten zu bauen. Das Team, das entscheidet, was produziert wird, kann sich ganz einfach an den Daten der Nutzer orientieren.
 
-  
+
+
+----
+
 ## Cambridge Analytica ##
 
-Zum Grauen vieler zog zu Beginn des Dezembers 2016 ein Artikel mit dem Titel „Ich habe nur gezeigt, dass es die Bombe gibt“[^cf8] seine Runde durch die verschiedensten Sozialen Medien. In ihm wird erläutert wie psychologische Methoden und öffentlich und zugänglich oder erwerbbare Daten von der Firma [„Cambridge Analytica“ (CA)](https://cambridgeanalytica.org/) genutzt wurden um Donald Trump zum Sieg über Hillary Clinton in den Präsidentschaftswahlen der U.S.A. von 2016  zu verhelfen. Ob dies wirklich eins zu eins so statt fand soll an dieser Stelle bezweifelt werden. (Siehe WDR Blog[^cf9], Spiegel Online[^cf10], wired.com[^cf11], bloomberg.com[^cf12] oder spektrum.de[^cf13])Es gibt einige Tatsachen die dagegen sprechen. So ist ein Artikel dessen gesamte Beweisführung sich auf die Aussagen von zwei Personen stützt, von denen eine noch ein großes Interesse daran hat genau so wahrgenommen zu werden, wenig fundiert. Ebenfalls trifft der Artikel einen bestimmten Nerv, schlägt genau in die Richtige Kerbe zum Richtigen Zeitpunkt. Nach einem langen und schmutzigen Wahlkampf, gewinnt der von dem es die wenigsten geglaubt hätten. Da ist es nur recht und billig einen Sündenbock zu finden. Nicht soziale Spannung die wir uns nicht vorstellen können war es, es muss eine neue bisher unbekannte Technologie (vielleicht eine künstliche Intelligenz?) gewesen sein und irgendwie spielen unsere Daten die Facebook über uns sammelt da mit .  
-Dennoch erweckt dies so sehr die Aufmerksamkeit der Autoren, dass hier einmal die Methoden und der Technologie Stack dieser Firma so weit es geht unter die Lupe genommen werden soll.     
+Zum Grauen vieler zog zu Beginn des Dezembers 2016 ein Artikel mit dem Titel „Ich habe nur gezeigt, dass es die Bombe gibt“[^cf8] seine Runde durch die verschiedensten Sozialen Medien. In ihm wird erläutert wie die psychologische Methode des Abgleichens von Facebook Daten mit Psychometrik Umfragen, entworfen von Michal Kosinski et. Al., im großen Stil mit öffentlich und zugänglich oder erwerbbare Daten von der Firma [„Cambridge Analytica“ (CA)](https://cambridgeanalytica.org/) genutzt wurden, um Donald Trump zum Sieg über Hillary Clinton in den Präsidentschaftswahlen der U.S.A. von 2016 zu verhelfen. Diese Methode soll es ermöglicht haben Personen so genau zu kategorisieren, dass Werbespots auf ihre persönlichen Ängste, Wünsche und politische Haltungen zurechtgeschnitten werden konnten. Der extrovertierte Unterstützer der National Rifle Association (NRA) bekommt Werbung für den Erhalt von Werten die seit Generationen von Vater zu Sohn weitergegeben wurden, wohingegen die introvertierte Mutter durch Angst vor Terroristen zum Wählen des Kandidaten animiert werden soll. Ob dies wirklich eins zu eins so statt fand soll an dieser Stelle bezweifelt werden. Es gibt einige Tatsachen die dagegen sprechen. So ist ein Artikel dessen gesamte Beweisführung sich auf die Aussagen von zwei Personen stützt, von denen eine noch ein großes Interesse daran hat genau so wahrgenommen zu werden, wenig fundiert. Ebenfalls trifft der Artikel einen bestimmten Nerv, schlägt genau in die Richtige Kerbe zum Richtigen Zeitpunkt. Nach einem langen und schmutzigen US-Wahlkampf, gewinnt __der von dem es die wenigsten geglaubt hätten__. Da ist es nur recht und billig einen Sündenbock zu finden. Nicht soziale Spannung die wir uns nicht vorstellen können waren es, es muss eine neue bisher unbekannte Technologie _(vielleicht eine künstliche Intelligenz?)_ gewesen sein und irgendwie spielen unsere Daten die Facebook über uns sammelt da mit. Siehe WDR Blog[^cf9], Spiegel Online[^cf10], wired.com[^cf11], bloomberg.com[^cf12] oder spektrum.de[^cf13].   
+Dennoch erweckt dies so sehr die Aufmerksamkeit der Autoren, dass hier einmal die Methoden und der Technologie Stack dieser Firma so weit es geht unter die Lupe genommen werden soll. Ebenfalls möchten wir auf die Möglichkeiten oder Gefahren, das liegt im Auge des Betrachters, die mit zielgerichteter Wahlwerbung vor uns stehen, aufmerksam machen. Als weiterführende Literatur empfehlen wir die Artikel „Algorithmen Allmächtig? Freiheit in den Zeiten der Statistik“[^cf14], und „Parteien in Deutschland haben noch keine Position zu Wähler-Targeting“[^cf15].  
+
+----
+
 ### Die Dienstleistung ###
 
-Nach eigenen Aussagen kann die Firma CA hinzugezogen werden um auf eine neue Weise Kontakt zu seinem Publikum aufzunehmen. Auf ihrer Website versprechen sie bis zu 5000 Daten Punkten pro Person (derzeit nur US Bürger) zu sammeln und deren Verhalten auf Grund von verschiedenen Modellen vorauszusagen. 
-> ## 5,000 data points per person  
-> We collect up to 5,000 data points on over 220 million Americans, and use more than 100 data variables to model target audience groups and predict the behavior of like-minded people.[^cf14]
+Nach eigenen Aussagen kann die Firma Cambrige Analytica hinzugezogen werden um auf eine neue Weise Kontakt zu seinem Publikum aufzunehmen. Auf ihrer Website versprechen sie bis zu 5000 Daten Punkten pro Person (derzeit nur US Bürger) zu sammeln und deren Verhalten auf Grund von verschiedenen Modellen vorauszusagen. 
 
-Laut Angaben von Alexander Nix (CEO CA) auf dem 2016 Concordia Summit, werden Demographische Daten Verbraucher-Daten und Daten aus dem Bereich Lifestyle, von Unternehmen geliefert wie [acxiom](http://www.acxiom.com/), [infogroup](http://www.infogroup.com/), [Experian](http://www.experian.com/), [data trust](http://thedatatrust.com/), [Facebook](https://www.facebook.com/), [L2](http://www.l2political.com/), [Aristotle](http://aristotle.com/), GOP, MRI , [Nielsen](http://www.nielsen.com/), [Magellan strategies](http://magellanstrategies.com/) mit psychographischen Daten verbunden.[^cf15] Mit diesen Informationen sollen in unserem Fall Wähler gezielt angesprochen werden sollen. In dem Artikel, der unsere Recherche angestossen hat, wird von personalisierter Wahlwerbung gesprochen die     
+> ## 5,000 data points per person  
+> We collect up to 5,000 data points on over 220 million Americans, and use more than 100 data variables to model target audience groups and predict the behavior of like-minded people.[^cf16]
+
+Laut Angaben von Alexander Nix (CEO CA) auf dem 2016 Concordia Summit, werden Demographische Daten Verbraucher-Daten und Daten aus dem Bereich Lifestyle, von Unternehmen geliefert wie [acxiom](http://www.acxiom.com/), [infogroup](http://www.infogroup.com/), [Experian](http://www.experian.com/), [data trust](http://thedatatrust.com/), [Facebook](https://www.facebook.com/), [L2](http://www.l2political.com/), [Aristotle](http://aristotle.com/), GOP, MRI , [Nielsen](http://www.nielsen.com/), [Magellan strategies](http://magellanstrategies.com/) mit psychographischen Daten verbunden.[^cf17] Mit diesen Informationen sollen in unserem Fall Wähler gezielt angesprochen worden sein. In dem Artikel, der unsere Recherche angestossen hat, wird von personalisierter Wahlwerbung gesprochen die bei der „Vote Leave“ Kampagne für den Ausstieg von Gross Britannien aus der Europäischen Union, bei der Präsidentschaftswahl 2016 in den Vereinigen Staaten von Amerika, zuerst für Ted Cruz und dann für Donald Trump, eingesetzt wurde.
+
+----
+
 ### Der Technologie Stack ###
 
-Natürlich lässt eine Firma wie CA sich nicht direkt in die Karten schauen. Aus den Stellenangeboten für Data Engineers und besonders für Data Scientists auf ihrer Seite lassen sich jedoch einige Schlüsse ziehen. [^cf16]Bei Datenbanken werden Erfahrungen und Fähigkeiten im Umgang mit  MySQL und, aus dem Sektor der NoSQL Datenbanken, MongoDB erwünscht. Im Bereich Big Data scheinen die Frameworks Spark und Hadoop zum Einsatz zu kommen und die gewünschten Sprachen sind Python, Java oder Scala und entsprechenden Objekt Orientierten Programmier Paradigmen. Des weiteren natürlich der Umgang mit Versions Kontroll Systemen.     
+Natürlich lässt eine Firma wie Cambridge Analytica sich nicht direkt in die Karten schauen.Daher mussten wir einen andere Weg finden um eine Idee zu bekommen mit welchen Technologien bei CA gearbeitet wird. Unser Ansatz ist, dass sich aus den aktuellen Stellenangeboten der Firma ein ungefähre Schätzung möglich ist, welche Technologien dort in den Alltagsgebrauch gehören. Zum aktuellen Zeitpunkt wurden dort zwei Stellen ausgeschrieben aus denen wir Schlüsse ziehen konnten. Es gab ein Stellenangebot für Data Engineers und eines für Data Scientists auf ihrer Seite. [^cf18]Bei Datenbanken werden Erfahrungen und Fähigkeiten im Umgang mit MySQL und, aus dem Sektor der NoSQL Datenbanken, MongoDB erwünscht. MySQL ist eine Variante der „Structured Query Language“, die um 1995 von der Firma MySQL AB entworfen und unter einer GNU General Public License veröffentlicht wurde. NoSQL steht nicht für die Verneinung von SQL Datenbanken, sondern für „Not Only SQL“. Damit werden unterschiedliche Typen von Datenbanken bezeichnet wie zum Beispiel die von CA gewünschte MongoDB. Im Bereich Big Data scheinen die Frameworks Spark und Hadoop zum Einsatz zu kommen und die gewünschten Sprachen sind Python, Java oder Scala und entsprechenden Objekt Orientierten Programmier Paradigmen. Des weiteren natürlich der Umgang mit Versions Kontroll Systemen. Anhand dieser Punkte werden wir versuchen die verwendeten Technologien zu betrachten.   
+
+----
+
 #### Speicherung ####
 
-Wenn die Behauptung der Firma CA stimmt ist es offensichtlich, dass ein relationale Datenbank nicht ausreicht um diese 4000 Datenpunkte zu speichern. Auch die Analyse kann nicht auf einer einzelnen Maschine stattfinden. Hier kommt das Hadoop Distributed File System (HDFS) zum Einsatz. Hadoop ist ein Open Source (Java) Projekt, welches von Googles proprietären Google File System (GFS) und dem MapReduce Framework inspiriert wurde. Mit diesem System können sehr große Datensätze zuverlässig gespeichert werden und mit hoher Bandbreite an Anwendungen, sogenannte HDFS Clients, übertragen werden. Die HDFS Architektur besteht aus einem einzelnen NameNode, vielen DataNodes und dem HDFS Client. Der NameNode organisiert die Anfragen und die Ablage von Daten von den DataNodes durch die Clients. Das Hadoop MapReduce Framework wurde entworfen um Speicherung- und Berechnungsaufgaben über viele tausend Server zu verteilen und bei Bedarf zu skalieren.[^cf17]   
+Wenn die Aussagen der Firma Cambridge Analytica über die von ihnen gesammelten Datenmengen der Bewohner der Vereinigten Staaten von Amerika stimmen, ist es offensichtlich, dass ein einzelne relationale Datenbank nicht ausreicht um diese 5000 Datenpunkte zu speichern. Diese Daten können aus unterschiedlichsten Typen bestehen, man spricht auch von einer Datenvielfalt in diesem Zusammenhang. Es können Bilddaten, Text, Video, Audio Informationen sein. Die von bereits geordneten Informationen in einer Tabelle bis hin zu dem „Twitter-Stream“ einer Person gehen können. Hier kommt das Hadoop Distributed File System (HDFS) zum Einsatz.  
+Hadoop ist ein Open Source in Java geschriebenes Projekt, welches von Googles proprietären Google File System (GFS) und dem „MapReduce“ Framework inspiriert wurde. Mit diesem System können sehr große Datensätze zuverlässig gespeichert werden und mit hoher Bandbreite an Anwendungen, sogenannte HDFS Clients, übertragen werden. Die HDFS Architektur besteht aus einem einzelnen NameNode, vielen DataNodes und dem HDFS Client. Der NameNode organisiert die Anfragen und die Ablage von Daten durch die Clients auf den DataNodes. Damit kann der NameNode als Eintrittspunkt betrachtet werden. Die DataNodes sind Kindelemente in diesem Netzwerk. Die Clients, auch EdgeNodes genannt, sind Softwareanwendungen, die von Aussen auf die Daten zugreifen oder Prozesse anstoßen.[^cf19] Das HDFS wurde absichtlich so entworfen, dass es auf günstiger Hardware laufen kann. Dies hat den Vorteil einer kostengünstigen Skalierung. Ebenfalls ist beim Design des Systems von vornherein mit in Rechnung genommen, dass bei einem System in dem viele Hundert oder Tausende Computer eingebunden sind, Ausfälle zu Regel gehören und nicht die Ausnahme sind. Aus diesem Grund werden Daten, die in Blöcken organisiert sind standardmäßig repliziert. Ein weitere Grundgedanke des Systems ist, dass das Bewegen von Daten, gerade bei großen von Gigabyte oder Terabyte wie sie in Big Data auftreten können, ist kostenintensiv. Das Bewegen von Berechnungen nicht. Daher bietet das HDFS die Möglichkeit die Clients näher an die Daten heran zu bringen.[^cf20] Das Hadoop MapReduce Framework wurde entworfen um Speicherung- und Berechnungsaufgaben über viele tausend Server zu verteilen und bei Bedarf zu skalieren (Eine genau Erklärung von MapReduce folgt im nächsten Kapitel). Als Randnotiz sei zu bemerken, dass Hadoop mittlerweile in einer erweiterten Version 2 existiert. Diese läuft unter dem Namen YARN und trennt das „MapReduce“ Verfahren von dem Dateisystem.[^cf21] Hadoop liefert bereits das MapReduce Verfahren mit. Im Fall von CA wird jedoch ein weiteres Framework benutzt, da MapReduce nicht für die iterativen Prozesse des maschinellen Lernens geeignet ist.
+Auch die Analyse kann nicht auf einer einzigen Maschine stattfinden. Damit setzten wir uns im folgende Kapitel „Analyse“ auseinander.  
+
+
+----
+
 #### Analyse ####
 
-Das Hadoop System ist die Infrastruktur zum handhaben dieser Datenmengen. Zur Analyse dieser Daten könnte dann, wie ebenfalls aus den Anforderungen der Stellenbeschreibung hervorgeht, das Apache Spark Framework verwendet werden. Mit Spark können Daten aus einer vielen verschiedenen Quellen verarbeitet werden. Zum Beispiel auch aus dem HDFS, aber auch aus NoSQL Datenbank Systemen oder relationalen  Datenbanken. Mit Spark können Daten aus dem HDFS schneller verarbeitet werden und es existieren flexiblere Alternativen zum Hadoop MapReduce Verfahren.
-MapReduce ist ein Verfahren welches von Google für große Datenmengen entworfen wurde. Map: Daten werden über einen Cluster von Rechner verteilt nach einer bestimmten Funktion abgearbeitet. Reduce: Die einzelnen Teile des Clusters liefern nur einen Wert zurück.[^cf18] Spark kommt gebündelt mit einer Bibliothek für maschinelles Lernen (MLib), was immer iterative Prozesses bedeutet, hat eine REPL (Read Eval Print Listen) Schnittstelle und kann ähnlich wir R oder Python explorativ für statistische Aufgaben verwendet werden.[^cf19] Seit Anfang 2014 gilt Spark als Top Level Project bei der Apache Foundation[^cf20].  
-Wenn Datenmengen bearbeitet werden sollen, die auf einer einzigen Maschine existieren und verarbeitet werden können, kommt auch gerne die Programmiersprache Python, in ihren interaktiven Umgebungen wie iPython[^cf21] oder Jupyter[^cf22], mit Paketen wie scikit-learn[^cf23] oder pandas[^cf24] zum Einsatz. Pandas zum bearbeiten von Datenstrukturen und scikit-learn zum analysieren von Daten. Weiter übliche Module sind Matplotlib[^cf25] für die Ausgabe als Plot  
+Das Hadoop System ist die Infrastruktur zum handhaben dieser Datenmengen. Zur Analyse dieser Daten könnte dann, wie ebenfalls aus den Anforderungen der Stellenbeschreibung hervorgeht, das Apache Spark Framework verwendet werden. Mit Spark können Daten aus einer vielen verschiedenen Quellen verarbeitet werden. Zum Beispiel auch aus dem HDFS, aber auch aus NoSQL Datenbank Systemen oder relationalen  Datenbanken. Mit Spark können Daten aus dem HDFS schneller verarbeitet werden und es existieren flexiblere Alternativen zum Hadoop „MapReduce“ Verfahren.
+„MapReduce“ ist ein Verfahren welches von Google für große Datenmengen entworfen wurde. Dieses Verfahren kann in zwei Abschnitte unterteilt werden. Der Erste Abschnitt ist „Map“. Daten werden über einen Cluster von Rechner verteilt nach einer bestimmten Funktion abgearbeitet. Der Zweite Teil ist der „Reduce“ Abschnitt. Die einzelnen Teile des Clusters liefern nur einen Wert zurück.[^cf22] Spark kommt gebündelt mit einer Bibliothek für maschinelles Lernen (MLib), was immer iterative Prozesses bedeutet, hat eine REPL (Read Eval Print Listen) Schnittstelle und kann ähnlich wir R oder Python explorativ für statistische Aufgaben verwendet werden.[^cf23] Seit Anfang 2014 gilt Spark als Top Level Project bei der Apache Foundation[^cf24]. Dieses Framework ist noch sehr jung und kann Hadoop oder YARN (Hadoop 2) noch nicht ersetzten, wird aber als zukunftsträchtiges Projekt angesehen.  
+Wenn Datenmengen bearbeitet werden sollen, die auf einer einzigen Maschine existieren und verarbeitet werden können, kommt auch gerne die Programmiersprache Python, in ihren interaktiven Umgebungen wie iPython[^cf25] oder Jupyter[^cf26], mit Paketen wie scikit-learn[^cf27] oder pandas[^cf28] zum Einsatz. Pandas zum bearbeiten von Datenstrukturen und scikit-learn zum analysieren von Daten. Weiter übliche Module sind Matplotlib[^cf29] für die Ausgabe als Plot um die Ergebnisse auch sichtbar zu machen. Dies ist eine oft unterschätzter Anteil an Arbeit. Aus Tabellen und Zahlenkolonnen lässt sich nur schlecht ein Verhalten von Werten ablesen. Als einfaches Beispiel hierzu kann das Anscombe Quartett betrachtet werden.[^cf30]
+
+    +------+------+------+------+-------+------+-------+------+
+    |  x1  |  x2  |  x3  |  x4  |  y1   |  y2  |  y3   |  y4  |
+    +======+======+======+======+=======+======+=======+======+
+    |  10  |  10  |  10  |  8   | 8.04  | 9.14 | 7.46  | 6.58 |
+    +------+------+------+------+-------+------+-------+------+
+    |  8   |  8   |  8   |  8   | 6.95  | 8.14 | 6.77  | 5.76 |
+    +------+------+------+------+-------+------+-------+------+
+    |  13  |  13  |  13  |  8   | 7.58  | 8.74 | 12.74 | 7.71 |
+    +------+------+------+------+-------+------+-------+------+
+    |  9   |  9   |  9   |  8   | 8.81  | 8.77 | 7.11  | 8.84 |
+    +------+------+------+------+-------+------+-------+------+
+    |  11  |  11  |  11  |  8   | 8.33  | 9.26 | 7.81  | 8.47 |
+    +------+------+------+------+-------+------+-------+------+
+    |  14  |  14  |  14  |  8   | 9.96  | 8.1  | 8.84  | 7.04 |
+    +------+------+------+------+-------+------+-------+------+
+    |  6   |  6   |  6   |  8   | 7.24  | 6.13 | 6.08  | 5.25 |
+    +------+------+------+------+-------+------+-------+------+
+    |  4   |  4   |  4   |  19  | 4.26  | 3.1  | 5.39  | 12.5 |
+    +------+------+------+------+-------+------+-------+------+
+    |  12  |  12  |  12  |  8   | 10.84 | 9.13 | 8.15  | 5.56 |
+    +------+------+------+------+-------+------+-------+------+
+    |  7   |  7   |  7   |  8   | 4.82  | 7.26 | 6.42  | 7.91 |
+    +------+------+------+------+-------+------+-------+------+
+    |  5   |  5   |  5   |  8   | 5.68  | 4.74 | 5.73  | 6.89 |
+    +------+------+------+------+-------+------+-------+------+
+
+![Anscombe Quartett Plot](./images/anscombe-quartet.png)  
+
+Aus der oben stehenden Tabelle lassen sich wenig bis gar keine Schlüsse auf das Verhalten der Werte schließen. Durch die Visualisierung der Werte kann schnell ein Muster oder eine Abweichung festgestellt werden.  
+
+----
+
 # Ausblick #
 
-Algorithmen, maschinelles Lernen und Künstliche Intelligenz halten Einzug in jeden Bereich unseres Lebens. Automatisiertes Handel ist schon seit Jahren üblich. Daten Wissenschaften sind ein neues Feld von Studien. Wo mag uns dies alles hin leiten?  
-Es ist schwer abzusehen was in den nächsten 5, 10, 15 Jahren auf diesen Feldern passieren wird. Eines ist jedoch klar. Die Mengen an Daten werden nicht geringer. Mit dem Bereich des „Internet of Things“ (IoT) kommen laut Gartner bis im Jahr 2020 mehr als 20 Milliarde Geräte ans Netz.[^cf26] Ältere Voraussagen gingen noch von 75 Milliarde Geräte[^cf27]. All diese Objekte werden Daten erzeugen, an einen Server spielen oder sie durch ihn hin druchleiten und dann? Genauso werden die Sozialen Netzwerke versuchen immer weiter in unser Leben einzudringen. Die Idee von Facebook solargetriebene Flugzeuge, die Internet Zugang bis in die entlegensten Winkel der Welt bringen, zu bauen, ist bestimmt nicht aus reinem Altruismus geboren.[^cf28] Wer das Netz liefert kann auch sehen was gesehen wird. Die Liste geht weiter und weiter. Von Amazon Echo, über Googles selbstfahrende Autos oder Heim-Automations-Systemen, zu Snapchats Brillen mit Videofunktion. Basierend auf diesen Informationen werden für alle Bereiche des Lebens Modelle unseres Verhaltens und unserer Vorlieben entwickelt um uns noch besser kontrollieren oder bewerben zu können. Sei es um uns Serien zu liefern die genau unseren Interessen entsprechen, oder um die richtige Partei zu wählen, das richtige Produkt zu kaufen oder um uns vor uns selber zu schützen. Für den einen mag diese Aussicht spannend sein für den anderen erschreckend. Sicher, egal ob Schöne neue Welt oder 1984, wir leben in spannenden Zeiten.   
-# Fazit #
+Algorithmen, maschinelles Lernen und Künstliche Intelligenz halten Einzug in jeden Bereich unseres Lebens. Automatisiertes Handel ist schon seit Jahren üblich. „Big Data“ ist ein Interessen Feld für viele Unternehmen. Daten Wissenschaften sind ein neues Feld von Studien von dem wir noch nicht sagen können wo es uns hin führen wird. Denn es ist schwer abzusehen was in den nächsten 5, 10, 15 Jahren auf diesen Feldern passieren wird. Eines ist jedoch klar. Die Mengen an Daten werden nicht geringer. Mit dem Bereich des „Internet of Things“ (IoT) kommen laut Gartner bis im Jahr 2020 mehr als 20 Milliarde Geräte ans Netz.[^cf31] Ältere Voraussagen gingen noch von 75 Milliarde Geräte[^cf32]. All diese Objekte werden Daten erzeugen, an einen Server spielen oder sie durch ihn hin druchleiten und dann? Genauso werden die Sozialen Netzwerke versuchen immer weiter in unser Leben einzudringen. Die Idee von Facebook solargetriebene Flugzeuge, die Internet Zugang bis in die entlegensten Winkel der Welt bringen, zu bauen, ist bestimmt nicht aus reinem Altruismus geboren.[^cf33] Wer das Netz liefert kann auch sehen was gesehen wird. Die Liste geht weiter und weiter. Von Amazon Echo, über Googles selbstfahrende Autos oder Heim-Automations-Systemen, zu Snapchats Brillen mit Videofunktion. Basierend auf diesen Informationen werden für alle Bereiche des Lebens Modelle unseres Verhaltens und unserer Vorlieben entwickelt um uns noch besser kontrollieren oder bewerben zu können. Sei es um uns Serien zu liefern die genau unseren Interessen entsprechen, oder um die richtige Partei zu wählen, das richtige Produkt zu kaufen oder um uns vor uns selber zu schützen. Für den einen mag diese Aussicht spannend sein für den anderen erschreckend. Sicher, egal ob Schöne neue Welt oder 1984, wir leben in spannenden Zeiten. 
 
 ----
 
@@ -181,32 +243,42 @@ Ende
 
 [^cf13]: Eva Wolfangel. "Big Data: Haben psychologische Facebookdaten Trumps Sieg verursacht?." Spektrum.de. n.d. Web. 9 Jan. 2017. <http://www.spektrum.de/kolumne/haben-psychologische-facebookdaten-trumps-sieg-verursacht/1431745>
 
-[^cf14]: N.a. "Cambridge Analytica – About Us." Cambridgeanalytica.org. 10 Jan. 2017. Web. 15 Jan. 2017. <https://cambridgeanalytica.org/about>
+[^cf14]: Gastbeitrag. "Algorithmen Allmächtig? Freiheit in den Zeiten der Statistik." netzpolitik.org. 25 Jul. 2014. Web. 25 Jan. 2017. <https://netzpolitik.org/2014/algorithmen-allmaechtig-freiheit-in-den-zeiten-der-statistik/>
 
-[^cf15]: YouTube. "The Power of Big Data and Psychographics." YouTube. 27 Sept. 2016. Web. 22 Jan. 2017. <https://www.youtube.com/watch?v=n8Dd5aVXLCc>
+[^cf15]: Markus Reuter. "Parteien in Deutschland haben noch keine Position zu Wähler-Targeting (Update)." netzpolitik.org. 6 Dec. 2016. Web. 25 Jan. 2017. <https://netzpolitik.org/2016/parteien-in-deutschland-haben-noch-keine-position-zu-waehler-targeting/>
 
-[^cf16]: Cambridge Analytica. "Cambridge Analytica – Better Audience Targeting." Cambridge Analytica. 10 Jan. 2017. Web. 22 Jan. 2017. <https://cambridgeanalytica.org/>
+[^cf16]: N.a. "Cambridge Analytica – About Us." Cambridgeanalytica.org. 10 Jan. 2017. Web. 15 Jan. 2017. <https://cambridgeanalytica.org/about>
 
-[^cf17]: Shvachko, Konstantin, et al. "The hadoop distributed file system." 2010 IEEE 26th symposium on mass storage systems and technologies (MSST). IEEE, 2010.
+[^cf17]: YouTube. "The Power of Big Data and Psychographics." YouTube. 27 Sept. 2016. Web. 22 Jan. 2017. <https://www.youtube.com/watch?v=n8Dd5aVXLCc>
 
-[^cf18]: Dean, Jeffrey, and Sanjay Ghemawat. "MapReduce: simplified data processing on large clusters." Communications of the ACM 51.1 (2008): 107-113.
+[^cf18]: Cambridge Analytica. "Cambridge Analytica – Better Audience Targeting." Cambridge Analytica. 10 Jan. 2017. Web. 22 Jan. 2017. <https://cambridgeanalytica.org/>
 
-[^cf19]: Sean Owen. "Why Apache Spark is a Crossover Hit for Data Scientists - Cloudera Engineering Blog." Cloudera Engineering Blog. 3 Mar. 2014. Web. 22 Jan. 2017. <http://blog.cloudera.com/blog/2014/03/why-apache-spark-is-a-crossover-hit-for-data-scientists/>
+[^cf19]: Shvachko, Konstantin, et al. "The hadoop distributed file system." 2010 IEEE 26th symposium on mass storage systems and technologies (MSST). IEEE, 2010.
 
-[^cf20]: N.a. "The Apache Software Foundation Announces Apache™ Spark™ as a Top-Level Project : The Apache Software Foundation Blog." Blogs.apache.org. 20 Jan. 2017. Web. 22 Jan. 2017. <https://blogs.apache.org/foundation/entry/the_apache_software_foundation_announces50>
+[^cf20]: N.a. "HDFS Architecture Guide." Hadoop.apache.org. 4 Aug. 2013. Web. 25 Jan. 2017. <https://hadoop.apache.org/docs/r1.2.1/hdfs_design.html>
 
-[^cf21]: N.a. "Jupyter and the future of IPython — IPython." Ipython.org. 9 Jan. 2017. Web. 22 Jan. 2017. <http://ipython.org/index.html>
+[^cf21]: Margaret Rouse. "Apache Hadoop YARN (Yet Another Resource Negotiator)." SearchDataManagement. n.d. Web. 25 Jan. 2017. <http://searchdatamanagement.techtarget.com/definition/Apache-Hadoop-YARN-Yet-Another-Resource-Negotiator>
 
-[^cf22]: N.a. "Project Jupyter." Jupyter.org. 17 Jan. 2017. Web. 22 Jan. 2017. <http://www.jupyter.org>
+[^cf22]: Dean, Jeffrey, and Sanjay Ghemawat. "MapReduce: simplified data processing on large clusters." Communications of the ACM 51.1 (2008): 107-113.
 
-[^cf23]: N.a. "scikit-learn: machine learning in Python — scikit-learn 0.18.1 documentation." Scikit-learn.org. n.d. Web. 22 Jan. 2017. <http://scikit-learn.org/stable/>
+[^cf23]: Sean Owen. "Why Apache Spark is a Crossover Hit for Data Scientists - Cloudera Engineering Blog." Cloudera Engineering Blog. 3 Mar. 2014. Web. 22 Jan. 2017. <http://blog.cloudera.com/blog/2014/03/why-apache-spark-is-a-crossover-hit-for-data-scientists/>
 
-[^cf24]: N.a. "Python Data Analysis Library — pandas: Python Data Analysis Library." Pandas.pydata.org. 26 Dec. 2016. Web. 22 Jan. 2017. <http://pandas.pydata.org/>
+[^cf24]: N.a. "The Apache Software Foundation Announces Apache™ Spark™ as a Top-Level Project : The Apache Software Foundation Blog." Blogs.apache.org. 20 Jan. 2017. Web. 22 Jan. 2017. <https://blogs.apache.org/foundation/entry/the_apache_software_foundation_announces50>
 
-[^cf25]: N.a. "Matplotlib: Python plotting — Matplotlib 2.0.0 documentation." Matplotlib.org. 19 Jan. 2017. Web. 22 Jan. 2017. <http://matplotlib.org/>
+[^cf25]: N.a. "Jupyter and the future of IPython — IPython." Ipython.org. 9 Jan. 2017. Web. 22 Jan. 2017. <http://ipython.org/index.html>
 
-[^cf26]: N.a. "Gartner Says 6.4 Billion Connected ." Gartner.com. n.d. Web. 22 Jan. 2017. <http://www.gartner.com/newsroom/id/3165317>
+[^cf26]: N.a. "Project Jupyter." Jupyter.org. 17 Jan. 2017. Web. 22 Jan. 2017. <http://www.jupyter.org>
 
-[^cf27]: Tony Danova. "Morgan Stanley: 75 Billion Devices Will Be Connected To The Internet Of Things By 2020." Business Insider. 2 Oct. 2013. Web. 22 Jan. 2017. <http://www.businessinsider.com/75-billion-devices-will-be-connected-to-the-internet-by-2020-2013-10>
+[^cf27]: N.a. "scikit-learn: machine learning in Python — scikit-learn 0.18.1 documentation." Scikit-learn.org. n.d. Web. 22 Jan. 2017. <http://scikit-learn.org/stable/>
 
-[^cf28]: Larry Dignan. "Facebook's 10-year roadmap outlined, eyes AI, VR, Internet access infrastructure | ZDNet." ZDNet. 12 Apr. 2016. Web. 22 Jan. 2017. <http://www.zdnet.com/article/facebooks-10-year-roadmap-outlined-eyes-ai-vr-internet-access-infrastructure/>
+[^cf28]: N.a. "Python Data Analysis Library — pandas: Python Data Analysis Library." Pandas.pydata.org. 26 Dec. 2016. Web. 22 Jan. 2017. <http://pandas.pydata.org/>
+
+[^cf29]: N.a. "Matplotlib: Python plotting — Matplotlib 2.0.0 documentation." Matplotlib.org. 19 Jan. 2017. Web. 22 Jan. 2017. <http://matplotlib.org/>
+
+[^cf30]: Turner, Stephen. "Using and Abusing Data Visualization: Anscombe’s Quartet and Cheating Bonferroni." R-bloggers. 26 Feb. 2015. Web. 25 Jan. 2017. <https://www.r-bloggers.com/using-and-abusing-data-visualization-anscombes-quartet-and-cheating-bonferroni/>
+
+[^cf31]: N.a. "Gartner Says 6.4 Billion Connected ." Gartner.com. n.d. Web. 22 Jan. 2017. <http://www.gartner.com/newsroom/id/3165317>
+
+[^cf32]: Tony Danova. "Morgan Stanley: 75 Billion Devices Will Be Connected To The Internet Of Things By 2020." Business Insider. 2 Oct. 2013. Web. 22 Jan. 2017. <http://www.businessinsider.com/75-billion-devices-will-be-connected-to-the-internet-by-2020-2013-10>
+
+[^cf33]: Larry Dignan. "Facebook's 10-year roadmap outlined, eyes AI, VR, Internet access infrastructure | ZDNet." ZDNet. 12 Apr. 2016. Web. 22 Jan. 2017. <http://www.zdnet.com/article/facebooks-10-year-roadmap-outlined-eyes-ai-vr-internet-access-infrastructure/>

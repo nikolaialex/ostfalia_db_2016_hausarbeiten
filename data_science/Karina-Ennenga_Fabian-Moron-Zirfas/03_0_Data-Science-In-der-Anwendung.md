@@ -5,4 +5,4 @@ Nicht so offensichtlich jedoch auch vorstellbar als Methode uns als Einzelperson
 
 Oder um es einfacher zu sagen: „Wie findet Data Science Anwendung?“  
 
-In den folgenden beiden Unterabschnitten werden wir die Unternehmen Netflix und Cambridge Analytica betrachten, um zwei weitere Modelle aufzuzeigen in den „Big Data“ eine zentrale Rolle spielt.    
+In den folgenden beiden Unterabschnitten werden wir die Unternehmen Netflix und Cambridge Analytica betrachten, um zwei weitere Modelle aufzuzeigen in den „Big Data“ eine zentrale Rolle spielt.  

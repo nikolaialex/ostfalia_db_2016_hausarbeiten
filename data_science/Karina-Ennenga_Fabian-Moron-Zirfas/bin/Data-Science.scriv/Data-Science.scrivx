@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<ScrivenerProject Version="1.5" Creator="SCRMAC-2.8.1.2-26324" Device="Fabians-MacBook-Air" Modified="2017-01-22 19:19:24 +0100" ModID="15753083-AA68-491F-B55E-A5C060CE0864">
+<ScrivenerProject Version="1.5" Creator="SCRMAC-2.8.1.2-26324" Device="Fabians-MacBook-Air" Modified="2017-01-25 16:45:50 +0100" ModID="097FE253-0D82-4E4C-B2C5-290A3C67EAC9">
     <Binder>
         <BinderItem ID="16" UUID="6F129022-E261-4132-AF42-88D164377F8F" Type="Text" Created="2017-01-07 18:37:53 +0100" Modified="2017-01-07 18:37:53 +0100">
             <Title>About</Title>
@@ -18,12 +18,31 @@
                 <IncludeInCompile>Yes</IncludeInCompile>
             </MetaData>
             <CorkboardAndOutliner>
-                <SelectedSubdocumentIDs>40</SelectedSubdocumentIDs>
+                <SelectedSubdocumentIDs>45</SelectedSubdocumentIDs>
+                <OutlinerExpandedState>
+                    <ItemID>31</ItemID>
+                    <ItemID>33</ItemID>
+                    <ItemID>44</ItemID>
+                </OutlinerExpandedState>
+                <CorkboardSettings>
+                    <FreeformMode>No</FreeformMode>
+                    <FreeformCorkboardDocuments>
+                        <IndexCardBinderID Position="1.183333,0.683333" TimeStamp="2017-01-25 15:29:29 +0100">31</IndexCardBinderID>
+                        <IndexCardBinderID Position="1.143333,0.106667" TimeStamp="2017-01-25 15:29:29 +0100">3</IndexCardBinderID>
+                        <IndexCardBinderID Position="0.17,0.106667" TimeStamp="2017-01-25 15:29:29 +0100">41</IndexCardBinderID>
+                        <IndexCardBinderID Position="1.143333,1.356667" TimeStamp="2017-01-25 15:29:29 +0100">8</IndexCardBinderID>
+                        <IndexCardBinderID Position="2.153333,0.736667" TimeStamp="2017-01-25 15:29:29 +0100">39</IndexCardBinderID>
+                        <IndexCardBinderID Position="0.15,0.713333" TimeStamp="2017-01-25 15:29:29 +0100">30</IndexCardBinderID>
+                        <IndexCardBinderID Position="0.156667,1.39" TimeStamp="2017-01-25 15:29:29 +0100">40</IndexCardBinderID>
+                        <IndexCardBinderID Position="2.23,0.116667" TimeStamp="2017-01-25 15:29:29 +0100">29</IndexCardBinderID>
+                    </FreeformCorkboardDocuments>
+                </CorkboardSettings>
             </CorkboardAndOutliner>
             <Children>
                 <BinderItem ID="41" UUID="82ADFECB-B8A4-4B65-91D3-63B604E76811" Type="Text" Created="2017-01-18 08:57:38 +0100" Modified="2017-01-18 08:57:42 +0100">
                     <Title>Meta-Data</Title>
                     <MetaData>
+                        <PageBreakBefore>Yes</PageBreakBefore>
                         <IncludeInCompile>Yes</IncludeInCompile>
                         <NotesTextSelection>0,0</NotesTextSelection>
                     </MetaData>
@@ -35,6 +54,7 @@
                     <Title>Title</Title>
                     <MetaData>
                         <LabelID>1</LabelID>
+                        <PageBreakBefore>Yes</PageBreakBefore>
                         <IncludeInCompile>Yes</IncludeInCompile>
                         <CompileAsIs>Yes</CompileAsIs>
                         <NotesTextSelection>0,0</NotesTextSelection>
@@ -43,11 +63,12 @@
                         <TextSelection>534,0</TextSelection>
                     </TextSettings>
                 </BinderItem>
-                <BinderItem ID="29" UUID="3DB88E38-BBC2-490C-ABF1-B1D339C4C24B" Type="Text" Created="2016-11-23 11:17:12 +0100" Modified="2017-01-15 17:30:52 +0100">
+                <BinderItem ID="29" UUID="3DB88E38-BBC2-490C-ABF1-B1D339C4C24B" Type="Text" Created="2016-11-23 11:17:12 +0100" Modified="2017-01-25 15:30:49 +0100">
                     <Title>Abstrakt</Title>
                     <MetaData>
                         <LabelID>1</LabelID>
                         <StatusID>1</StatusID>
+                        <PageBreakBefore>Yes</PageBreakBefore>
                         <IncludeInCompile>Yes</IncludeInCompile>
                         <NotesTextSelection>0,0</NotesTextSelection>
                     </MetaData>
@@ -61,6 +82,7 @@
                     <MetaData>
                         <LabelID>1</LabelID>
                         <StatusID>1</StatusID>
+                        <PageBreakBefore>Yes</PageBreakBefore>
                         <IncludeInCompile>Yes</IncludeInCompile>
                         <NotesTextSelection>0,0</NotesTextSelection>
                     </MetaData>
@@ -69,21 +91,25 @@
                         <Target Type="Words" Notify="Yes">500</Target>
                     </TextSettings>
                 </BinderItem>
-                <BinderItem ID="31" UUID="473B9863-DD91-4C44-B8F6-F37AAF01ED95" Type="Text" Created="2016-12-11 15:45:47 +0100" Modified="2017-01-22 16:20:19 +0100">
+                <BinderItem ID="31" UUID="473B9863-DD91-4C44-B8F6-F37AAF01ED95" Type="Text" Created="2016-12-11 15:45:47 +0100" Modified="2017-01-25 15:30:54 +0100">
                     <Title>Data Science In der Anwendung</Title>
                     <MetaData>
                         <LabelID>1</LabelID>
+                        <StatusID>1</StatusID>
+                        <PageBreakBefore>Yes</PageBreakBefore>
                         <IncludeInCompile>Yes</IncludeInCompile>
                         <NotesTextSelection>0,0</NotesTextSelection>
                     </MetaData>
                     <TextSettings>
-                        <TextSelection>1319,0</TextSelection>
+                        <TextSelection>658,0</TextSelection>
                         <Target Type="Words" Notify="Yes">200</Target>
                     </TextSettings>
                     <Children>
-                        <BinderItem ID="32" UUID="DBC7FA2C-CB7C-4A21-8732-25F9F86CBFFB" Type="Text" Created="2016-12-11 15:45:47 +0100" Modified="2017-01-17 18:44:02 +0100">
+                        <BinderItem ID="32" UUID="DBC7FA2C-CB7C-4A21-8732-25F9F86CBFFB" Type="Text" Created="2016-12-11 15:45:47 +0100" Modified="2017-01-25 16:45:12 +0100">
                             <Title>Netflix</Title>
                             <MetaData>
+                                <StatusID>1</StatusID>
+                                <PageBreakBefore>Yes</PageBreakBefore>
                                 <IncludeInCompile>Yes</IncludeInCompile>
                                 <NotesTextSelection>0,0</NotesTextSelection>
                             </MetaData>
@@ -92,59 +118,64 @@
                                 <Target Type="Words" Notify="Yes">3000</Target>
                             </TextSettings>
                         </BinderItem>
-                        <BinderItem ID="33" UUID="4B55A380-BAC9-47CE-8BFC-2582A85051BE" Type="Text" Created="2016-12-11 15:45:47 +0100" Modified="2017-01-22 17:51:43 +0100">
+                        <BinderItem ID="33" UUID="4B55A380-BAC9-47CE-8BFC-2582A85051BE" Type="Text" Created="2016-12-11 15:45:47 +0100" Modified="2017-01-25 15:11:09 +0100">
                             <Title>Cambridge Analytica</Title>
                             <MetaData>
+                                <PageBreakBefore>Yes</PageBreakBefore>
                                 <IncludeInCompile>Yes</IncludeInCompile>
                                 <NotesTextSelection>0,0</NotesTextSelection>
                             </MetaData>
                             <TextSettings>
-                                <TextSelection>1588,0</TextSelection>
-                                <Target Type="Words" Notify="Yes">250</Target>
+                                <TextSelection>2554,0</TextSelection>
+                                <Target Type="Words" Notify="Yes">350</Target>
                             </TextSettings>
                             <Children>
-                                <BinderItem ID="43" UUID="56CB4723-CFC8-4016-AE35-E4A005608896" Type="Text" Created="2017-01-22 17:48:42 +0100" Modified="2017-01-22 17:51:49 +0100">
+                                <BinderItem ID="43" UUID="56CB4723-CFC8-4016-AE35-E4A005608896" Type="Text" Created="2017-01-22 17:48:42 +0100" Modified="2017-01-25 15:11:09 +0100">
                                     <Title>Die Dienstleistung</Title>
                                     <MetaData>
+                                        <PageBreakBefore>Yes</PageBreakBefore>
                                         <IncludeInCompile>Yes</IncludeInCompile>
                                         <NotesTextSelection>0,0</NotesTextSelection>
                                     </MetaData>
                                     <TextSettings>
-                                        <TextSelection>0,0</TextSelection>
-                                        <Target Type="Words" Notify="No">200</Target>
+                                        <TextSelection>55,0</TextSelection>
+                                        <Target Type="Words" Notify="No">300</Target>
                                     </TextSettings>
                                 </BinderItem>
-                                <BinderItem ID="44" UUID="4B76E3B2-50DC-4F10-846F-4361E259A6CB" Type="Text" Created="2017-01-22 17:49:24 +0100" Modified="2017-01-22 17:54:11 +0100">
+                                <BinderItem ID="44" UUID="4B76E3B2-50DC-4F10-846F-4361E259A6CB" Type="Text" Created="2017-01-22 17:49:24 +0100" Modified="2017-01-25 15:11:09 +0100">
                                     <Title>Der Technologie Stack</Title>
                                     <MetaData>
+                                        <PageBreakBefore>Yes</PageBreakBefore>
                                         <IncludeInCompile>Yes</IncludeInCompile>
                                         <NotesTextSelection>0,0</NotesTextSelection>
                                     </MetaData>
                                     <TextSettings>
-                                        <TextSelection>0,0</TextSelection>
-                                        <Target Type="Words" Notify="No">100</Target>
+                                        <TextSelection>1422,0</TextSelection>
+                                        <Target Type="Words" Notify="Yes">200</Target>
                                     </TextSettings>
                                     <Children>
-                                        <BinderItem ID="45" UUID="CBC60C9E-2042-4FE0-A6D0-A6FE30E10541" Type="Text" Created="2017-01-22 17:50:06 +0100" Modified="2017-01-22 17:56:21 +0100">
+                                        <BinderItem ID="45" UUID="CBC60C9E-2042-4FE0-A6D0-A6FE30E10541" Type="Text" Created="2017-01-22 17:50:06 +0100" Modified="2017-01-25 16:45:50 +0100">
                                             <Title>Speicherung</Title>
                                             <MetaData>
+                                                <PageBreakBefore>Yes</PageBreakBefore>
                                                 <IncludeInCompile>Yes</IncludeInCompile>
                                                 <NotesTextSelection>0,0</NotesTextSelection>
                                             </MetaData>
                                             <TextSettings>
-                                                <TextSelection>948,0</TextSelection>
-                                                <Target Type="Words" Notify="No">300</Target>
+                                                <TextSelection>2359,0</TextSelection>
+                                                <Target Type="Words" Notify="No">200</Target>
                                             </TextSettings>
                                         </BinderItem>
-                                        <BinderItem ID="46" UUID="0A22FDD5-FDCA-426C-AD8F-A96D0C4DB3F0" Type="Text" Created="2017-01-22 17:50:57 +0100" Modified="2017-01-22 19:19:24 +0100">
+                                        <BinderItem ID="46" UUID="0A22FDD5-FDCA-426C-AD8F-A96D0C4DB3F0" Type="Text" Created="2017-01-22 17:50:57 +0100" Modified="2017-01-25 16:45:50 +0100">
                                             <Title>Analyse</Title>
                                             <MetaData>
+                                                <PageBreakBefore>Yes</PageBreakBefore>
                                                 <IncludeInCompile>Yes</IncludeInCompile>
                                                 <NotesTextSelection>0,0</NotesTextSelection>
                                             </MetaData>
                                             <TextSettings>
-                                                <TextSelection>1577,0</TextSelection>
-                                                <Target Type="Words" Notify="No">300</Target>
+                                                <TextSelection>1973,0</TextSelection>
+                                                <Target Type="Words" Notify="Yes">400</Target>
                                             </TextSettings>
                                         </BinderItem>
                                     </Children>
@@ -153,16 +184,17 @@
                         </BinderItem>
                     </Children>
                 </BinderItem>
-                <BinderItem ID="39" UUID="5362E602-E8C9-46AE-942A-2AC07CB5A711" Type="Text" Created="2017-01-15 16:05:50 +0100" Modified="2017-01-22 19:19:24 +0100">
+                <BinderItem ID="39" UUID="5362E602-E8C9-46AE-942A-2AC07CB5A711" Type="Text" Created="2017-01-15 16:05:50 +0100" Modified="2017-01-25 16:45:50 +0100">
                     <Title>Ausblick</Title>
                     <MetaData>
                         <LabelID>1</LabelID>
                         <StatusID>0</StatusID>
+                        <PageBreakBefore>Yes</PageBreakBefore>
                         <IncludeInCompile>Yes</IncludeInCompile>
                         <NotesTextSelection>0,0</NotesTextSelection>
                     </MetaData>
                     <TextSettings>
-                        <TextSelection>1707,0</TextSelection>
+                        <TextSelection>170,0</TextSelection>
                         <Target Type="Words" Notify="No">300</Target>
                     </TextSettings>
                 </BinderItem>
@@ -171,7 +203,7 @@
                     <MetaData>
                         <LabelID>1</LabelID>
                         <StatusID>0</StatusID>
-                        <IncludeInCompile>Yes</IncludeInCompile>
+                        <PageBreakBefore>Yes</PageBreakBefore>
                         <NotesTextSelection>0,0</NotesTextSelection>
                     </MetaData>
                     <TextSettings>
@@ -403,8 +435,8 @@
     </ProjectProperties>
     <ProjectTargets Notify="Yes">
         <DraftTarget Type="Words" CountIncludedOnly="Yes" CurrentCompileGroupOnly="Yes" Deadline="2017-01-29 13:28:32 +0100" IgnoreDeadline="No">6000</DraftTarget>
-        <SessionTarget Type="Words" CountDraftOnly="No" AllowNegatives="Yes" ResetType="Midnight" DeterminedFromDeadline="Yes" WritingDays="1-7" CanWriteOnDeadlineDate="No">857</SessionTarget>
-        <PreviousSession Words="645" Characters="4470" Date="2017-01-22 15:16:57 +0100"></PreviousSession>
+        <SessionTarget Type="Words" CountDraftOnly="Yes" AllowNegatives="Yes" ResetType="Midnight" DeterminedFromDeadline="Yes" WritingDays="1-7" CanWriteOnDeadlineDate="No">981</SessionTarget>
+        <PreviousSession Words="792" Characters="6449" Date="2017-01-25 10:09:04 +0100"></PreviousSession>
     </ProjectTargets>
     <PrintSettings PaperSize="595.275574,841.889771" LeftMargin="72.0" RightMargin="72.0" TopMargin="90.0" BottomMargin="90.0" PaperType="iso-a4" Orientation="Portrait" HorizontalPagination="Clip" VerticalPagination="Auto" ScaleFactor="1.0" HorizontallyCentered="Yes" VerticallyCentered="Yes" Collates="Yes" PagesAcross="1" PagesDown="1"></PrintSettings>
 </ScrivenerProject>

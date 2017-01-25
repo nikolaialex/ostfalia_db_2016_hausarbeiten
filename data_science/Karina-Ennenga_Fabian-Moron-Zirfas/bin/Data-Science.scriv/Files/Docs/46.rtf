@@ -5,7 +5,36 @@
 \pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\fi366\pardirnatural
 
 \f0\fs28 \cf2 \cb3 \expnd0\expndtw0\kerning0
-Das Hadoop System ist die Infrastruktur zum handhaben dieser Datenmengen. Zur Analyse dieser Daten k\'f6nnte dann, wie ebenfalls aus den Anforderungen der Stellenbeschreibung hervorgeht, das Apache Spark Framework verwendet werden. Mit Spark k\'f6nnen Daten aus einer vielen verschiedenen Quellen verarbeitet werden. Zum Beispiel auch aus dem HDFS, aber auch aus NoSQL Datenbank Systemen oder relationalen  Datenbanken. Mit Spark k\'f6nnen Daten aus dem HDFS schneller verarbeitet werden und es existieren flexiblere Alternativen zum Hadoop MapReduce Verfahren.\
-\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\fi366\pardirnatural
-{\field{\*\fldinst{HYPERLINK "scrivcmt://508D63D1-C92F-4C8C-82A7-EE3E089FBC34"}}{\fldrslt \cf2 \cb3 MapReduce ist ein Verfahren welches von Google f\'fcr gro\'dfe Datenmengen entworfen wurde. Map: Daten werden \'fcber einen Cluster von Rechner verteilt nach einer bestimmten Funktion abgearbeitet. Reduce: Die einzelnen Teile des Clusters liefern nur einen Wert zur\'fcck.}} {\field{\*\fldinst{HYPERLINK "scrivcmt://C9CBE5AE-2C22-4E12-B2F0-6D4C533CF2E3"}}{\fldrslt \cf2 \cb3 Spark kommt geb\'fcndelt mit einer Bibliothek f\'fcr maschinelles Lernen (MLib), was immer iterative Prozesses bedeutet, hat eine REPL (Read Eval Print Listen) Schnittstelle und kann \'e4hnlich wir R oder Python explorativ f\'fcr statistische Aufgaben verwendet werden.}} Seit Anfang 2014 gilt Spark als {\field{\*\fldinst{HYPERLINK "scrivcmt://FD6ACECA-A542-402D-AEB0-638A8D6D6119"}}{\fldrslt \cf2 \cb3 Top Level Project bei der Apache Foundation}}.  \
-Wenn Datenmengen bearbeitet werden sollen, die auf einer einzigen Maschine existieren und verarbeitet werden k\'f6nnen, kommt auch gerne die Programmiersprache Python, in ihren interaktiven Umgebungen wie {\field{\*\fldinst{HYPERLINK "scrivcmt://F898A827-9B11-4171-AF6E-22F4B3F7508D"}}{\fldrslt iPython}} oder {\field{\*\fldinst{HYPERLINK "scrivcmt://416896A6-5E06-435B-9DFB-DB1B110AF36C"}}{\fldrslt Jupyter}}, mit Paketen wie {\field{\*\fldinst{HYPERLINK "scrivcmt://C35AAE4D-E981-44E9-9D86-424A4C789F29"}}{\fldrslt scikit-learn}} oder {\field{\*\fldinst{HYPERLINK "scrivcmt://E733F774-EBAA-4282-9057-D30F8944B769"}}{\fldrslt pandas}} zum Einsatz. Pandas zum bearbeiten von Datenstrukturen und scikit-learn zum analysieren von Daten. Weiter \'fcbliche Module sind {\field{\*\fldinst{HYPERLINK "scrivcmt://376C176E-EA58-410A-B077-1FD5367DADB0"}}{\fldrslt Matplotlib}} f\'fcr die Ausgabe als Plot}
+Das Hadoop System ist die Infrastruktur zum handhaben dieser Datenmengen. Zur Analyse dieser Daten k\'f6nnte dann, wie ebenfalls aus den Anforderungen der Stellenbeschreibung hervorgeht, das Apache Spark Framework verwendet werden. Mit Spark k\'f6nnen Daten aus einer vielen verschiedenen Quellen verarbeitet werden. Zum Beispiel auch aus dem HDFS, aber auch aus NoSQL Datenbank Systemen oder relationalen  Datenbanken. Mit Spark k\'f6nnen Daten aus dem HDFS schneller verarbeitet werden und es existieren flexiblere Alternativen zum Hadoop \'84MapReduce\'93 Verfahren.\
+{\field{\*\fldinst{HYPERLINK "scrivcmt://D61D7692-324C-4D80-8BD5-041EDDBBFB2C"}}{\fldrslt \'84MapReduce\'93 ist ein Verfahren welches von Google f\'fcr gro\'dfe Datenmengen entworfen wurde. Dieses Verfahren kann in zwei Abschnitte unterteilt werden. Der Erste Abschnitt ist \'84Map\'93. Daten werden \'fcber einen Cluster von Rechner verteilt nach einer bestimmten Funktion abgearbeitet. Der Zweite Teil ist der \'84Reduce\'93 Abschnitt. Die einzelnen Teile des Clusters liefern nur einen Wert zur\'fcck.}} {\field{\*\fldinst{HYPERLINK "scrivcmt://C9CBE5AE-2C22-4E12-B2F0-6D4C533CF2E3"}}{\fldrslt Spark kommt geb\'fcndelt mit einer Bibliothek f\'fcr maschinelles Lernen (MLib), was immer iterative Prozesses bedeutet, hat eine REPL (Read Eval Print Listen) Schnittstelle und kann \'e4hnlich wir R oder Python explorativ f\'fcr statistische Aufgaben verwendet werden.}} Seit Anfang 2014 gilt Spark als {\field{\*\fldinst{HYPERLINK "scrivcmt://FD6ACECA-A542-402D-AEB0-638A8D6D6119"}}{\fldrslt Top Level Project bei der Apache Foundation}}. Dieses Framework ist noch sehr jung und kann Hadoop oder YARN (Hadoop 2) noch nicht ersetzten, wird aber als zukunftstr\'e4chtiges Projekt angesehen.  \
+Wenn Datenmengen bearbeitet werden sollen, die auf einer einzigen Maschine existieren und verarbeitet werden k\'f6nnen, kommt auch gerne die Programmiersprache Python, in ihren interaktiven Umgebungen wie {\field{\*\fldinst{HYPERLINK "scrivcmt://F898A827-9B11-4171-AF6E-22F4B3F7508D"}}{\fldrslt iPython}} oder {\field{\*\fldinst{HYPERLINK "scrivcmt://416896A6-5E06-435B-9DFB-DB1B110AF36C"}}{\fldrslt Jupyter}}, mit Paketen wie {\field{\*\fldinst{HYPERLINK "scrivcmt://C35AAE4D-E981-44E9-9D86-424A4C789F29"}}{\fldrslt scikit-learn}} oder {\field{\*\fldinst{HYPERLINK "scrivcmt://E733F774-EBAA-4282-9057-D30F8944B769"}}{\fldrslt pandas}} zum Einsatz. Pandas zum bearbeiten von Datenstrukturen und scikit-learn zum analysieren von Daten. Weiter \'fcbliche Module sind {\field{\*\fldinst{HYPERLINK "scrivcmt://376C176E-EA58-410A-B077-1FD5367DADB0"}}{\fldrslt Matplotlib}} f\'fcr die Ausgabe als Plot um die Ergebnisse auch sichtbar zu machen. Dies ist eine oft untersch\'e4tzter Anteil an Arbeit. Aus Tabellen und Zahlenkolonnen l\'e4sst sich nur schlecht ein Verhalten von Werten ablesen. {\field{\*\fldinst{HYPERLINK "scrivcmt://1FBD1AE3-6289-494D-A6CE-E472D09565F7"}}{\fldrslt Als einfaches Beispiel hierzu kann das Anscombe Quartett betrachtet werden.}}\
+\
+    +------+------+------+------+-------+------+-------+------+\
+    |  x1  |  x2  |  x3  |  x4  |  y1   |  y2  |  y3   |  y4  |\
+    +======+======+======+======+=======+======+=======+======+\
+    |  10  |  10  |  10  |  8   | 8.04  | 9.14 | 7.46  | 6.58 |\
+    +------+------+------+------+-------+------+-------+------+\
+    |  8   |  8   |  8   |  8   | 6.95  | 8.14 | 6.77  | 5.76 |\
+    +------+------+------+------+-------+------+-------+------+\
+    |  13  |  13  |  13  |  8   | 7.58  | 8.74 | 12.74 | 7.71 |\
+    +------+------+------+------+-------+------+-------+------+\
+    |  9   |  9   |  9   |  8   | 8.81  | 8.77 | 7.11  | 8.84 |\
+    +------+------+------+------+-------+------+-------+------+\
+    |  11  |  11  |  11  |  8   | 8.33  | 9.26 | 7.81  | 8.47 |\
+    +------+------+------+------+-------+------+-------+------+\
+    |  14  |  14  |  14  |  8   | 9.96  | 8.1  | 8.84  | 7.04 |\
+    +------+------+------+------+-------+------+-------+------+\
+    |  6   |  6   |  6   |  8   | 7.24  | 6.13 | 6.08  | 5.25 |\
+    +------+------+------+------+-------+------+-------+------+\
+    |  4   |  4   |  4   |  19  | 4.26  | 3.1  | 5.39  | 12.5 |\
+    +------+------+------+------+-------+------+-------+------+\
+    |  12  |  12  |  12  |  8   | 10.84 | 9.13 | 8.15  | 5.56 |\
+    +------+------+------+------+-------+------+-------+------+\
+    |  7   |  7   |  7   |  8   | 4.82  | 7.26 | 6.42  | 7.91 |\
+    +------+------+------+------+-------+------+-------+------+\
+    |  5   |  5   |  5   |  8   | 5.68  | 4.74 | 5.73  | 6.89 |\
+    +------+------+------+------+-------+------+-------+------+\
+\
+![Anscombe Quartett Plot](./images/anscombe-quartet.png)  \
+\
+Aus der oben stehenden Tabelle lassen sich wenig bis gar keine Schl\'fcsse auf das Verhalten der Werte schlie\'dfen. Durch die Visualisierung der Werte kann schnell ein Muster oder eine Abweichung festgestellt werden.  }
