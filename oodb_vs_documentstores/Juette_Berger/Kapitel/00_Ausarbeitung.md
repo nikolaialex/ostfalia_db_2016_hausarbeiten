@@ -16,3 +16,5 @@
 [^wikiorm]: https://en.wikipedia.org/wiki/List_of_object-relational_mapping_software
 
 <!-- Footer Heiko -->
+[^oracle]: https://www.oracle.com/de/index.html
+[^mssql]: https://www.microsoft.com/de-de/

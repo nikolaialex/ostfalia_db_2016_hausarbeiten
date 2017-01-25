@@ -7,7 +7,7 @@ In Kapitel 2.2 werden die objektorientierten Datenbanken vorgestellt und in 2.3 
 
 ## 2.1 Relationale Datenbankmanagementsysteme
 
-Das Unterkapitel 2.1 soll grundlegende Informationen zur Organisation und Speicherung von Daten nach dem relationalen Ansatz darlegen. Dazu werden das Entity Relationship- und das Relationale Modell betrachtet. Es werden somit ausschließlich diejenigen Aspekte thematisiert, die eine Einflussnahme auf die Modellierung der Datenrepräsentation haben. Konkret bezieht sich dieses Kapitel  auf die konzeptionelle und logische Ebene der Datenabbildung durch das RDBMS.    
+Das Unterkapitel 2.1 soll grundlegende Informationen zur Organisation und Speicherung von Daten nach dem relationalen Ansatz darlegen. Dazu werden das Entity Relationship- und das Relationale Modell betrachtet. Es werden somit ausschließlich diejenigen Aspekte thematisiert, die eine Einflussnahme auf die Modellierung der Datenrepräsentation haben. Konkret bezieht sich dieses Kapitel auf die konzeptionelle und logische Ebene der Datenabbildung durch das RDBMS.    
 
 Die Modellierung der Daten für eine relationale Abbildung erfolgt in drei Schritten. Diese bestehen aus der Datenanalyse, dem Entwurf des Entity Relationship-Modell und den Transfer in das relationale Modell. Das physische Modell dient der Beschreibung der Transition des konzeptionellen Datenmodells auf die Datenbankebene. Schlussendlich liegt das relationale Datenmodell in die DB-spezifische Ausprägung vor. @@ QUELLE Die Abbildung 1 stellt den Ablauf der Modellierungsschritte dar und ordnet den jeweiligen allgemeingültigen Ebenenbegriff des Datenbankmodells zu.
 
@@ -20,11 +20,11 @@ Das Entity Relationship Modell (ER) ist die initiale Abbildung der zu modelliere
   *	Entität
   *	Entitätsmenge
 
-eingeführt. „Unter Entität (engl. entity) versteht man ein bestimmtes, d.h. von anderen wohlunterscheidbares Objekt der realen Welt oder unserer Vorstellung. Dabei kann es sich um ein Individuum, einen Gegenstand, einen abstrakten Begriff oder um ein Ereignis handeln (@meier2016nosql S. 20)". Dementgegen definiert sich der Begriff Entitätsmenge wie folgt: „Entitäten des gleichen Typs werden zu Entitätsmengen zusammengefasst und durch Merkmale weiter charakterisiert (@meier2016nosql S. 20)“.
+eingeführt. „Unter Entität (engl. entity) versteht man ein bestimmtes, d.h. von anderen wohlunterscheidbares Objekt der realen Welt oder unserer Vorstellung. Dabei kann es sich um ein Individuum, um einen Gegenstand, um einen abstrakten Begriff oder um ein Ereignis handeln (@meier2016nosql S. 20)". Dementgegen definiert sich der Begriff Entitätsmenge wie folgt: „Entitäten des gleichen Typs werden zu Entitätsmengen zusammengefasst und durch Merkmale weiter charakterisiert (@meier2016nosql S. 20)“.
 
 Um eine Entität in der Entitätsmenge identifizieren zu können, ist ein Merkmal oder Merkmalskombination zu bestimmen, welches als Identifikationsschlüssel fungiert. Der dazu bestimmte Schlüssel muss das Kriterium der Eindeutigkeit erfüllen. Sobald ein Identitätsschlüssel für eine Entitätsmenge zwei Entitäten zugeordnet werden kann, besteht keine Eindeutigkeit.
 
-Das Entity Relationship-Modell sieht für Entitäten ferner auch das Konzept der Generalisierung und Aggregation vor, indem Daten vom Detail ausgehend abstrahiert werden oder durch Submengenbildung als Spezialisierungen gelten können. Für die Generalisierung existieren mehrere Formen auf:
+Das Entity Relationship-Modell sieht für Entitäten ferner auch das Konzept der Generalisierung und Aggregation vor, indem Daten vom Detail ausgehend abstrahiert werden oder durch Submengenbildung als Spezialisierungen gelten können. Die Generalisierung umfasst als Begrifflichkeit mehrere Formen:
 
   *	Überlappende Subentitätsmengen
   *	Überlappend-vollständige Subentitätsmengen
@@ -52,11 +52,11 @@ Je nach Beziehungstyp der Entitäten muss die logische Entsprechung als Relation
 
 ### 2.1.2	Das Relationale Datenmodell
 
-Relationale Datenbankmanagementsysteme wurden im Jahr 1970 von Edgar Frank Codd entwickelt (vgl. @meier2016nosql S. 133). Dieses Konzept zur Verwaltung und Speicherung von Daten ist bis heute weit verbreitet. Relationale Datenbanken wurden vom ursprünglichen Konzept aus erweitert, indem beispielsweise neue Formen der Datenorganisation im XML-Format oder andere Betriebsaspekte wie einer Cloud-Infrastruktur für eine Datenspeicherung integriert werden. Der Fokus der anschließenden Betrachtung soll sich lediglich auf das grundlegende relationale Modell beschränken, um zu verdeutlichen, wie Informationen in einem RDBMS gespeichert werden.
+Relationale Datenbankmanagementsysteme wurden im Jahr 1970 von Edgar Frank Codd entwickelt (vgl. @meier2016nosql S. 133). Dieses Konzept zur Verwaltung und Speicherung von Daten ist bis heute weit verbreitet (siehe Kapitel 5). Relationale Datenbanken wurden vom ursprünglichen Konzept aus erweitert, indem beispielsweise neue Formen der Datenorganisation im XML-Format oder andere Betriebsaspekte wie einer Cloud-Infrastruktur für eine Datenspeicherung integriert werden. Der Fokus der anschließenden Betrachtung soll sich lediglich auf das grundlegende relationale Modell beschränken, um zu verdeutlichen, wie Informationen in einem RDBMS gespeichert werden.
 
 Das relationale Modell setzt sich aus Objekten, Operationen und Regeln zusammen. Zu den Objekten zählen beispielweise Domains (Wertebereiche), Relationen (Tabellen), Attribute (Spalten), Tupel (Datensätze), Primary-Keys (Primärschlüssel) oder Foreign-Keys (Fremdschlüssel). Zentrale Regeln im Kontext des relationalen Modells sind die Entitätenintegrität und die referenzielle Integrität. Zu den Operationen gehören beispielsweise Restrictionens, Projections, Unions oder Joins. (vgl. @unterstein2012rdbms S. 30)
 
-Wie der Name des Modells bereits vermuten lässt, sieht es als Kernprinzip eine Speicherung von Informationen in Relationen (Tabellen) vor. Dieses Modell beruht auf mathematischen Grundprinzipien der Mengenlehre. So kann eine Relation als eine Teilmenge beschreiben werden. Eine Relation besteht aus Indizes die als Attribute bezeichnet werden. Diese besitzen wiederum Namen, um das mentale Modell des Menschen zu unterstützen. Diese Mengen können aus unterschiedlichen Elementen bestehen. Beispielhaft seien an dieser Stelle Zahlen, Zeichenketten oder Datumsangaben genannt. Hierbei wird der Begriff der Domäne verwendet.  Eine Domäne ist der Wertebereich, aus dem Attribute ihre Werte beziehen können. Um die Daten in eine repräsentative und verständliche  Form zu bringen, werden Relationen in einer tabellarischen Form dargestellt. (vgl. @unterstein2012rdbms S. 30)
+Wie der Name des Modells bereits vermuten lässt, sieht es als Kernprinzip eine Speicherung von Informationen in Relationen (Tabellen) vor. Dieses Modell beruht auf mathematischen Grundprinzipien der Mengenlehre. So kann eine Relation als eine Teilmenge beschreiben werden. Eine Relation besteht aus Indizes die als Attribute bezeichnet werden. Diese besitzen wiederum Namen, um das mentale Modell des Menschen zu unterstützen. Diese Mengen können aus unterschiedlichen Elementen bestehen. Beispielhaft seien an dieser Stelle Zahlen, Zeichenketten oder Datumsangaben genannt. Hierbei wird der Begriff der Domäne verwendet. Eine Domäne ist der Wertebereich, aus dem Attribute ihre Werte beziehen können. Um die Daten in eine repräsentative und verständliche  Form zu bringen, werden Relationen in einer tabellarischen Form dargestellt. (vgl. @unterstein2012rdbms S. 30)
 
 | TITEL | AUTOR | GENRE  | ISBN | DATUM |
 | ------------- |-------------| -----| -----| -----|
@@ -71,7 +71,7 @@ Die Attribute/Spaltennamen der in der Tabelle 1 abgebildeten Relation Buch heiß
 
 Zwischen den Attributen einer Relation können funktionale und voll funktionale Abhängigkeiten existieren. Funktionale Abhängigkeiten liegen vor, wenn Attributwerte der Komponente A die Attributwerte der Komponente B eindeutig bestimmen (der Titel des Buches ist funktional abhängig von der ISBN-Nummer). Voll funktionale Abhängigkeiten liegen vor, wenn zwischen Attributwerten von Komponenten eine funktionale Abhängigkeit existiert (B ist abhängig von A) und wenn C eine echte Teilmenge von A ist und C wiederum funktional B bedingt (B ist abhängig von C).
 
-Das relationale Datenmodell greift die Anforderung einer redundanzfreien Speicherung von Daten auf, indem eine definierte Abfolge von Normalisierungsschritten durchlaufen wird. Jede Normalisierungsform stellt bestimmte Anforderungen an die Beschaffenheit der Daten und deren Abhängigkeiten untereiner, wie im vorherigen Abschnitt angedeutet. Aufgrund der Wichtigkeit der Normalisierung der Daten, werden die Normformen aus Gründen der Vollständigkeit mit der jeweils erforderlichen Qualitätsanforderung tabellarisch aufgelistet.(vgl. @meier2016nosql S. 36ff)
+Das relationale Datenmodell greift die Anforderung einer redundanzfreien Speicherung von Daten auf, indem eine definierte Abfolge von Normalisierungsschritten durchlaufen wird. Jede Normalisierungsform stellt bestimmte Anforderungen an die Beschaffenheit der Daten und deren Abhängigkeiten untereinander, wie im vorherigen Abschnitt angedeutet. Aufgrund der Wichtigkeit der Normalisierung der Daten, werden die Normalformen (NF) aus Gründen der Vollständigkeit mit der jeweils erforderlichen Qualitätsanforderung tabellarisch aufgelistet.(vgl. @meier2016nosql S. 36ff)
 
   * **1. Normalform (1NF)**
     1. Atomare Wertebereiche
@@ -87,12 +87,12 @@ Das relationale Datenmodell greift die Anforderung einer redundanzfreien Speiche
   * **5. Normalform (5NF)**
     1. wenn Tabelle keine Verbundabhängigkeit aufweist
 
-Zur eindeutigen Identifikation von Tupeln/Datensätzen werden Primary Keys verwendet. Die Wahl des Primary Keys wird anhand der Charakteristik der Attribute gewählt. Ein Primary Key sollte eine entsprechende Effizienz besitzen, indem er nur aus wenigen Attributen besteht. Über die eindeutige Identifikation der Tupel mittels eines Primary Keys und den Primary Keys einer zweiten Relation lassen sich die darin abgelegten Informationen in eine Beziehung (Relation) bringen. (vgl. @unterstein2012rdbms S. XX)
+Zur eindeutigen Identifikation von Tupeln/Datensätzen werden Primary Keys eingesetzt. Die Wahl des Primary Keys wird anhand der Charakteristik der Attribute gewählt. Ein Primary Key sollte eine entsprechende Effizienz besitzen, indem er nur aus wenigen Attributen besteht. Über die eindeutige Identifikation der Tupel mittels eines Primary Keys und den Primary Keys einer zweiten Relation lassen sich die darin abgelegten Informationen in eine Beziehung (Relation) bringen. (vgl. @unterstein2012rdbms S. XX)
 
-Wie bereits im Kapitel 2.1.1 erwähnt, werden Beziehungen zwischen Relationen über die Attributausprägungen realisiert. Das Konstrukt der Primär- und Fremdschlüssel ermöglicht Relationen miteinander zu verknüpfen und im Fall einer Selektion, auf die Datenbestände der in einer  Beziehung stehenden Relationen zugreifen zu können. Ein Primärschlüssel muss einen Tupel in einer Relation eindeutig identifizieren können. Je nach Charakteristik der Datenabbildung können gewisse Entitäten bereits über ein eindeutiges Schlüsselattribut verfügen. Ein Fremdschlüssel in der Detailrelation bezieht sich auf die Schlüsselwerte des Primärschlüssels. Weiterhin bedingt die Charakteristik des Primärschlüssels gleichermaßen die Charakteristik des Sekundärschlüssels. Sollte der Primärschlüssel mehrere eine Kombination aus mehreren Attributen aufweisen, so ist dies auch beim Fremdschlüssel der Fall. Für eine Fremdschlüsselbeziehung wird die Eigenschaft der referenziellen Integrität gefordert. Gemäß dieser Anforderung muss der enthaltende Fremdschlüssel in der Primärtabelle als Primärschlüssel enthalten sein. Die Forderung der Eindeutigkeit für Primärschlüssel gilt nicht für die Fremdschlüssel, da mehre Datensätze einer Fremdtabelle einem Datensatz in einer Primärtabelle zugeordnet sein können. (vgl. @unterstein2012rdbms S. 31)
+Wie bereits im Kapitel 2.1.1 erwähnt, werden Beziehungen zwischen Relationen über die Attributausprägungen realisiert. Das Konstrukt der Primär- und Fremdschlüssel ermöglicht Relationen miteinander zu verknüpfen und um im Fall einer Selektion, auf die Datenbestände der in einer Beziehung stehenden Relationen, zugreifen zu können. Ein Primärschlüssel muss einen Tupel in einer Relation eindeutig identifizieren können. Je nach Charakteristik der Datenabbildung können gewisse Entitäten bereits über ein eindeutiges Schlüsselattribut verfügen. Ein Fremdschlüssel in der Detailrelation bezieht sich auf die Schlüsselwerte des Primärschlüssels. Weiterhin bedingt die Charakteristik des Primärschlüssels gleichermaßen die Charakteristik des Sekundärschlüssels. Sollte der Primärschlüssel eine Kombination aus mehreren Attributen aufweisen, so ist dies auch beim Fremdschlüssel der Fall. Für eine Fremdschlüsselbeziehung wird die Eigenschaft der referenziellen Integrität gefordert. Gemäß dieser Anforderung muss der enthaltende Fremdschlüssel in der Primärtabelle als Primärschlüssel enthalten sein. Die Forderung der Eindeutigkeit für Primärschlüssel gilt nicht für die Fremdschlüssel, da mehre Datensätze einer Fremdtabelle einem Datensatz in einer Primärtabelle zugeordnet sein können. (vgl. @unterstein2012rdbms S. 31)
 
 ## 2.2 Objektorientierte Datenbankmanagementsysteme
-Bei den Objektorientierten Datenbanken handelt es sich Systeme, welche den Anspruch erheben, die Objekte aus der Objektorientierten Programmierung, mit allen Eigenschaften und Vorteilen die diese besitzen, speichern zu können.
+Bei den Objektorientierten Datenbanken handelt es sich um Systeme, welche den Anspruch erheben, die Objekte aus der Objektorientierten Programmierung, mit allen Eigenschaften und Vorteilen die diese besitzen, speichern zu können.
 Im folgenden Kapitel 2.2.1 werden zuerst die grundlegenden Konzepten der Objektorientierung beschrieben, da diese Konzepte sich bei den Objektorientierten Datenbanken wiederfinden.
 In weiteren Verlauf beschreibt das Kapitel 2.2.3 f. die Objektorientierten Datenbankmanagementsystemen (im folgenden OODBMS).
 
@@ -163,10 +163,10 @@ Dadurch entsteht ein Problem welches unter dem Begriff Objektrelationales Mappin
 
 ### 2.2.2 Objektrelationales Mapping und Objektdatenbanken
 Eines der größeren Probleme als Benutzer einer objektorientierten Sprache ist, dass die verwendeten Objekte in eine relationalen Datenbank nicht persistent gespeichert werden, da eine relationale Datenbank nur einen eigenen Pool aus Datentypen besitzt.
-Dieses Problem lässt sich durch mehrere Ansätze verringern:
+Dieses Problem lässt sich durch mehrere Ansätze kompensieren:
 
-  * Verzicht auf die Verwendung von Objekten, welche nicht dem objektorientierten Paradigma entspricht.
-  * Konvertierung der Objekte zu relationalen Daten beim Speichern und der relationalen Daten zu Objekten beim Lesen.
+  * Verzicht auf die Verwendung von Objekten, welche nicht dem objektorientierten Paradigma entsprechen.
+  * Konvertierung der Objekte zu relationalen Daten beim Speichern und Konvertierung der relationalen Daten zu Objekten beim Lesen.
   Diese Variante hat den Nachteil, dass viel Performance in die Umwandlung der Daten investiert werden muss.
   Der Vorteil ist, dass die Daten weiterhin in einer relationalen Datenbank liegen und somit bekannte Verfahren zum Lesen und Schreiben und der Konsistenz angewendet werden.
   * Verzicht auf die Speicherung der Daten in einer relationalen Datenbank.
@@ -178,11 +178,11 @@ Im Bereich Java ist das die Java-Persistance-API, auf der ein Framework wie Hibe
 Eine bessere Lösung ist jedoch die Speicherung der verwendeten Objekte direkt in der Datenbank.
 In diesem Fall findet kein Performanceverlust durch das Mapping der Daten statt, des weiteren lassen sich Informationen wie Vererbung oder Verknüpfungen zwischen den Objekten wesentlich besser hinterlegen.
 
-Bei der Verwendung eines OODBMS erfolgt der Zugriff auf die Daten in gleicher Weise als würden diese im Speicher des Betriebsystems liegen.
-Dadurch werden weitere Layer wie ODBC, ADO oder JDBC nicht benötigt.
+Bei der Verwendung eines OODBMS erfolgt der Zugriff auf die Daten in gleicher Weise, als würden diese im Speicher des Betriebsystems liegen.
+Dadurch werden weitere Layer wie ODBC, ADO oder JDBC nicht benötigt. @@ hier ggf. Abkürzungen einführen oder ausschreiben?
 Die CURD-Abfragen (Create, Update, Read, Delete) können über Methoden direkt auf die Datenbank ausgeführt werden.
 Lediglich für das Suchen bestimmter Objekte nach Kriterien in den Attributen muss eine eigene Sprache bereitgestellt werden.
-Ein sehr generischer Ansatz hierfür sind beispielsweise Lambda Expressions, welche in C# zu LINQ to Objects geführt haben.
+Ein sehr generischer Ansatz hierfür ist beispielsweise die Verwendung von Lambda Expressions, welche in C# zu LINQ to Objects geführt haben.
 Werden Objekte aus der Datenbank geholt, können diese im Modus Transient oder Mirror sein.
 Als Transient sind diese von der Datenbank entbunden, Änderungen wirken sich nur auf das Objekt im Speicher des Systems aus.
 Im Mirror Modus wirken sich Änderungen direkt auf das Objekt im Speicher und in der Datenbank aus.
@@ -196,7 +196,7 @@ Daher müssen Anforderungen nach Vererbung, Polymorphie, Schnittstellen oder Obj
 
 Jedes Objekt muss unter einer eindeutigen ID, der Objekt ID (OID) gespeichert werden, welche vom OODBS vorgegeben bzw. generiert wird.
 Anforderungen an die OID sind:
-  * Unabhängig von den Daten in dem Objekt, ändern sich die Daten im Objekt bleibt die OID gleich
+  * ist unabhängig gegenüber den Daten in dem Objekt, ändern sich die Daten im Objekt bleibt die OID gleich
   * Objekte mit unterschiedlichen OIDs und gleichen Eigenschaften sind möglich. (z. B. eine Klasse mit den Attributen Nachname und Vorname von der zwei gleiche Instanzen existieren)
   * Dient der Auffindbarkeit
   * Dient der eindeutigen Identifizierung eins Objekts innerhalb einer Datenbank
@@ -208,11 +208,13 @@ Die Erzeugung der OID kann auf verschiedene Arten und Weisen durchgeführt werde
   2. Eine Name, der meist aus einem geeigneten Namensraum stammt, welcher üblicherweise vom Nutzer vergeben wird. Hierbei ist es oft schwierig über viele Attribute eindeutige Werte zu vergeben.
   3. Einen Surrogate oder Identifier Attribut. Diese haben den Nachteil das sie nicht wie normale Attribute behandelt werden können.
 
+@@ hier passt der einleitende Text noch nicht ganz zu den Aufzählungen (Meckern auf hohem Niveau)
+
 Neben der OID wird der Zustand eines Objektes gespeichert. (vgl. @poschekdatenbanken S. 9)
 
-Bei der Verwendung von Referenzen kann es wie bei den relationalen Datenbanken zu Integritätsproblemen kommen, wenn ein Objekt, auf welches noch referenziert wird, aus der Datenbank entfernt wird.
-Einige Datenbanksysteme können Referenzen über Attribute setzen, sodass das eine Eigenschaft des Objektes x auf y zeigt ohne das weiter bestimmt werden muss wie die Referenz berechnet wird.
-Die Berechnung könnte über eine direkte Referenz auf das Objekt (Pointer) oder wird über gleiche Attribute bestimmt.
+Bei der Verwendung von Referenzen kann es, wie bei den relationalen Datenbanken, zu Integritätsproblemen kommen, wenn ein Objekt, auf welches noch referenziert wird, aus der Datenbank entfernt wird.
+Einige Datenbanksysteme können Referenzen über Attribute setzen, sodass das eine Eigenschaft des Objektes x auf y zeigt ohne das weiter bestimmt werden muss, wie die Referenz berechnet wird.
+Die Berechnung könnte über eine direkte Referenz auf das Objekt (Pointer) oder wird über gleiche Attribute bestimmt. @@ statts bestimmt -> erfolgen?
 Ob dies erlaubt ist und wie damit verfahren wird, hängt von der Implementierung des OODBMS ab.
 Das OODBMS muss Mechanismen bereitstellen, um diese Probleme zu adressieren.
 
@@ -271,7 +273,7 @@ class Person {
 Für Abfragen gibt es die Object Query Language (OQL), welche auf der Basis und Syntax von SQL aufbaut.
 Es können beispielsweise Abfragen in der bekannten Form *SELECT ... FROM ... WHERE* durchgeführt werden.
 Ebenfalls sind bekannte Abfragen aus SQL über Aggregierungsfunktionen (count, avg, min, max, etc.) und Mengenoperationen (wie intersct, except oder union) möglich.
-Des Weiteren können in den Abfragen auf komplexe Werte, Objektidentitäten oder Methoden genutzt werden.
+Des Weiteren können in den Abfragen auf @@ auf? komplexe Werte, Objektidentitäten oder Methoden genutzt werden.
 Mittels Quantoren können Methoden für Mengen direkt aus der Abfragesprache heraus ausgeführt werden.
 
 Im Folgenden werden einige Beispiel für OQL Operationen aufgeführt:
@@ -293,7 +295,7 @@ ELEMENT(SELECT k FRM Katzen WHERE k.ID = 235423523)
 
 Neben diesem Standard, an dem seit 2001 nicht mehr gearbeitet wird, da sich die Organisation aufgelöst hat und er einige Schwächen aufweist, gibt es die SQL-3-Norm. (vgl. @kulkarni1993object, @poschekdatenbanken)
 Diese erweitert den bisherigen Standard um Konstrukte, welche für objektorientierte Datenbanken wichtig sind.
-Dazu gehören abstrakte Datentypen, Objekt-Identifikatoren, überladen von Funktionen oder komplexen Datentypen wie SET, MULTISET, LIST oder ROW.
+Dazu gehören abstrakte Datentypen, Objekt-Identifikatoren, Überladen von Funktionen oder komplexen Datentypen wie SET, MULTISET, LIST oder ROW.
 Eine dritte Möglichkeit sind native Abfragen aus der Programmiersprache hinaus, sofern die Datenbank eine solche Schnittstelle anbietet.
 Im Folgenden ein LINQ-Beispiel aus der Programmiersprache C# um alle Personenobjekte die erwachsen sind zu erhalten:
 
@@ -316,10 +318,10 @@ Typische Operationen, welche angeboten werden sind:
   * *active()* um den Status einer Transaktion abzufragen
 
 <!-- Weitere Wichtige Punkte für den Betrieb eines OODB -->
-Neben den oben aufgeführten dreizehn Regeln gibt es weitere Aspekte die wichtig für den Einsatz eines OODBMS sind.
+Neben den oben aufgeführten dreizehn Regeln gibt es weitere Aspekte, die wichtig für den Einsatz eines OODBMS sind.
 Dazu gehören Autorisierung, Schemaevaluation und Versionierung.
 Der Bereich der Autorisierung beschreibt den Schutz vor unberechtigtem Zugriff.
-Dafür werden Zugriffsrechte an Benutzer vergeben, welche Klasse, Objekte oder bestimmte Untermengen von Objekten lesen, schreiben, verändern oder löschen dürfen.
+Dafür werden Zugriffsrechte an Benutzer vergeben, welche Klassen, Objekte oder bestimmte Untermengen von Objekten lesen, schreiben, verändern oder löschen dürfen.
 
 Die Schemaevaluation ist wichtig, wenn Definitionen von Klassen oder Beziehungen angepasst werden müssen.
 In diesem Fall dürfen Änderungen nicht das laufende System beeinträchtigen.
@@ -332,7 +334,7 @@ Eine andere Möglichkeit ist eine zeitbezogene Versionierung durchzuführen. (z.
 Werden diese mit einem Gültigkeitsstempel versehen, findet ein Aufräumungsprozess statt. (vgl. @poschekdatenbanken S. 18)
 
 ### 2.2.6 Zusammenfassung
-Der große Vorteil von Objektdatenbanken ist die Vermeidung des Bruchs der bei der Speicherung von Daten in relationale Datenbanken entsteht.
+Der große Vorteil von Objektdatenbanken ist die Vermeidung des Bruchs, der bei der Speicherung von Daten in relationale Datenbanken entsteht.
 Ein weiterer Vorteil ist, dass das benötige *Joinen* von normalisierten Tabellen entfällt.
 Drittes Argument für ein OODBMS ist, dass die Objektidentität gesichert ist, da für dessen Verwaltung das Datenbanksystem verantwortlich ist.
 Des Weiteren wird die Historie eines Objektes gespeichert, sodass die Wiederherstellung einzelner Objekte leichter ist.
@@ -341,20 +343,20 @@ Der größte Nachteil ist der geringe Anteil von Schnittstellen für den Zugriff
 Besonders unter den populären Programmiersprachen wie Java, PHP oder Python fehlen die entsprechenden Frameworks.
 Weiterhin gibt es nur wenige Implementierungen von diesem Datenbanktyp.
 Beispiel von Objektdatenbanken sind db4o[^db4o], ZooDB[^zoodb] oder mcobject[^mcobject].
-Das Kapitel 5 beschäftigt sich eingehend mit der Verbreitung von objektorientierten Datenbanken.
+Das Kapitel 5 beschäftigt sich eingehend mit der Verbreitung von objektorientierten Datenbanken. @@ Dieser Satz ist irgendwie von dem vorhergehenden Inhalt losgelöst...
 
 ## 2.3 Dokumentdatenbanken
 Dokumentdatenbanken gehören zum Typ der NoSQL (Not only SQL) Datenbanken.
-Der englische Name ist nicht wie zu vermuten *document database*, sondern treffender *document store*, da diese für die Speicherung von Dokumenten optimiert sind.
-Dieser Datenbanktyp bietet den großen Vorteil der Schemafreiheit von Schlüssel-Wert-Speichern mit einer Möglichkeit zur strukturierten Speicherung von Daten.
+Der englische Name ist nicht wie zu vermuten *document database*, sondern treffender *document store*, da diese Systeme für die Speicherung von Dokumenten optimiert sind.
+Dieser Datenbanktyp bietet den großen Vorteil der Schemafreiheit von Schlüssel-Wert-Speichern @@ Schlüssel-Wert-Speichern... klingt irgend wie fremd... mit einer Möglichkeit zur strukturierten Speicherung von Daten.
 Bei den Daten handelt es sich um strukturierte Daten in Datensätzen, welche in diesem Kontext als Dokumente bezeichnet werden. (vgl. @meier2016nosql S. 230 ff)
 
-Einsatzbereich sind meist spezielle Webdienste, welche horizontal skalierbar sein müssen.
+Einsatzbereich sind meist spezielle Web-Dienste, welche horizontal skalierbar sein müssen.
 Dabei werden überwiegend verschiedene Rechner als Cluster betrieben, die Verteilung erfolgt über Sharding.
 Kurzzeitige Datenbankinkonsistenzen werden in Kauf genommen, da erst eine Verteilung der aktualisierten Daten auf alle Knoten erfolgen muss.
 Anwendung finden Dokumentdatenbanken besonders bei Social-Media-Plattformen oder suchintensiven Anwendungen.
 
-Schemafrei bedeutet, dass nicht wie bei relationalen oder obejektorientierten Datenbanken das Tabellen- oder Objektschema angegeben werden muss.
+Schemafrei bedeutet, dass nicht wie bei relationalen oder objektorientierten Datenbanken das Tabellen- oder Objektschema angegeben werden muss.
 Dokumente lassen sich ohne vorherige Definition eines Schemas einfügen.
 Dadurch wird auf Vorteile wie referenzielle Integrität oder Normalisierung verzichtet.
 Des Weiteren kann eine Dokumentdatenbank keine transaktionale Sicherheit gewährleisten, vielmehr wird nach dem Prinzip der schlussendlichen Konsistenz (eventual consistency) gearbeitet.
@@ -404,7 +406,7 @@ Beim Eintragen von Dokumenten kann es spezifiziert sein, dass ein eindeutiger Ke
 Die Suche nach Dokumenten kann über den Key, nach Schlüsselworten aus dem Value-Bereich oder nach Metadaten erfolgen.
 Dafür stellt die Datenbank eine API (z. B. RESTful) bereit, welche von der Programmiersprache verwendet wird.
 Die Syntax zur Suche von Einträgen variiert abhängig von den jeweiligen Implementierungen.
-Um eine effizientere Suche zu ermöglichen versucht die Datenbank die Dokumente über Metadaten zu klassifizieren.
+Um eine effizientere Suche zu ermöglichen, versucht die Datenbank die Dokumente über Metadaten zu klassifizieren.
 Das könnte beispielsweise die Erkennung der fünfstelligen Postleitzahl sein, wonach dann alle Dokumente gruppiert werden.
 
 Die Anfragen an die Datenbank können über das Map/Reduce Verfahren parallel ablaufen und dadurch sehr effizient durchgeführt werden.
@@ -413,9 +415,12 @@ Zuerst wird Map ausgeführt, wobei ein Index entsteht.
 Der entstehende Index ist ein assoziatives Array, welches aus einem oder mehreren Key-Value Paaren besteht.
 Der Vorteil ist, dass dieser Schritt unabhängig von den restlichen Daten ausgeführt wird, sodass dies auf allen Knoten parallel ausgeführt wird.
 Die zweite Phase führt dann eine Reduzierung der Ergebnisse durch (Reduce). (vgl. @meier2016nosql S. 231)
-Eine Ausführliche grafische Beschreibung ist unter https://highlyscalable.wordpress.com/2012/02/01/mapreduce-patterns/ zu finden.
+Eine ausführliche grafische Beschreibung ist unter https://highlyscalable.wordpress.com/2012/02/01/mapreduce-patterns/ zu finden.
 
 ### 2.3.3 Performace von Dokumentdatenbanken
+
+@@ Dieser Abschnitt könnte z.B. in die Abgrenzung von oodb vs ddb mit rein -> Mehr Gewicht für den Hauptteil
+
 In @li2013performance wurden SQL und NoSQL-Datenbanken über die Performance miteinander verglichen.
 Dabei zeigt sich, dass sich Systeme wie CouchDB oder RavenDB, im Vergleich zu der relationalen Datenbank MS SQL Express, nicht performanter im Bereich CRUD verhalten.
 Andere Systeme hingegen, wie Couchbase oder MongoDB, sind deutlich performanter als die verglichene MS SQL Datenbank.
@@ -450,7 +455,7 @@ db.books.insert({
 ```
 
 Es ist erkennbar, dass innerhalb von *insert* die JSON Syntax zum Einsatz kommt.
-Um das Ablegen vieler Dokumente zu vereinfachen ist es möglich JavaScript-Funktionen zu hinterlegen, welche die nötigen Werte als Parameter entgegen nehmen und intern *insert* aufrufen.
+Um das Ablegen vieler Dokumente zu vereinfachen, ist es möglich JavaScript-Funktionen zu hinterlegen, welche die nötigen Werte als Parameter entgegen nehmen und intern *insert* aufrufen.
 
 **Suche aller Bücher**
 ```javascript
@@ -459,7 +464,7 @@ db.books.find();
 
 Das Ergebnis von *find()* liefert ein JSON-Array der abgelegten Bücher.
 In der Ergebnissmenge ist erkennbar, dass ein Attribut *_id* hinzugekommen ist, welches die eindeutige vom System vergebene Dokument-ID ist.
-Der Algorithmus für die Generierung der Dokument-ID ist so implementiert, dass dieser auf unterschiedlichen Maschinen ausgeführt nicht die selben IDs erzeugt.
+Der Algorithmus für die Generierung der Dokument-ID ist so implementiert, dass dieser, auf unterschiedlichen Maschinen ausgeführt, nicht die selben IDs erzeugt.
 
 **Suche eines Buchs**
 ```javascript
@@ -473,7 +478,7 @@ Die Suche nach einem bestimmten Objekt ist ebenfalls mittels der *find()* Method
 db.books.find({ "year" : { $gt : 2000 } });
 ```
 
-Innerhalb von *find()* lassen sich Kriterien angeben, es werden nur noch Dokumente zurückgegeben dessen Jahr größer als 2000 ist.
+Innerhalb von *find()* lassen sich Kriterien angeben. In dem nachfolgenden Beispiel werden nur noch Dokumente zurückgegeben, dessen Jahr größer als 2000 ist.
 
 **Suche über JS Funktionen**
 ```javascript
@@ -483,7 +488,7 @@ db.books.find( function () {
 ```
 
 Eine weitere Möglichkeit ist die Benutzung von JS Funktionen, um komplexere Anfragen durchzuführen.
-Nachteil dieser Variante ist, dass die Funktion für jedes Dokument in der Datenbank ausgeführt wird. Durch die Schemafreiheit ist aber nicht garantiert, dass das Feld *year* auch in jedem Dokument existiert, sodass diese Abfrage fehlschlägt wenn das Feld nicht vorhanden ist.
+Ein Nachteil dieser Variante ist, dass die Funktion für jedes Dokument in der Datenbank ausgeführt wird. Durch die Schemafreiheit ist aber nicht garantiert, dass das Feld *year* auch in jedem Dokument existiert, sodass diese Abfrage fehlschlägt wenn das Feld nicht vorhanden ist.
 
 **Update eines Dokuments**
 ```javascript
@@ -494,7 +499,7 @@ db.books.update(
 ```
 
 Über den Befehl *update* in der Kombination mit *\$set* können bestimmte Eigenschaften eines Dokuments verändert werden.
-Wird *\$set* nicht mit angegeben, wird das gesamte Dokument durch das neue ersetzt.
+Wird *\$set* nicht mit angegeben, wird das gesamte Dokument durch das Neue ersetzt.
 Dabei gehen auch alle nicht mit angegeben Eigenschaften, wie der Titel, verloren.
 
 Das Löschen eines Dokuments findet über den Befehl *delete()* statt, dem wie schon bei *find* die ID des Dokuments mitgegeben wird.
