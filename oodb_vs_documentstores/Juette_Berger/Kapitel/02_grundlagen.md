@@ -64,6 +64,7 @@ Wie der Name des Modells bereits vermuten lässt, sieht als Kernprinzip eine Spe
 | Der Schwarm | Frank Schätzing | Belletristik | 978-3596164530 | 01.11.2005 |
 | Die Zwölf | Justin Cronin | Belletristik | 978-3442469352 | 21.04.2014 |
 | Die Spiegelstadt | Justin Cronin | Belletristik | 978-3442311804 | 31.10.2016 |
+
 Tabelle 1:  Die Relation Buch
 
 Die Attribute/Spaltennamen der in der Tabelle 1 abgebildeten Relation Buch heißen TITEL, AUTOR, GENRE, ISBN und DATUM, diese bilden zusammen die Attributmenge der Relation. Eine Zeile ist ein Tupel/Datensatz, ein Attributwert bzw. ein Feld eines Datensatzes beinhaltet einen konkreten Wert. An dieser Stelle wird nochmals deutlich, dass eine Relation sich unterschiedlichen Datentypen der Attribute zusammensetzen kann.

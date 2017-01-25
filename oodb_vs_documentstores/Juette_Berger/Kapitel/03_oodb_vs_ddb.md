@@ -15,10 +15,10 @@ Speziell der Dokumentenabruf erfordert Mechanismen, welche die Key-Value-Struktu
 
 Neben den technologischen Unterschieden von OODB und Dokumentendatenbanken lassen sich auch potentielle Einsatzszenarien identifizieren. Dokumentendatenbanken kommen oftmals in WebApplikationen zu um Einsatz, wo eine heterogene Datenmenge eine schemakonforme Datenablage schwer realisierbar erscheinen lässt. Beispielsweise eignen sich Dokumenten-datenbanken für skalierbare Webapplikationen (vgl. @bach2016DDB S. 486). OODB sind demgegenüber für Applikationen prädestiniert, die auf eine schemagestützte Persistenz setzen. Weiterhin kann dadurch der agile und vereinfachte objektorientierten Entwicklungsprozess für die Realisierung der Datenschicht eingesetzt werden. (vgl. @nayak2013type S. 3)
 
-Die Tabelle 2 fasst die wesentlichen Charakteristiken der Datenbanksysteme zusammen.
+Die Tabelle 3 fasst die wesentlichen Charakteristiken der Datenbanksysteme zusammen.
 
-| Merkmal | OODB | Dokumentendatenbank |
-| ----- | ------- | -------- |
+| Merkmal             | OODB                           | Dokumentendatenbank            |
+| ------------------- | ------------------------------ | ------------------------------ |
 | Grundeigenschaften | Weiterführung des Applikations-Modells der objektorientierten Programmierung | Optimiert für Webtechnologien, horizontal skalierbar |
 | Schemata | Objektbasiertes Datenbankschema | Kein definiertes Datenschema |
 | Datenkonsistenz | Infolge der schema-basierten Struktur von Klassen gegeben | Nicht vorhanden bzw. auf Entwickler ausgelagert |
@@ -26,6 +26,7 @@ Die Tabelle 2 fasst die wesentlichen Charakteristiken der Datenbanksysteme zusam
 | Datentypen | komplex | komplex |
 | Hierarchien | Abbildbar durch das Vererbungs-konstrukt von Objekten | Abbildbar durch Verschachtelung der Dokumente |
 | Abfragesprache | Object Query Language (OQL) | @@ JSON, XML |
+
 Tabelle 3: Charakteristik von OODB und Dokumentendatenbanken
 
 Infolge der Spezifik beider Datenbanksysteme lässt sich eine klare Abgrenzung einer Dokumentendatenbank gegenüber eines OODB vornehmen.
