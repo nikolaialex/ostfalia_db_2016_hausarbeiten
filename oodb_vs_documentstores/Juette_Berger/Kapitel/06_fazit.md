@@ -1,4 +1,4 @@
 
 # 6. Fazit
 
-Lorem ipsum
+HIER FEHLT NOCH DER TEXT VON MIR
