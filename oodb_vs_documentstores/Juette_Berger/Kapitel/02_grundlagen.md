@@ -1,15 +1,15 @@
 
 # 2. Grundlagen
 
-Dieses Kapitel behandelt die grundlegenden Konzepte verschiedener Datenbanksysteme.
-Zuerst werden relationale Datenbankmanagementsysteme betrachtet, da diese aktuell am verbreitesten sind und die anderen Datenbanksysteme damit verglichen werden.
+Dieses Kapitel behandelt die grundlegenden Konzepte drei verschiedener Datenbanksysteme.
+Zu Beginn werden relationale Datenbankmanagementsysteme betrachtet, da diese aktuell am verbreitesten sind und die anderen Datenbanksysteme damit verglichen werden.
 In Kapitel 2.2 werden die objektorientierten Datenbanken vorgestellt und in 2.3 die Dokumentdatenbanken.
 
 ## 2.1 Relationale Datenbankmanagementsysteme
 
 Das Unterkapitel 2.1 soll grundlegende Informationen zur Organisation und Speicherung von Daten nach dem relationalen Ansatz darlegen. Dazu werden das Entity Relationship- und das Relationale Modell betrachtet. Es werden somit ausschließlich diejenigen Aspekte thematisiert, die eine Einflussnahme auf die Modellierung der Datenrepräsentation haben. Konkret bezieht sich dieses Kapitel auf die konzeptionelle und logische Ebene der Datenabbildung durch das RDBMS.    
 
-Die Modellierung der Daten für eine relationale Abbildung erfolgt in drei Schritten. Diese bestehen aus der Datenanalyse, dem Entwurf des Entity Relationship-Modell und den Transfer in das relationale Modell. Das physische Modell dient der Beschreibung der Transition des konzeptionellen Datenmodells auf die Datenbankebene. Schlussendlich liegt das relationale Datenmodell in die DB-spezifische Ausprägung vor. @@ QUELLE Die Abbildung 1 stellt den Ablauf der Modellierungsschritte dar und ordnet den jeweiligen allgemeingültigen Ebenenbegriff des Datenbankmodells zu.
+Die Modellierung der Daten für eine relationale Abbildung erfolgt in drei Schritten. Diese bestehen aus der Datenanalyse, dem Entwurf des Entity Relationship-Modell und den Transfer in das relationale Modell. Das physische Modell dient der Beschreibung der Transition des konzeptionellen Datenmodells auf die Datenbankebene. Schlussendlich liegt das relationale Datenmodell in die DB-spezifische Ausprägung vor. @@QUELLE Die Abbildung 1 stellt den Ablauf der Modellierungsschritte dar und ordnet den jeweiligen allgemeingültigen Ebenenbegriff des Datenbankmodells zu.
 
 ![Schematische Darstellung des relationalen Modellierungsprozesses](images/kap2_abb1_prozess.png)
 
@@ -33,7 +33,7 @@ Das Entity Relationship-Modell sieht für Entitäten ferner auch das Konzept der
 
 Diese Formen der Mengendarstellung müssen von der Transformation zum Relationalen Modell berücksichtigt werden. (vgl. @meier2016nosql S. 33)
 
-Zwischen den Entitätsmengen können unterschiedliche Beziehungen (engl. relationships) existieren. Die Beziehungen bilden eine Beziehungsmenge, die wiederum durch  Merkmale näher charakterisiert werden können. Beziehungen werden durch Assoziationen näher beschrieben, die wiederum durch Assoziationstypen spezifiziert werden. Die nachstehenden Assoziationstypen sind im ER-Modell definiert:
+Zwischen den Entitätsmengen können unterschiedliche Beziehungen (engl. relationships) existieren. Die Beziehungen bilden eine Beziehungsmenge, die wiederum durch Merkmale näher charakterisiert werden können. Beziehungen werden durch Assoziationen näher beschrieben, die wiederum durch Assoziationstypen spezifiziert werden. Die nachstehenden Assoziationstypen sind im ER-Modell definiert:
 
   * einfache Assoziation (genau ein Tupel)
   * konditionelle Assoziationen (kein oder genau ein Tupel)
@@ -119,7 +119,7 @@ Die Person könnte beispielsweise die Aktion *Bewegen* implementieren um eine fr
 Ein Kernkonzept der Objektorientierung ist die Kapselung, welches besagt, dass ein direkter Zugriff auf die Attribute eines Objektes nicht möglich ist.
 Der Zugriff wird über eigene Methoden bereitgestellt.
 In dem verwendeten Beispiel sind das die Get- und Set-Methoden.
-Damit können Einschränkungen durchgeführt werden, sodass bestimmte Eigenschaften nur lesbar sind oder nur gesetzt werden können.
+Damit können Einschränkungen durchgeführt werden, sodass bestimmte Eigenschaften nur lesbar sind oder nur gesetzt werden können.(vgl. @kuhnel2012visual Kap. 3)
 
 <!-- Abtrakte Klassen, Interfaces und Vererbung -->
 Um generische Klassen abbilden zu können gibt es *abstrakte* Klassen, von denen sich keine Instanz erzeugen lässt.
@@ -141,7 +141,7 @@ Daraus ergibt sich ein weiteres Prinzip der Objektorientierung.
 Eine erbende Klasse kann die Methoden der übergeordneten Klasse(n) überschreiben und dadurch ein angepasstes Verhalten implementieren.
 Beispielsweise bewegt sich ein Mensch auf zwei Beinen, ein Löwe aber auf vier Pfoten.
 Daneben gibt es das Prinzip der Polymorphie, welches besagt, dass es von einer Methode mit gleichem Namen verschiedene Ausprägungen geben kann.
-Diese unterscheiden sich durch ihre Parameter.
+Diese unterscheiden sich durch ihre Parameter. (vgl. @kuhnel2012visual Kap. 4)
 
 <!-- Objektbeziehungen -->
 Neben der Modellierung einzelner Klassen müssen deren Beziehungen untereinander abgebildet werden.
@@ -150,7 +150,7 @@ Bei 1:1 Beziehungen findet genau eine Referenz von Klasse 1 auf eine Klasse 2 st
 Ebenfalls hat Klasse 2 nur genau 1 Referenz, nämlich die auf Klasse 1.
 Der zweite Typ sind 1:n Beziehungen bei denen die Klasse 1 auf n weitere Klassen verweisen kann.
 Beide Typen können ebenfalls bedingt sein, wobei auch eine Referenz auf NULL möglich ist.
-Beziehungen lassen sich zusätzlich noch klassifizieren, dazu gehören verhaltensbezogene Beziehungen (Nachrichten oder Funktionsaufrufe) und strukturelle Beziehungen (Einschluss oder Vererbung).
+Beziehungen lassen sich zusätzlich noch klassifizieren, dazu gehören verhaltensbezogene Beziehungen (Nachrichten oder Funktionsaufrufe) und strukturelle Beziehungen (Einschluss oder Vererbung). (vgl. @poschekdatenbanken S. 12f)
 
 <!--- Client-Server Programmierung ubd Übergang zu OOM --->
 Der Einsatz von Objektorientierten Programmen ist sehr unterschiedlich.
@@ -179,24 +179,24 @@ Eine bessere Lösung ist jedoch die Speicherung der verwendeten Objekte direkt i
 In diesem Fall findet kein Performanceverlust durch das Mapping der Daten statt, des weiteren lassen sich Informationen wie Vererbung oder Verknüpfungen zwischen den Objekten wesentlich besser hinterlegen.
 
 Bei der Verwendung eines OODBMS erfolgt der Zugriff auf die Daten in gleicher Weise, als würden diese im Speicher des Betriebsystems liegen.
-Dadurch werden weitere Layer wie ODBC, ADO oder JDBC nicht benötigt. @@ hier ggf. Abkürzungen einführen oder ausschreiben?
+Dadurch werden weitere Layer wie Open Database Connectivity (ODBC), ActiveX Data Objects (ADO) oder Java Database Connectivity (JDBC) nicht benötigt.
 Die CURD-Abfragen (Create, Update, Read, Delete) können über Methoden direkt auf die Datenbank ausgeführt werden.
 Lediglich für das Suchen bestimmter Objekte nach Kriterien in den Attributen muss eine eigene Sprache bereitgestellt werden.
-Ein sehr generischer Ansatz hierfür ist beispielsweise die Verwendung von Lambda Expressions, welche in C# zu LINQ to Objects geführt haben.
+Ein sehr generischer Ansatz hierfür ist beispielsweise die Verwendung von Lambda Expressions, welche in C# zu LINQ to Objects[^linq] geführt haben.
 Werden Objekte aus der Datenbank geholt, können diese im Modus Transient oder Mirror sein.
 Als Transient sind diese von der Datenbank entbunden, Änderungen wirken sich nur auf das Objekt im Speicher des Systems aus.
-Im Mirror Modus wirken sich Änderungen direkt auf das Objekt im Speicher und in der Datenbank aus.
+Im Mirror Modus wirken sich Änderungen direkt auf das Objekt im Speicher und in der Datenbank aus. (vgl. @obasanjo2003exploration S. 2)
 
 
 ### 2.2.3 Anforderungen an ein Objektorientierte Datenbank
-Ein OODBMS muss verschiedene Anforderungen abdecken um den Programmierer die oben beschriebenen Vorteile zu bieten.
+Ein OODBMS muss verschiedene Anforderungen abdecken um den Programmierer die bisher beschriebenen Vorteile zu bieten.
 
 Die gespeicherten Objekte sollten nahezu ununterscheidbar von denen in der verwendeten Programmiersprache sein.
 Daher müssen Anforderungen nach Vererbung, Polymorphie, Schnittstellen oder Objektreferenzen von dem OODBMS ebenfalls mit abgedeckt werden. (vgl. Kapitel 2.1)
 
 Jedes Objekt muss unter einer eindeutigen ID, der Objekt ID (OID) gespeichert werden, welche vom OODBS vorgegeben bzw. generiert wird.
 Anforderungen an die OID sind:
-  * ist unabhängig gegenüber den Daten in dem Objekt, ändern sich die Daten im Objekt bleibt die OID gleich
+  * Unabhängigkeit gegenüber den Daten in dem Objekt, ändern sich die Daten im Objekt bleibt die OID gleich.
   * Objekte mit unterschiedlichen OIDs und gleichen Eigenschaften sind möglich. (z. B. eine Klasse mit den Attributen Nachname und Vorname von der zwei gleiche Instanzen existieren)
   * Dient der Auffindbarkeit
   * Dient der eindeutigen Identifizierung eins Objekts innerhalb einer Datenbank
@@ -208,13 +208,11 @@ Die Erzeugung der OID kann auf verschiedene Arten und Weisen durchgeführt werde
   2. Eine Name, der meist aus einem geeigneten Namensraum stammt, welcher üblicherweise vom Nutzer vergeben wird. Hierbei ist es oft schwierig über viele Attribute eindeutige Werte zu vergeben.
   3. Einen Surrogate oder Identifier Attribut. Diese haben den Nachteil das sie nicht wie normale Attribute behandelt werden können.
 
-@@ hier passt der einleitende Text noch nicht ganz zu den Aufzählungen (Meckern auf hohem Niveau)
-
-Neben der OID wird der Zustand eines Objektes gespeichert. (vgl. @poschekdatenbanken S. 9)
+Neben der OID wird der Zustand eines Objektes als weitere Information mit gespeichert. (vgl. @poschekdatenbanken S. 9)
 
 Bei der Verwendung von Referenzen kann es, wie bei den relationalen Datenbanken, zu Integritätsproblemen kommen, wenn ein Objekt, auf welches noch referenziert wird, aus der Datenbank entfernt wird.
 Einige Datenbanksysteme können Referenzen über Attribute setzen, sodass das eine Eigenschaft des Objektes x auf y zeigt ohne das weiter bestimmt werden muss, wie die Referenz berechnet wird.
-Die Berechnung könnte über eine direkte Referenz auf das Objekt (Pointer) oder wird über gleiche Attribute bestimmt. @@ statts bestimmt -> erfolgen?
+Die Berechnung erfolgt über eine direkte Referenz auf das Objekt (Pointer) oder wird über gleichartige Attribute bestimmt.
 Ob dies erlaubt ist und wie damit verfahren wird, hängt von der Implementierung des OODBMS ab.
 Das OODBMS muss Mechanismen bereitstellen, um diese Probleme zu adressieren.
 
@@ -273,10 +271,10 @@ class Person {
 Für Abfragen gibt es die Object Query Language (OQL), welche auf der Basis und Syntax von SQL aufbaut.
 Es können beispielsweise Abfragen in der bekannten Form *SELECT ... FROM ... WHERE* durchgeführt werden.
 Ebenfalls sind bekannte Abfragen aus SQL über Aggregierungsfunktionen (count, avg, min, max, etc.) und Mengenoperationen (wie intersct, except oder union) möglich.
-Des Weiteren können in den Abfragen auf @@ auf? komplexe Werte, Objektidentitäten oder Methoden genutzt werden.
+Des Weiteren können in den Abfragen komplexe Werte, Objektidentitäten oder Methoden genutzt werden.
 Mittels Quantoren können Methoden für Mengen direkt aus der Abfragesprache heraus ausgeführt werden.
 
-Im Folgenden werden einige Beispiel für OQL Operationen aufgeführt:
+Im Folgenden werden einige Beispiel für OQL Operationen aufgeführt (vgl. @poschekdatenbanken S. 17f):
 
 **Erzeugen eines Objektes**
 ```
@@ -293,7 +291,7 @@ SELECT k FRM Katzen WHERE k.Vita.Alter > 10
 ELEMENT(SELECT k FRM Katzen WHERE k.ID = 235423523)
 ```
 
-Neben diesem Standard, an dem seit 2001 nicht mehr gearbeitet wird, da sich die Organisation aufgelöst hat und er einige Schwächen aufweist, gibt es die SQL-3-Norm. (vgl. @kulkarni1993object, @poschekdatenbanken)
+Neben diesem Standard, an dem seit 2001 nicht mehr gearbeitet wird, da sich die Organisation aufgelöst hat und er einige Schwächen aufweist, gibt es die SQL-3-Norm. (vgl. @kulkarni1993object, @poschekdatenbanken S. 19ff)
 Diese erweitert den bisherigen Standard um Konstrukte, welche für objektorientierte Datenbanken wichtig sind.
 Dazu gehören abstrakte Datentypen, Objekt-Identifikatoren, Überladen von Funktionen oder komplexen Datentypen wie SET, MULTISET, LIST oder ROW.
 Eine dritte Möglichkeit sind native Abfragen aus der Programmiersprache hinaus, sofern die Datenbank eine solche Schnittstelle anbietet.
@@ -343,12 +341,11 @@ Der größte Nachteil ist der geringe Anteil von Schnittstellen für den Zugriff
 Besonders unter den populären Programmiersprachen wie Java, PHP oder Python fehlen die entsprechenden Frameworks.
 Weiterhin gibt es nur wenige Implementierungen von diesem Datenbanktyp.
 Beispiel von Objektdatenbanken sind db4o[^db4o], ZooDB[^zoodb] oder mcobject[^mcobject].
-Das Kapitel 5 beschäftigt sich eingehend mit der Verbreitung von objektorientierten Datenbanken. @@ Dieser Satz ist irgendwie von dem vorhergehenden Inhalt losgelöst...
 
 ## 2.3 Dokumentdatenbanken
 Dokumentdatenbanken gehören zum Typ der NoSQL (Not only SQL) Datenbanken.
 Der englische Name ist nicht wie zu vermuten *document database*, sondern treffender *document store*, da diese Systeme für die Speicherung von Dokumenten optimiert sind.
-Dieser Datenbanktyp bietet den großen Vorteil der Schemafreiheit von Schlüssel-Wert-Speichern @@ Schlüssel-Wert-Speichern... klingt irgend wie fremd... mit einer Möglichkeit zur strukturierten Speicherung von Daten.
+Dieser Datenbanktyp bietet den großen Vorteil der Schemafreiheit von *Key-Value Pairs* (Schlüssel/Werte-Paar) mit einer Möglichkeit zur strukturierten Speicherung von Daten.
 Bei den Daten handelt es sich um strukturierte Daten in Datensätzen, welche in diesem Kontext als Dokumente bezeichnet werden. (vgl. @meier2016nosql S. 230 ff)
 
 Einsatzbereich sind meist spezielle Web-Dienste, welche horizontal skalierbar sein müssen.
@@ -359,7 +356,7 @@ Anwendung finden Dokumentdatenbanken besonders bei Social-Media-Plattformen oder
 Schemafrei bedeutet, dass nicht wie bei relationalen oder objektorientierten Datenbanken das Tabellen- oder Objektschema angegeben werden muss.
 Dokumente lassen sich ohne vorherige Definition eines Schemas einfügen.
 Dadurch wird auf Vorteile wie referenzielle Integrität oder Normalisierung verzichtet.
-Des Weiteren kann eine Dokumentdatenbank keine transaktionale Sicherheit gewährleisten, vielmehr wird nach dem Prinzip der schlussendlichen Konsistenz (eventual consistency) gearbeitet.
+Des Weiteren kann eine Dokumentdatenbank keine transaktionale Sicherheit gewährleisten, vielmehr wird nach dem Prinzip der schlussendlichen Konsistenz (eventual consistency) gearbeitet. (vgl. @redmond2012seven S. 317 ff)
 Der Vorteil dieses Ansatzes ist eine sehr schnelle Verarbeitung der Daten, da die Replikation erst später erfolgt.
 
 Beispiele für bekannte Dokumentdatenbanken sind CouchDB[^couchdb], RavenDB[^ravendb] oder MongoDB[^mongodb].
@@ -369,7 +366,7 @@ Durch diese Verknüpfung der beiden Systeme fallen die Nachteile der fehlenden T
 Lediglich der Suchindex kann eine Inkonsistent zum vorhanden Datenbestand aufweisen.
 
 ### 2.3.1 Dokumente
-Der Begriff "Dokument" kann zu irretationen führen, da hierunter auch andere Dateitypen wie z. B. Multimedia oder Binärdateien fallen. (z. B. Word-Dokument)
+Der Begriff "Dokument" kann zu Irritationen führen, da hierunter auch andere Dateitypen wie z. B. Multimedia oder Binärdateien fallen. (z. B. Word-Dokument)
 Ein Dokument besteht vielmehr aus einem strukturierten Datensatz, welcher beispielsweise in XML[^xml] oder JSON[^json] formatiert ist.
 
 **Beispiel eines JSON Datensatzes**
@@ -417,18 +414,7 @@ Der Vorteil ist, dass dieser Schritt unabhängig von den restlichen Daten ausgef
 Die zweite Phase führt dann eine Reduzierung der Ergebnisse durch (Reduce). (vgl. @meier2016nosql S. 231)
 Eine ausführliche grafische Beschreibung ist unter https://highlyscalable.wordpress.com/2012/02/01/mapreduce-patterns/ zu finden.
 
-### 2.3.3 Performace von Dokumentdatenbanken
-
-@@ Dieser Abschnitt könnte z.B. in die Abgrenzung von oodb vs ddb mit rein -> Mehr Gewicht für den Hauptteil
-
-In @li2013performance wurden SQL und NoSQL-Datenbanken über die Performance miteinander verglichen.
-Dabei zeigt sich, dass sich Systeme wie CouchDB oder RavenDB, im Vergleich zu der relationalen Datenbank MS SQL Express, nicht performanter im Bereich CRUD verhalten.
-Andere Systeme hingegen, wie Couchbase oder MongoDB, sind deutlich performanter als die verglichene MS SQL Datenbank.
-Diese Auswertung zeigt, dass nicht das alleinige Konzept einer NoSQL-Datenbank zu mehr Performance führt, vielmehr muss die konkrete Umsetzung den Vorteil auch tatsächlich liefern.
-
-Eine weitere Erkenntnis ist, dass NoSQL-Datenbanken bei trivialen Operationen sehr schnell sein können, bei komplexeren Operationen diese aber im Verhältnis deutlich länger brauchen.
-
-### 2.3.4 Beispiel MongoDB
+### 2.3.3 Beispiel MongoDB
 Im folgenden wird exemplarisch die Dokumentdatenbank MongoDB betrachtet.(vgl. @redmond2012seven S. 135 ff.)
 Die erste Version dieser Datenbank ist aus dem Jahr 2009 und findet seitdem eine schnelle Verbreitung.
 Ziel war es, eine skalierbare, performante Datenbank mit einfachem Zugriff zu designen.

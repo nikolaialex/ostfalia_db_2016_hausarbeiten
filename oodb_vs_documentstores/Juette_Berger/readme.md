@@ -7,3 +7,7 @@ Im Kapitel *07_literatur.md* ist lediglich die Überschrift definiert.
 
 Zum Umwandeln liegen die build Skripte (build.sh und build.bat) bereit.
 Allerdings ist die Transformation nicht in allen Fällen zufriedenstellend, sodass besonders Tabellen im PDF falsch dargestellt werden.
+
+## Anteile
+Die Kapitel 1, 3, 4 und 6 sind vollständig von Herrn Berger erarbeitet sowie Abschnitt 2.1 in Kapitel 2.
+Die andere Hälfte ist von Herrn Jütte erarbeitet.

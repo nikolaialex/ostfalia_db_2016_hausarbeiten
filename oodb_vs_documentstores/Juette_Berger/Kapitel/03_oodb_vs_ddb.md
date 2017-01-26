@@ -25,8 +25,17 @@ Die Tabelle 3 fasst die wesentlichen Charakteristiken der Datenbanksysteme zusam
 | Einsatzszenarien | Normalisierte objektorientierte Datenbestände | Heterogene Datenbestände, die schematisch vorab nicht exakt definierbar sind |
 | Datentypen | komplex | komplex |
 | Hierarchien | Abbildbar durch das Vererbungs-konstrukt von Objekten | Abbildbar durch Verschachtelung der Dokumente |
-| Abfragesprache | Object Query Language (OQL) | @@ JSON, XML |
+| Abfragesprache | Object Query Language (OQL) | JSON, XML |
 
 Tabelle 3: Charakteristik von OODB und Dokumentendatenbanken
 
 Infolge der Spezifik beider Datenbanksysteme lässt sich eine klare Abgrenzung einer Dokumentendatenbank gegenüber eine OODB vornehmen.
+
+### 3.1 Performace von Dokumentdatenbanken
+
+In @li2013performance wurden SQL und NoSQL-Datenbanken über die Performance miteinander verglichen.
+Dabei zeigt sich, dass sich Systeme wie CouchDB oder RavenDB, im Vergleich zu der relationalen Datenbank MS SQL Express, nicht performanter im Bereich CRUD verhalten.
+Andere Systeme hingegen, wie Couchbase oder MongoDB, sind deutlich performanter als die verglichene MS SQL Datenbank.
+Diese Auswertung zeigt, dass nicht das alleinige Konzept einer NoSQL-Datenbank zu mehr Performance führt, vielmehr muss die konkrete Umsetzung den Vorteil auch tatsächlich liefern.
+
+Eine weitere Erkenntnis ist, dass NoSQL-Datenbanken bei trivialen Operationen sehr schnell sein können, bei komplexeren Operationen diese aber im Verhältnis deutlich länger brauchen.
