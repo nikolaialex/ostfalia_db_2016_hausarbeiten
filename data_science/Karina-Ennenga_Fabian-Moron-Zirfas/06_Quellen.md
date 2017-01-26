@@ -1,10 +1,10 @@
-# Quellen #
+# 6 Quellen #
 
-[^cf1]: Oremus, Will. "Who Really Controls What You See in Your Facebook Feed—and Why They Keep Changing It   ." Slate Magazine. Slate.com, 03 Jan. 2016. Web. 08 Jan. 2017. <http://www.slate.com/articles/technology/cover_story/2016/01/how_facebook_s_news_feed_algorithm_works.html>.
+[^cf1]: Oremus, Will. "Who Really Controls What You See in Your Facebook Feed—and Why They Keep Changing It ."Slate Magazine. Slate.com, 03 Jan. 2016. Web. 08 Jan. 2017. <http://www.slate.com/articles/technology/cover_story/2016/01/how_facebook_s_news_feed_algorithm_works.html>.
 
 [^cf2]: The Signal. "What is data science vs. statistics? - The Signal." The Signal. 30 Mar. 2016. Web. 8 Jan. 2017. <https://blog.mixpanel.com/2016/03/30/this-is-the-difference-between-statistics-and-data-science/>
 
-[^cf3]: Glassdoor. " Best Jobs in America ." Glassdoor. n.d. Web. 8 Jan. 2017. <https://www.glassdoor.com/List/Best-Jobs-in-America-LST_KQ0,20.htm>
+[^cf3]: Glassdoor. "Best Jobs in America." Glassdoor. n.d. Web. 8 Jan. 2017. <https://www.glassdoor.com/List/Best-Jobs-in-America-LST_KQ0,20.htm>
 
 [^cf4]: Harvard Business Review. "Data Scientist: The Sexiest Job of the 21st Century." Harvard Business Review. 1 Oct. 2012. Web. 8 Jan. 2017. <https://hbr.org/2012/10/data-scientist-the-sexiest-job-of-the-21st-century>
 
