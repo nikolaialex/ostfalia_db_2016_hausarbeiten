@@ -26,6 +26,7 @@ Die folgenden Liste versucht einige der größten Probleme von Objektdatenbanken
   * Datenbanken wie db4o unterstützen nicht den Import von verbreiteten Formten wie JSON oder XML, was den Einsatz dieser Datenbank für einige Anwendungsfälle unbrauchbar macht. Ebenfalls bietet die Datenbank keine referenzielle Integrität, dessen Verzicht nur bei skalierbaren Datenbanken tragbar ist.
 
 Des weiteren wurde eine Stichwortsuche auf einigen großen Plattformen durchgeführt um die Verbreitung der Datenbanksysteme zu ermitteln.
+Treffer bei einer reinen Suche bei Google wurden nicht mit aufgenommen, da diese die Skalen der anderen Treffer zu stark reduzieren.
 Wie auf der Abbildung 10 zu erkennen ist sind auf allen drei Plattformen am meisten Treffer zu relationalen Datenbanken und der Abfragesprache SQL zu finden.
 Lediglich auf Google Scholar gibt es eine deutliche Anzahl von Treffern für die objektorientierten Datenbanken.
 Eine Möglich Schlussfolgerung daraus ist, dass diese Datenbanksysteme bisher nur im Akademischen Umfeld vorkommen.
