@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<ScrivenerProject Version="1.5" Creator="SCRMAC-2.8.1.2-26324" Device="Fabians-MacBook-Air" Modified="2017-01-25 16:45:50 +0100" ModID="097FE253-0D82-4E4C-B2C5-290A3C67EAC9">
+<ScrivenerProject Version="1.5" Creator="SCRMAC-2.8.1.2-26324" Device="Fabians-MacBook-Air" Modified="2017-01-26 13:42:30 +0100" ModID="ED89FFDE-2D66-4DFB-98E0-B947F6C1DBF9">
     <Binder>
         <BinderItem ID="16" UUID="6F129022-E261-4132-AF42-88D164377F8F" Type="Text" Created="2017-01-07 18:37:53 +0100" Modified="2017-01-07 18:37:53 +0100">
             <Title>About</Title>
@@ -435,8 +435,8 @@
     </ProjectProperties>
     <ProjectTargets Notify="Yes">
         <DraftTarget Type="Words" CountIncludedOnly="Yes" CurrentCompileGroupOnly="Yes" Deadline="2017-01-29 13:28:32 +0100" IgnoreDeadline="No">6000</DraftTarget>
-        <SessionTarget Type="Words" CountDraftOnly="Yes" AllowNegatives="Yes" ResetType="Midnight" DeterminedFromDeadline="Yes" WritingDays="1-7" CanWriteOnDeadlineDate="No">981</SessionTarget>
-        <PreviousSession Words="792" Characters="6449" Date="2017-01-25 10:09:04 +0100"></PreviousSession>
+        <SessionTarget Type="Words" CountDraftOnly="Yes" AllowNegatives="Yes" ResetType="Midnight" DeterminedFromDeadline="Yes" WritingDays="1-7" CanWriteOnDeadlineDate="No">674</SessionTarget>
+        <PreviousSession Words="0" Characters="0" Date="2017-01-26 13:42:28 +0100"></PreviousSession>
     </ProjectTargets>
     <PrintSettings PaperSize="595.275574,841.889771" LeftMargin="72.0" RightMargin="72.0" TopMargin="90.0" BottomMargin="90.0" PaperType="iso-a4" Orientation="Portrait" HorizontalPagination="Clip" VerticalPagination="Auto" ScaleFactor="1.0" HorizontallyCentered="Yes" VerticallyCentered="Yes" Collates="Yes" PagesAcross="1" PagesDown="1"></PrintSettings>
 </ScrivenerProject>
