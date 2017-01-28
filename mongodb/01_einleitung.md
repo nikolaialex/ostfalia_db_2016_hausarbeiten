@@ -31,6 +31,5 @@ Im folgenden Kapitel wird ein kurzer Überblick über NoSQL Datenbanken gegeben 
 <a name="footnote12"></a> <a><sup>2</sup></a> Anhang: [Trend-Diagramm][trend] auf DB-Engines.com   
 <a name="footnote13"></a> <a><sup>3</sup></a> MongoDB Dokumentation:  ![](pict/link.png)  [https://docs.mongodb.com/manual/](https://docs.mongodb.com/manual/)
 
-***
 
 Nächstes Kapitel: [2. Überblick][kap2]  
