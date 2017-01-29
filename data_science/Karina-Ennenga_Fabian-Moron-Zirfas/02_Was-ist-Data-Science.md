@@ -1,4 +1,4 @@
-# 2 Was ist Data Science? #
+# 2. Was ist Data Science? #
 
 Der Begriff „Data Science“ ist seit einigen Jahren ein Buzz Word, welches immer wieder im Zusammenhang mit anderen Begriffen wie „Big Data“ und „Artificial Intelligence“ auftauchen. Aber was ist dieses „Data Science“ überhaupt? Wer sind diese Daten Wissenschaftler und was machen sie?  
 Geboren wurde diese neue Art von Stellenbeschreibung wohl zusammen mit dem Aufkommen von großen Datenmengen, die von Unternehmen gesammelt werden. Um diesen Daten Herr zu werden, bedarf es einiger Qualifikation. Zu diesen Qualifikationen zählen der Umgang mit verschiedensten Datenbanken, die Methoden aus der Statistik, die Fähigkeit zu programmieren, das Wissen wie die Ergebnisse in eine visuelle Form gebracht werden können, aus denen auch Informationen abgelesen und verstanden werden können und auch die Befähigung die Algorithmen zu schreiben, die effizient genug sind Ergebnisse nicht erst in zwei Wochen zu liefern.  
