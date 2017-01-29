@@ -99,7 +99,7 @@ main();
 
 Das Ergebnis ist ein Datensatz, der uns genau zeigt, wie oft welches Tier in allen Datensätzen vorkommt.  
 
-```shell
+```js
 [ [ { animal: 'elefant', count: 3 },
     { animal: 'mice', count: 2 },
     { animal: 'cat', count: 3 },
