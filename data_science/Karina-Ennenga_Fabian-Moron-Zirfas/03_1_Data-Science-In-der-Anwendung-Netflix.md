@@ -6,7 +6,7 @@ Netflix weiß von jedem Nutzer, was er schaut, wann er schaut, wie lange er etwa
 
 Diese riesige Menge an Daten wird von Netflix gespeichert und anschließend von Algorithmen beobachtet. Laut des Artikels *How Netflix Reverse Engineered Hollywood* des amerikanischen Magazins *The Atlantic* (http://www.theatlantic.com/technology/archive/2014/01/how-netflix-reverse-engineered-hollywood/282679/) beschäftigt Netflix allein 800 Ingenieure, die sich nur mit diesem Algorithmus beschäftigen.
 
-*The Atlantic* hat recherchiert, wie die Algorithmen funktionieren. Auf die Funktionsweise des Algorithmus gehe ich im nächsten Abschnitt *Speicherung / Algorithmus* näher ein.
+*The Atlantic* hat recherchiert, wie die Algorithmen funktionieren. Auf die Funktionsweise des Algorithmus gehen wir im nächsten Abschnitt *Speicherung / Algorithmus* näher ein.
 
 Das Herzstück von Netflix ist sein Empfehlungsmechanismus. Dieser basiert auf dem Algorithmus, der CineMatch genannt wird.
 Um diesen Mechanismus noch weiter zu verbessern, wurde 2006 von Netflix-Chef Reed Hastings ein Wettbewerb “The Netflix Prize” zur Verbesserung des Algorithmus, ausgeschrieben, so Xavier Amatriain und Justin Basilico im Artikel *Netflix Recommendations: Beyond the 5 stars (Part 1)* (http://techblog.netflix.com/2012/04/netflix-recommendations-beyond-5-stars.html). Er versprach 1 Million Dollar für diejenigen, die es schaffen würde, den Algorithmus um 10 Prozent zu verbessern.
@@ -33,7 +33,7 @@ Quelle http://www.theatlantic.com/technology/archive/2014/01/how-netflix-reverse
 
 Durch den beschriebenen Alghorithmus hat Netflix eine neue Form des Empfehlens geschaffen. Im folgenden beschreiben wir zwei unterschiedliche Filtermethoden für Empfehlungssysteme.
 
-In einer Diplomarbeit (http://inka.htw-berlin.de/Sieck/Abschlussarbeiten/Hebeisen.pdf) beschreibt Benedikt Hebeisen zwei verschiedene Filtermethoden für Empfehlungssysteme. Auf diese zwei Methoden - das kollaborative Filtern, sowie das inhaltsbasierte Filtern - gehe ich im folgenen genauer ein.
+In einer Diplomarbeit (http://inka.htw-berlin.de/Sieck/Abschlussarbeiten/Hebeisen.pdf) beschreibt Benedikt Hebeisen zwei verschiedene Filtermethoden für Empfehlungssysteme. Auf diese zwei Methoden - das kollaborative Filtern, sowie das inhaltsbasierte Filtern - gehe wir im Folgenden genauer ein.
 
 ###2.1 Kollaboratives Filtern
 Die am häufigsten verbreitete Filtermethode für Empfehlungssysteme ist laut Hebeisen heutzutage das kollaborative Filtern. Ein kollaboratives System ist ein lernendes System, welches eine vorhandene Datenbasis nutzt. Anhand dieser Datenbasis sollen Verhaltensmuster von Nutzereingaben zu erkennen sein und es soll versucht werden, eine Verbindung zwischen eingegebenen und bereits vorhandenen Daten herzustellen (User-to-User). Es werden also Empfehlungen auf Basis von Bewertungen anderer Nutzer gegeben. Das Interessenprofil eines Nutzers soll auf das Interessenprofil eines anderen Nutzers übertragen werden. Bewertungen erfolgen hierbei entweder durch konkrete Bewertungen einer bestimmten Sache (zum Beispiel eines Filmes), indem beispielsweise anhand einer Skala ein Rating abgegeben wird oder angegeben wird, ob etwas nützlich war, oder aber auch durch das implizite Verhalten des Nutzers. Hierbei wird zum Beispiel berückstichtigt, wie lange ein Nutzer etwas angeschaut hat oder was angeschaut wurde.
