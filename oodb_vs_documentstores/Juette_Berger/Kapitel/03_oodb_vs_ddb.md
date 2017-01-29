@@ -24,7 +24,7 @@ Diese Auswertung zeigt, dass nicht das alleinige Konzept einer NoSQL-Datenbank z
 
 Eine weitere Erkenntnis ist, dass NoSQL-Datenbanken bei trivialen Operationen sehr schnell sein können, bei komplexeren Operationen diese aber im Verhältnis deutlich länger brauchen.
 
-@@ Hier besser die Vergleichbarkeit von OODB und DDB herausarbeiten.
+@@ Hier besser die Vergleichbarkeit von OODB und DDB herausarbeiten. --> Die Quelle hat leider keine OODBs getestet. Ggf müssen wir das dann wieder zurückschieben
 
 *Abschließende Zusammenfassung der Eigenschaften beider Datenbankkonzepte*
 

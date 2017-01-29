@@ -2,12 +2,12 @@
 # 2. Grundlagen
 
 Dieses Kapitel behandelt die grundlegenden Konzepte drei verschiedener Datenbanksysteme.
-Zu Beginn werden relationale Datenbankmanagementsysteme betrachtet, da diese aktuell am verbreitesten sind und die anderen Datenbanksysteme damit verglichen werden.
+Zu Beginn werden die RDBMS betrachtet, da diese aktuell am verbreitesten sind und die anderen Datenbanksysteme damit im weiteren verglichen werden.
 In Kapitel 2.2 werden die objektorientierten Datenbanken vorgestellt und in 2.3 die Dokumentdatenbanken.
 
 ## 2.1 Relationale Datenbankmanagementsysteme
 
-Das Unterkapitel 2.1 soll grundlegende Informationen zur Organisation und Speicherung von Daten nach dem relationalen Ansatz darlegen. Dazu werden das Entity Relationship- und das Relationale Modell betrachtet. Es werden somit ausschließlich diejenigen Aspekte thematisiert, die eine Einflussnahme auf die Modellierung der Datenrepräsentation haben. Konkret bezieht sich dieses Kapitel auf die konzeptionelle und logische Ebene der Datenabbildung durch das RDBMS.    
+Das Unterkapitel 2.1 soll grundlegende Informationen zur Organisation und Speicherung von Daten nach dem relationalen Ansatz darlegen. Dazu werden das Entity Relationship- und das relationale Modell betrachtet. Es werden somit ausschließlich diejenigen Aspekte thematisiert, die eine Einflussnahme auf die Modellierung der Datenrepräsentation haben. Konkret bezieht sich dieses Kapitel auf die konzeptionelle und logische Ebene der Datenabbildung durch das RDBMS.    
 
 Die Modellierung der Daten für eine relationale Abbildung erfolgt in drei Schritten. Diese bestehen aus der Datenanalyse, dem Entwurf des Entity Relationship-Modell und den Transfer in das relationale Modell. Das physische Modell dient der Beschreibung der Transition des konzeptionellen Datenmodells auf die Datenbankebene. Schlussendlich liegt das relationale Datenmodell in die DB-spezifische Ausprägung vor. (vgl. @schropp2004DBProjekt S. 6) Die Abbildung 1 stellt den Ablauf der Modellierungsschritte dar und ordnet den jeweiligen allgemeingültigen Ebenenbegriff des Datenbankmodells zu.
 
@@ -15,7 +15,7 @@ Die Modellierung der Daten für eine relationale Abbildung erfolgt in drei Schri
 
 ### 2.1.1	Das Entity Relationship Modell
 
-Das Entity Relationship Modell (ER) ist die initiale Abbildung der zu modellierenden Daten und deren Abhängigkeiten oder Zugehörigkeiten untereinander. Im Kontext des ER-Modells werden die Termini  
+Das Entity Relationship-Modell (ERM) ist die initiale Abbildung der zu modellierenden Daten und deren Abhängigkeiten oder Zugehörigkeiten untereinander. Im Kontext des ER-Modells werden die Termini  
 
   *	Entität
   *	Entitätsmenge
@@ -24,14 +24,14 @@ eingeführt. „Unter Entität (engl. entity) versteht man ein bestimmtes, d.h. 
 
 Um eine Entität in der Entitätsmenge identifizieren zu können, ist ein Merkmal oder Merkmalskombination zu bestimmen, welches als Identifikationsschlüssel fungiert. Der dazu bestimmte Schlüssel muss das Kriterium der Eindeutigkeit erfüllen. Sobald ein Identitätsschlüssel für eine Entitätsmenge zwei Entitäten zugeordnet werden kann, besteht keine Eindeutigkeit.
 
-Das Entity Relationship-Modell sieht für Entitäten ferner auch das Konzept der Generalisierung und Aggregation vor, indem Daten vom Detail ausgehend abstrahiert werden oder durch Submengenbildung als Spezialisierungen gelten können. Die Generalisierung umfasst als Begrifflichkeit mehrere Formen:
+Das ER-Modell sieht für Entitäten ferner auch das Konzept der Generalisierung und Aggregation vor, indem Daten vom Detail ausgehend abstrahiert werden oder durch Submengenbildung als Spezialisierungen gelten können. Die Generalisierung umfasst als Begrifflichkeit mehrere Formen:
 
   *	Überlappende Subentitätsmengen
   *	Überlappend-vollständige Subentitätsmengen
   *	Disjunkte Subentitätsmengen
   * Disjunkt-vollständige Subentitätsmengen
 
-Diese Formen der Mengendarstellung müssen von der Transformation zum Relationalen Modell berücksichtigt werden. (vgl. @meier2016nosql S. 33)
+Diese Formen der Mengendarstellung müssen von der Transformation zum relationalen Modell berücksichtigt werden. (vgl. @meier2016nosql S. 33)
 
 Zwischen den Entitätsmengen können unterschiedliche Beziehungen (engl. relationships) existieren. Die Beziehungen bilden eine Beziehungsmenge, die wiederum durch Merkmale näher charakterisiert werden können. Beziehungen werden durch Assoziationen näher beschrieben, die wiederum durch Assoziationstypen spezifiziert werden. Die nachstehenden Assoziationstypen sind im ER-Modell definiert:
 
@@ -46,15 +46,15 @@ Die o.g. Assoziationstypen ermöglichen unterschiedliche Arten von Beziehungen. 
 
 ![Blockdiagramm Beziehung zwischen zwei Relationen](images/kap2_abb3_blockdiagramm.png)
 
-Das ER-Modell beschreibt die Beziehung der Entitäten untereinander auf einer konzeptionellen Ebene. Die konkrete Umsetzung in einem RDBMS ist dadurch noch nicht erfolgt, da im konzeptionellen ER-Modell z.B. noch keine einzelnen Attribute berücksichtigt werden. Dazu muss das konzeptionelle Modell letztendlich in ein physikalisches Modell umgewandelt werden. Der Zwischenschritt erfolgt über das logische Modell, der relationalen Umsetzung des logischen Datenmodells, in diesem Fall vom Entity Relationship-Modell ausgehend.
+Das ER-Modell beschreibt die Beziehung der Entitäten untereinander auf einer konzeptionellen Ebene. Die konkrete Umsetzung in einem RDBMS ist dadurch noch nicht erfolgt, da im konzeptionellen ER-Modell z.B. noch keine einzelnen Attribute berücksichtigt werden. Dazu muss das konzeptionelle Modell letztendlich in ein physikalisches Modell umgewandelt werden. Der Zwischenschritt erfolgt über das logische Modell, der relationalen Umsetzung des logischen Datenmodells, in diesem Fall vom ER-Modell ausgehend.
 
-Je nach Beziehungstyp der Entitäten muss die logische Entsprechung als Relationen in der Form von Tabellen im physischen Datenmodell realisiert werden. Beispielsweise müssen m-m-Beziehungen über eine Zwischentabelle abgebildet werden, da sonst eine redundanzfreie Speicherung von Daten in der Detailtabelle nicht umsetzbar wäre. Das physische Datenmodell setzt die Relationen gemäß der Syntax des DBMS um. (vgl. @steiner2006rdbs S. 15)
+Je nach Beziehungstyp der Entitäten muss die logische Entsprechung als Relationen in der Form von Tabellen im physischen Datenmodell realisiert werden. Beispielsweise müssen n-m-Beziehungen über eine Zwischentabelle abgebildet werden, da sonst eine redundanzfreie Speicherung von Daten in der Detailtabelle nicht umsetzbar wäre. Das physische Datenmodell setzt die Relationen gemäß der Syntax des DBMS um. (vgl. @steiner2006rdbs S. 15)
 
 ### 2.1.2	Das Relationale Datenmodell
 
 Relationale Datenbankmanagementsysteme wurden im Jahr 1970 von Edgar Frank Codd entwickelt (vgl. @meier2016nosql S. 133). Dieses Konzept zur Verwaltung und Speicherung von Daten ist bis heute weit verbreitet (siehe Kapitel 5). Relationale Datenbanken wurden vom ursprünglichen Konzept aus erweitert, indem beispielsweise neue Formen der Datenorganisation im XML-Format oder andere Betriebsaspekte wie einer Cloud-Infrastruktur für eine Datenspeicherung integriert werden. Der Fokus der anschließenden Betrachtung soll sich lediglich auf das grundlegende relationale Modell beschränken, um zu verdeutlichen, wie Informationen in einem RDBMS gespeichert werden.
 
-Das relationale Modell setzt sich aus Objekten, Operationen und Regeln zusammen. Zu den Objekten zählen beispielweise Domains (Wertebereiche), Relationen (Tabellen), Attribute (Spalten), Tupel (Datensätze), Primary-Keys (Primärschlüssel) oder Foreign-Keys (Fremdschlüssel). Zentrale Regeln im Kontext des relationalen Modells sind die Entitätenintegrität und die referenzielle Integrität. Zu den Operationen gehören beispielsweise Restrictionens, Projections, Unions oder Joins. (vgl. @unterstein2012rdbms S. 30)
+Das relationale Modell setzt sich aus Objekten, Operationen und Regeln zusammen. Zu den Objekten zählen beispielsweise Domains (Wertebereiche), Relationen (Tabellen), Attribute (Spalten), Tupel (Datensätze), Primary-Keys (Primärschlüssel) oder Foreign-Keys (Fremdschlüssel). Zentrale Regeln im Kontext des relationalen Modells sind die Entitätenintegrität und die referenzielle Integrität. Zu den Operationen gehören beispielsweise Restrictionens, Projections, Unions oder Joins. (vgl. @unterstein2012rdbms S. 30)
 
 Wie der Name des Modells bereits vermuten lässt, sieht es als Kernprinzip eine Speicherung von Informationen in Relationen (Tabellen) vor. Dieses Modell beruht auf mathematischen Grundprinzipien der Mengenlehre. So kann eine Relation als eine Teilmenge beschreiben werden. Eine Relation besteht aus Indizes die als Attribute bezeichnet werden. Diese besitzen wiederum Namen, um das mentale Modell des Menschen zu unterstützen. Diese Mengen können aus unterschiedlichen Elementen bestehen. Beispielhaft seien an dieser Stelle Zahlen, Zeichenketten oder Datumsangaben genannt. Hierbei wird der Begriff der Domäne verwendet. Eine Domäne ist der Wertebereich, aus dem Attribute ihre Werte beziehen können. Um die Daten in eine repräsentative und verständliche  Form zu bringen, werden Relationen in einer tabellarischen Form dargestellt. (vgl. @unterstein2012rdbms S. 30)
 
@@ -92,46 +92,43 @@ Zur eindeutigen Identifikation von Tupeln/Datensätzen werden Primary Keys einge
 Wie bereits im Kapitel 2.1.1 erwähnt, können Beziehungen zwischen Entitäten bestehen. Dies gilt  konsequenterweise auch für Relationen, die Beziehungen über die Attributausprägungen realisieren. Das Konstrukt der Primär- und Fremdschlüssel ermöglicht Relationen miteinander zu verknüpfen und um im Fall einer Selektion, auf die Datenbestände der in einer Beziehung stehenden Relationen, zugreifen zu können. Ein Primärschlüssel muss einen Tupel in einer Relation eindeutig identifizieren können. Je nach Charakteristik der Datenabbildung können gewisse Entitäten bereits über ein eindeutiges Schlüsselattribut verfügen. Ein Fremdschlüssel in der Detailrelation bezieht sich auf die Schlüsselwerte des Primärschlüssels. Weiterhin bedingt die Charakteristik des Primärschlüssels gleichermaßen die Charakteristik des Sekundärschlüssels. Sollte der Primärschlüssel eine Kombination aus mehreren Attributen aufweisen, so ist dies auch beim Fremdschlüssel der Fall. Für eine Fremdschlüsselbeziehung wird die Eigenschaft der referenziellen Integrität gefordert. Gemäß dieser Anforderung muss der enthaltende Fremdschlüssel in der Primärtabelle als Primärschlüssel enthalten sein. Die Forderung der Eindeutigkeit für Primärschlüssel gilt nicht für die Fremdschlüssel, da mehre Datensätze einer Fremdtabelle einem Datensatz in einer Primärtabelle zugeordnet sein können. (vgl. @unterstein2012rdbms S. 31)
 
 ## 2.2 Objektorientierte Datenbankmanagementsysteme
-Bei den Objektorientierten Datenbanken handelt es sich um Systeme, welche den Anspruch erheben, die Objekte aus der Objektorientierten Programmierung, mit allen Eigenschaften und Vorteilen die diese besitzen, speichern zu können.
+Bei den Objektorientierten Datenbanken handelt es sich um Systeme, welche den Anspruch erheben, die Objekte aus der Objektorientierten Programmierung (OOP), mit allen Eigenschaften und Vorteilen die diese besitzen, speichern zu können.
 Im folgenden Kapitel 2.2.1 werden zuerst die grundlegenden Konzepten der Objektorientierung beschrieben, da diese Konzepte sich bei den Objektorientierten Datenbanken wiederfinden.
 In weiteren Verlauf beschreibt das Kapitel 2.2.3 f. die Objektorientierten Datenbankmanagementsystemen (im folgenden OODBMS).
 
 ### 2.2.1 Objektorientierung
-Im diesem Kapitel werden die grundlegenden Konzepte der Objektorientierung beschrieben, da diese notwendig sind um den Aufbau, die Funktionsweise und die Anforderungen an ein OODBMS zu verstehen.
-
-Unter einem Objekt wird im allgemeinen eine Einheit verstanden, welche aus Attributen und Methoden besteht.
-Dieses versucht ein Ding oder ein abstraktes Konstrukt aus der realen Welt in Teilen oder vollständig zu beschreiben.
+Unter einem **Objekt** wird im allgemeinen eine Einheit verstanden, welche aus Attributen und Methoden besteht.
+Dieses versucht ein abstraktes Konstrukt aus der realen Welt in Teilen oder vollständig zu beschreiben.
 Das können beispielsweise Personen, Tiere oder Gegenstände sein, aber auch abstrakte Dinge wie die Zugriffsklasse auf ein Dateisystem oder auf eine Datenbank.
-Der Bauplan, welche für die Erzeugung der Objekte verwendet wird, wird als Klasse bezeichnet.
+Der Bauplan, welche für die Erzeugung der Objekte verwendet wird, wird als **Klasse** bezeichnet.
 Im folgenden wird die Klasse mit dem Namen *Person* und den Eigenschaften *Nachname*, *Vorname* und *Alter* beispielhaft verwendet.
 Diese beschreibt Personen für einen geeigneten Kontext ausreichend genau.
 Sind weitere Eigenschaften oder Methoden nötig so muss die Klasse um solche erweitert werden.
-Die Abbildung 1 zeigt die Klasse in der Notation eines UML Klassendiagramms.
+Die Abbildung 4 zeigt die Klasse in der Notation eines UML Klassendiagramms.
 
 ![Modell einer Person](images/Person.png)
 
 <!-- Eigenschaten und Methoden -->
 Die konkrete Instanz einer Klasse heisst Objekt.
 Dieses kann die Werte zu seinen definierten Eigenschaften aufnehmen, welche für den Nutzungskontext wichtig sind.
-Die Charakterisierung eines Objektes erfolgt durch seine Methoden.
+Die Charakterisierung eines Objektes erfolgt durch seine **Methoden**.
 Methoden beschreiben die Aktionen, welche mit einer Instanz durchgeführt werden können.
 Die Person könnte beispielsweise die Aktion *Bewegen* implementieren um eine frei definierbare Bewegung des Objektes zu starten.
-Ein Kernkonzept der Objektorientierung ist die Kapselung, welches besagt, dass ein direkter Zugriff auf die Attribute eines Objektes nicht möglich ist.
+Ein Kernkonzept der Objektorientierung ist die **Kapselung**, welches besagt, dass ein direkter Zugriff auf die Attribute eines Objektes nicht möglich ist.
 Der Zugriff wird über eigene Methoden bereitgestellt.
 In dem verwendeten Beispiel sind das die Get- und Set-Methoden.
 Damit können Einschränkungen durchgeführt werden, sodass bestimmte Eigenschaften nur lesbar sind oder nur gesetzt werden können. (vgl. @kuhnel2012visual Kap. 3)
 
 <!-- Abtrakte Klassen, Interfaces und Vererbung -->
-Um generische Klassen abbilden zu können gibt es *abstrakte* Klassen, von denen sich keine Instanz erzeugen lässt.
+Um generische Klassen abbilden zu können gibt es **abstrakte* Klassen**, von denen sich keine Instanz erzeugen lässt.
 Eine passende abstrakte Klasse könnte beispielsweise das *Lebewesen* sein, welche allgemein gültige Attribute und Methoden definiert.
-Von diesen lassen sich keine Instanzen erzeugen.
-Für die Realisierung von Schnittstellen eigenen sich Interfaces, welche nur den Kopf von Methoden definieren und die eigentliche Implementierung den Klassen überlassen.
+Für die Realisierung von Schnittstellen eigenen sich **Interfaces**, welche nur den Kopf von Methoden definieren und die eigentliche Implementierung den Klassen überlassen.
 Schnittstellen eigenen sich besonders gut, wenn über die eigenen Systemgrenzen hinweg Daten ausgetauscht werden müssen.
-Die folgende Abbildung zeigt die Verwendung der abstrakten Klasse *Lebewesen* mit der Schnittstelle *ILebewesen*.
+Die Abbildung 5 zeigt die Verwendung der abstrakten Klasse *Lebewesen* mit der Schnittstelle *ILebewesen*.
 
 ![Abstrakte Klasse und Interface](images/Person_Ai.png)
 
-Hierbei spielt das Prinzip der Vererbung eine große Rolle.
+Hierbei spielt das Prinzip der **Vererbung** eine große Rolle.
 Die Klasse *Person* erbt alle Eigenschaften und Methoden von *Lebewesen*.
 Dadurch ist es möglich Aktionen und Eigenschaften zu generalisieren.
 Durch die Verwendung eines Interfaces verpflichtet sich die abstrakte Klasse *Lebenwesen* dazu, selbst die definierten Methoden zu implementieren.
@@ -140,7 +137,7 @@ Durch die Verwendung eines Interfaces verpflichtet sich die abstrakte Klasse *Le
 Daraus ergibt sich ein weiteres Prinzip der Objektorientierung.
 Eine erbende Klasse kann die Methoden der übergeordneten Klasse(n) überschreiben und dadurch ein angepasstes Verhalten implementieren.
 Beispielsweise bewegt sich ein Mensch auf zwei Beinen, ein Löwe aber auf vier Pfoten.
-Daneben gibt es das Prinzip der Polymorphie, welches besagt, dass es von einer Methode mit gleichem Namen verschiedene Ausprägungen geben kann.
+Daneben gibt es das Prinzip der **Polymorphie**, welches besagt, dass es von einer Methode mit gleichem Namen verschiedene Ausprägungen geben kann.
 Diese unterscheiden sich durch ihre Parameter. (vgl. @kuhnel2012visual Kap. 4)
 
 <!-- Objektbeziehungen -->
@@ -161,13 +158,11 @@ Dazu werden in den meisten Fällen relationale Datenbankmanagementsysteme wie My
 Häufig findet die Realisierung der Anwendung in einer objektorientierten Programmiersprache wie Java, C# oder PHP statt.
 Dadurch entsteht ein Problem welches unter dem Begriff Objektrelationales Mapping (ORM) zusammengefasst wird und das im folgenden Kapitel genauer beschrieben wird.
 
-@@ Fabian: im oberen Abschnitt hast du relationale Datenbanken klein geschrieben, in den nachfolgenden Kapiteln Groß, da Eigenname. Was wollen wir für einen Stil durchziehen?
-
 ### 2.2.2 Objektrelationales Mapping und Objektdatenbanken
-Eines der größeren Probleme als Benutzer einer objektorientierten Sprache ist, dass die verwendeten Objekte in eine relationalen Datenbank nicht @@[adequat] persistent gespeichert werden, da eine relationale Datenbank nur einen eigenen Pool aus Datentypen besitzt (siehe Kapitel 2.1.2).
+Eines der größeren Probleme als Benutzer einer objektorientierten Sprache ist, dass die verwendeten Objekte in eine relationalen Datenbank nicht adequat persistent gespeichert werden, da eine relationale Datenbank nur einen eigenen Pool aus Datentypen besitzt (siehe Kapitel 2.1.2).
 Dieses Problem lässt sich durch mehrere Ansätze kompensieren:
 
-  * Verzicht auf die Verwendung von Objekten, welche nicht dem objektorientierten Paradigma entsprechen. @@ meinst du hier auf Objekte für die Speicherung zu verzichten (in der DB), oder auf Objekte in der OOP?
+  * Verzicht auf die Verwendung von Objekten in der Programmierung, was nicht dem objektorientierten Paradigma entsprechen. @@ meinst du hier auf Objekte für die Speicherung zu verzichten (in der DB), oder auf Objekte in der OOP? FJ: Auf die Objecte in der OOP
   * Konvertierung der Objekte zu relationalen Daten beim Speichern und Konvertierung der relationalen Daten zu Objekten beim Lesen.
   Diese Variante hat den Nachteil, dass viel Performance in die Umwandlung der Daten investiert werden muss.
   Der Vorteil ist, dass die Daten weiterhin in einer relationalen Datenbank liegen und somit bekannte Verfahren zum Lesen und Schreiben und der Konsistenz angewendet werden.
@@ -175,10 +170,10 @@ Dieses Problem lässt sich durch mehrere Ansätze kompensieren:
   Als geeignete Alternative bieten sich hier objektorientierte Datenbanken an, die jegliche Art von Objekten speichern können.
 
 Um ein solches Mapping mit möglichst wenig Aufwand durchführen zu können, gibt es in den verschiedenen Programmiersprachen Frameworks, welche die meiste Arbeit (Generierung der SQL Statements, Umwandeln des Datenstroms in Objekte, usw.) durchführen.
-Im Bereich Java ist das die Java-Persistance-API, auf der ein Framework wie Hibernate aufsetzen kann, im Bereich C# existiert nativ das Entity Data Framework für MSSQL Datenbanken oder im Bereich der Android Entwicklung das Framework SugarORM.
+Im Bereich Java ist das die Java-Persistance-API[^jpi], auf der ein Framework wie Hibernate[^hib] aufsetzen kann, im Bereich C# existiert nativ das Entity Framework[^ef] für MSSQL Datenbanken oder im Bereich der Android Entwicklung das Framework SugarORM[^sugar].
 
 Eine bessere Lösung ist jedoch die Speicherung der verwendeten Objekte direkt in der Datenbank.
-In diesem Fall findet kein Performanceverlust durch das Mapping der Daten statt, des weiteren lassen sich Informationen wie Vererbung oder Verknüpfungen zwischen den Objekten wesentlich besser hinterlegen.
+In diesem Fall findet kein Verlust der Performance durch das Mapping der Daten statt, des weiteren lassen sich Informationen wie Vererbung oder Verknüpfungen zwischen den Objekten wesentlich besser hinterlegen.
 
 Bei der Verwendung eines OODBMS erfolgt der Zugriff auf die Daten in gleicher Weise, als würden diese im Speicher des Betriebsystems liegen.
 Dadurch werden weitere Layer wie Open Database Connectivity (ODBC), ActiveX Data Objects (ADO) oder Java Database Connectivity (JDBC) nicht benötigt.
@@ -200,8 +195,8 @@ Jedes Objekt muss unter einer eindeutigen ID, der Objekt ID (OID) gespeichert we
 Anforderungen an die OID sind:
   * Unabhängigkeit gegenüber den Daten in dem Objekt, ändern sich die Daten im Objekt bleibt die OID gleich.
   * Objekte mit unterschiedlichen OIDs und gleichen Eigenschaften sind möglich. (z. B. eine Klasse mit den Attributen Nachname und Vorname von der zwei gleiche Instanzen existieren)
-  * Dient der Auffindbarkeit
-  * Dient der eindeutigen Identifizierung eins Objekts innerhalb einer Datenbank
+  * Es dient der Auffindbarkeit
+  * Es dient als eindeutigen Identifizierung eins Objekts innerhalb einer Datenbank
   * Über die OIDs ist es möglich Referenzen zwischen Objekten innerhalb der Datenbank zu hinterlegen
   * Eine Referenz kann sich nur auf ein anderes Element oder auf eine Menge anderer Elementen beziehen
 
@@ -210,7 +205,7 @@ Die Erzeugung der OID kann auf verschiedene Arten und Weisen durchgeführt werde
   2. Eine Name, der meist aus einem geeigneten Namensraum stammt, welcher üblicherweise vom Nutzer vergeben wird. Hierbei ist es oft schwierig über viele Attribute eindeutige Werte zu vergeben.
   3. Einen Surrogate oder Identifier Attribut. Diese haben den Nachteil, dass sie nicht wie normale Attribute behandelt werden können.
 
-@@ 2. und 3. fällt mir der Einstieg in die Bildungsvorschrift etwas schwer.. .z.B. Bildung OID durch einen Namen -> 3. Identifizierung Objekt mittels Attribute...
+@@ 2. und 3. fällt mir der Einstieg in die Bildungsvorschrift etwas schwer.. .z.B. Bildung OID durch einen Namen -> 3. Identifizierung Objekt mittels Attribute... -> Wie genau meinst du das?
 
 Neben der OID wird der Zustand eines Objektes als weitere Information mit gespeichert. (vgl. @poschekdatenbanken S. 9)
 
@@ -295,9 +290,10 @@ SELECT k FRM Katzen WHERE k.Vita.Alter > 10
 ELEMENT(SELECT k FRM Katzen WHERE k.ID = 235423523)
 ```
 
-Neben diesem Standard, an dem seit 2001 nicht mehr gearbeitet wird, da sich die Organisation aufgelöst hat und er einige Schwächen aufweist, gibt es die SQL-3-Norm (vgl. @kulkarni1993object, @poschekdatenbanken S. 19ff). @@ Frage: Indirektes Zitieren, was sich nur auf einen Satz bezieht mit in den Satz? Indirekte Zitate, die sich auf einen Abschnitt beziehen nach den Satz?
+Neben diesem Standard, an dem seit 2001 nicht mehr gearbeitet wird, da sich die Organisation aufgelöst hat und er einige Schwächen aufweist, gibt es die SQL-3-Norm (vgl. @kulkarni1993object, @poschekdatenbanken S. 19ff). @@ Frage: Indirektes Zitieren, was sich nur auf einen Satz bezieht mit in den Satz? Indirekte Zitate, die sich auf einen Abschnitt beziehen nach den Satz? --> Das bezieht sich auf die SQL-3 Norm
 Diese erweitert den bisherigen Standard um Konstrukte, welche für objektorientierte Datenbanken wichtig sind.
 Dazu gehören abstrakte Datentypen, Objekt-Identifikatoren, Überladen von Funktionen oder komplexen Datentypen wie SET, MULTISET, LIST oder ROW.
+
 Eine dritte Möglichkeit sind native Abfragen aus der Programmiersprache hinaus, sofern die Datenbank eine solche Schnittstelle anbietet.
 Im Folgenden ein LINQ-Beispiel aus der Programmiersprache C# um alle Personenobjekte die erwachsen sind zu erhalten:
 
@@ -402,10 +398,10 @@ Der Einsatz von XML ist nicht auf Dokumentdatenbanken begrenzt, es existiert ein
 Innerhalb einer Dokumentendatenbank können die Dokumente mittels Listen, Tags, Metadaten oder Hierarchien gruppiert werden.
 
 ### 2.3.2 Abfragen der Datenbank
-Eine Dokumentdatenbanken unterstützt die bekannten CRUD-Anfragen.
+Eine Dokumentdatenbank unterstützt die bekannten CRUD-Anfragen.
 Beim Eintragen von Dokumenten kann es spezifiziert sein, dass ein eindeutiger Key mit angegeben werden muss. Alternativ wird dieser Key von dem Datenbanksystem vergeben.
 Die Suche nach Dokumenten kann über den Key, nach Schlüsselworten aus dem Value-Bereich oder nach Metadaten erfolgen.
-Dafür stellt die Datenbank eine API (z. B. RESTful) bereit, welche von der Programmiersprache verwendet wird. @@ hattest du die API-Abkürzung eingeführt?
+Dafür stellt die Datenbank eine Programmierschnittstelle (z. B. RESTful) bereit, welche von der Programmiersprache verwendet wird.
 Die Syntax zur Suche von Einträgen variiert abhängig von den jeweiligen Implementierungen.
 Um eine effizientere Suche zu ermöglichen, versucht die Datenbank die Dokumente über Metadaten zu klassifizieren.
 Das könnte beispielsweise die Erkennung der fünfstelligen Postleitzahl sein, wonach dann alle Dokumente gruppiert werden.
@@ -424,10 +420,10 @@ Die erste Version dieser Datenbank ist aus dem Jahr 2009 und findet seitdem eine
 Ziel war es, eine skalierbare, performante Datenbank mit einfachem Zugriff zu designen.
 Abfragen lassen sich Ad-hoc auf den Datenbestand ausführen.
 Für die Ablage von Dokumenten wird kein Schema benötigt, sodass neue Typen von Dokumenten einfach hinterlegt werden können.
-Verwendet wird die Datenbank beispielsweise von der Webseite http://bit.ly oder vom CERN um die Daten aus dem Large Hadron Collider zu sammeln.
+Verwendet wird die Datenbank beispielsweise von der Webseite http://bit.ly oder vom CERN[^cern] um die Daten aus dem Large Hadron Collider zu sammeln.
 
 Die Dokumente werden in JSON Syntax abgelegt, intern werden diese dann in dem Binärformat BSON abgelegt.
-Durch die schemafreie Ablagen, kann die Datenbank während der Entwicklung mitwachsen ohne diese erneut anzulegen.
+Durch die schemafreie Ablage, kann die Datenbank während der Entwicklung mitwachsen ohne diese erneut anzulegen.
 Im Folgenden werden die CRUD Operationen, welche sich über das mitgelieferte Command Line Interface ausführen lassen, vorgestellt.
 Die Dokumente werden in Buckets gespeichert, welche ähnlich den Datenbanken in relationalen Datenbanksystemen sind.
 
