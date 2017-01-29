@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<ScrivenerProject Version="1.5" Creator="SCRMAC-2.8.1.2-26324" Device="Fabians-MacBook-Air" Modified="2017-01-26 18:33:34 +0100" ModID="71FB0DFC-DA35-4750-B356-8C224916D497">
+<ScrivenerProject Version="1.5" Creator="SCRMAC-2.8.1.2-26324" Device="Fabians-MacBook-Air" Modified="2017-01-27 11:06:37 +0100" ModID="81ADC15B-9845-49E4-AB8E-8BB49BB1E85F">
     <Binder>
         <BinderItem ID="16" UUID="6F129022-E261-4132-AF42-88D164377F8F" Type="Text" Created="2017-01-07 18:37:53 +0100" Modified="2017-01-07 18:37:53 +0100">
             <Title>About</Title>
@@ -28,9 +28,9 @@
                     <FreeformMode>No</FreeformMode>
                     <FreeformCorkboardDocuments>
                         <IndexCardBinderID Position="1.183333,0.683333" TimeStamp="2017-01-25 15:29:29 +0100">31</IndexCardBinderID>
-                        <IndexCardBinderID Position="1.143333,0.106667" TimeStamp="2017-01-25 15:29:29 +0100">3</IndexCardBinderID>
-                        <IndexCardBinderID Position="0.17,0.106667" TimeStamp="2017-01-25 15:29:29 +0100">41</IndexCardBinderID>
                         <IndexCardBinderID Position="1.143333,1.356667" TimeStamp="2017-01-25 15:29:29 +0100">8</IndexCardBinderID>
+                        <IndexCardBinderID Position="0.17,0.106667" TimeStamp="2017-01-25 15:29:29 +0100">41</IndexCardBinderID>
+                        <IndexCardBinderID Position="1.143333,0.106667" TimeStamp="2017-01-25 15:29:29 +0100">3</IndexCardBinderID>
                         <IndexCardBinderID Position="2.153333,0.736667" TimeStamp="2017-01-25 15:29:29 +0100">39</IndexCardBinderID>
                         <IndexCardBinderID Position="0.15,0.713333" TimeStamp="2017-01-25 15:29:29 +0100">30</IndexCardBinderID>
                         <IndexCardBinderID Position="0.156667,1.39" TimeStamp="2017-01-25 15:29:29 +0100">40</IndexCardBinderID>
@@ -443,8 +443,8 @@
     </ProjectProperties>
     <ProjectTargets Notify="Yes">
         <DraftTarget Type="Words" CountIncludedOnly="Yes" CurrentCompileGroupOnly="Yes" Deadline="2017-01-29 13:28:32 +0100" IgnoreDeadline="No">6000</DraftTarget>
-        <SessionTarget Type="Words" CountDraftOnly="Yes" AllowNegatives="Yes" ResetType="Midnight" DeterminedFromDeadline="Yes" WritingDays="1-7" CanWriteOnDeadlineDate="No">674</SessionTarget>
-        <PreviousSession Words="2141" Characters="15820" Date="2017-01-26 13:42:28 +0100"></PreviousSession>
+        <SessionTarget Type="Words" CountDraftOnly="Yes" AllowNegatives="Yes" ResetType="Midnight" DeterminedFromDeadline="Yes" WritingDays="1-7" CanWriteOnDeadlineDate="No">3000</SessionTarget>
+        <PreviousSession Words="0" Characters="0" Date="2017-01-27 11:06:06 +0100"></PreviousSession>
     </ProjectTargets>
     <PrintSettings PaperSize="595.275574,841.889771" LeftMargin="72.0" RightMargin="72.0" TopMargin="90.0" BottomMargin="90.0" PaperType="iso-a4" Orientation="Portrait" HorizontalPagination="Clip" VerticalPagination="Auto" ScaleFactor="1.0" HorizontallyCentered="Yes" VerticallyCentered="Yes" Collates="Yes" PagesAcross="1" PagesDown="1"></PrintSettings>
 </ScrivenerProject>

@@ -172,8 +172,11 @@ http://techblog.netflix.com/2012/04/netflix-recommendations-beyond-5-stars.html<
         <Document ID="10">
             <Title>Body</Title>
         </Document>
-        <Document ID="40">
-            <Title>Fazit</Title>
+        <Document ID="48">
+            <Title>5 Fazit</Title>
+            <Text>Es ist schwer einem global agierenden Unternehmen in die Karten zu schauen. Alle Informationen die sich finden lassen geben zwar einen Überblick jedoch keinen direkten Einblick. Glücklicherweise ist das wohlgeplante teilen von Informationen mittlerweile Teil einer Corporate Identity womit wir zumindest etwas an der Oberfläche dieser Themen kratzen konnten. Wir hoffen dennoch wir konnten dem geneigten Leser etwas Wissenszuwachs bescheren. 
+
+Karina Ennenga &amp; Fabian Morón Zirfas</Text>
         </Document>
         <Document ID="33">
             <Title>3.2 Cambridge Analytica</Title>
@@ -269,6 +272,9 @@ York: Soft Skull Press, 2007.
 Dent 10
 </Text>
         </Document>
+        <Document ID="40">
+            <Title>Fazit</Title>
+        </Document>
         <Document ID="19">
             <Title>Note on MLA Guidelines</Title>
             <Text>GENERAL GUIDELINES
@@ -295,12 +301,6 @@ http://www.csus.edu/owl/index/mla/mla_format.htm
 
 Citation Guidelines
 http://www.swccd.edu/~library/Pdfs/MLA6thEd.pdf</Text>
-        </Document>
-        <Document ID="48">
-            <Title>5 Fazit</Title>
-            <Text>Es ist schwer einem global agierenden Unternehmen in die Karten zu schauen. Alle Informationen die sich finden lassen geben zwar einen Überblick jedoch keinen direkten Einblick. Glücklicherweise ist das wohlgeplante teilen von Informationen mittlerweile Teil einer Corporate Identity womit wir zumindest etwas an der Oberfläche dieser Themen kratzen konnten. Wir hoffen dennoch wir konnten dem geneigten Leser etwas Wissenszuwachs bescheren. 
-
-Karina Ennenga &amp; Fabian Morón Zirfas</Text>
         </Document>
         <Document ID="41">
             <Title>Meta-Data</Title>
