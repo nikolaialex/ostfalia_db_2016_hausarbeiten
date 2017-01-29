@@ -71,7 +71,7 @@ Die Attribute/Spaltennamen der in der Tabelle 1 abgebildeten Relation Buch heiß
 
 Zwischen den Attributen einer Relation können funktionale und voll funktionale Abhängigkeiten existieren. Funktionale Abhängigkeiten liegen vor, wenn Attributwerte der Komponente A die Attributwerte der Komponente B eindeutig bestimmen (der Titel des Buches ist funktional abhängig von der ISBN-Nummer). Voll funktionale Abhängigkeiten liegen vor, wenn zwischen Attributwerten von Komponenten eine funktionale Abhängigkeit existiert (B ist abhängig von A) und wenn C eine echte Teilmenge von A ist und C wiederum funktional B bedingt (B ist abhängig von C).
 
-Das relationale Datenmodell greift die Anforderung einer redundanzfreien Speicherung von Daten auf, indem eine definierte Abfolge von Normalisierungsschritten durchlaufen wird. Jede Normalisierungsform stellt bestimmte Anforderungen an die Beschaffenheit der Daten und deren Abhängigkeiten untereinander, wie im vorherigen Abschnitt angedeutet. Aufgrund der Wichtigkeit der Normalisierung der Daten, werden die Normalformen (NF) aus Gründen der Vollständigkeit mit der jeweils erforderlichen Qualitätsanforderung tabellarisch aufgelistet.(vgl. @meier2016nosql S. 36ff)
+Das relationale Datenmodell greift die Anforderung einer redundanzfreien Speicherung von Daten auf, indem eine definierte Abfolge von Normalisierungsschritten durchlaufen wird. Jede Normalisierungsform stellt bestimmte Anforderungen an die Beschaffenheit der Daten und deren Abhängigkeiten untereinander, wie im vorherigen Abschnitt angedeutet. Aufgrund der Wichtigkeit der Normalisierung der Daten, werden die Normalformen (NF) aus Gründen der Vollständigkeit mit der jeweils erforderlichen Qualitätsanforderung aufgelistet.(vgl. @meier2016nosql S. 36ff)
 
   * **1. Normalform (1NF)**
     1. Atomare Wertebereiche
@@ -87,9 +87,9 @@ Das relationale Datenmodell greift die Anforderung einer redundanzfreien Speiche
   * **5. Normalform (5NF)**
     1. wenn Tabelle keine Verbundabhängigkeit aufweist
 
-Zur eindeutigen Identifikation von Tupeln/Datensätzen werden Primary Keys eingesetzt. Die Wahl des Primary Keys wird anhand der Charakteristik der Attribute gewählt. Ein Primary Key sollte eine entsprechende Effizienz besitzen, indem er nur aus wenigen Attributen besteht. Über die eindeutige Identifikation der Tupel mittels eines Primary Keys und den Primary Keys einer zweiten Relation lassen sich die darin abgelegten Informationen in eine Beziehung (Relation) bringen. (vgl. @unterstein2012rdbms S. XX)
+Zur eindeutigen Identifikation von Tupeln/Datensätzen werden Primary Keys eingesetzt. Die Wahl des Primary Keys wird anhand der Charakteristik der Attribute gewählt. Ein Primary Key sollte eine entsprechende Effizienz besitzen, indem er nur aus wenigen Attributen besteht. Über die eindeutige Identifikation der Tupel mittels eines Primary Keys und den Primary Keys einer zweiten Relation lassen sich die darin abgelegten Informationen in eine Beziehung (Relation) bringen. (vgl. @unterstein2012rdbms S. 30ff)
 
-Wie bereits im Kapitel 2.1.1 erwähnt, werden Beziehungen zwischen Relationen über die Attributausprägungen realisiert. Das Konstrukt der Primär- und Fremdschlüssel ermöglicht Relationen miteinander zu verknüpfen und um im Fall einer Selektion, auf die Datenbestände der in einer Beziehung stehenden Relationen, zugreifen zu können. Ein Primärschlüssel muss einen Tupel in einer Relation eindeutig identifizieren können. Je nach Charakteristik der Datenabbildung können gewisse Entitäten bereits über ein eindeutiges Schlüsselattribut verfügen. Ein Fremdschlüssel in der Detailrelation bezieht sich auf die Schlüsselwerte des Primärschlüssels. Weiterhin bedingt die Charakteristik des Primärschlüssels gleichermaßen die Charakteristik des Sekundärschlüssels. Sollte der Primärschlüssel eine Kombination aus mehreren Attributen aufweisen, so ist dies auch beim Fremdschlüssel der Fall. Für eine Fremdschlüsselbeziehung wird die Eigenschaft der referenziellen Integrität gefordert. Gemäß dieser Anforderung muss der enthaltende Fremdschlüssel in der Primärtabelle als Primärschlüssel enthalten sein. Die Forderung der Eindeutigkeit für Primärschlüssel gilt nicht für die Fremdschlüssel, da mehre Datensätze einer Fremdtabelle einem Datensatz in einer Primärtabelle zugeordnet sein können. (vgl. @unterstein2012rdbms S. 31)
+Wie bereits im Kapitel 2.1.1 erwähnt, können Beziehungen zwischen Entitäten bestehen. Dies gilt  konsequenterweise auch für Relationen, die Beziehungen über die Attributausprägungen realisieren. Das Konstrukt der Primär- und Fremdschlüssel ermöglicht Relationen miteinander zu verknüpfen und um im Fall einer Selektion, auf die Datenbestände der in einer Beziehung stehenden Relationen, zugreifen zu können. Ein Primärschlüssel muss einen Tupel in einer Relation eindeutig identifizieren können. Je nach Charakteristik der Datenabbildung können gewisse Entitäten bereits über ein eindeutiges Schlüsselattribut verfügen. Ein Fremdschlüssel in der Detailrelation bezieht sich auf die Schlüsselwerte des Primärschlüssels. Weiterhin bedingt die Charakteristik des Primärschlüssels gleichermaßen die Charakteristik des Sekundärschlüssels. Sollte der Primärschlüssel eine Kombination aus mehreren Attributen aufweisen, so ist dies auch beim Fremdschlüssel der Fall. Für eine Fremdschlüsselbeziehung wird die Eigenschaft der referenziellen Integrität gefordert. Gemäß dieser Anforderung muss der enthaltende Fremdschlüssel in der Primärtabelle als Primärschlüssel enthalten sein. Die Forderung der Eindeutigkeit für Primärschlüssel gilt nicht für die Fremdschlüssel, da mehre Datensätze einer Fremdtabelle einem Datensatz in einer Primärtabelle zugeordnet sein können. (vgl. @unterstein2012rdbms S. 31)
 
 ## 2.2 Objektorientierte Datenbankmanagementsysteme
 Bei den Objektorientierten Datenbanken handelt es sich um Systeme, welche den Anspruch erheben, die Objekte aus der Objektorientierten Programmierung, mit allen Eigenschaften und Vorteilen die diese besitzen, speichern zu können.
@@ -119,11 +119,11 @@ Die Person könnte beispielsweise die Aktion *Bewegen* implementieren um eine fr
 Ein Kernkonzept der Objektorientierung ist die Kapselung, welches besagt, dass ein direkter Zugriff auf die Attribute eines Objektes nicht möglich ist.
 Der Zugriff wird über eigene Methoden bereitgestellt.
 In dem verwendeten Beispiel sind das die Get- und Set-Methoden.
-Damit können Einschränkungen durchgeführt werden, sodass bestimmte Eigenschaften nur lesbar sind oder nur gesetzt werden können.(vgl. @kuhnel2012visual Kap. 3)
+Damit können Einschränkungen durchgeführt werden, sodass bestimmte Eigenschaften nur lesbar sind oder nur gesetzt werden können. (vgl. @kuhnel2012visual Kap. 3)
 
 <!-- Abtrakte Klassen, Interfaces und Vererbung -->
 Um generische Klassen abbilden zu können gibt es *abstrakte* Klassen, von denen sich keine Instanz erzeugen lässt.
-Eine passende abstrakte Klasse könnte Beispielsweise das *Lebewesen* sein, welche allgemein gültige Attribute und Methoden definiert.
+Eine passende abstrakte Klasse könnte beispielsweise das *Lebewesen* sein, welche allgemein gültige Attribute und Methoden definiert.
 Von diesen lassen sich keine Instanzen erzeugen.
 Für die Realisierung von Schnittstellen eigenen sich Interfaces, welche nur den Kopf von Methoden definieren und die eigentliche Implementierung den Klassen überlassen.
 Schnittstellen eigenen sich besonders gut, wenn über die eigenen Systemgrenzen hinweg Daten ausgetauscht werden müssen.
@@ -134,7 +134,7 @@ Die folgende Abbildung zeigt die Verwendung der abstrakten Klasse *Lebewesen* mi
 Hierbei spielt das Prinzip der Vererbung eine große Rolle.
 Die Klasse *Person* erbt alle Eigenschaften und Methoden von *Lebewesen*.
 Dadurch ist es möglich Aktionen und Eigenschaften zu generalisieren.
-Durch die Verwendung eines Interfaces verpflichtet sich die abstrakte Klasse *Lebenwesen* dazu selbst die definierten Methoden zu implementieren.
+Durch die Verwendung eines Interfaces verpflichtet sich die abstrakte Klasse *Lebenwesen* dazu, selbst die definierten Methoden zu implementieren.
 
 <!-- Polymorphie und Überladung/Überschreiben von Methoden -->
 Daraus ergibt sich ein weiteres Prinzip der Objektorientierung.
@@ -161,18 +161,20 @@ Dazu werden in den meisten Fällen relationale Datenbankmanagementsysteme wie My
 Häufig findet die Realisierung der Anwendung in einer objektorientierten Programmiersprache wie Java, C# oder PHP statt.
 Dadurch entsteht ein Problem welches unter dem Begriff Objektrelationales Mapping (ORM) zusammengefasst wird und das im folgenden Kapitel genauer beschrieben wird.
 
+@@ Fabian: im oberen Abschnitt hast du relationale Datenbanken klein geschrieben, in den nachfolgenden Kapiteln Groß, da Eigenname. Was wollen wir für einen Stil durchziehen?
+
 ### 2.2.2 Objektrelationales Mapping und Objektdatenbanken
-Eines der größeren Probleme als Benutzer einer objektorientierten Sprache ist, dass die verwendeten Objekte in eine relationalen Datenbank nicht persistent gespeichert werden, da eine relationale Datenbank nur einen eigenen Pool aus Datentypen besitzt.
+Eines der größeren Probleme als Benutzer einer objektorientierten Sprache ist, dass die verwendeten Objekte in eine relationalen Datenbank nicht @@[adequat] persistent gespeichert werden, da eine relationale Datenbank nur einen eigenen Pool aus Datentypen besitzt (siehe Kapitel 2.1.2).
 Dieses Problem lässt sich durch mehrere Ansätze kompensieren:
 
-  * Verzicht auf die Verwendung von Objekten, welche nicht dem objektorientierten Paradigma entsprechen.
+  * Verzicht auf die Verwendung von Objekten, welche nicht dem objektorientierten Paradigma entsprechen. @@ meinst du hier auf Objekte für die Speicherung zu verzichten (in der DB), oder auf Objekte in der OOP?
   * Konvertierung der Objekte zu relationalen Daten beim Speichern und Konvertierung der relationalen Daten zu Objekten beim Lesen.
   Diese Variante hat den Nachteil, dass viel Performance in die Umwandlung der Daten investiert werden muss.
   Der Vorteil ist, dass die Daten weiterhin in einer relationalen Datenbank liegen und somit bekannte Verfahren zum Lesen und Schreiben und der Konsistenz angewendet werden.
   * Verzicht auf die Speicherung der Daten in einer relationalen Datenbank.
   Als geeignete Alternative bieten sich hier objektorientierte Datenbanken an, die jegliche Art von Objekten speichern können.
 
-Um ein solches Mapping mit möglichst wenig Aufwand durchführen zu können, gibt es in den verschiedenen Programmiersprachen Frameworks, welche die meiste Arbeit (Generierung des SQLs, Umwandeln des Datenstroms in Objekte, usw.) durchführen.
+Um ein solches Mapping mit möglichst wenig Aufwand durchführen zu können, gibt es in den verschiedenen Programmiersprachen Frameworks, welche die meiste Arbeit (Generierung der SQL Statements, Umwandeln des Datenstroms in Objekte, usw.) durchführen.
 Im Bereich Java ist das die Java-Persistance-API, auf der ein Framework wie Hibernate aufsetzen kann, im Bereich C# existiert nativ das Entity Data Framework für MSSQL Datenbanken oder im Bereich der Android Entwicklung das Framework SugarORM.
 
 Eine bessere Lösung ist jedoch die Speicherung der verwendeten Objekte direkt in der Datenbank.
@@ -192,7 +194,7 @@ Im Mirror Modus wirken sich Änderungen direkt auf das Objekt im Speicher und in
 Ein OODBMS muss verschiedene Anforderungen abdecken um den Programmierer die bisher beschriebenen Vorteile zu bieten.
 
 Die gespeicherten Objekte sollten nahezu ununterscheidbar von denen in der verwendeten Programmiersprache sein.
-Daher müssen Anforderungen nach Vererbung, Polymorphie, Schnittstellen oder Objektreferenzen von dem OODBMS ebenfalls mit abgedeckt werden. (vgl. Kapitel 2.1)
+Daher müssen Anforderungen nach Vererbung, Polymorphie, Schnittstellen oder Objektreferenzen von dem OODBMS ebenfalls mit abgedeckt werden (vgl. Kapitel 2.1).
 
 Jedes Objekt muss unter einer eindeutigen ID, der Objekt ID (OID) gespeichert werden, welche vom OODBS vorgegeben bzw. generiert wird.
 Anforderungen an die OID sind:
@@ -204,9 +206,11 @@ Anforderungen an die OID sind:
   * Eine Referenz kann sich nur auf ein anderes Element oder auf eine Menge anderer Elementen beziehen
 
 Die Erzeugung der OID kann auf verschiedene Arten und Weisen durchgeführt werden:
-  1. Erzeugung aus der physischen Adresse, bzw. dem Pointer. Nachteil dieser Variante ist, dass eine Bindung an den physischen Speicherplatz entsteht.
+  1. Erzeugung aus der physischen Adresse, bzw. dem Pointer. Der Nachteil dieser Variante ist, dass eine Bindung an den physischen Speicherplatz entsteht.
   2. Eine Name, der meist aus einem geeigneten Namensraum stammt, welcher üblicherweise vom Nutzer vergeben wird. Hierbei ist es oft schwierig über viele Attribute eindeutige Werte zu vergeben.
-  3. Einen Surrogate oder Identifier Attribut. Diese haben den Nachteil das sie nicht wie normale Attribute behandelt werden können.
+  3. Einen Surrogate oder Identifier Attribut. Diese haben den Nachteil, dass sie nicht wie normale Attribute behandelt werden können.
+
+@@ 2. und 3. fällt mir der Einstieg in die Bildungsvorschrift etwas schwer.. .z.B. Bildung OID durch einen Namen -> 3. Identifizierung Objekt mittels Attribute...
 
 Neben der OID wird der Zustand eines Objektes als weitere Information mit gespeichert. (vgl. @poschekdatenbanken S. 9)
 
@@ -245,7 +249,7 @@ Der Strukturbereich beinhaltet die Objekte, deren Zustände, die Klassen, das Sc
 Im Operationsteil finden sich die Metaklassen, die Funktionen, Methoden, die Vererbung von Methoden sowie die Ausnahmen.
 
 ### 2.2.4 Modellierung und Datenabfrage
-Ähnlich wie bei SQL müssen die Entitäten der Datenbank bekannt gemacht werden. (vgl. @nayak2013type)
+Ähnlich wie bei SQL, müssen die Entitäten der Datenbank bekannt gemacht werden (vgl. @nayak2013type).
 Um objektorientierte Datenbanken zu modellieren, kann die Sprache UML[^uml] verwendet werden.
 Diese wird von der Object Management Group (OMG) standardisiert und ist aktuell in der Version 2.5 aus dem Jahr 2015 vorhanden.
 Besonders geeignet sind Klassendiagramme um Objekte und deren Beziehungen zueinander darzustellen.
@@ -291,7 +295,7 @@ SELECT k FRM Katzen WHERE k.Vita.Alter > 10
 ELEMENT(SELECT k FRM Katzen WHERE k.ID = 235423523)
 ```
 
-Neben diesem Standard, an dem seit 2001 nicht mehr gearbeitet wird, da sich die Organisation aufgelöst hat und er einige Schwächen aufweist, gibt es die SQL-3-Norm. (vgl. @kulkarni1993object, @poschekdatenbanken S. 19ff)
+Neben diesem Standard, an dem seit 2001 nicht mehr gearbeitet wird, da sich die Organisation aufgelöst hat und er einige Schwächen aufweist, gibt es die SQL-3-Norm (vgl. @kulkarni1993object, @poschekdatenbanken S. 19ff). @@ Frage: Indirektes Zitieren, was sich nur auf einen Satz bezieht mit in den Satz? Indirekte Zitate, die sich auf einen Abschnitt beziehen nach den Satz?
 Diese erweitert den bisherigen Standard um Konstrukte, welche für objektorientierte Datenbanken wichtig sind.
 Dazu gehören abstrakte Datentypen, Objekt-Identifikatoren, Überladen von Funktionen oder komplexen Datentypen wie SET, MULTISET, LIST oder ROW.
 Eine dritte Möglichkeit sind native Abfragen aus der Programmiersprache hinaus, sofern die Datenbank eine solche Schnittstelle anbietet.
@@ -328,7 +332,7 @@ Im zweiten Fall geschieht das meist erst beim erneuten Zugriff auf die Daten.
 Werden Objekte verändert, so ist es wichtig die Historie zu verwalten.
 Die Darstellung der Versionen kann mittels eines Versionsgraphen erfolgen.
 In diesem ist auch gekennzeichnet, welche als die aktuelle Version behandelt wird, also das Objekt, welches bei einer Anfrage in dieser Version zurückgegeben wird.
-Eine andere Möglichkeit ist eine zeitbezogene Versionierung durchzuführen. (z. B. Jede Stunde/Monat etc.)
+Eine andere Möglichkeit ist, eine zeitbezogene Versionierung durchzuführen. (z. B. Jede Stunde/Monat etc.)
 Werden diese mit einem Gültigkeitsstempel versehen, findet ein Aufräumungsprozess statt. (vgl. @poschekdatenbanken S. 18)
 
 ### 2.2.6 Zusammenfassung
@@ -401,7 +405,7 @@ Innerhalb einer Dokumentendatenbank können die Dokumente mittels Listen, Tags, 
 Eine Dokumentdatenbanken unterstützt die bekannten CRUD-Anfragen.
 Beim Eintragen von Dokumenten kann es spezifiziert sein, dass ein eindeutiger Key mit angegeben werden muss. Alternativ wird dieser Key von dem Datenbanksystem vergeben.
 Die Suche nach Dokumenten kann über den Key, nach Schlüsselworten aus dem Value-Bereich oder nach Metadaten erfolgen.
-Dafür stellt die Datenbank eine API (z. B. RESTful) bereit, welche von der Programmiersprache verwendet wird.
+Dafür stellt die Datenbank eine API (z. B. RESTful) bereit, welche von der Programmiersprache verwendet wird. @@ hattest du die API-Abkürzung eingeführt?
 Die Syntax zur Suche von Einträgen variiert abhängig von den jeweiligen Implementierungen.
 Um eine effizientere Suche zu ermöglichen, versucht die Datenbank die Dokumente über Metadaten zu klassifizieren.
 Das könnte beispielsweise die Erkennung der fünfstelligen Postleitzahl sein, wonach dann alle Dokumente gruppiert werden.
@@ -420,7 +424,7 @@ Die erste Version dieser Datenbank ist aus dem Jahr 2009 und findet seitdem eine
 Ziel war es, eine skalierbare, performante Datenbank mit einfachem Zugriff zu designen.
 Abfragen lassen sich Ad-hoc auf den Datenbestand ausführen.
 Für die Ablage von Dokumenten wird kein Schema benötigt, sodass neue Typen von Dokumenten einfach hinterlegt werden können.
-Verwendet wird die Datenbank beispielsweise von der Webseite http://bit.ly oder vom CERN um die Daten aus dem LHC zu sammeln.
+Verwendet wird die Datenbank beispielsweise von der Webseite http://bit.ly oder vom CERN um die Daten aus dem Large Hadron Collider zu sammeln.
 
 Die Dokumente werden in JSON Syntax abgelegt, intern werden diese dann in dem Binärformat BSON abgelegt.
 Durch die schemafreie Ablagen, kann die Datenbank während der Entwicklung mitwachsen ohne diese erneut anzulegen.
