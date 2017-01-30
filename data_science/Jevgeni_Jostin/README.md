@@ -13,5 +13,7 @@ The term parper has a [cover page](00_a_Cover.md), [table of contents](00_b_Tabl
 As discussed [here](http://moodle.oncampus.de/mod/forum/discuss.php?d=204486) the seven **Data Science** topics were shared between seven different students, so this is a single-person work.
 
 #### **Total scope:**
-
+**Words:** 3888
+**Characters(no spaces):** 22 978
+**Characters:** 26 725
 
