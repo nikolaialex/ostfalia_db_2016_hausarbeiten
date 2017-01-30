@@ -1,0 +1,3 @@
+# Abstract
+
+The purpose of this written work is to give an overview of Apache Spark technology and its main components and to show where and how it could be used in data science. Data science became really popular in the arround last ten years, but where did it actually come from? What is data science and who are the data scientists? The first part of the work would introduce the general purposes and origin of data science. While the main part would present the structure and features of Apache Spark, would reveal the differences to Apache Hadoop and show some use cases.
