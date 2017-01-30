@@ -24,7 +24,7 @@ author:
 3. Konzept hinter Jepsen
    * Stakre Konsistenzmodelle (von Michael Nicks)
      * Richtigkeit
-     * Gleichzeitiger Zugriff
+     * Gleichzeitiger Verlauf
      * Lichtkegel
      * Linearisierbarkeit
    * Testumgebung (von Michael Nicks)
