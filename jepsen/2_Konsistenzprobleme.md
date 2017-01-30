@@ -18,7 +18,8 @@ Bei der synchronen Replikation wird das ACK an den Client erst gesendet, wenn al
 Beim Zwei-Phasen-Commit Protokoll sendet im Falle von Datenbanken ein Client beispielsweise ein schreibende Anfrage an die Datenbank. Zuerst wird als Vorbereitung der schreibenden Anfrage ein “query to commit” an den Server gesendet. Erlaubt dieser mit einem “yes” die schreiben Anfrage an die Datenbank, sendet der Client die zu speichernde Information an den Datenbankserver. Nach erfolgtem Schreibvorgang beendet der Datenbank-Server mit einem “Acknowledge” (ACK) die Verbindung. Mit dem ACK weiß der Client, dass die Information in die Datenbank geschrieben wurde. 
 
 Kommt es jetzt allerdings während der Verbindung zwischen Client und Datenbank-Server zu einem Verbindungsproblem, so dass der Datenbankserver die Anfrage zwar abgearbeitet und ein ACK sendet, diese aber nicht beim Client ankommt, hat der Client keine Information ob die Anfrage erfolgreich bearbeitet wurde. Ein Timeout wird beim Client ausgelöst und die schreibende Anfrage nicht als erfolgreich angesehen, was zu einem Konsistenzproblem führt.
-Reaktion der verteilten Datenbank bei teilweisem Verlust einzelner Knoten
+
+## Reaktion der verteilten Datenbank bei teilweisem Verlust einzelner Knoten
 Bei einem Verlust eines Teiles der verteilten Datenbank, muss die verteilte Datenbank je nach Möglichkeit und Konfiguration entsprechend darauf reagieren um sicherzustellen, dass bei wieder erfolgtem zusammenführen der Datenbankserver die Konsistenz erhalten bleibt.
 
 Hier kommt es besonders auf die Konfiguration der verteilten Datenbank an, was bei einem Verlust eines Teiles der verteilten Datenbank geschieht. 
