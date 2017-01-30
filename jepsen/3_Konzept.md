@@ -10,12 +10,13 @@ Abb. 1 https://aphyr.com/data/posts/313/uniprocessor-history.jpg
 In Abbildung 1 ist eine Sequenz von Operationen auf einer Variable zu sehen, die nacheinander abgearbeitet werden und als gelesene Werte die Buchstabenfolge “aabd” annehmen sollte. Als eine Regel lässt sich festlegen, dass ein schreibender Vorgang den Inhalt der Variable auf einen neuen Wert ändert, der aber auch dem alten Wert entsprechen kann. Eine zweite Regel ist, dass der Wert, der gelesen wird dem zuletzt geschriebenen Wert entspricht. 
 Diese Folge von Regeln ergeben dabei ein Konsistenzmodell, dass die Richtigkeit beschreibt.
 
-### Gleichzeitiger Zugriff / Gleichzeitige Historie/Vergangenheit
-
+### Gleichzeitiger Zugriff
+Beim gleichzeitigen Zugriff haben zwei oder mehrere Prozesse Zugriff auf die Variable. 
 ![Image of multiprocessor-history](/jepsen/images/multiprocessor-history.jpg)
 
 Abb. 2 https://aphyr.com/data/posts/313/multiprocessor-history.jpg
 
+Aus Sicht des unteren Prozesses ergibt sich "ab" als gelesene Werte, wobei für den ersten gelesenen Wert "a" kein definierter Wert erwartet wird. Der obere Prozess erwartet beim lesen der Werte "aa" liest aber wie der untere Prozess "ab". Dies führt nach den bisherigen Regeln der Richtigkeit zu einer Verletzung des Konsistenzmodelles. Für das Modell des gleichzeitigen Zugriffs ist es daher notwendig den Begriff der Parallelität für das Konsistenzmodell zu beschreiben. Prozessen wird es erlaubt den Wert eines anderen Prozesses zu lesen. Somit teilen sich beide Prozesse die Zustände.
 ### Lichtkegel
 
 ![Image of lightcone-history](/jepsen/images/lightcone-history.jpg)
