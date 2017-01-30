@@ -1,3 +1,13 @@
+---
+title: "Jepsen"
+subtitle: "Ein Tool um Eigenschaften von Datenbanken zu testen"
+institute: ["Ostfalia Hochschule für angewandte Wissenschaften"]
+tags: ["Jepsen"]
+
+author:
+   - Michael Nicks  
+   - Patrick Volgmann
+---
 #Jepsen
 
 ##Inhaltsverzeichnis
