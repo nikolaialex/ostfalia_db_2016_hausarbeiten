@@ -3,31 +3,46 @@
 Wir im vorherigen Kapitel schon erwähnt, kann eine Aufteilung des Netzes verschiedene Ursachen haben, die zur einer Verzögerung, Löschung, Verdopplung oder Neuordnung innerhalb der verteilten Datenbank führen. 
 ### Richtigkeit
 Um eine Richtigkeit zu beschreiben, wird von einem Zustand ausgegangen, der durch Operationen beeinflusst wird. Der Zustand kann hier durch eine Variable mit den Operationen lesen (r) und schreiben (w) beschrieben werden.
+![Image of uniprocessor-history](/jepsen/images/uniprocessor-history.jpg)
 
-Abb.1 https://aphyr.com/data/posts/313/uniprocessor-history.jpg
+Abb. 1 https://aphyr.com/data/posts/313/uniprocessor-history.jpg
 
 In Abbildung 1 ist eine Sequenz von Operationen auf einer Variable zu sehen, die nacheinander abgearbeitet werden und als gelesene Werte die Buchstabenfolge “aabd” annehmen sollte. Als eine Regel lässt sich festlegen, dass ein schreibender Vorgang den Inhalt der Variable auf einen neuen Wert ändert, der aber auch dem alten Wert entsprechen kann. Eine zweite Regel ist, dass der Wert, der gelesen wird dem zuletzt geschriebenen Wert entspricht. 
 Diese Folge von Regeln ergeben dabei ein Konsistenzmodell, dass die Richtigkeit beschreibt.
 
 ### Gleichzeitiger Zugriff / Gleichzeitige Historie/Vergangenheit
 
+![Image of multiprocessor-history](/jepsen/images/multiprocessor-history.jpg)
+
 Abb. 2 https://aphyr.com/data/posts/313/multiprocessor-history.jpg
 
 ### Lichtkegel
 
+![Image of lightcone-history](/jepsen/images/lightcone-history.jpg)
+
 Abb. 3 https://aphyr.com/data/posts/313/lightcone-history.jpg
+
+![Image of concurrent-read](/jepsen/images/concurrent-read.jpg)
 
 Abb. 4 https://aphyr.com/data/posts/313/concurrent-read.jpg
 ### Linearisierbarkeit
 
+![Image of finite-concurrency-bounds](/jepsen/images/finite-concurrency-bounds.jpg)
+
 Abb. 5 https://aphyr.com/data/posts/313/finite-concurrency-bounds.jpg
 
-Abb. 6 https://aphyr.com/posts/313-strong-consistency-models
+![Image of linearizability-complete-visibility](/jepsen/images/linearizability-complete-visibility.jpg)
+
+Abb. 6 https://aphyr.com/posts/313-linearizability-complete-visibility.jpg
 ### Sequentielle Konsistenz
+
+![Image of sequential-history](/jepsen/images/sequential-history.jpg)
 
 Abb. 7 https://aphyr.com/data/posts/313/sequential-history.jpg
 ### Kausale Konsistenz
 ### Serialisierbare Konsistenz
+
+![Image of serializable-history](/jepsen/images/serializable-history.jpg)
 
 Abb. 8 https://aphyr.com/data/posts/313/serializable-history.jpg
 ## Testumgebung
