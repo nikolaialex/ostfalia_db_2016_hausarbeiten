@@ -243,68 +243,7 @@ Ein OODBMS kann in die zwei Teile "Struktur" und "Operation" eingeteilt werden.
 Der Strukturbereich beinhaltet die Objekte, deren Zustände, die Klassen, das Schema und die Vererbung.
 Im Operationsteil finden sich die Metaklassen, die Funktionen, Methoden, die Vererbung von Methoden sowie die Ausnahmen.
 
-### 2.2.4 Modellierung und Datenabfrage
-Ähnlich wie bei SQL, müssen die Entitäten der Datenbank bekannt gemacht werden (vgl. @nayak2013type).
-Um objektorientierte Datenbanken zu modellieren, kann die Sprache UML[^uml] verwendet werden.
-Diese wird von der Object Management Group (OMG) standardisiert und ist aktuell in der Version 2.5 aus dem Jahr 2015 vorhanden.
-Besonders geeignet sind Klassendiagramme um Objekte und deren Beziehungen zueinander darzustellen.
-
-Bei relationalen Datenbanken wurde SQL als Abfragesprache spezifiziert.
-Im Bereich der OODB wurde ebenfalls versucht einen Standard zu etablieren.
-Für die Beschreibung des Schemas gibt es die Object Definition Language (ODL), welche von der Object Data Management Group (ODMG) stammt.
-In dieser werden die Klassen, Schnittstellen, Attribute, Beziehungen, Operationen und Schlüssel beschrieben.
-Die Syntax ist in der Wikipedia[^odl] beschrieben. Nachstehend folgt ein Beispiel für das Erzeugen einer Klasse:
-
-**Erzeugen einer Klasse**
-```
-class Person {
-  attribute string nachname;
-  attribute int alter;
-  attribute array<Person *> children;
-  void change_address(in string street, in string town,
-                     out string oldstreet, out string oldtown);
-  index on  name;
-};
-```
-
-Für Abfragen gibt es die Object Query Language (OQL), welche auf der Basis und Syntax von SQL aufbaut.
-Es können beispielsweise Abfragen in der bekannten Form *SELECT ... FROM ... WHERE* durchgeführt werden.
-Ebenfalls sind bekannte Abfragen aus SQL über Aggregierungsfunktionen (count, avg, min, max, etc.) und Mengenoperationen (wie intersct, except oder union) möglich.
-Des Weiteren können in den Abfragen komplexe Werte, Objektidentitäten oder Methoden genutzt werden.
-Mittels Quantoren können Methoden für Mengen direkt aus der Abfragesprache heraus ausgeführt werden.
-
-Im Folgenden werden einige Beispiel für OQL Operationen aufgeführt (vgl. @poschekdatenbanken S. 17f):
-
-**Erzeugen eines Objektes**
-```
-Katze(ID: 235423523, Vita: struct(Name: Mietze, Alter: 14), ...)
-```
-
-**Suchen von Objekten**
-```
-SELECT k FRM Katzen WHERE k.Vita.Alter > 10
-```
-
-**Holen eines Objekts**
-```
-ELEMENT(SELECT k FRM Katzen WHERE k.ID = 235423523)
-```
-
-Neben diesem Standard, an dem seit 2001 nicht mehr gearbeitet wird, da sich die Organisation aufgelöst hat und er einige Schwächen aufweist, gibt es die SQL-3-Norm (vgl. @kulkarni1993object, @poschekdatenbanken S. 19ff). @@ Frage: Indirektes Zitieren, was sich nur auf einen Satz bezieht mit in den Satz? Indirekte Zitate, die sich auf einen Abschnitt beziehen nach den Satz? --> Das bezieht sich auf die SQL-3 Norm
-Diese erweitert den bisherigen Standard um Konstrukte, welche für objektorientierte Datenbanken wichtig sind.
-Dazu gehören abstrakte Datentypen, Objekt-Identifikatoren, Überladen von Funktionen oder komplexen Datentypen wie SET, MULTISET, LIST oder ROW.
-
-Eine dritte Möglichkeit sind native Abfragen aus der Programmiersprache hinaus, sofern die Datenbank eine solche Schnittstelle anbietet.
-Im Folgenden ein LINQ-Beispiel aus der Programmiersprache C# um alle Personenobjekte die erwachsen sind zu erhalten:
-
-**Abfragen bestimmter Personen**
-```cs
-var personen = (from p in db.Personen where p.Alter > 17 select p).ToList();
-```
-
-Damit ähnliche Abfragen in einer anderen Programmiersprache möglich sind, muss diese Closures unterstützen.
-
-### 2.2.5 Transaktionen und Einsatz eins OODBMS
+### 2.2.4 Transaktionen und Einsatz eins OODBMS
 Die meisten OODBMS unterstützen die Verwendung von Transaktionen.
 Wird eine Transaktion gestartet, so wird das betreffende Objekt gesperrt (Read-Write Modell).
 Typische Operationen, welche angeboten werden sind:
@@ -331,7 +270,7 @@ In diesem ist auch gekennzeichnet, welche als die aktuelle Version behandelt wir
 Eine andere Möglichkeit ist, eine zeitbezogene Versionierung durchzuführen. (z. B. Jede Stunde/Monat etc.)
 Werden diese mit einem Gültigkeitsstempel versehen, findet ein Aufräumungsprozess statt. (vgl. @poschekdatenbanken S. 18)
 
-### 2.2.6 Zusammenfassung
+### 2.2.5 Zusammenfassung
 Der große Vorteil von Objektdatenbanken ist die Vermeidung des Bruchs, der bei der Speicherung von Daten in relationale Datenbanken entsteht.
 Ein weiterer Vorteil ist, dass das benötige *Joinen* von normalisierten Tabellen entfällt.
 Drittes Argument für ein OODBMS ist, dass die Objektidentität gesichert ist, da für dessen Verwaltung das Datenbanksystem verantwortlich ist.
@@ -413,79 +352,3 @@ Der entstehende Index ist ein assoziatives Array, welches aus einem oder mehrere
 Der Vorteil ist, dass dieser Schritt unabhängig von den restlichen Daten ausgeführt wird, sodass dies auf allen Knoten parallel ausgeführt wird.
 Die zweite Phase führt dann eine Reduzierung der Ergebnisse durch (Reduce). (vgl. @meier2016nosql S. 231)
 Eine ausführliche grafische Beschreibung ist unter https://highlyscalable.wordpress.com/2012/02/01/mapreduce-patterns/ zu finden.
-
-### 2.3.3 Beispiel MongoDB
-Im folgenden wird exemplarisch die Dokumentdatenbank MongoDB betrachtet.(vgl. @redmond2012seven S. 135 ff.)
-Die erste Version dieser Datenbank ist aus dem Jahr 2009 und findet seitdem eine schnelle Verbreitung.
-Ziel war es, eine skalierbare, performante Datenbank mit einfachem Zugriff zu designen.
-Abfragen lassen sich Ad-hoc auf den Datenbestand ausführen.
-Für die Ablage von Dokumenten wird kein Schema benötigt, sodass neue Typen von Dokumenten einfach hinterlegt werden können.
-Verwendet wird die Datenbank beispielsweise von der Webseite http://bit.ly oder vom CERN[^cern] um die Daten aus dem Large Hadron Collider zu sammeln.
-
-Die Dokumente werden in JSON Syntax abgelegt, intern werden diese dann in dem Binärformat BSON abgelegt.
-Durch die schemafreie Ablage, kann die Datenbank während der Entwicklung mitwachsen ohne diese erneut anzulegen.
-Im Folgenden werden die CRUD Operationen, welche sich über das mitgelieferte Command Line Interface ausführen lassen, vorgestellt.
-Die Dokumente werden in Buckets gespeichert, welche ähnlich den Datenbanken in relationalen Datenbanksystemen sind.
-
-**Anlegen eines Buckets**
-```
-mongo book
-```
-
-**Anlegen eines Dokuments**
-```javascript
-db.books.insert({
-  "title": "Harry Potter",
-  "year": 2002
-  });
-```
-
-Es ist erkennbar, dass innerhalb von *insert* die JSON Syntax zum Einsatz kommt.
-Um das Ablegen vieler Dokumente zu vereinfachen, ist es möglich JavaScript-Funktionen zu hinterlegen, welche die nötigen Werte als Parameter entgegen nehmen und intern *insert* aufrufen.
-
-**Suche aller Bücher**
-```javascript
-db.books.find();
-```
-
-Das Ergebnis von *find()* liefert ein JSON-Array der abgelegten Bücher.
-In der Ergebnissmenge ist erkennbar, dass ein Attribut *_id* hinzugekommen ist, welches die eindeutige vom System vergebene Dokument-ID ist.
-Der Algorithmus für die Generierung der Dokument-ID ist so implementiert, dass dieser, auf unterschiedlichen Maschinen ausgeführt, nicht die selben IDs erzeugt.
-
-**Suche eines Buchs**
-```javascript
-db.books.find({ "_id" : ObjectId("5a6bb81fbb30123365f39fa8") });
-```
-
-Die Suche nach einem bestimmten Objekt ist ebenfalls mittels der *find()* Methode möglich, der als Parameter die ID des Dokuments übergeben wird.
-
-**Suche nach Kriterien**
-```javascript
-db.books.find({ "year" : { $gt : 2000 } });
-```
-
-Innerhalb von *find()* lassen sich Kriterien angeben. In dem nachfolgenden Beispiel werden nur noch Dokumente zurückgegeben, dessen Jahr größer als 2000 ist.
-
-**Suche über JS Funktionen**
-```javascript
-db.books.find( function () {
-    return this.year > 2000 && this.year <= 2010;
-});
-```
-
-Eine weitere Möglichkeit ist die Benutzung von JS Funktionen, um komplexere Anfragen durchzuführen.
-Ein Nachteil dieser Variante ist, dass die Funktion für jedes Dokument in der Datenbank ausgeführt wird. Durch die Schemafreiheit ist aber nicht garantiert, dass das Feld *year* auch in jedem Dokument existiert, sodass diese Abfrage fehlschlägt wenn das Feld nicht vorhanden ist.
-
-**Update eines Dokuments**
-```javascript
-db.books.update(
-  { "_id" : ObjectId("5a6bb81fbb30123365f39fa8") },
-  { $set : { "year" : 2003 } }
-);
-```
-
-Über den Befehl *update* in der Kombination mit *\$set* können bestimmte Eigenschaften eines Dokuments verändert werden.
-Wird *\$set* nicht mit angegeben, wird das gesamte Dokument durch das Neue ersetzt.
-Dabei gehen auch alle nicht mit angegeben Eigenschaften, wie der Titel, verloren.
-
-Das Löschen eines Dokuments findet über den Befehl *delete()* statt, dem wie schon bei *find* die ID des Dokuments mitgegeben wird.

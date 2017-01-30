@@ -1,7 +1,13 @@
 
 # 3. Abgrenzung OODB zu Dokumentdatenbanken
 
-Wie bereits im Kapitel 2.2 und 2.3 dargelegt, handelt es sich bei Objektorientierten Datenbanken und Dokumentendatenbanken um Vertreter der Kategorie schemafreie Datenbanken. Gemäß der Struktur von Objekten können in einer OODB Objektdaten nach einer vorab definierten Klassendefinition abgelegt werden. Demnach findet eine schemabasierte Speicherung der Daten statt. Dem gegenüber verzeichnen Dokumentendatenbanken keine schemabasierten Datenstrukturen. Die als hierarchisch zusammengesetzten, respektive rekursiv verschachtelten, Attribut-Wert-Paare (Key-Value-Pairs) formen in beliebiger Ausprägung die Dokumente. Je Dokument kann infolgedessen der interne Aufbau ab der zweiten Hierarchieebene variieren. Aus der Perspektive der Validierung der Daten betrachtet, wird diese an unterschiedlichen Stellen vorgenommen. Die OODB besitzt eine Modellierungssprache, auf der Basis von der Unified Modeling Language (UML). Daten die in die Datenbank gelangen sollen, müssen dem vorab definierten Datenmodell bzw. Objektmodell entsprechen. Die Datenbank übernimmt die Schemaverantwortung, indem neue Objektedaten nur in die OODB eingefügt werden können, wenn sie dem Schema entsprechen. Dokumentdatenbanken delegieren diese Aufgabe, aufgrund ihrer Eigenschaft der schemafreien Speicherung von Inhalten, an die Ebene der Geschäftslogik. Der Entwickler trägt hierbei die Verantwortung über entsprechende Methoden einen konsistenten Datenbestand zu gewährleisten (siehe Kapitel 2.2 und 2.3).
+Dieses Kapitel soll die beiden Konzepte Objektorientierte Datenbanken und Dokumentendatenbanken gegeneinander abgrenzen. Zunächst soll die Spezifik der Technologien über dem Niveau der Grundlagenbeschreibung abgehandelt werden. Im Anschluss dazu sollen die zentralen Eigenschaften beider Systeme miteinander vergleichen und letztendlich abgegrenzt werden.
+
+## 3.2 Allgemeiner Vergleich der Charakteristiken
+
+Wie bereits im Kapitel 2.2 und 2.3 dargelegt, handelt es sich bei Objektorientierten Datenbanken und Dokumentendatenbanken um Vertreter der Kategorie schemafreie Datenbanken. Gemäß der Struktur von Objekten können in einer OODB Objektdaten nach einer vorab definierten Klassendefinition abgelegt werden. Demnach findet eine schemabasierte Speicherung der Daten statt. Dem gegenüber verzeichnen Dokumentendatenbanken keine schemabasierten Datenstrukturen. Die als hierarchisch zusammengesetzten, respektive rekursiv verschachtelten, Attribut-Wert-Paare (Key-Value-Pairs) formen in beliebiger Ausprägung die Dokumente. Je Dokument kann infolgedessen der interne Aufbau ab der zweiten Hierarchieebene variieren.
+
+Aus der Perspektive der Validierung der Daten betrachtet, wird diese an unterschiedlichen Stellen vorgenommen. Die OODB besitzt eine Modellierungssprache, auf der Basis von der Unified Modeling Language (UML). Daten die in die Datenbank gelangen sollen, müssen dem vorab definierten Datenmodell bzw. Objektmodell entsprechen. Die Datenbank übernimmt die Schemaverantwortung, indem neue Objektedaten nur in die OODB eingefügt werden können, wenn sie dem Schema entsprechen. Dokumentdatenbanken delegieren diese Aufgabe, aufgrund ihrer Eigenschaft der schemafreien Speicherung von Inhalten, an die Ebene der Geschäftslogik. Der Entwickler trägt hierbei die Verantwortung über entsprechende Methoden einen konsistenten Datenbestand zu gewährleisten (siehe Kapitel 2.2 und 2.3).
 
 Die von Dokumentendatenbanken verwendbaren Datenformate sind für den Menschen leichter interpretierbar, da sämtliche in einem Zusammenhang stehenden Daten menschenlesbar abgespeichert sind (siehe Kapitel 2.3.1). Dies entspricht der Charakteristik von Dokumenten auf der Basis von JSON oder XML. OODB müssen hingegen die Informationen analog zum RDBMS in eine repräsentierbare Form bringen (siehe Kapitel 2.1.2 und 2.2).
 
@@ -15,7 +21,159 @@ Speziell der Dokumentenabruf erfordert Mechanismen, welche die Key-Value-Struktu
 
 Neben den technologischen Unterschieden von OODB und Dokumentendatenbanken lassen sich auch potentielle Einsatzszenarien identifizieren. Dokumentendatenbanken kommen oftmals in Web-Applikationen zum Einsatz, wo eine heterogene Datenmenge eine schemakonforme Datenablage schwer realisierbar erscheinen lässt. Beispielsweise eignen sich Dokumentendatenbanken für skalierbare Webapplikationen (vgl. @bach2016DDB S. 486). OODB sind demgegenüber für Applikationen prädestiniert, die auf eine schemagestützte Persistenz setzen. Weiterhin kann dadurch der agile und vereinfachte objektorientierte Entwicklungsprozess für die Realisierung der Datenschicht eingesetzt werden. (vgl. @nayak2013type S. 3)
 
-*Performacevergleich OODB und Dokumentdatenbanken*
+## 3.2 Vergleich der Sprachelemente
+
+Inhaltsgegenstand dieses Kapitels ist die Beschreibung der syntaktischen Sprachelemente. Dadurch soll die Beschaffenheit von OODB und DDB transparenter werden. Für die DDB kommt hierbei die Hersteller-konkrete MongoDB zum Einsatz. Für die Skizzierung der OODB Sprachcharakteristik wird anhand von generischen Sprachelementen vorgenommen.    
+
+### 3.2.1 Dokumentendatenbank am Beispiel MongoDB
+
+Im folgenden werden die syntaktischen Elemente der Dokumentdatenbank MongoDB betrachtet.(vgl. @redmond2012seven S. 135 ff.)
+Das DBS zeichnet sich dadurch aus, Abfragen Ad-hoc auf den Datenbestand ausführen zu können.
+Für die Ablage von Dokumenten wird kein Schema benötigt, sodass neue Typen von Dokumenten einfach hinterlegt werden können, wie im Kapitel 2.3 anfänglich andegedeutet wurde.
+
+Die Dokumente werden in JSON Syntax abgelegt, intern werden diese dann in dem Binärformat BSON abgelegt.
+Durch die schemafreie Ablage, kann die Datenbank während der Entwicklung mitwachsen ohne diese erneut anzulegen.
+Im Folgenden werden die CRUD Operationen, welche sich über das mitgelieferte Command Line Interface ausführen lassen, vorgestellt.
+Die Dokumente werden in Buckets gespeichert, welche ähnlich den Datenbanken in relationalen Datenbanksystemen sind.
+
+**Anlegen eines Buckets**
+```
+mongo book
+```
+
+**Anlegen eines Dokuments**
+```javascript
+db.books.insert({
+  "title": "Harry Potter",
+  "year": 2002
+  });
+```
+
+Es ist erkennbar, dass innerhalb von *insert* die JSON Syntax zum Einsatz kommt.
+Um das Ablegen vieler Dokumente zu vereinfachen, ist es möglich JavaScript-Funktionen zu hinterlegen, welche die nötigen Werte als Parameter entgegen nehmen und intern *insert* aufrufen.
+
+**Suche aller Bücher**
+```javascript
+db.books.find();
+```
+
+Das Ergebnis von *find()* liefert ein JSON-Array der abgelegten Bücher.
+In der Ergebnissmenge ist erkennbar, dass ein Attribut *_id* hinzugekommen ist, welches die eindeutige vom System vergebene Dokument-ID ist.
+Der Algorithmus für die Generierung der Dokument-ID ist so implementiert, dass dieser, auf unterschiedlichen Maschinen ausgeführt, nicht die selben IDs erzeugt.
+
+**Suche eines Buchs**
+```javascript
+db.books.find({ "_id" : ObjectId("5a6bb81fbb30123365f39fa8") });
+```
+
+Die Suche nach einem bestimmten Objekt ist ebenfalls mittels der *find()* Methode möglich, der als Parameter die ID des Dokuments übergeben wird.
+
+**Suche nach Kriterien**
+```javascript
+db.books.find({ "year" : { $gt : 2000 } });
+```
+
+Innerhalb von *find()* lassen sich Kriterien angeben. In dem nachfolgenden Beispiel werden nur noch Dokumente zurückgegeben, dessen Jahr größer als 2000 ist.
+
+**Suche über JS Funktionen**
+```javascript
+db.books.find( function () {
+    return this.year > 2000 && this.year <= 2010;
+});
+```
+
+Eine weitere Möglichkeit ist die Benutzung von JS Funktionen, um komplexere Anfragen durchzuführen.
+Ein Nachteil dieser Variante ist, dass die Funktion für jedes Dokument in der Datenbank ausgeführt wird. Durch die Schemafreiheit ist aber nicht garantiert, dass das Feld *year* auch in jedem Dokument existiert, sodass diese Abfrage fehlschlägt wenn das Feld nicht vorhanden ist.
+
+**Update eines Dokuments**
+```javascript
+db.books.update(
+  { "_id" : ObjectId("5a6bb81fbb30123365f39fa8") },
+  { $set : { "year" : 2003 } }
+);
+```
+
+Über den Befehl *update* in der Kombination mit *\$set* können bestimmte Eigenschaften eines Dokuments verändert werden.
+Wird *\$set* nicht mit angegeben, wird das gesamte Dokument durch das Neue ersetzt.
+Dabei gehen auch alle nicht mit angegeben Eigenschaften, wie der Titel, verloren.
+
+Das Löschen eines Dokuments findet über den Befehl *delete()* statt, dem wie schon bei *find* die ID des Dokuments mitgegeben wird.
+
+### 3.2.2 OODB
+
+Ähnlich wie bei SQL, müssen die Entitäten der Datenbank bekannt gemacht werden (vgl. @nayak2013type).
+Um objektorientierte Datenbanken zu modellieren, kann die Sprache UML[^uml] verwendet werden.
+Diese wird von der Object Management Group (OMG) standardisiert und ist aktuell in der Version 2.5 aus dem Jahr 2015 vorhanden.
+Besonders geeignet sind Klassendiagramme um Objekte und deren Beziehungen zueinander darzustellen.
+
+Bei relationalen Datenbanken wurde SQL als Abfragesprache spezifiziert.
+Im Bereich der OODB wurde ebenfalls versucht einen Standard zu etablieren.
+Für die Beschreibung des Schemas gibt es die Object Definition Language (ODL), welche von der Object Data Management Group (ODMG) stammt.
+In dieser werden die Klassen, Schnittstellen, Attribute, Beziehungen, Operationen und Schlüssel beschrieben.
+Die Syntax ist in der Wikipedia[^odl] beschrieben. Nachstehend folgt ein Beispiel für das Erzeugen einer Klasse:
+
+**Erzeugen einer Klasse**
+```
+class Person {
+  attribute string nachname;
+  attribute int alter;
+  attribute array<Person *> children;
+  void change_address(in string street, in string town,
+                     out string oldstreet, out string oldtown);
+  index on  name;
+};
+```
+
+Für Abfragen gibt es die Object Query Language (OQL), welche auf der Basis und Syntax von SQL aufbaut.
+Es können beispielsweise Abfragen in der bekannten Form *SELECT ... FROM ... WHERE* durchgeführt werden.
+Ebenfalls sind bekannte Abfragen aus SQL über Aggregierungsfunktionen (count, avg, min, max, etc.) und Mengenoperationen (wie intersct, except oder union) möglich.
+Des Weiteren können in den Abfragen komplexe Werte, Objektidentitäten oder Methoden genutzt werden.
+Mittels Quantoren können Methoden für Mengen direkt aus der Abfragesprache heraus ausgeführt werden.
+
+Im Folgenden werden einige Beispiel für OQL Operationen aufgeführt (vgl. @poschekdatenbanken S. 17f):
+
+**Erzeugen eines Objektes**
+```
+Katze(ID: 235423523, Vita: struct(Name: Mietze, Alter: 14), ...)
+```
+
+**Suchen von Objekten**
+```
+SELECT k FRM Katzen WHERE k.Vita.Alter > 10
+```
+
+**Holen eines Objekts**
+```
+ELEMENT(SELECT k FRM Katzen WHERE k.ID = 235423523)
+```
+
+Neben diesem Standard, an dem seit 2001 nicht mehr gearbeitet wird, da sich die Organisation aufgelöst hat und er einige Schwächen aufweist, gibt es die SQL-3-Norm (vgl. @kulkarni1993object, @poschekdatenbanken S. 19ff). @@ Frage: Indirektes Zitieren, was sich nur auf einen Satz bezieht mit in den Satz? Indirekte Zitate, die sich auf einen Abschnitt beziehen nach den Satz? --> Das bezieht sich auf die SQL-3 Norm
+Diese erweitert den bisherigen Standard um Konstrukte, welche für objektorientierte Datenbanken wichtig sind.
+Dazu gehören abstrakte Datentypen, Objekt-Identifikatoren, Überladen von Funktionen oder komplexen Datentypen wie SET, MULTISET, LIST oder ROW.
+
+Eine dritte Möglichkeit sind native Abfragen aus der Programmiersprache hinaus, sofern die Datenbank eine solche Schnittstelle anbietet.
+Im Folgenden ein LINQ-Beispiel aus der Programmiersprache C# um alle Personenobjekte die erwachsen sind zu erhalten:
+
+**Abfragen bestimmter Personen**
+```cs
+var personen = (from p in db.Personen where p.Alter > 17 select p).ToList();
+```
+
+Damit ähnliche Abfragen in einer anderen Programmiersprache möglich sind, muss diese Closures unterstützen.
+
+### 3.2.3 Vergleich der Sprachkonstrukte
+
+Werden beide Sprachkonstrukte gegenübergestellt, so wird deutlich, dass diese unterschiedliche Ansätze verfolgen. Während für Dokumentendatenbanken eine API verwenden, kommen bei OODB standardisierte Syntaxelemente zum Einsatz. Beide Methoden unterscheiden sich in den meisten Disziplinen wie:
+
+* Selektion von Daten
+* Ändern von Daten
+* Suchen von Daten
+* Anlegen von Objekten
+
+. Dies ist nicht zuletzt auf die unterschiedliche Modellierung beider Datenbanken zurück zu führen. Inwiefern dich daraus Vor und Nachteile ergeben, obliegt erneut einer Beurteilung im Kontext eines Einsatzszenarios. Davon losgelöst, ist jedoch die Ähnlichkeit der OODB-Syntax zum SQL-Standard der RDBMS recht ähnlich, was zumindest dem Aspekt Erlernbarkeit zu Gute kommen kann.  
+
+
+## 3.3 Performacevergleich OODB und Dokumentdatenbanken
 
 In @li2013performance wurden SQL und NoSQL-Datenbanken über die Performance miteinander verglichen.
 Dabei zeigt sich, dass sich Systeme wie CouchDB oder RavenDB, im Vergleich zu der relationalen Datenbank MS SQL Express, nicht performanter im Bereich CRUD verhalten.
@@ -28,7 +186,7 @@ Aufgrund mangelnder Performance-Vergleiche von OODB und DDB kann jedoch ein erne
 
 Der Vergleich deutet zumindest an, dass beide NoSQL-Technologien gegenüber RDBMS gegeneinander keine negativ behaftete Beurteilung zulassen und folglich einem System aus diesem Aspekt heraus keine Präferenz zugesprochen werden kann.    
 
-*Abschließende Zusammenfassung der Eigenschaften beider Datenbankkonzepte*
+## 3.4 Fazit und abschließende Zusammenfassung der Eigenschaften beider Datenbankkonzepte
 
 Die Tabelle 3 fasst die wesentlichen Charakteristiken der Datenbanksysteme zusammen.
 
