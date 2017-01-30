@@ -49,11 +49,11 @@ Bei einem minimalen Spannbaum handelt es sich bei einem gewichteten Graphen G um
 
 Die nachfolgende Abbildung zeigt zunächst den Ausgangsgraphen mit den gewichteten Kanten.
 
-<img src="images/kruskal1.svg" title="Default title" alt="alt text" width="300" />
+<img src="images/kruskal1.svg" title="Kruskal 1" alt="Kruskal 1" width="300" />
 
 Nach Anwendung des Algorithmus von Kruskal folgt daraus der folgende minimale Spannbaum.
 
-<img src="images/kruskal2.svg" title="Default title" alt="alt text" width="300" />
+<img src="images/kruskal2.svg" title="Kruskal 2" alt="Kruskal 2" width="300" />
 
 
 #### Kürzeste Wege Algorithmen
@@ -66,23 +66,23 @@ Ein bekannter Algorithmus zur Berechnung des SSP, also der Berechnung der kürze
 
 Die nachfolgenden Graphen verdeutlichen dabei den Ablauf, ausgehend von Knoten A. 
 
-<img src="images/dijkstra1.svg" title="Default title" alt="alt text" width="300" />
+<img src="images/dijkstra1.svg" title="Default title" alt="Dijkstra 1" width="300" />
 
 In der nachfolgenden Abbildung beginnt der Algorithmus seine Arbeit. Der Knoten A wird in die permanente Markierung aufgenommen, in diesem Fall grün symbolisiert. Außerdem werden die Distanzen von A ausgehend für B, E und F berechnet. 
 
-<img src="images/dijkstra2.svg" title="Default title" alt="alt text" width="300" />
+<img src="images/dijkstra2.svg" title="Default title" alt="Dijkstra 2" width="300" />
 
 Der Knoten mit dem Minimum, in diesem Fall B wird zu der permanenten Markierung hinzugefügt. Die von B ausgehenden Kanten werden verfolgt und die Distanzen notiert.
 
-<img src="images/dijkstra3.svg" title="Default title" alt="alt text" width="300" />
+<img src="images/dijkstra3.svg" title="Default title" alt="Dijkstra 3" width="300" />
 
 Es wird wiederum das Minimum selektiert und der Knoten C in die permanente Markierung aufgenommen. Anschließend werden von C ausgehend alle von dort erreichbaren Distanzen berechnet und bei Bedarf aktualisiert. Der Distanz-Wert des zuvor direkt von A erreichbaren Knoten F wird aktualisiert, da dieser nun mit der Gewichtung 50 über A-B-C-F erreicht werden kann.
 
-<img src="images/dijkstra4.svg" title="Default title" alt="alt text" width="300" />
+<img src="images/dijkstra4.svg" title="Default title" alt="Dijkstra 4" width="300" />
 
 Das bekannte Verfahren wird erneut angewendet und die Berechnung ist nun vollständig und abgeschlossen.
 
-<img src="images/dijkstra5.svg" title="Default title" alt="alt text" width="300" />
+<img src="images/dijkstra5.svg" title="Default title" alt="Dijkstra 5" width="300" />
  
 
 ### Verfügbare Graph-Datenbanken
