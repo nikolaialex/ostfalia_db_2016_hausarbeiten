@@ -20,7 +20,7 @@ Das Entity Relationship-Modell (ERM) ist die initiale Abbildung der zu modellier
   *	Entität
   *	Entitätsmenge
 
-eingeführt. „Unter Entität (engl. entity) versteht man ein bestimmtes, d.h. von anderen wohlunterscheidbares Objekt der realen Welt oder unserer Vorstellung. Dabei kann es sich um ein Individuum, um einen Gegenstand, um einen abstrakten Begriff oder um ein Ereignis handeln (@meier2016nosql S. 20)". Dementgegen definiert sich der Begriff Entitätsmenge wie folgt: „Entitäten des gleichen Typs werden zu Entitätsmengen zusammengefasst und durch Merkmale weiter charakterisiert (@meier2016nosql S. 20)“.
+eingeführt. "Unter Entität (engl. entity) versteht man ein bestimmtes, d.h. von anderen wohlunterscheidbares Objekt der realen Welt oder unserer Vorstellung. Dabei kann es sich um ein Individuum, um einen Gegenstand, um einen abstrakten Begriff oder um ein Ereignis handeln (@meier2016nosql S. 20)". Dementgegen definiert sich der Begriff Entitätsmenge wie folgt: "Entitäten des gleichen Typs werden zu Entitätsmengen zusammengefasst und durch Merkmale weiter charakterisiert (@meier2016nosql S. 20)".
 
 Um eine Entität in der Entitätsmenge identifizieren zu können, ist ein Merkmal oder Merkmalskombination zu bestimmen, welches als Identifikationsschlüssel fungiert. Der dazu bestimmte Schlüssel muss das Kriterium der Eindeutigkeit erfüllen. Sobald ein Identitätsschlüssel für eine Entitätsmenge zwei Entitäten zugeordnet werden kann, besteht keine Eindeutigkeit.
 
