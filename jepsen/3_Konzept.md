@@ -15,21 +15,21 @@ Abb. 2 https://aphyr.com/data/posts/313/multiprocessor-history.jpg
 
 ### Lichtkegel
 
-Abb. 3
+Abb. 3 https://aphyr.com/data/posts/313/lightcone-history.jpg
 
-Abb. 4
+Abb. 4 https://aphyr.com/data/posts/313/concurrent-read.jpg
 ### Linearisierbarkeit
 
-Abb. 5
+Abb. 5 https://aphyr.com/data/posts/313/finite-concurrency-bounds.jpg
 
-Abb 6.
+Abb. 6 https://aphyr.com/posts/313-strong-consistency-models
 ### Sequentielle Konsistenz
 
-Abb. 7
+Abb. 7 https://aphyr.com/data/posts/313/sequential-history.jpg
 ### Kausale Konsistenz
 ### Serialisierbare Konsistenz
 
-Abb 8.
+Abb. 8 https://aphyr.com/data/posts/313/serializable-history.jpg
 ## Testumgebung
 Für die Durchführung eines Test eines Datenbanksystems wird davon abgeraten ein im Einsatz befindliches Produktivsystem zu benutzen, da ein Auftreten unvorhersehbarer Fehler zu Datenverlust und Abstürzen des Datenbanksystems führen kann. 
 ### Nötige Hardware
