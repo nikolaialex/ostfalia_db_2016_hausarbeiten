@@ -3,6 +3,8 @@
 ##Inhaltsverzeichnis
 1. Einleitung (von Michael Nicks)
 2. Ursachen für Konsistenzprobleme und Erreichbarkeit bei verteilten Datenbanken (von Michael Nicks)
+   * CAP-Theorem
+   * Replikation
    * Zwei-Phasen-Commit Protokolle 
    * Reaktion der verteilten Datenbank bei teilweisem Verlust einzelner Knoten
    * Ausfälle auf Anwendungsebene
