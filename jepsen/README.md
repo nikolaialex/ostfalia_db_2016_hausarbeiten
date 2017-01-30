@@ -27,9 +27,6 @@ author:
      * Gleichzeitiger Zugriff
      * Lichtkegel
      * Linearisierbarkeit
-     * Sequenzielle Konsistenz
-     * Kausale Konsistenz
-     * Serialisierbare Konsistenz
    * Testumgebung (von Michael Nicks)
      * Nötige Hardware
      * Einrichtung der Testumgebung
