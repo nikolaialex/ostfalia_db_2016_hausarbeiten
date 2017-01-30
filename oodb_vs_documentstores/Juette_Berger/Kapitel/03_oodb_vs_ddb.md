@@ -24,7 +24,9 @@ Diese Auswertung zeigt, dass nicht das alleinige Konzept einer NoSQL-Datenbank z
 
 Eine weitere Erkenntnis ist, dass NoSQL-Datenbanken bei trivialen Operationen sehr schnell sein können, bei komplexeren Operationen diese aber im Verhältnis deutlich länger brauchen.
 
-@@ Hier besser die Vergleichbarkeit von OODB und DDB herausarbeiten. --> Die Quelle hat leider keine OODBs getestet. Ggf müssen wir das dann wieder zurückschieben
+Aufgrund mangelnder Performance-Vergleiche von OODB und DDB kann jedoch ein erneuter Vergleich von NoSQL-Datenbanken in der Form von OODB gegenüber Relationalen Datenbanken eine ungefähre Einschützung liefern. Nach @saxena2013performance wurde eine Performance-Messung zwischen den beiden Datenbanksystemen DB4o und MS SQL-Server 2007 gezogen. Das Ergebnis bescheinigt in den Operationszenarien Ändern von Daten und Abfrage von Daten dem OODB-System einen Perfromance-Vorteil. Lediglich das Schreiben von Datenobjekten verdeutlichte, dass beide Datenbanksysteme ein annähernd gleiches Perofrmance-Verhalten erzielen konnten. (vgl. @saxena2013performance S. 6ff)
+
+Der Vergleich deutet zumindest an, dass beide NoSQL-Technologien gegenüber RDBMS gegeneinander keine negativ behaftete Beurteilung zulassen und folglich einem System aus diesem Aspekt heraus keine Präferenz zugesprochen werden kann.    
 
 *Abschließende Zusammenfassung der Eigenschaften beider Datenbankkonzepte*
 
@@ -42,4 +44,4 @@ Die Tabelle 3 fasst die wesentlichen Charakteristiken der Datenbanksysteme zusam
 
 Tabelle 3: Charakteristik von OODB und Dokumentendatenbanken
 
-Infolge der Spezifik beider Datenbanksysteme lässt sich eine klare Abgrenzung einer Dokumentendatenbank gegenüber eine OODB vornehmen.
+Infolge der Spezifik beider Datenbanksysteme lässt sich eine klare Abgrenzung einer Dokumentendatenbank gegenüber eine OODB vornehmen. Vielmehr ist es angsichts der Eigenschaften beider Syteme schwierig, diese nach den gleichen Kriterien beurteilen zu können. Jede NoSQL-DB bedient eine andere Anforderungskategorie und zielt auf divergierende Einsatzszenarien ab.
