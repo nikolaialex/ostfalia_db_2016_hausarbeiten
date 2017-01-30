@@ -162,7 +162,7 @@ Dadurch entsteht ein Problem welches unter dem Begriff Objektrelationales Mappin
 Eines der größeren Probleme als Benutzer einer objektorientierten Sprache ist, dass die verwendeten Objekte in eine relationalen Datenbank nicht adequat persistent gespeichert werden, da eine relationale Datenbank nur einen eigenen Pool aus Datentypen besitzt (siehe Kapitel 2.1.2).
 Dieses Problem lässt sich durch mehrere Ansätze kompensieren:
 
-  * Verzicht auf die Verwendung von Objekten in der Programmierung, was nicht dem objektorientierten Paradigma entsprechen. @@ meinst du hier auf Objekte für die Speicherung zu verzichten (in der DB), oder auf Objekte in der OOP? FJ: Auf die Objecte in der OOP
+  * Verzicht auf die Verwendung von Objekten in der Programmierung, was nicht dem objektorientierten Paradigma entsprechen.
   * Konvertierung der Objekte zu relationalen Daten beim Speichern und Konvertierung der relationalen Daten zu Objekten beim Lesen.
   Diese Variante hat den Nachteil, dass viel Performance in die Umwandlung der Daten investiert werden muss.
   Der Vorteil ist, dass die Daten weiterhin in einer relationalen Datenbank liegen und somit bekannte Verfahren zum Lesen und Schreiben und der Konsistenz angewendet werden.
@@ -200,12 +200,10 @@ Anforderungen an die OID sind:
   * Über die OIDs ist es möglich Referenzen zwischen Objekten innerhalb der Datenbank zu hinterlegen
   * Eine Referenz kann sich nur auf ein anderes Element oder auf eine Menge anderer Elementen beziehen
 
-Die Erzeugung der OID kann auf verschiedene Arten und Weisen durchgeführt werden:
+Die Erzeugung der OID kann auf verschiedene Arten und Weisen vergeben werden:
   1. Erzeugung aus der physischen Adresse, bzw. dem Pointer. Der Nachteil dieser Variante ist, dass eine Bindung an den physischen Speicherplatz entsteht.
   2. Eine Name, der meist aus einem geeigneten Namensraum stammt, welcher üblicherweise vom Nutzer vergeben wird. Hierbei ist es oft schwierig über viele Attribute eindeutige Werte zu vergeben.
   3. Einen Surrogate oder Identifier Attribut. Diese haben den Nachteil, dass sie nicht wie normale Attribute behandelt werden können.
-
-@@ 2. und 3. fällt mir der Einstieg in die Bildungsvorschrift etwas schwer.. .z.B. Bildung OID durch einen Namen -> 3. Identifizierung Objekt mittels Attribute... -> Wie genau meinst du das?
 
 Neben der OID wird der Zustand eines Objektes als weitere Information mit gespeichert. (vgl. @poschekdatenbanken S. 9)
 

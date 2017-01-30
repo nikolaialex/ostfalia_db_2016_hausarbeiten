@@ -1,11 +1,11 @@
 
 # 3. Abgrenzung OODB zu Dokumentdatenbanken
 
-Dieses Kapitel soll die beiden Konzepte Objektorientierte Datenbanken und Dokumentendatenbanken gegeneinander abgrenzen. Zunächst soll die Spezifik der Technologien über dem Niveau der Grundlagenbeschreibung abgehandelt werden. Im Anschluss dazu sollen die zentralen Eigenschaften beider Systeme miteinander vergleichen und letztendlich abgegrenzt werden.
+Dieses Kapitel soll die beiden Konzepte objektorientierte Datenbanken und Dokumentendatenbanken gegeneinander abgrenzen. Zunächst soll die Spezifik der Technologien über dem Niveau der Grundlagenbeschreibung abgehandelt werden. Im Anschluss dazu sollen die zentralen Eigenschaften beider Systeme miteinander vergleichen und letztendlich abgegrenzt werden.
 
 ## 3.2 Allgemeiner Vergleich der Charakteristiken
 
-Wie bereits im Kapitel 2.2 und 2.3 dargelegt, handelt es sich bei Objektorientierten Datenbanken und Dokumentendatenbanken um Vertreter der Kategorie schemafreie Datenbanken. Gemäß der Struktur von Objekten können in einer OODB Objektdaten nach einer vorab definierten Klassendefinition abgelegt werden. Demnach findet eine schemabasierte Speicherung der Daten statt. Dem gegenüber verzeichnen Dokumentendatenbanken keine schemabasierten Datenstrukturen. Die als hierarchisch zusammengesetzten, respektive rekursiv verschachtelten, Attribut-Wert-Paare (Key-Value-Pairs) formen in beliebiger Ausprägung die Dokumente. Je Dokument kann infolgedessen der interne Aufbau ab der zweiten Hierarchieebene variieren.
+Wie bereits im Kapitel 2.2 und 2.3 dargelegt, handelt es sich bei objektorientierten Datenbanken und Dokumentendatenbanken um Vertreter der Kategorie schemafreie Datenbanken. Gemäß der Struktur von Objekten können in einer OODB Objektdaten nach einer vorab definierten Klassendefinition abgelegt werden. Demnach findet eine schemabasierte Speicherung der Daten statt. Dem gegenüber verzeichnen Dokumentendatenbanken keine schemabasierten Datenstrukturen. Die als hierarchisch zusammengesetzten, respektive rekursiv verschachtelten, Attribut-Wert-Paare (Key-Value-Pairs) formen in beliebiger Ausprägung die Dokumente. Je Dokument kann infolgedessen der interne Aufbau ab der zweiten Hierarchieebene variieren.
 
 Aus der Perspektive der Validierung der Daten betrachtet, wird diese an unterschiedlichen Stellen vorgenommen. Die OODB besitzt eine Modellierungssprache, auf der Basis von der Unified Modeling Language (UML). Daten die in die Datenbank gelangen sollen, müssen dem vorab definierten Datenmodell bzw. Objektmodell entsprechen. Die Datenbank übernimmt die Schemaverantwortung, indem neue Objektedaten nur in die OODB eingefügt werden können, wenn sie dem Schema entsprechen. Dokumentdatenbanken delegieren diese Aufgabe, aufgrund ihrer Eigenschaft der schemafreien Speicherung von Inhalten, an die Ebene der Geschäftslogik. Der Entwickler trägt hierbei die Verantwortung über entsprechende Methoden einen konsistenten Datenbestand zu gewährleisten (siehe Kapitel 2.2 und 2.3).
 
@@ -147,8 +147,7 @@ SELECT k FRM Katzen WHERE k.Vita.Alter > 10
 ELEMENT(SELECT k FRM Katzen WHERE k.ID = 235423523)
 ```
 
-Neben diesem Standard, an dem seit 2001 nicht mehr gearbeitet wird, da sich die Organisation aufgelöst hat und er einige Schwächen aufweist, gibt es die SQL-3-Norm (vgl. @kulkarni1993object, @poschekdatenbanken S. 19ff). @@ Frage: Indirektes Zitieren, was sich nur auf einen Satz bezieht mit in den Satz? Indirekte Zitate, die sich auf einen Abschnitt beziehen nach den Satz? --> Das bezieht sich auf die SQL-3 Norm
-Diese erweitert den bisherigen Standard um Konstrukte, welche für objektorientierte Datenbanken wichtig sind.
+Neben diesem Standard, an dem seit 2001 nicht mehr gearbeitet wird, da sich die Organisation aufgelöst hat und er einige Schwächen aufweist, gibt es die SQL-3-Norm (vgl. @kulkarni1993object, @poschekdatenbanken S. 19ff). Diese erweitert den bisherigen Standard um Konstrukte, welche für objektorientierte Datenbanken wichtig sind.
 Dazu gehören abstrakte Datentypen, Objekt-Identifikatoren, Überladen von Funktionen oder komplexen Datentypen wie SET, MULTISET, LIST oder ROW.
 
 Eine dritte Möglichkeit sind native Abfragen aus der Programmiersprache hinaus, sofern die Datenbank eine solche Schnittstelle anbietet.
@@ -182,7 +181,7 @@ Diese Auswertung zeigt, dass nicht das alleinige Konzept einer NoSQL-Datenbank z
 
 Eine weitere Erkenntnis ist, dass NoSQL-Datenbanken bei trivialen Operationen sehr schnell sein können, bei komplexeren Operationen diese aber im Verhältnis deutlich länger brauchen.
 
-Aufgrund mangelnder Performance-Vergleiche von OODB und DDB kann jedoch ein erneuter Vergleich von NoSQL-Datenbanken in der Form von OODB gegenüber Relationalen Datenbanken eine ungefähre Einschützung liefern. Nach @saxena2013performance wurde eine Performance-Messung zwischen den beiden Datenbanksystemen DB4o und MS SQL-Server 2007 gezogen. Das Ergebnis bescheinigt in den Operationszenarien Ändern von Daten und Abfrage von Daten dem OODB-System einen Perfromance-Vorteil. Lediglich das Schreiben von Datenobjekten verdeutlichte, dass beide Datenbanksysteme ein annähernd gleiches Perofrmance-Verhalten erzielen konnten. (vgl. @saxena2013performance S. 6ff)
+Aufgrund mangelnder Performance-Vergleiche von OODB und DDB kann jedoch ein erneuter Vergleich von NoSQL-Datenbanken in der Form von OODB gegenüber relationalen Datenbanken eine ungefähre Einschützung liefern. Nach @saxena2013performance wurde eine Performance-Messung zwischen den beiden Datenbanksystemen DB4o und MS SQL-Server 2007 gezogen. Das Ergebnis bescheinigt in den Operationszenarien Ändern von Daten und Abfrage von Daten dem OODB-System einen Perfromance-Vorteil. Lediglich das Schreiben von Datenobjekten verdeutlichte, dass beide Datenbanksysteme ein annähernd gleiches Perofrmance-Verhalten erzielen konnten. (vgl. @saxena2013performance S. 6ff)
 
 Der Vergleich deutet zumindest an, dass beide NoSQL-Technologien gegenüber RDBMS gegeneinander keine negativ behaftete Beurteilung zulassen und folglich einem System aus diesem Aspekt heraus keine Präferenz zugesprochen werden kann.    
 
