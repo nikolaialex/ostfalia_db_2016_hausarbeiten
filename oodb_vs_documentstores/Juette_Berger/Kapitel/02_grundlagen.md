@@ -92,9 +92,9 @@ Zur eindeutigen Identifikation von Tupeln/Datensätzen werden Primary Keys einge
 Wie bereits im Kapitel 2.1.1 erwähnt, können Beziehungen zwischen Entitäten bestehen. Dies gilt  konsequenterweise auch für Relationen, die Beziehungen über die Attributausprägungen realisieren. Das Konstrukt der Primär- und Fremdschlüssel ermöglicht Relationen miteinander zu verknüpfen und um im Fall einer Selektion, auf die Datenbestände der in einer Beziehung stehenden Relationen, zugreifen zu können. Ein Primärschlüssel muss einen Tupel in einer Relation eindeutig identifizieren können. Je nach Charakteristik der Datenabbildung können gewisse Entitäten bereits über ein eindeutiges Schlüsselattribut verfügen. Ein Fremdschlüssel in der Detailrelation bezieht sich auf die Schlüsselwerte des Primärschlüssels. Weiterhin bedingt die Charakteristik des Primärschlüssels gleichermaßen die Charakteristik des Sekundärschlüssels. Sollte der Primärschlüssel eine Kombination aus mehreren Attributen aufweisen, so ist dies auch beim Fremdschlüssel der Fall. Für eine Fremdschlüsselbeziehung wird die Eigenschaft der referenziellen Integrität gefordert. Gemäß dieser Anforderung muss der enthaltende Fremdschlüssel in der Primärtabelle als Primärschlüssel enthalten sein. Die Forderung der Eindeutigkeit für Primärschlüssel gilt nicht für die Fremdschlüssel, da mehre Datensätze einer Fremdtabelle einem Datensatz in einer Primärtabelle zugeordnet sein können. (vgl. @unterstein2012rdbms S. 31)
 
 ## 2.2 Objektorientierte Datenbankmanagementsysteme
-Bei den Objektorientierten Datenbanken handelt es sich um Systeme, welche den Anspruch erheben, die Objekte aus der Objektorientierten Programmierung (OOP), mit allen Eigenschaften und Vorteilen die diese besitzen, speichern zu können.
-Im folgenden Kapitel 2.2.1 werden zuerst die grundlegenden Konzepten der Objektorientierung beschrieben, da diese Konzepte sich bei den Objektorientierten Datenbanken wiederfinden.
-In weiteren Verlauf beschreibt das Kapitel 2.2.3 f. die Objektorientierten Datenbankmanagementsystemen (im folgenden OODBMS).
+Bei den objektorientierten Datenbanken handelt es sich um Systeme, welche den Anspruch erheben, die Objekte aus der objektorientierten Programmierung (OOP), mit allen Eigenschaften und Vorteilen die diese besitzen, speichern zu können.
+Im folgenden Kapitel 2.2.1 werden zuerst die grundlegenden Konzepten der Objektorientierung beschrieben, da diese Konzepte sich bei den objektorientierten Datenbanken wiederfinden.
+In weiteren Verlauf beschreibt das Kapitel 2.2.3 f. die objektorientierten Datenbankmanagementsystemen (im folgenden OODBMS).
 
 ### 2.2.1 Objektorientierung
 Unter einem **Objekt** wird im allgemeinen eine Einheit verstanden, welche aus Attributen und Methoden besteht.
@@ -150,7 +150,7 @@ Beide Typen können ebenfalls bedingt sein, wobei auch eine Referenz auf NULL m�
 Beziehungen lassen sich zusätzlich noch klassifizieren, dazu gehören verhaltensbezogene Beziehungen (Nachrichten oder Funktionsaufrufe) und strukturelle Beziehungen (Einschluss oder Vererbung). (vgl. @poschekdatenbanken S. 12f)
 
 <!--- Client-Server Programmierung ubd Übergang zu OOM --->
-Der Einsatz von Objektorientierten Programmen ist sehr unterschiedlich.
+Der Einsatz von objektorientierten Programmen ist sehr unterschiedlich.
 In Bereichen wie z. B. im Computer Aided Design (CAD) oder Multimedia-Anwendungen werden Objekte mit komplexen Strukturen erzeugt, die persistent gespeichert werden müssen.
 Heutzutage werden viele Client-Server basierte Anwendungen entwickelt, die Daten dauerhaft speichern müssen.
 Häufig sind hierbei viele Nutzer, die auf ein zentrales System zugreifen, welches die Daten bereitstellt (Client-Server Prinzip).
@@ -185,7 +185,7 @@ Als Transient sind diese von der Datenbank entbunden, Änderungen wirken sich nu
 Im Mirror Modus wirken sich Änderungen direkt auf das Objekt im Speicher und in der Datenbank aus. (vgl. @obasanjo2003exploration S. 2)
 
 
-### 2.2.3 Anforderungen an ein Objektorientierte Datenbank
+### 2.2.3 Anforderungen an ein objektorientierte Datenbank
 Ein OODBMS muss verschiedene Anforderungen abdecken um den Programmierer die bisher beschriebenen Vorteile zu bieten.
 
 Die gespeicherten Objekte sollten nahezu ununterscheidbar von denen in der verwendeten Programmiersprache sein.
@@ -216,7 +216,7 @@ Das OODBMS muss Mechanismen bereitstellen, um diese Probleme zu adressieren.
 Eine OODBMS muss ebenfalls die ACID Prinzipien (Atomar, Konsistenz, Isolation und Haltbarkeit) gewährleisten.
 Für die Abfrage der Daten muss ggf. eine eigene Sprache bereitgestellt werden.
 Weitere Anforderungen wie Transaktionen, das Speichern und Abrufen großer Datenmengen, Erkennen von Deadlocks, Erzeugen von Backups sowie die Möglichkeit diese wieder einzuspielen muss ein OODBMS ebenfalls leisten.
-Das Objektorientierten Datenbankmanifest gibt dreizehn Regeln an, welche Anforderungen ein OODBMS erfüllen muss.
+Das objektorientierten Datenbankmanifest gibt dreizehn Regeln an, welche Anforderungen ein OODBMS erfüllen muss.
 Diese Teilen sich in acht Regeln aus dem Bereich der Objektorientierung und fünf aus Datenbankgrundsätzen [vgl. @rutner2002implementing, @obasanjo2003exploration] und werden im folgenden ausführlicher vorgestellt.
 
 
