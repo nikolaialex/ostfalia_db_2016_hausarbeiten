@@ -9,18 +9,13 @@ author:
    - Fabian Morón Zirfas
 ---
 
+Karina Ennenga, Fabian Morón Zirfas
+Nikolai Alex
+Datenbanktechnologien (FHBSWF MIM 12 W16)
+30. Januar 2017
+Data Science 
 
-Daten Wissenschaft
-==================
-
-## Datenbanken in Big Data. Welche Technologien kommen zum Einsatz?  
-
-### Aufgabenstellung:  
-
-Data science - Die Analyse von großen Datenmengen wird immer wichtiger. Wie unterstützen Datenbanken bei dieser Analyse?
-
-### TOC
-
+----
 
 - [1. Abstrakt](01_Abstrakt.md)
 - [2. Was ist Data Science?](02_Was-ist-Data-Science.md)

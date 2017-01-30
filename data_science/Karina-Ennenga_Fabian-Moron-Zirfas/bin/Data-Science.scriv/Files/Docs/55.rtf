@@ -1,0 +1,59 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1504\cocoasubrtf760
+{\fonttbl\f0\fnil\fcharset0 Vollkorn-Regular;}
+{\colortbl;\red255\green255\blue255;\red0\green0\blue0;\red255\green255\blue255;}
+{\*\expandedcolortbl;;\cssrgb\c0\c0\c0;\cssrgb\c100000\c100000\c100000;}
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\fi366\pardirnatural
+{\field{\*\fldinst{HYPERLINK "scrivcmt://56FE3AE8-36FD-4285-B74A-977FCC45F5F6"}}{\fldrslt 
+\f0\fs28 \cf2 \cb3 \expnd0\expndtw0\kerning0
+Die Darstellung einzelner Sendungen h\'e4ngt nicht vom Zufall ab, meinen die Autoren Chris Alvino und Justin Basilico des Artikels \'93Learning a Personalized Homepage\'93}}
+\f0\fs28 \cf2 \cb3 \expnd0\expndtw0\kerning0
+. Ganz im Gegenteil: Die Platzierung und Auswahl der richtigen Sendungen f\'fcr die einzelnen Zeilen ist ein wichtiger Teil des Personalisierungsansatzes von Netflix. Es muss also herausgefunden werden, welche Zeilen am relevantesten f\'fcr jeden einzelnen Nutzer sind sowie mit welchen Sendungen die Zeilen gef\'fcllt werden sollten. Au\'dferdem muss entschieden werden, an welcher Stelle der limitierten Startseite jede Zeile platziert wird, so dass die Auswahl des n\'e4chsten Videos m\'f6glichst intuitiv geschehen wird.\
+Hierf\'fcr nutzt Neflix das maschinelle Lernen. Die Maschine lernt, historische Informationen zu nutzen. Historische Informationen w\'e4ren zum Beispiel:  \
+\
++ welche Homepages wurden bereits einmal f\'fcr die Mitglieder erstellt\
++ wie interagieren die Mitglieder\
++ was schauen die Mitglieder tats\'e4chlich gerade an\
++ was spielen sie \'fcberhaupt ab\
+\
+Es gibt offenbar einige Herausforderungen f\'fcr das Anlernen des Modells f\'fcr maschinelles Lernen. Die Trainingsdaten f\'fcr den Algorithmus m\'fcssen sehr bedacht ausgew\'e4hlt werden. Die Herausforderung ist auch, wie die Zuordnung im Modell erlaubt ist. Wenn ein Nutzer ein Video aus einer bestimmten Zeile in der Vergangenheit abgespielt hat, hei\'dft es nicht, dass der Nutzer dieses Video ebenfalls ausgew\'e4hlt h\'e4tte, wenn es in einer anderen Zeile an erster Stelle gestanden h\'e4tte. Es k\'f6nnte die Benennung der Zeile und nicht die Position in der Zeile ausschlaggebend f\'fcr das Abspielen gewesen sein.\
+Um diese Herausforderungen zu bew\'e4ltigen, ist es wichtig, eine gute Metrik auszuw\'e4hlen. Von hoher Wichtigkeit f\'fcr die Seitengenerierung ist, wie die Qualit\'e4t der Seiten, die durch einen Algorithmus erzeugt wurden, zu bewerten ist. Jede m\'f6gliche Verbesserung des Algorithmus wird sofort online in einem A/B-Test gepr\'fcft. Netflix m\'f6chte in der Lage sein, die wertvollen A/B-Testressourcen auf Algorithmen anzuwenden, von denen angenommen wird, dass sie die Qualit\'e4t der Seiten wahrscheinlich verbessern. Die Parameter der Algorithmen sollten vor dem A/B-Test abgestimmt werden. Dazu k\'f6nnen historische Daten verwendet werden, um hypothetische Seiten aus dem neuen algorithmischen Ansatz zu generieren.\
+F\'fcr die Entwicklung von Qualit\'e4tsmetriken auf Seitenebene hat sich Netflix von in der Informationsr\'fcckgewinnung bereits etablierten Ranking-Metriken inspirieren lassen. Sie haben als Beispiel eine Metrik f\'fcr eine eindimensionale Liste genommen und daraus eine neue Metrik erstellt, die in einem zweidimensionalen Layout funktioniert.\
+Als Beispiel geben Sie die Metrik \'84Recall@n\'93 an. Diese misst die Anzahl der relevanten Items in den Top n geteilt durch die Gesamtanzahl der relevanten Items. Netflix hat diese Metrik in zwei Dimensionen erweitert zu \'84Recall@m-by-n\'93. So kann die Anzahl der relevanten Items der ersten m Zeilen und n Spalten auf der Seite geteilt durch die Gesamtanzahl der relevanten Items gez\'e4hlt werden. \'84Recall@3-by-4\'93 kann also die Qualit\'e4t der Videos, die im sichtbaren Bereich eines Ger\'e4ts angezeigt werden, das nur 3 Zeilen mit jeweils 4 Videos zur Zeit anzeigen kann, repr\'e4sentieren. Eine nette Eigenschaft von Recalls, die auf diese Weise definiert werden, ist, dass es automatisch Sonderf\'e4lle, wie doppelte Videos oder kurze Zeilen behandeln kann. Au\'dferdem k\'f6nnte man einen der Werte, also n oder m fixieren und die jeweils anderen durchtauschen, um zu berechnen, wie sich der Recall im sichtbaren Bereich erh\'f6hen w\'fcrde, wenn der Nutzer die Seite nach unten scrollen w\'fcrde. Solch definierte Metriken kann Netflix nutzen, um \'c4nderungen an jedem der algorithmischen Ans\'e4tze, die f\'fcr die Generierung der Seite genutzt werden, oder jede der eingegebenen Daten, zu bewerten. \
+{\field{\*\fldinst{HYPERLINK "scrivcmt://BD9A772C-5262-4A9A-8FF8-52F1FA944876"}}{\fldrslt Laut des Artikels \'84To Be Continued: Helping you find shows to continue watching on Netflix\'93, geschrieben von Hossein Taghavi, Ashok Chandrashekar, Linas Baltrunas und Justin Basilico auf dem Netflix eigenen Blog, ist das gro\'dfe Ziel des Empfehlungssystem von Netflix, die perfekte Serie oder den perfekten Film f\'fcr jeden Nutzer zu kennen und diesen direkt beim Start von Netflix zu starten.}}\
+Wenn ein Nutzer Netflix \'f6ffnet, m\'f6chte er entweder eine ganz neue, f\'fcr ihn unbekannte Sendung entdecken oder die n\'e4chste Folge einer bereits bekannten Serie sehen, bzw. einen angefangenen Film zu Ende schauen. Wenn Netflix vorhersagen kann, dass der Nutzer beim \'d6ffnen gerade eine Serie oder einen Film weiterschauen m\'f6chte, so w\'fcrde es Sinn machen, diese/n an pr\'e4senter Stelle auf der Startseite zu platzieren.\
+Grunds\'e4tzlich fokussiert Netflix sich hier auf die Zeile \'84Weiterschauen\'93. Ein nicht unerheblicher Anteil der Streaming-Zeit erfolgt aufgrund der Platzierung der Serie oder des Films in dieser Zeile. Wie die Zeile auf der Seite platziert wurde, hing von einigen Regeln ab, die wiederum vom der Plattform abh\'e4ngig waren. Laut des Blog-Artikels will Netflix dies nun \'fcber die Plattformen hinweg vereinheitlichen um die Nutzererfahrung der "Weiterschauen"-Zeile anhand folgender zweier Dimensionen zu verbessern:  \
+\
++ Verbesserung der Platzierung der Zeile: Sie soll h\'f6her platziert werden, wenn ein Nutzer im "Weiterschauen-Modus" ist. Sie soll tiefer platziert werden, wenn ein Nutzer eher nach einem neuen Titel sucht, sich also im "Entdeckungs-Modus" befindet. \
++ Verbesserung der Reihenfolge der zuletzt angeschauten Sendungen in der Zeile in Abh\'e4ngigkeit der Wahrscheinlichkeit, dass sie beim n\'e4chsten Aufruf von Netflix angeschaut/weitergeschaut werden.\
+Herauszufinden, wie hoch die Wahrscheinlichkeit ist, dass sich ein Nutzer gerade im \'84Weiterschauen-Modus\'93 befindet, versucht Netflix \'fcber die Definition unterschiedlicher Aktivit\'e4tsmuster. Ein Nutzer ist m\'f6glicherweise gewollt, eine Sendung fortzusetzen, wenn er:\
+\
++ schon viele Folgen einer Serie geschaut hat, diese aber noch nicht komplett zu Ende geschaut hat\
++ vor Kurzem einen Film angefangen hat\
++ eine Show vermehrt zu einer bestimmten Zeit am Tag oder \'fcber das aktuelle Ger\'e4t geschaut hat\
+\
+Im \'84Entdeckungs-Modus\'93 befindet sich der Nutzer eher, wenn er:\
+\
++ gerade einen Film zu Ende oder alle Staffeln und Episoden einer Serie geschaut hat\
++ in letzter Zeit nichts mehr geschaut hat\
++ sich neu bei Netflix angemeldet hat\
+\
+Diese Hypothesen haben Netflix laut oben genanntem Artikel dazu motiviert, ein maschinenlernendes Modell zu bauen, welches obige Muster identifiziert und nutzt, um eine bessere \'84Weiterschauen\'93-Zeile zu generieren.\
+Um ein Empfehlungsmodell f\'fcr die \'84Weiterschauen\'93-Zeile zu kreieren, braucht man zun\'e4chst Merkmale, die Muster aus dem Verhalten der Nutzer erkennen. Diese sollen dabei helfen, eine Vorhersage zu treffen, wann ein Nutzer eine Serie oder einen Film weitersehen m\'f6chte. Diese Merkmale werden als Input f\'fcr das Erstellen des maschinenlernenden Modells genutzt. Die wichtigsten Merkmale k\'f6nnen dann sp\'e4ter nach einigen Testl\'e4ufen optimiert und ausgew\'e4hlt werden. Die Autoren des Blog-Artikels haben drei m\'f6gliche Ideen f\'fcr das Erstellen des Weiterschauen-Modells ber\'fccksichtigt, darunter:\
+\
++ Eigenschaften auf Mitgliedsebene:\
+    + Daten \'fcber das Abonnement des Mitglieds, wie zum Beispiel die Dauer des Abonnements, das Land der Registrierung und die Sprachpr\'e4ferenzen\
+    + Wie aktiv das Mitglied in letzter Zeit war\
+    + Die letzten Bewertungen des Mitglieds sowie Pr\'e4ferenzen in Genres\
++ Eigenschaften \'fcber eine Sendung sowie die Interaktion des Nutzers mit dieser:\
+    + Wie lange ist es her, dass eine Sendung zu dem Katalog hinzugef\'fcgt, bzw. vom Mitglied geschaut wurde\
+    + Wie viel der Sendung hat das Mitglied geschaut\
+    + Metadaten \'fcber die Sendung, wie zum Beispiel Typ, Genre, Anzahl der Episoden. Beispielsweise werden Kindersendungen \'f6fter wiederholt geschaut\
+    + Beliebtheit und Relevanz der Sendung f\'fcr das Mitglied\
+    + Wie oft das Mitglied die Sendung weitergeschaut hat\
++ Kontextbezogene Eigenschaften:\
+    + Aktuelle Uhrzeit sowie Wochentag\
+    + Standort\
+    + Genutztes Ger\'e4t des Mitglieds\
+\
+F\'fcr die optimale Darstellung der \'84Weiterschauen\'93-Zeile gibt es zwei Aufgaben: Sortierung der Ergebnisse innerhalb der Zeile sowie die Platzierung der Ergebnisse an eine sinnvolle Stelle auf der Startseite des Mitglieds. F\'fcr die Sortierung der Ergebnisse innerhalb der \'84Weiterschauen\'93-Zeile hat Netflix ein Modell trainiert, das Sessions nutzt, in denen das Mitglied eine zuvor angesehene Sendung weiter schaut. In jeder Session lernt das Modell zwischen den Sendungen, die wiederholt werden, zu unterscheiden und ordnet diese in der vorhergesagten Wahrscheinlichkeit an. Um die \'84Weiterschauen\'93-Zeile sinnvoll, bzw. an einer geeigneten Stelle auf der Startseite des Mitglieds zu platzieren, m\'f6chte Netflix die Wahrscheinlichkeit absch\'e4tzen, ob sich das Mitglied gerade im \'84Weiterschauen-Modus\'93 oder aber im \'84Entdeckungs-Modus\'93s befindet, so die Autoren des Blog-Artikels. Aufgrund dieser Wahrscheinlichkeit k\'f6nnten mehrere Ans\'e4tze verfolgt werden. Ein einfacher Ansatz w\'e4re, dass es nur zwei M\'f6glichkeiten gibt, die Zeile zu platzieren: oben auf der Seite oder weiter unten auf der Seite.\
+Durch Anwendung eines Schwellenwertes auf die vorhergesehene Wahrscheinlichkeit kann Netflix entscheiden, in welcher dieser beiden m\'f6glichen Positionen die Zeile platziert wird. }
