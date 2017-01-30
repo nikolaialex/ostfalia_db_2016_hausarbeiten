@@ -12,7 +12,7 @@ author:
 Karina Ennenga, Fabian Morón Zirfas
 Nikolai Alex
 Datenbanktechnologien (FHBSWF MIM 12 W16)
-26. Januar 2017
+30. Januar 2017
 Data Science 
 
 ----
