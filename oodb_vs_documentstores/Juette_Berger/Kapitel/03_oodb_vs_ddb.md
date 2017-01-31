@@ -169,7 +169,7 @@ Werden beide Sprachkonstrukte gegenübergestellt, so wird deutlich, dass diese u
 * Suchen von Daten
 * Anlegen von Objekten
 
-. Dies ist nicht zuletzt auf die unterschiedliche Modellierung beider Datenbanken zurück zu führen. Inwiefern dich daraus Vor und Nachteile ergeben, obliegt erneut einer Beurteilung im Kontext eines Einsatzszenarios. Davon losgelöst, ist jedoch die Ähnlichkeit der OODB-Syntax zum SQL-Standard der RDBMS recht ähnlich, was zumindest dem Aspekt Erlernbarkeit zu Gute kommen kann.
+. Dies ist nicht zuletzt auf die unterschiedliche Modellierung beider Datenbanken zurück zu führen. Inwiefern dich daraus Vor- und Nachteile ergeben, obliegt erneut einer Beurteilung im Kontext eines Einsatzszenarios. Davon losgelöst, ist jedoch die Ähnlichkeit der OODB-Syntax zum SQL-Standard der RDBMS recht ähnlich, was zumindest dem Aspekt der Erlernbarkeit zu Gute kommen kann.  
 
 
 ## 3.3 Performacevergleich OODB und Dokumentendatenbanken
@@ -180,8 +180,8 @@ Andere Systeme hingegen, wie Couchbase oder MongoDB, sind deutlich performanter 
 Diese Auswertung zeigt, dass nicht das alleinige Konzept einer NoSQL-Datenbank zu mehr Performance führt, vielmehr muss die konkrete Umsetzung den Vorteil auch tatsächlich liefern.
 
 Eine weitere Erkenntnis ist, dass NoSQL-Datenbanken bei trivialen Operationen sehr schnell sein können, bei komplexeren Operationen diese aber im Verhältnis deutlich länger brauchen.
-
 Aufgrund mangelnder Performance-Vergleiche von OODB und DDB kann jedoch ein erneuter Vergleich von NoSQL-Datenbanken in der Form von OODB gegenüber relationalen Datenbanken eine ungefähre Einschätzung liefern. Nach @saxena2013performance wurde eine Performance-Messung zwischen den beiden Datenbanksystemen dB4o und MS SQL-Server 2007 gezogen. Das Ergebnis bescheinigt in den Operationszenarien Ändern von Daten und Abfrage von Daten dem OODB-System einen Perfromance-Vorteil. Lediglich das Schreiben von Datenobjekten verdeutlichte, dass beide Datenbanksysteme ein annähernd gleiches Performance-Verhalten erzielen konnten. (vgl. @saxena2013performance S. 6ff)
+
 
 Der Vergleich deutet zumindest an, dass beide NoSQL-Technologien gegenüber RDBMS gegeneinander keine negativ behaftete Beurteilung zulassen und folglich einem System aus diesem Aspekt heraus keine Präferenz zugesprochen werden kann.
 

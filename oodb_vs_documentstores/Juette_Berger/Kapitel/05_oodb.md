@@ -1,7 +1,7 @@
 
 # 5. Verbreitung von OODB
 
-Wie bereits in Kapitel 2.2 beschrieben versuchen objektorientiere Datenbankmanagementsysteme die objektorientierten Prinzipien bis zur Speicherung der Daten in einer Datenbank zu realisieren.
+Wie bereits in Kapitel 2.2 beschrieben, versuchen objektorientiere Datenbankmanagementsysteme die objektorientierten Prinzipien bis zur Speicherung der Daten in einer Datenbank zu realisieren.
 Trotz der großen Verbreitung von objektorientierten Programmiersprachen werden kaum objektbasierte Datenbanken eingesetzt und sind eine Nischentechnologie.
 Vielmehr werden für gängige Client-Server-Anwendungen weiterhin relationale Datenbanken verwendet und der Medienbruch wird durch die objekt-relationalen Mapper kompensiert.
 Trotzdem erleben viele NoSQL-Datenbanken in den letzten Jahren einen großen Aufwind, zu denen die objektbasierten nicht gehören.
@@ -25,11 +25,11 @@ Die folgenden Liste versucht einige der größten Probleme von Objektdatenbanken
   * Der Einsatz lohnt sich nur bei sehr komplexen Objektbeziehungen und nicht für einfache Anwendungen. Wird eine Anwendung iterativ entwickelt, wird die Entscheidung zugunsten einer relationalen Datenbank bereits im frühen Stadium getroffen, wo die Komplexität der Beziehungen noch überschaubar ist.
   * Datenbanken wie db4o unterstützen nicht den Import von verbreiteten Formten wie JSON oder XML, was den Einsatz dieser Datenbank für einige Anwendungsfälle unbrauchbar macht. Ebenfalls bietet die Datenbank keine referenzielle Integrität, dessen Verzicht nur bei skalierbaren Datenbanken tragbar ist.
 
-Des weiteren wurde eine Stichwortsuche auf einigen großen Plattformen durchgeführt um die Verbreitung der Datenbanksysteme zu ermitteln.
+Des Weiteren wurde eine Stichwortsuche auf einigen großen Plattformen durchgeführt, um die Verbreitung der Datenbanksysteme zu ermitteln.
 Treffer bei einer reinen Suche bei Google wurden nicht mit aufgenommen, da diese die Skalen der anderen Treffer zu stark reduzieren.
-Wie auf der Abbildung 10 zu erkennen ist sind auf allen drei Plattformen am meisten Treffer zu relationalen Datenbanken und der Abfragesprache SQL zu finden.
+Wie auf der Abbildung 10 zu erkennen ist, sind auf allen drei Plattformen am meisten Treffer zu relationalen Datenbanken und der Abfragesprache SQL zu finden.
 Lediglich auf Google Scholar gibt es eine deutliche Anzahl von Treffern für die objektorientierten Datenbanken.
-Eine Möglich Schlussfolgerung daraus ist, dass diese Datenbanksysteme bisher nur im Akademischen Umfeld vorkommen.
+Eine mögliche Schlussfolgerung daraus ist, dass diese Datenbanksysteme bisher nur im akademischen Umfeld vorkommen.
 Besonders wichtiges Indiz für eine geringe Verbreitung einer Technologie sind die Anzahl der öffentlichen Projekte auf der Plattform Github.
 Wie in der Abbildung 10 zu erkennen ist, gibt es zu den Stichworten *sql* und *nosql*, dort nennenswerte Treffermengen.
 Zu den objektorientierten Datenbanken gibt es nur wenige Treffer (52 bzw. 162).

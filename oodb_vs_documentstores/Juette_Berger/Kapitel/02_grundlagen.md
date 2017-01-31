@@ -2,14 +2,15 @@
 # 2. Grundlagen
 
 Dieses Kapitel behandelt die grundlegenden Konzepte drei verschiedener Datenbanksysteme.
-Zu Beginn werden die RDBMS betrachtet, da diese aktuell am verbreitetsten sind und die anderen Datenbanksysteme damit im weiteren verglichen werden.
+Zu Beginn werden die RDBMS betrachtet, da diese aktuell am verbreitetsten sind und die anderen Datenbanksysteme damit anschließend verglichen werden.
 In Kapitel 2.2 werden die objektorientierten Datenbanken vorgestellt und in 2.3 die Dokumentendatenbanken.
+
 
 ## 2.1 Relationale Datenbankmanagementsysteme
 
 Das Unterkapitel 2.1 soll grundlegende Informationen zur Organisation und Speicherung von Daten nach dem relationalen Ansatz darlegen. Dazu werden das Entity Relationship- und das relationale Modell betrachtet. Es werden somit ausschließlich diejenigen Aspekte thematisiert, die eine Einflussnahme auf die Modellierung der Datenrepräsentation haben. Konkret bezieht sich dieses Kapitel auf die konzeptionelle und logische Ebene der Datenabbildung durch das RDBMS.
 
-Die Modellierung der Daten für eine relationale Abbildung erfolgt in drei Schritten. Diese bestehen aus der Datenanalyse, dem Entwurf des Entity Relationship-Modell und den Transfer in das relationale Modell. Das physische Modell dient der Beschreibung der Transition des konzeptionellen Datenmodells auf die Datenbankebene. Schlussendlich liegt das relationale Datenmodell in die DB-spezifische Ausprägung vor. (vgl. @schropp2004DBProjekt S. 6) Die Abbildung 1 stellt den Ablauf der Modellierungsschritte dar und ordnet den jeweiligen allgemeingültigen Ebenenbegriff des Datenbankmodells zu.
+Die Modellierung der Daten für eine relationale Abbildung erfolgt in drei Schritten. Diese bestehen aus der Datenanalyse, dem Entwurf des Entity Relationship-Modell und den Transfer in das relationale Modell. Das physische Modell dient der Beschreibung der Transition des konzeptionellen Datenmodells auf die Datenbankebene. Schlussendlich liegt das relationale Datenmodell in einer DB-spezifischen Ausprägung vor. (vgl. @schropp2004DBProjekt S. 6) Die Abbildung 1 stellt den Ablauf der Modellierungsschritte dar und ordnet den jeweiligen allgemeingültigen Ebenenbegriff des Datenbankmodells zu.
 
 ![Schematische Darstellung des relationalen Modellierungsprozesses](images/kap2_abb1_prozess.png)
 
@@ -22,7 +23,7 @@ Das Entity Relationship-Modell (ERM) ist die initiale Abbildung der zu modellier
 
 eingeführt. "Unter Entität (engl. entity) versteht man ein bestimmtes, d.h. von anderen wohlunterscheidbares Objekt der realen Welt oder unserer Vorstellung. Dabei kann es sich um ein Individuum, um einen Gegenstand, um einen abstrakten Begriff oder um ein Ereignis handeln (@meier2016nosql S. 20)". Dementgegen definiert sich der Begriff Entitätsmenge wie folgt: "Entitäten des gleichen Typs werden zu Entitätsmengen zusammengefasst und durch Merkmale weiter charakterisiert (@meier2016nosql S. 20)".
 
-Um eine Entität in der Entitätsmenge identifizieren zu können, ist ein Merkmal oder Merkmalskombination zu bestimmen, welches als Identifikationsschlüssel fungiert. Der dazu bestimmte Schlüssel muss das Kriterium der Eindeutigkeit erfüllen. Sobald ein Identitätsschlüssel für eine Entitätsmenge zwei Entitäten zugeordnet werden kann, besteht keine Eindeutigkeit.
+Um eine Entität in der Entitätsmenge identifizieren zu können, ist ein Merkmal oder eine Merkmalskombination zu bestimmen, welches als Identifikationsschlüssel fungiert. Der dazu bestimmte Schlüssel muss das Kriterium der Eindeutigkeit erfüllen. Sobald ein Identitätsschlüssel für eine Entitätsmenge zwei Entitäten zugeordnet werden kann, besteht keine Eindeutigkeit.
 
 Das ER-Modell sieht für Entitäten ferner auch das Konzept der Generalisierung und Aggregation vor, indem Daten vom Detail ausgehend abstrahiert werden oder durch Submengenbildung als Spezialisierungen gelten können. Die Generalisierung umfasst als Begrifflichkeit mehrere Formen:
 
@@ -33,7 +34,7 @@ Das ER-Modell sieht für Entitäten ferner auch das Konzept der Generalisierung 
 
 Diese Formen der Mengendarstellung müssen von der Transformation zum relationalen Modell berücksichtigt werden. (vgl. @meier2016nosql S. 33)
 
-Zwischen den Entitätsmengen können unterschiedliche Beziehungen (engl. relationships) existieren. Die Beziehungen bilden eine Beziehungsmenge, die wiederum durch Merkmale näher charakterisiert werden können. Beziehungen werden durch Assoziationen näher beschrieben, die wiederum durch Assoziationstypen spezifiziert werden. Die nachstehenden Assoziationstypen sind im ER-Modell definiert:
+Zwischen den Entitätsmengen können unterschiedliche Beziehungen (engl. relationships) existieren. Die Beziehungen bilden eine Beziehungsmenge, die wiederum durch Merkmale näher charakterisiert werden können. Beziehungen werden durch Assoziationen näher beschrieben, die abermals durch Assoziationstypen spezifiziert werden. Die nachstehenden Assoziationstypen sind im ER-Modell definiert:
 
   * einfache Assoziation (genau ein Tupel)
   * konditionelle Assoziationen (kein oder genau ein Tupel)
@@ -71,7 +72,7 @@ Die Attribute/Spaltennamen der in der Tabelle 1 abgebildeten Relation Buch heiß
 
 Zwischen den Attributen einer Relation können funktionale und voll funktionale Abhängigkeiten existieren. Funktionale Abhängigkeiten liegen vor, wenn Attributwerte der Komponente A die Attributwerte der Komponente B eindeutig bestimmen (der Titel des Buches ist funktional abhängig von der ISBN-Nummer). Voll funktionale Abhängigkeiten liegen vor, wenn zwischen Attributwerten von Komponenten eine funktionale Abhängigkeit existiert (B ist abhängig von A) und wenn C eine echte Teilmenge von A ist und C wiederum funktional B bedingt (B ist abhängig von C).
 
-Das relationale Datenmodell greift die Anforderung einer redundanzfreien Speicherung von Daten auf, indem eine definierte Abfolge von Normalisierungsschritten durchlaufen wird. Jede Normalisierungsform stellt bestimmte Anforderungen an die Beschaffenheit der Daten und deren Abhängigkeiten untereinander, wie im vorherigen Abschnitt angedeutet. Aufgrund der Wichtigkeit der Normalisierung der Daten, werden die Normalformen (NF) aus Gründen der Vollständigkeit mit der jeweils erforderlichen Qualitätsanforderung aufgelistet.(vgl. @meier2016nosql S. 36ff)
+Das relationale Datenmodell greift die Anforderung einer redundanzfreien Speicherung von Daten auf, indem eine definierte Abfolge von Normalisierungsschritten durchlaufen wird. Jede Normalisierungsform stellt bestimmte Anforderungen an die Beschaffenheit der Daten und deren Abhängigkeiten untereinander, wie im vorherigen Abschnitt angedeutet. Aufgrund der Wichtigkeit der Normalisierung der Daten, werden die Normalformen (NF) aus Gründen der Vollständigkeit mit der jeweils erforderlichen Qualitätsanforderung aufgelistet.(vgl. @meier2016nosql S. 36 ff)
 
   * **1. Normalform (1NF)**
     1. Atomare Wertebereiche
@@ -100,10 +101,10 @@ Im weiteren Verlauf beschreiben die Kapitel 2.2.3 - 2.2.5 die objektorientierten
 Unter einem **Objekt** wird im allgemeinen eine Einheit verstanden, welche aus Attributen und Methoden besteht.
 Dieses versucht ein abstraktes Konstrukt aus der realen Welt in Teilen oder vollständig zu beschreiben.
 Das können beispielsweise Personen, Tiere oder Gegenstände sein, aber auch abstrakte Dinge wie die Zugriffsklasse auf ein Dateisystem oder auf eine Datenbank.
-Der Bauplan, welche für die Erzeugung der Objekte verwendet wird, wird als **Klasse** bezeichnet.
+Der Bauplan, welcher für die Erzeugung der Objekte verwendet wird, wird als **Klasse** bezeichnet.
 Im folgenden wird die Klasse mit dem Namen *Person* und den Eigenschaften *Nachname*, *Vorname* und *Alter* beispielhaft verwendet.
 Diese beschreibt Personen für einen geeigneten Kontext ausreichend genau.
-Sind weitere Eigenschaften oder Methoden nötig so muss die Klasse um solche erweitert werden.
+Sind weitere Eigenschaften oder Methoden nötig, so muss die Klasse um solche erweitert werden.
 Die Abbildung 4 zeigt die Klasse in der Notation eines UML Klassendiagramms.
 
 ![Modell einer Person](images/Person.png)
@@ -128,7 +129,7 @@ Die Abbildung 5 zeigt die Verwendung der abstrakten Klasse *Lebewesen* mit der S
 
 Hierbei spielt das Prinzip der **Vererbung** eine große Rolle.
 Die Klasse *Person* erbt alle Eigenschaften und Methoden von *Lebewesen*.
-Dadurch ist es möglich Aktionen und Eigenschaften zu generalisieren.
+Dadurch ist es möglich, Aktionen und Eigenschaften zu generalisieren.
 Durch die Verwendung eines Interfaces verpflichtet sich die abstrakte Klasse *Lebenwesen* dazu, selbst die definierten Methoden zu implementieren.
 
 Daraus ergibt sich ein weiteres Prinzip der Objektorientierung.
@@ -138,7 +139,7 @@ Daneben gibt es das Prinzip der **Polymorphie**, welches besagt, dass es von ein
 Diese unterscheiden sich durch ihre Parameter. (vgl. @kuhnel2012visual Kap. 4)
 
 Neben der Modellierung einzelner Klassen müssen deren Beziehungen untereinander abgebildet werden.
-Dabei ergeben sich vier verschiedene Typen von Beziehungen die für die Speicherung in Objektdatenbanken wichtig sind.
+Dabei ergeben sich vier verschiedene Typen von Beziehungen, die für die Speicherung in Objektdatenbanken wichtig sind.
 Bei 1:1 Beziehungen findet genau eine Referenz von Klasse 1 auf eine Klasse 2 statt.
 Ebenfalls hat Klasse 2 nur genau 1 Referenz, nämlich die auf Klasse 1.
 Der zweite Typ sind 1:n Beziehungen bei denen die Klasse 1 auf n weitere Klassen verweisen kann.
@@ -197,7 +198,7 @@ Anforderungen an die OID sind:
 
 Die Erzeugung der OID kann auf verschiedene Arten und Weisen vergeben werden:
   1. Erzeugung aus der physischen Adresse, bzw. dem Pointer. Der Nachteil dieser Variante ist, dass eine Bindung an den physischen Speicherplatz entsteht.
-  2. Eine Name, der meist aus einem geeigneten Namensraum stammt, welcher üblicherweise vom Nutzer vergeben wird. Hierbei ist es oft schwierig über viele Attribute eindeutige Werte zu vergeben.
+  2. Eine Name, der meist aus einem geeigneten Namensraum stammt, welcher üblicherweise vom Nutzer vergeben wird. Hierbei ist es oft schwierig, über viele Attribute eindeutige Werte zu vergeben.
   3. Einen Surrogate oder Identifier Attribut. Diese haben den Nachteil, dass sie nicht wie normale Attribute behandelt werden können.
 
 Neben der OID wird der Zustand eines Objektes als weitere Information mit gespeichert. (vgl. @poschekdatenbanken S. 9)
@@ -210,7 +211,7 @@ Das OODBMS muss Mechanismen bereitstellen, um diese Probleme zu adressieren.
 
 Eine OODBMS muss ebenfalls die ACID Prinzipien (Atomar, Konsistenz, Isolation und Haltbarkeit) gewährleisten.
 Für die Abfrage der Daten muss ggf. eine eigene Sprache bereitgestellt werden.
-Weitere Anforderungen wie Transaktionen, das Speichern und Abrufen großer Datenmengen, Erkennen von Deadlocks, Erzeugen von Backups sowie die Möglichkeit diese wieder einzuspielen muss ein OODBMS ebenfalls leisten.
+Weitere Anforderungen wie Transaktionen, das Speichern und Abrufen großer Datenmengen, Erkennen von Deadlocks, Erzeugen von Backups sowie die Möglichkeit diese wieder einzuspielen, muss ein OODBMS ebenfalls leisten.
 Das objektorientierten Datenbankmanifest gibt dreizehn Regeln an, welche Anforderungen ein OODBMS erfüllen muss.
 Diese Teilen sich in acht Regeln aus dem Bereich der Objektorientierung und fünf aus Datenbankgrundsätzen (vgl. @rutner2002implementing, @obasanjo2003exploration) und werden im folgenden ausführlicher vorgestellt.
 
@@ -257,7 +258,7 @@ Die Schemaevaluation ist wichtig, wenn Definitionen von Klassen oder Beziehungen
 In diesem Fall dürfen Änderungen nicht das laufende System beeinträchtigen.
 Die Änderungen können sich sofort auf alle Objekte auswirken (eager update) oder werden nach und nach verändert (lazy update).
 Im zweiten Fall geschieht das meist erst beim erneuten Zugriff auf die Daten.
-Werden Objekte verändert, so ist es wichtig die Historie zu verwalten.
+Werden Objekte verändert, so ist es wichtig, die Historie zu verwalten.
 Die Darstellung der Versionen kann mittels eines Versionsgraphen erfolgen.
 In diesem ist auch gekennzeichnet, welche als die aktuelle Version behandelt wird, also das Objekt, welches bei einer Anfrage in dieser Version zurückgegeben wird.
 Eine andere Möglichkeit ist, eine zeitbezogene Versionierung (z. B. Jede Stunde/Monat etc.) durchzuführen.
@@ -266,13 +267,13 @@ Werden diese mit einem Gültigkeitsstempel versehen, findet ein Aufräumungsproz
 ### 2.2.5 Zusammenfassung
 Der große Vorteil von Objektdatenbanken ist die Vermeidung des Bruchs, der bei der Speicherung von Daten in relationale Datenbanken entsteht.
 Ein weiterer Vorteil ist, dass das benötige *Joinen* von normalisierten Tabellen entfällt.
-Drittes Argument für ein OODBMS ist, dass die Objektidentität gesichert ist, da für dessen Verwaltung das Datenbanksystem verantwortlich ist.
+Ein drittes Argument für ein OODBMS ist, dass die Objektidentität gesichert ist, da für dessen Verwaltung das Datenbanksystem verantwortlich ist.
 Des Weiteren wird die Historie eines Objektes gespeichert, sodass die Wiederherstellung einzelner Objekte leichter ist.
 
 Der größte Nachteil ist der geringe Anteil von Schnittstellen für den Zugriff.
 Besonders unter den populären Programmiersprachen wie Java, PHP oder Python fehlen die entsprechenden Frameworks.
 Weiterhin gibt es nur wenige Implementierungen von diesem Datenbanktyp.
-Beispiel von Objektdatenbanken sind db4o[^db4o], ZooDB[^zoodb] oder mcobject[^mcobject].
+Beispiele von Objektdatenbanken sind db4o[^db4o], ZooDB[^zoodb] oder mcobject[^mcobject].
 
 ## 2.3 Dokumentendatenbanken
 Dokumentendatenbanken gehören zum Typ der NoSQL (Not only SQL) Datenbanken.
