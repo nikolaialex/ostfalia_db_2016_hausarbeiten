@@ -22,11 +22,60 @@ In der `<project.clj>` werden die Anhängigkeiten des Projektes und weitere Meta
 In der unter `<:main>` angegebenen Pfad wird eine Clojure Datei für die Testkonfiguration angelegt. Die wichtigstens Bestandteile dieses Jepsen-Tests sind die Bereiche für die automatische Einrichtung der verteilten Datenbank, des Clients, mehrerer Checker und der Auslösung von Fehlerfällen.
 
 ### Einrichtung der Datenbank
-
+db function
+setup
+teardown
+noop-test
+config file for each node
+Standard Datenbank Konfigurationsdatei
 ### Einrichtung des Clients
-
+read
+write
+compare-and-set
 ### Definierung von Checkern
+Mit dem Generator und von Client ausgeführten Operationen entsteht ein Verlauf, der sich auf Korrektheit analysieren lässt. Dabei wird von Jepsen ein abstrktest Modell des System benutzt und Checker erstellt, die den Verlauf der Operationen bestätigen sollen. 
 
+Als Checker stehen eine Vielzahl von unterschiedlichen Vergleichstest zur Verfügung:
+  * valid-priorities - "A map of :valid? values to their importance. Larger numbers are considered more signficant and dominate when checkers are composed."
+  * merge-valid - "Merge n :valid values, yielding the one with the highest priority." 
+  * unbridled-optimism - "Everything is awesoooommmmme!"
+  * linearizable - "Validates linearizability with Knossos."
+  * queue - "Every dequeue must come from somewhere. Validates queue operations by assuming every non-failing enqueue succeeded, and only OK dequeues succeeded, then reducing the model with that history. Every subhistory of every queue should obey this property. Should probably be used with an unordered queue model, because we don't look for alternate orderings. O(n)."
+  * set - "Given a set of :add operations followed by a final :read, verifies that every successfully added element is present in the read, and that the read contains only elements for which an add was attempted."
+  * total-queue - "What goes in *must* come out. Verifies that every successful enqueue has a successful dequeue. Queues only obey this property if the history includes draining them completely. O(n)."
+  * counter - "A counter starts at zero; add operations should increment it by that much, and reads should return the present value. This checker validates that at each read, the value is at greater than the sum of all :ok increments, and lower than the sum of all attempted increments."
+  * compose - "Takes a map of names to checkers, and returns a checker which runs each check (possibly in parallel) and returns a map of names to results; plus a top-level :valid? key which is true iff every checker considered the history valid."
+  * latency-graph - "Spits out graphs of latencies."
+  * rate-graph - "Spits out graphs of throughput over time."
+  * perf - "Assorted performance statistics"
+  
+Eine Kombination mehrerer Checker ist ebenfalls möglich, zum Beispiel falls gnuplot installiert ist, kann Jepsen den Durchsatz ausgeben, so dass eine entsprechender Latzen-graph erstellt werden kann.
+```clj
+         :checker (checker/compose
+                    {:perf   (checker/perf)
+                     :linear checker/linearizable})))
+```
+Mit `$ open store/latest/latency-raw.png` lässt sich diese Graph dann anschauen.
 ### Auslösen von Fehlerfällen
-
+Das bei Jepsen unter dem Namen "Nemesis" laufende Modul ermöglicht es automatisch Fehler in die verteilte Datenbank zu injizieren. Auch hier gibt es eine Reihe von Fehlern die ausgelöst werden können:
+  * noop - "Does nothing."
+  * snub-noodes! - "Drops all packets from the given nodes."
+  * partition! - "Takes a *grudge*: a map of nodes to the collection of nodes they should reject messages from, and makes the appropriate changes. Does not heal the network first, so repeated calls to partition! are cumulative right now."
+  * bisect - "Given a sequence, cuts it in half; smaller half first."
+  * split-one - "Split one node off from the rest"
+  * complete-grudge - "Takes a collection of components (collections of nodes), and computes a grudge such that no node can talk to any nodes outside its partition."
+  * bridge - "A grudge which cuts the network in half, but preserves a node in the middle which has uninterrupted bidirectional connectivity to both components."
+  * partitioner - "Responds to a :start operation by cutting network links as defined by (grudge nodes), and responds to :stop by healing the network."
+  * partition-halves - "Responds to a :start operation by cutting the network into two halves--first nodes together and in the smaller half--and a :stop operation by repairing the network."
+  * partition-random-halves - "Cuts the network into randomly chosen halves."
+  * partition-random-node - "Isolates a single node from the rest of the network."
+  * majorities-ring - "A grudge in which every node can see a majority, but no node sees the *same* majority as any other."
+  * partition-majorities-ring - "Every node can see a majority, but no node sees the *same* majority as any other. Randomly orders nodes into a ring."
+  * compose - "Takes a map of fs to nemeses and returns a single nemesis which, depending on (:f op), routes to the appropriate child nemesis. `fs` should be a function which takes (:f op) and returns either nil, if that nemesis should not handle that :f, or a new :f, which replaces the op's :f, and the resulting op is passed to the given nemesis."
+  * set-time! - "Set the local node time in POSIX seconds."
+  * clock-scrambler - "Randomizes the system clock of all nodes within a dt-second window."
+  * node-start-stopper -  "Takes a targeting function which, given a list of nodes, returns a single node or collection of nodes to affect, and two functions `(start! test node)` invoked on nemesis start, and `(stop! test node)` invoked on nemesis stop. Returns a nemesis which responds to :start and :stop by running the start! and stop! fns on each of the given nodes. During `start!` and `stop!`, binds the `jepsen.control` session to the given node, so you can just call `(c/exec ...)`."
+  * hammer-time - "Responds to `{:f :start}` by pausing the given process name on a given node or nodes using SIGSTOP, and when `{:f :stop}` arrives, resumes it with SIGCONT.  Picks the node(s) to pause using `(targeter list-of-nodes)`, which defaults to `rand-nth`. Targeter may return either a single node or a collection of nodes."
+  
+Jepsen weiß durch diesen Test, wann es zu einer Störung in der verteilten Datenbank kommt, und kann dadurch analysieren, ob das erwartete Verhalten mit dem tatsächlichen übereinstimmt.
 
