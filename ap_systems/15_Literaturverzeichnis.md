@@ -1,8 +1,5 @@
 # Literaturverzeichnis
-[FHK17] FH Köln (Hrsgb.): “Datenbanken Online Lexikon”; http://wikis.gm.fh-
-koeln.de/wiki_db/Datenbanken/BASE; http://wikis.gm.fh-
-koeln.de/wiki_db/Datenbanken/CAP; http://wikis.gm.fh-
-koeln.de/wiki_db/Datenbanken/Cassandra“; alle abgerufen am 27. 01. 2017
+[FHK17] FH Köln (Hrsgb.): “Datenbanken Online Lexikon”; http://wikis.gm.fh-koeln.de/wiki_db/Datenbanken/BASE; http://wikis.gm.fh-koeln.de/wiki_db/Datenbanken/CAP; http://wikis.gm.fh-koeln.de/wiki_db/Datenbanken/Cassandra“; alle abgerufen am 27. 01. 2017
 
 [LTS+17] Lie, J. S.; Tabara, C.; Schierschlicht, L.; et al.: „Online-Studienmodul:
 Datenbanktechnologien“; Beuth-Hochschule für Technik; Berlin; 2017
