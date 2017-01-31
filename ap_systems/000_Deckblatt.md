@@ -1,4 +1,4 @@
-## Hausarbeit Modul Datenbanktechnologie
+## Hausarbeit im Modul Datenbanktechnologie
 
 Modulverantwortlicher: Herr Nikolai Alex
 
@@ -6,7 +6,7 @@ Wintersemester 2016/ 2017
 
 **Eigenschaften, sowie Vor- und Nachteile von AP-Systemen**
 
-
+---
 
 Tobias Ziolkowski
 
@@ -16,7 +16,7 @@ Hochschule: Fachhochschule Lübeck
 
 Matrikelnummer: 270665
 
-
+---
 
 Benjamin Penz
 
@@ -26,7 +26,7 @@ Hochschule: Hochschule Emden
 
 Matrikelnummer: 7001507
 
-
+---
 
 Datum: 31.01.2017
 
