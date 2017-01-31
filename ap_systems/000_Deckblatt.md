@@ -1,18 +1,18 @@
----
-title: "AP-Datenbanken"
-subtitle: "Beschreiben Sie die Eigenschaften eines AP-Systems. Zeigen Sie die Vor- und Nachteile anhand konkreter Beispiele"
-institute: ["Fachhochschüle Lübeck, Hochschule Emden/ Leer"
-tags: ["CAP", "AP-Datenbank", "BASE", "ACID", "NoSQL", "Relationale Datenbank"]
+Hausarbeit Modul Datenbanktechnologie
+Modulverantwortlicher: Herr Nikolai Alex
+Wintersemester 2016/ 2017
 
-author:
-	- Tobias Ziolkowski
-	- Benjamin Penz
----
+**Eigenschaften, sowie Vor- und Nachteile von AP-Systemen**
 
-Tobias Ziolkowski, Benjamin Penz
-Nikolai Alex
-Datenbanktechnologie (12 W16)
-30. Januar 2017
-Data Science
+Tobias Ziolkowski
+E-Mail: tobias.ziolkowski@stud.fh-luebeck.de
+Hochschule: Fachhochschule Lübeck
+Matrikelnummer: 270665
 
----
+Benjamin Penz
+E-Mail: bpenz@technik-emden.de
+Hochschule: Hochschule Emden
+Matrikelnummer: 7001507
+
+Datum: 31.01.2017
+
