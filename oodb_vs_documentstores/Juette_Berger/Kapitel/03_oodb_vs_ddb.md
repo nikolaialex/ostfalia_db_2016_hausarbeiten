@@ -3,7 +3,7 @@
 
 Dieses Kapitel soll die beiden Konzepte objektorientierte Datenbanken und Dokumentendatenbanken gegeneinander abgrenzen. Zunächst soll die Spezifik der Technologien über dem Niveau der Grundlagenbeschreibung abgehandelt werden. Im Anschluss dazu sollen die zentralen Eigenschaften beider Systeme miteinander vergleichen und letztendlich abgegrenzt werden.
 
-## 3.2 Allgemeiner Vergleich der Charakteristiken
+## 3.1 Allgemeiner Vergleich der Charakteristiken
 
 Wie bereits im Kapitel 2.2 und 2.3 dargelegt, handelt es sich bei objektorientierten Datenbanken und Dokumentendatenbanken um Vertreter der Kategorie der NoSQL Datenbanken. Gemäß der Struktur von Objekten können in einer OODB Objektdaten nach einer vorab definierten Klassendefinition abgelegt werden. Demnach findet eine schemabasierte Speicherung der Daten statt. Dem gegenüber verzeichnen Dokumentendatenbanken keine schemabasierten Datenstrukturen. Die als hierarchisch zusammengesetzten, respektive rekursiv verschachtelten, Attribut-Wert-Paare (Key-Value-Pairs) formen in beliebiger Ausprägung die Dokumente. Je Dokument kann infolgedessen der interne Aufbau ab der zweiten Hierarchieebene variieren.
 
