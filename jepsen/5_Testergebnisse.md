@@ -33,6 +33,9 @@ Beim Versuch diese Aufteilung der Datenbank wieder zu beheben, zeigt der Jepsen-
 ___________________________________________________________________________
 
 [1] https://aphyr.com/posts/282-jepsen-postgres
+
 [2] https://aphyr.com/posts/283-jepsen-redis
+
 [3] https://aphyr.com/posts/284-jepsen-mongodb
+
 [4] https://aphyr.com/posts/285-jepsen-riak
