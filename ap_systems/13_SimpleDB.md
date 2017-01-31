@@ -12,6 +12,7 @@ Datenbanken. Nach [Ama14] bestehen die Attribute aus Name-Wert Paaren.
 Metadaten gibt. Die Struktur des Informationsraums kann jederzeit beliebig geändert werden.
 
 ![Anschaulicher Vergleich des SimpleDB-Aufbaus mit einer Tabellenkalkulation](https://github.com/TobiasZiolkowski/ostfalia_db_2016_hausarbeiten/blob/master/ap_systems/Bilder/SimpleDB%20Aufbau.jpg)
+
 **Abbildung 6: Anschaulicher Vergleich des SimpleDB-Aufbaus mit einer Tabellenkalkulation [AMA14]**
 
 Abbildung 7 veranschaulicht diesen Aufbau durch den Vergleich mit der Datei einer
@@ -26,6 +27,7 @@ einen Unterschied zu Tabellenkalkulationsprogrammen darstellt, bei denen eine Ze
 einen Wert enthalten darf. 
 
 ![Items mit unterschiedlichen Attributen in einer Domäne](https://github.com/TobiasZiolkowski/ostfalia_db_2016_hausarbeiten/blob/master/ap_systems/Bilder/Items-Attribute%20SimpleDB.jpg)
+
 **Abbildung 6: Items mit unterschiedlichen Attributen in einer Domäne [AMA14]**
 
 Die Domänen von SimpleDB benötigen keine spezifischen Attribute. Es können also Items mit

@@ -47,6 +47,7 @@ Nachdem die Begrifflichkeiten geklärt wurden kann das Theorem näher erläutert
 werden. Die folgende Abbildung dient dabei dem besseren Verständnis:
 
 ![Abbildung 1: Gegenüberstellung RDBS vs. NoSQL](https://github.com/TobiasZiolkowski/ostfalia_db_2016_hausarbeiten/blob/master/ap_systems/Bilder/RDBS%20vs.%20NoSQL.jpg)
+
 **Abbildung 1:Gegenüberstellung RDBS vs. NoSQL [FHK17]**
 
 Das CAP-Theorem sagt aus, dass in verteilten System die drei Anforderungen

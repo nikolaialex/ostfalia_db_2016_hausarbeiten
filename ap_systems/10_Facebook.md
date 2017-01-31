@@ -64,9 +64,11 @@ den nachfolgenden Tabellen sind die einzelnen Konsistenzlevel nach Schreiboperat
 und Leseoperationen aufgezeigt:
 
 ![Schreibkonsistenz bei Cassandra](https://github.com/TobiasZiolkowski/ostfalia_db_2016_hausarbeiten/blob/master/ap_systems/Bilder/Schreibkonsistenz%20Cassandra.jpg)
+
 **Abbildung 4:Schreibkonsistenz von Cassandra [FHK17]**
 
 ![Lesekonsistenz bei Cassandra](https://github.com/TobiasZiolkowski/ostfalia_db_2016_hausarbeiten/blob/master/ap_systems/Bilder/Lesekonsistenz%20Cassandra.jpg)
+
 **Abbildung 5: Lesekonsistenz bei Cassandra [FHK17]**
 
 Die Skalierbarkeit von Cassandra ist deswegen so hoch, da für das Hinzufügen von Nodes nur
