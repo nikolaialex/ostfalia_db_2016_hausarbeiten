@@ -17,7 +17,7 @@ Anwendung findet Riemann beispielsweise, um die Latenzverteilung einer Web-App z
 Das Tool Riemann aggregiert Ereignisse von Servern und Anwendungen durch eine leistungsfähige Stream-Verarbeitungssprache. Die Idee hinter Riemann ist, das Überwachen und Messen von Ereignissen zu einem einfachen Standard zu machen. Der Zustand von eingehenden Ereignissen kann verfolgt werden. [Turn16]
 Ereignisse (events) sind nach Riemann nur Strukturen, die über „Protocol Buffer“ versendet werden und in Riemann werden diese als unabänderlich behandelt. Jedes Ereignis hat bestimmte, optionale Felder (siehe Abbildung 4) und wird eindeutig durch seinen „Host“ und „Service“ identifiziert. [Turn26]
 
- ![Event Felder](images/tavelle_riemann.jpg)
+ ![Event Felder](images/tabelle_riemann.png)
 
 Abbildung 4: Event-Felder
 
