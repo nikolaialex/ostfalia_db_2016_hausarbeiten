@@ -30,7 +30,7 @@ Beim Versuch diese Aufteilung der Datenbank wieder zu beheben, zeigt der Jepsen-
 
 ## Riak [4]
 
-
+___________________________________________________________________________
 
 [1] https://aphyr.com/posts/282-jepsen-postgres
 [2] https://aphyr.com/posts/283-jepsen-redis
