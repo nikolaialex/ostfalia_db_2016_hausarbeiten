@@ -10,8 +10,8 @@ author:
 #Jepsen
 
 ##Inhaltsverzeichnis
-1. Einleitung (von Michael Nicks)
-2. Ursachen für Konsistenzprobleme und Erreichbarkeit bei verteilten Datenbanken (von Michael Nicks)
+1. Einleitung
+2. Ursachen für Konsistenzprobleme und Erreichbarkeit bei verteilten Datenbanken
    * CAP-Theorem
    * Replikation
    * Zwei-Phasen-Commit Protokolle 
@@ -20,13 +20,12 @@ author:
    * Probleme mit Network Interface Controllern (NIC) und Treibern
    * Netwerkkonfiguration im Rechenzentrum
    * Verteilte Datenbanken im WAN
-3. Konzept hinter Jepsen (von Michael Nicks)
-   * Stakre Konsistenzmodelle 
-     * Richtigkeit
-     * Gleichzeitiger Verlauf
-     * Lichtkegel
-     * Linearisierbarkeit
-4. Einrichtung eines Datenbanktests (von Michael Nicks)
+3. Stakre Konsistenzmodelle 
+   * Richtigkeit
+   * Gleichzeitiger Verlauf
+   * Lichtkegel
+   * Linearisierbarkeit
+4. Einrichtung eines Datenbanktests
    * Testumgebung
      * Nötige Hardware
      * Einrichtung der Testumgebung
@@ -36,9 +35,9 @@ author:
      * Einrichtung des Clients
      * Definierung von Checkern
      * Auslösen von Fehlerfällen
-5. Ergebnisse verschiedener Datenbanktests mit Jepsen (von Michael Nicks)
+5. Ergebnisse verschiedener Datenbanktests mit Jepsen
    * Postgres
    * Redis
    * MongoDB 2.4.3
    * Riak
-6. Fazit (von Michael Nicks)
+6. Fazit
