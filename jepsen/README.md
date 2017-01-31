@@ -39,5 +39,4 @@ author:
    * Postgres
    * Redis
    * MongoDB 2.4.3
-   * Riak
 6. Fazit
