@@ -21,10 +21,11 @@ In der `<project.clj>` werden die Anhängigkeiten des Projektes und weitere Meta
 
 In der unter `<:main>` angegebenen Pfad wird eine Clojure Datei für die Testkonfiguration angelegt. Die wichtigstens Bestandteile dieses Jepsen-Tests sind die Bereiche für die automatische Einrichtung der verteilten Datenbank, des Clients, mehrerer Checker und der Auslösung von Fehlerfällen.
 
-Da die Konfigurationsdateien nicht ganz einfach zu verstehen sind, falls noch nicht weiter mit Clojure gearbeitet wurde, folgt hier jetzt eine vereinfachte Aufzählen von Konfigurationselementen, die für einen automatischen Jepsen-Test nötig, bzw. möglich sind.
+Da die Konfigurationsdateien nicht ganz einfach zu verstehen sind, falls noch nicht weiter mit Clojure gearbeitet wurde, folgt hier jetzt eine vereinfachte Auflistung von Konfigurationselementen, die für einen automatischen Jepsen-Test nötig, bzw. möglich sind.
 
 ### Einrichtung der Datenbank
 Im Bereich der `db` Funktion des Jepsen-Tests werden alle für eine automatische Einrichtung der Datenbank nötigen Bestandteile hinterlegt.
+
 Zu diesen Bestandteilen zählen:
   * Informationen über das verwendete Betriebssystem
   * die zu testen Datanbank mit Versionsangabe
@@ -51,10 +52,11 @@ Der Lebenszyklus des Clients besteht aus 3 Bestandteilen, "setup!", "invoke!" un
   * "teardown!" gibt alle noch belegten Ressourcen wieder frei
   
 Wichtig ist hierbei, das es in der Regel mehr als einen Clientprozess gibt, der Operationen gegen die Datenbank durchführt.
+
 Innerhalb der Clienkonfiguration werden mit `jespsen.generator`und `jepsen.util` einige Jepsen-Module verwendet die für die Steuerung und Durchführung der Operationen notwendig sind.
 
 ### Definierung von Checkern
-Mit dem Generator und von Client ausgeführten Operationen entsteht ein Verlauf, der sich auf Korrektheit analysieren lässt. Dabei wird von Jepsen ein abstrktest Modell des System benutzt und Checker erstellt, die den Verlauf der Operationen bestätigen sollen. 
+Mit dem Generator und von Client ausgeführten Operationen entsteht ein Verlauf, der sich auf Korrektheit analysieren lässt. Dabei wird von Jepsen ein abstraktes Modell des Systems benutzt und Checker erstellt, die den Verlauf der Operationen bestätigen sollen. 
 
 Als Checker stehen eine Vielzahl von unterschiedlichen Vergleichstest zur Verfügung:
   * valid-priorities - "A map of :valid? values to their importance. Larger numbers are considered more signficant and dominate when checkers are composed."
@@ -77,6 +79,7 @@ Eine Kombination mehrerer Checker ist ebenfalls möglich, zum Beispiel falls gnu
                      :linear checker/linearizable})))
 ```
 Mit `$ open store/latest/latency-raw.png` lässt sich diese Graph dann anschauen.
+
 ### Auslösen von Fehlerfällen
 Das bei Jepsen unter dem Namen "Nemesis" laufende Modul ermöglicht es automatisch Fehler in die verteilte Datenbank zu injizieren. Auch hier gibt es eine Reihe von Fehlern die ausgelöst werden können:
   * noop - "Does nothing."
@@ -98,7 +101,7 @@ Das bei Jepsen unter dem Namen "Nemesis" laufende Modul ermöglicht es automatis
   * node-start-stopper -  "Takes a targeting function which, given a list of nodes, returns a single node or collection of nodes to affect, and two functions `(start! test node)` invoked on nemesis start, and `(stop! test node)` invoked on nemesis stop. Returns a nemesis which responds to :start and :stop by running the start! and stop! fns on each of the given nodes. During `start!` and `stop!`, binds the `jepsen.control` session to the given node, so you can just call `(c/exec ...)`."
   * hammer-time - "Responds to `{:f :start}` by pausing the given process name on a given node or nodes using SIGSTOP, and when `{:f :stop}` arrives, resumes it with SIGCONT.  Picks the node(s) to pause using `(targeter list-of-nodes)`, which defaults to `rand-nth`. Targeter may return either a single node or a collection of nodes."
   
-Jepsen weiß durch diesen Test, wann es zu einer Störung in der verteilten Datenbank kommt, und kann dadurch analysieren, ob das erwartete Verhalten mit dem tatsächlichen übereinstimmt.
+Jepsen weiß durch diesen Test, wann es zu einer Störung in der verteilten Datenbank kommt und kann dadurch analysieren, ob das erwartete Verhalten mit dem tatsächlichen übereinstimmt.
 
 ___________________________________________________________________________
 
