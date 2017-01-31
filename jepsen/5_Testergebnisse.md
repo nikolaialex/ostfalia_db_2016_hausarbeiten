@@ -40,8 +40,6 @@ Die Erwartungen des "mongo-replicas-safe" liegen da um einiges höher, da zwei R
 
 Der letzte Test bringt dann endlich eine erhebliche Verbesserung. Dadurch das die Mehrheit der Replikatinssever die schreibenden Operationen an den Datenbank-Master erst bestätigen müssen ehe das ACK gesendet wird, kommt es auch im Falle des Teilausfall zu keinem großen Datenverlust, da der neue Datenbank-Master die vorherigen Schreiboperationen schon erhalten hat. Von den den 6000 Schreiboperationen werden wieder 5700 bestätigt, aber dieses mal gehen nur zwei bestätigte ACK verloren und es werden sogar 3 unbestätigte Schreiboperationen innerhalb der Datenbank gefunden. Dies Kennzeichnet ein wirkliches CP System aus.
 
-## Riak [4]
-
 ___________________________________________________________________________
 
 [1] https://aphyr.com/posts/282-jepsen-postgres
@@ -49,5 +47,3 @@ ___________________________________________________________________________
 [2] https://aphyr.com/posts/283-jepsen-redis
 
 [3] https://aphyr.com/posts/284-jepsen-mongodb
-
-[4] https://aphyr.com/posts/285-jepsen-riak
