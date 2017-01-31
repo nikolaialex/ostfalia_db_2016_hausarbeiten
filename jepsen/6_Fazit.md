@@ -3,7 +3,7 @@ Die Ergebnisse die das Team hinter Jepson über die Jahre mit den unterschiedlic
 
 Die Jepsen-Bibliothek ist beim Testen einer Datenbank sehr hilfreich, allerdings ersetzt diese nicht das Wissen das über Datenbanken, das für die Erstellung nötig ist. Die Tatsache das die Jepsen-Bibliothek in Clojure geschrieben ist, macht das ganze für potentielle Nutzer von Jepsen nicht einfacher, sollten die bisher keine oder kaum Erfahrungen mit funktionalen Programmiersprachen haben.
 
-Für die Konfiguration eines Tests ist nicht nur wissen über die zu testendende Datenbank notwendig was die Einrichtung und die potentiellen Stärken und Schwäche der verteilten Datenbank betrifft. Es ist weiter ein nicht zu verachtenden Wissen bezüglich des Verhalten von Netzwerkverkehr nötig und Störeinwirkungen auf verteilte Datenbanken nötig um Schlüsse aus den Tests ziehen zu können.
+Für die Konfiguration eines Tests ist nicht nur wissen über die zu testendende Datenbank notwendig, was die Einrichtung und die potentiellen Stärken und Schwäche der verteilten Datenbank betrifft. Es ist weiter ein nicht zu verachtendes Wissen bezüglich des Verhalten von Netzwerkverkehr und Störeinwirkungen auf verteilte Datenbanken nötig, um Schlüsse aus den Testergebnissen ziehen zu können.
 
 Als Tool zum Vergleichen verschiedener Datenbanken bezüglich der Einsatzfähigkeit in einem Unternehmen, ist Jepsen wahrscheinlich nur bedingt tauglich, da die Planung, Einrichtung, Tests und Auswertung der Ergebnisse für jede einzelne Datenbank sehr viel zeitlichen Aufwand erfordert, der nur schwer zu rechtfertigen sein wird. 
 
