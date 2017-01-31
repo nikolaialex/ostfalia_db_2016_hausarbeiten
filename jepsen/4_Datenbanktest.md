@@ -1,4 +1,4 @@
-# 4. Einrichtung eines Datenbanktests
+# 4. Einrichtung eines Datenbanktests [1]
 
 ## Testumgebung
 Für die Durchführung eines Test eines Datenbanksystems wird davon abgeraten ein im Einsatz befindliches Produktivsystem zu benutzen, da ein Auftreten unvorhersehbarer Fehler zu Datenverlust und Abstürzen des Datenbanksystems führen kann. 
@@ -100,3 +100,6 @@ Das bei Jepsen unter dem Namen "Nemesis" laufende Modul ermöglicht es automatis
   
 Jepsen weiß durch diesen Test, wann es zu einer Störung in der verteilten Datenbank kommt, und kann dadurch analysieren, ob das erwartete Verhalten mit dem tatsächlichen übereinstimmt.
 
+___________________________________________________________________________
+
+[1] https://github.com/jepsen-io/jepsen
