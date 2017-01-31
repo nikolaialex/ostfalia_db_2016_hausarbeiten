@@ -1,0 +1,127 @@
+# Data Sciene 
+## Vorwort 
+Data Scientist wurde bereits als der "sexiest Job des 21. Jahrhunderts" beschrieben. Data Science ist ein aktuelles und wachsendes Feld, was zukünftig immer mehr Data Scientists fordern wird. Was ist Data Science eigentlich? Laut einem in der Branche bekannten Venn-Diagramm setzt sich Data Science zusammen aus:
+- Die Fähigkeit zu hacken 
+- dem Wissen über Mathematik und Statistik sowie 
+- substanziellem Expertenwissen.
+
+## 1 Einleitung
+Mittlerweile ist die Datenflut nicht mehr zu stoppen. Unscheinbar wird jeder Klick auf einer Webseite oder in einer App jedes Benutzers erfasst. Dazu werden zudem der Aufenthaltsort und die GPS-Daten zu jedem Zeitpunkt gespeichert. "Quantified Selfer" tragen Schrittmesser, welche Bewegungsgewohnheiten, Schlafzeiten, Herzfrequenzen und Ernährung registrieren. Aber auch "intelligente" Autos sammeln Informationen über das Fahrverhalten, Häuser sammeln Informationen über Lebensgewohnheiten und die Marketingabteilung sammelt Konsumgewohnheiten der bestehenden und potentiellen Kunden. Das Internet bietet dazu ein gewaltiges Wissensnetzwerk. Domänenspezifische Datenbanken über Musik, Filme, Statistiken, brandaktuelle Nachrichten, alles ist im Übermass zu finden. Verschollen in all dieser Datenflut sind Antworten auf viele Fragen, welche noch nicht mal bekannt sind. Ziel ist es genau solche Antworten zu finden.
+
+## 2 Was ist Data Science?
+Kurz auf den Punkt gebracht, bedeutet es, aus der Überflut von Daten nutzbare und weiterführende Erkenntnisse zu generieren. Dies führte in den daraus abgeleiteten Data Products mittlerweile zu einigen nachfolgend genannten Kassenschlager.
+Im Feld der E-Commerce Applikationen zählt man mittlerweile Unmengen an "data-driven" Apps. Hinter all diesen Front-Ends der Applikationen stehen Datenbanken und Middleware, welche mit anderen Datenbanken und Datenservices in Form von beispielsweise Kreditkarten- oder Bankenprozesse, kommunizieren. Somit sind es nun nicht mehr nur Applikationen, welche mit Daten gespeist werden, sondern Applikationen die ständig Daten erfassen, um daraus neue Erkenntnisse für einen weitere "Geldendmachung" zu gewinnen.
+*Target, ein Unternehmen im Einzelhandel, verfolgt die Einkäufe und Interaktionen sowohl online als auch im stationären Handel. Diese Daten werden zur Feststellung verwendet, welche der Kundinnen schwanger sind, um ihnen Babyprodukte zu präsentieren.* 
+Als bekanntes Beispiel kann auch Facebook genannt werden: 
+*Facebook fragt nach der persönlichen Heimatstadt sowie dem aktuellen Aufenthaltsort - vorgeblich, um es Freunden zu erleichtern, das Profil zu finden. Facebook aber analysiert die Orte auch, um in der globalen Migration und der Wohnorte von Fußballfans Muster zu erkennen.* 
+Die Erfassung von Daten kann aber auch durchaus positiv genutzt werden, zum Beispiel um die öffentliche Verwaltung effektiver zu machen, Obdachlosen zu helfen oder die Gesundheitsversorgung zu verbessern.
+ 
+## 3 Der Data Scientist
+"Ein Witz besagt, dass ein Data Scientist jemand ist, der mehr über Statistik weiß als ein Informatiker und mehr über Informatik als ein Statistiker." Einfach gesagt ist der Data Scientist jemand, der aus übermengen an chaotischen Daten Erkenntnisse gewinnt. 
+### 3.1 Case Study: Ein Arbeitstag im Leben eines Data Scientists
+Diese Case Study soll als Beispiel ergänzend zur Dokumentation "Datenwissenschaft - Die Analyse von grossen Datenmengen wird immer wichtiger. Wie unterstützen Datenbanken bei dieser Analyse?" die Rolle innerhalb eines Unternehmens veranschaulichen. (Grus Joel, *Einführung in Data Science*, O´Reilly, 2016)
+
+#### 3.1.1 Finden von Schlüsselpersonen
+Es ist Ihr erster Arbeitstag bei DataSciencester, und der Vizepräsident für Netzwerkarbeit steckt voller Fragen über Ihre Nutzer. Bisher hatte er niemanden, den er fragen konnte, und daher ist er begeistert, Sie dabei zu haben. Insbesondere möchte er herausbekommen, welche die »Schlüsselpersonen« unter den Data Scientists sind. Dazu stellt er Ihnen eine vollständige Kopie des Netzwerks von DataSciencester zur Verfügung.
+
+Wie sieht diese Kopie der Netzwerkdaten aus? 
+Sie besteht aus einer Liste von Nutzern, in der für jeden einzelnen Nutzer ein dict mit einer id (eine Zahl) und einem Namen (name) angelegt ist. Aufgrund eines großen kosmischen Zufalls reimen sich die Namen mit der englisch ausgesprochenen id des Nutzers:
+
+users = [
+
+{ "id": 0, "name": "Hero" },
+
+{ "id": 1, "name": "Dunn" },
+
+{ "id": 2, "name": "Sue" },
+
+{ "id": 3, "name": "Chi" },
+
+{ "id": 5, "name": "Clive" },
+
+{ "id": 6, "name": "Hicks" },
+
+{ "id": 7, "name": "Devin" },
+
+{ "id": 8, "name": "Kate" },
+
+{ "id": 9, "name": "Klein" }
+
+]
+
+Der Vizepräsident gibt Ihnen auch noch Daten über »Freundschaften« als eine
+Liste von id-Paaren:
+
+friendships = [(0, 1), (0, 2), (1, 2), (1, 3), (2, 3), (3, 4),
+
+(4, 5), (5, 6), (5, 7), (6, 8), (7, 8), (8, 9)]
+
+Zum Beispiel zeigt das Tupel (0, 1) an, dass der Data Scientist mit der id 0 (Hero) und der Data Scientist mit der id 1 (Dunn) befreundet sind.
+ 
+Weil wir unsere Nutzer als dict abgelegt haben, können wir sie leicht durch zusätzliche Datenfelder erweitern.
+Wir könnten beispielsweise zu jedem Nutzer eine Liste von Freunden hinzufügen. Zuerst setzen wir die Eigenschaft friends jedes Nutzers auf eine leere Liste:
+
+for user in users:
+
+user["friends"] = []
+
+Anschließend könnten wir diese Listen mit den Daten aus friendships befüllen:
+
+for i, j in friendships: das funktioniert, weil users[i] der Nutzer mit i als id ist
+
+users[i]["friends"].append(users[j]) 
+- add i als Freund von j ergänzen
+
+users[j]["friends"].append(users[i])
+- add j als Freund von i ergänzen
+
+„Hat jedes user dict erst einmal eine Liste von Freunden erhalten, können wir leicht Fragen an unseren Graphen formulieren, wie »Was ist die durchschnittliche Anzahl von Verbindungen eines Nutzers?“
+
+Als Erstes ermitteln wir die gesamte Anzahl an Verbindungen, indem wir die Längen sämtlicher Listen in friends aufsummieren:
+
+def number_of_friends(user):
+
+"Wie viele Freunde hat _user_?"
+
+return len(user["friends"])						#Länge der Liste friend_ids 
+
+total_connections = sum(number_of_friends(user) for user in users) 	# 24
+
+Anschließend teilen wir einfach durch die Anzahl der Nutzer:
+
+from __future__ import division						 #ganzzahlige Division ist langweilig
+
+num_users = len(users)
+							 - Länge der Liste users avg_connections = total_connections / num_users
+
+Es ist ebenfalls leicht, die am besten vernetzten Personen zu finden – sie sind diejenigen mit der größten Anzahl Freunde.
+
+Weil es nicht sehr viele Nutzer gibt, können wir sie von »hat am meisten Freunde“ bis „hat am wenigsten Freunde“ sortieren:
+- erstelle eine Liste (user_id, number_of_friends) 
+
+num_friends_by_id = [(user["id"], 
+
+number_of_friends(user))
+
+for user in users]
+
+sorted(num_friends_by_id,
+
+- sortiere sie key=lambda (user_id, num_friends): num_friends,
+
+ 
+- nach num_friends reverse=True) 	
+							- in absteigender 
+											- Reihenfolge 	
+	
+- jedes Paar entspricht (user_id, num_friends) 
+
+- [(1, 3), (2, 3), (3, 3), (5, 3), (8, 3), 
+
+- (0, 2), (4, 2), (6, 2), (7, 2), (9, 1)] 
+
+Wir können die obige Prozedur anwenden, um die zentralen Personen im Netzwerk zu identifizieren. Tatsächlich nennt man das von uns berechnete Maß für die Zentralität des Netzwerks Grad.
+ 
+Dieses Maß hat den Charme, leicht berechenbar zu sein, aber es liefert nicht immer das Ergebnis, das Sie möchten oder erwarten. Im Netzwerk von DataSciencester zum Beispiel hat Thor (id 4) nur zwei Verbindungen, Dunn (id 1) dagegen besitzt drei. Aber schaut man sich einmal das Netzwerk an, sieht es eigentlich so aus, dass wäre Thor zentraler.
+
+Weitere Vorgehensweise können Sie im aktuellen „Joel Grus, Einführung in Data Science, O´Reilly, ISBN 978-3-96009-021-2“ nachlesen.
