@@ -1,0 +1,2 @@
+## Fazit
+Shards lassen sich mittlerweile auf fast allen Datenbanktypen einrichten. Gerade hinsichtlich Kosteneffizienz und kurzer Antwortzeiten bringt es einen enormen Vorteil gegenüber ungeshardeter Datenbanken. Jedoch stellt das Einrichten von Shards einen zusätzlichen Aufwand dar, welcher sich dann wieder in Kosten niederschlägt. Jedoch verfügen NoSQL Implementationen, wie MongoDB oder die Such-Engine Elasticsearch über Mechanismen, welche einem die aufwändige Einrichtung und Verwaltung der Shards abnehmen.
