@@ -1,4 +1,4 @@
-# 2 Starke Konsistenzmodelle[1]
+# 2 Starke Konsistenzmodelle [1]
 Wir im vorherigen Kapitel schon erwähnt, kann eine Aufteilung des Netzes verschiedene Ursachen haben, die zur einer Verzögerung, Löschung, Verdopplung oder Neuordnung innerhalb der verteilten Datenbank führen. 
 
 ### Richtigkeit
