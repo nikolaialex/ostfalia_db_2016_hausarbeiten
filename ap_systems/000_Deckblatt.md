@@ -1,6 +1,6 @@
 ## Hausarbeit im Modul Datenbanktechnologien
 
-Modulverantwortlicher: Herr Nikolai Alex
+Modulverantwortlicher: Nikolai Alex
 
 Wintersemester 2016/ 2017
 
