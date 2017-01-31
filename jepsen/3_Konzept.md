@@ -1,5 +1,4 @@
-# 2 Konzept hinter Jepsen
-## Starke Konsistenzmodelle[2]
+# 2 Starke Konsistenzmodelle[2]
 Wir im vorherigen Kapitel schon erwähnt, kann eine Aufteilung des Netzes verschiedene Ursachen haben, die zur einer Verzögerung, Löschung, Verdopplung oder Neuordnung innerhalb der verteilten Datenbank führen. 
 ### Richtigkeit
 Um eine Richtigkeit zu beschreiben, wird von einem Zustand ausgegangen, der durch Operationen beeinflusst wird. Der Zustand kann hier durch eine Variable mit den Operationen lesen (r) und schreiben (w) beschrieben werden.
