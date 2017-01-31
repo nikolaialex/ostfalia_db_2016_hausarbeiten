@@ -6,7 +6,6 @@ tags: ["Jepsen"]
 
 author:
    - Michael Nicks  
-   - Patrick Volgmann
 ---
 #Jepsen
 
