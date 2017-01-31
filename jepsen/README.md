@@ -21,19 +21,19 @@ author:
    * Probleme mit Network Interface Controllern (NIC) und Treibern
    * Netwerkkonfiguration im Rechenzentrum
    * Verteilte Datenbanken im WAN
-3. Konzept hinter Jepsen
-   * Stakre Konsistenzmodelle (von Michael Nicks)
+3. Konzept hinter Jepsen (von Michael Nicks)
+   * Stakre Konsistenzmodelle 
      * Richtigkeit
      * Gleichzeitiger Verlauf
      * Lichtkegel
      * Linearisierbarkeit
-   * Testumgebung (von Michael Nicks)
+4. Einrichtung eines Datenbanktests (von Michael Nicks)
+   * Testumgebung
      * Nötige Hardware
      * Einrichtung der Testumgebung
      * Konfiguration für Client und Server
-   * Automatisches Testen durch Jepsen (von Michael Nicks)
-   * Analysen (von Patrick Volgmann)
-4. Fragestellungen hinter Jepsen (von Patrick Volgmann)
-   * Für wen ist Jepsen interessant?
-   * Wo kann man Jepsen einsetzen!
-   
+   * Automatisches Testen durch Jepsen 
+     * Einrichtung der Datenbank
+     * Einrichtung des Clients
+     * Definierung von Checkern
+     * Auslösen von Fehlerfällen
