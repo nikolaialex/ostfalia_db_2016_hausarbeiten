@@ -21,17 +21,38 @@ In der `<project.clj>` werden die Anhängigkeiten des Projektes und weitere Meta
 
 In der unter `<:main>` angegebenen Pfad wird eine Clojure Datei für die Testkonfiguration angelegt. Die wichtigstens Bestandteile dieses Jepsen-Tests sind die Bereiche für die automatische Einrichtung der verteilten Datenbank, des Clients, mehrerer Checker und der Auslösung von Fehlerfällen.
 
+Da die Konfigurationsdateien nicht ganz einfach zu verstehen sind, falls noch nicht weiter mit Clojure gearbeitet wurde, folgt hier jetzt eine vereinfachte Aufzählen von Konfigurationselementen, die für einen automatischen Jepsen-Test nötig, bzw. möglich sind.
+
 ### Einrichtung der Datenbank
-db function
-setup
-teardown
-noop-test
-config file for each node
-Standard Datenbank Konfigurationsdatei
+Im Bereich der `db` Funktion des Jepsen-Tests werden alle für eine automatische Einrichtung der Datenbank nötigen Bestandteile hinterlegt.
+Zu diesen Bestandteilen zählen:
+  * Informationen über das verwendete Betriebssystem
+  * die zu testen Datanbank mit Versionsangabe
+  * die von der Paketverwaltung zu installierenden Pakete der Datenbank
+  * eine setup und eine teardown Routine
+  * Pfadangaben zu eine für die Datenbank zuständigen Konfigurationsdatei
+  * Angaben zur Spezifierung einzelner Knoten der Datenbank
+  * Betriebssystem- und Datenbankspezifische Angaben zum starten und stoppen der Datenbank
+
 ### Einrichtung des Clients
-read
-write
-compare-and-set
+Wichtig ist hier an erster Stelle die Definition der Operationen an die Datenbank, damit mittels des eingebauten Generators eine Liste von Operationen die abgearbeitet werden sollen generiert werden kann.
+Hier seien jetzt Definitionen für "read", "write" und "compare-and-set" (cas) aufgeführt:
+  ```(defn r   [_ _] {:type :invoke, :f :read, :value nil})
+     (defn w   [_ _] {:type :invoke, :f :write, :value (rand-int 5)})
+     (defn cas [_ _] {:type :invoke, :f :cas, :value [(rand-int 5) (rand-int 5)]})
+  ```
+Die Operation :read bekommt von der Datenbank ein :value welches durch den Test aber mit keinem Wert (nil) spezifiziert ist, den Wert nicht kennen ehe die Leseoperation durchgeführt wurde.
+Bei :write wird in diesem Fall eine zufällige Integerzahl zwischen 0 und 5 generiert, die in die Datenbank geschrieben werden soll.
+Bei :cas wird im Gegensatz zu :read zusätzlich der Zustand vor der schreibenden Operation mitbetrachtet, was einer genaueren Fallunterscheidung bedarf um festzustellen ob die Operation korrekt durchgeführt wurde.
+
+Der Lebenszyklus des Clients besteht aus 3 Bestandteilen, "setup!", "invoke!" und "teardown".
+  * "setup!" bau dabei den Client-Test auf
+  * "invoke!" ist für die Durchführung der Operationen verantwortlich
+  * "teardown!" gibt alle noch belegten Ressourcen wieder frei
+  
+Wichtig ist hierbei, das es in der Regel mehr als einen Clientprozess gibt, der Operationen gegen die Datenbank durchführt.
+Innerhalb der Clienkonfiguration werden mit `jespsen.generator`und `jepsen.util` einige Jepsen-Module verwendet die für die Steuerung und Durchführung der Operationen notwendig sind.
+
 ### Definierung von Checkern
 Mit dem Generator und von Client ausgeführten Operationen entsteht ein Verlauf, der sich auf Korrektheit analysieren lässt. Dabei wird von Jepsen ein abstrktest Modell des System benutzt und Checker erstellt, die den Verlauf der Operationen bestätigen sollen. 
 
