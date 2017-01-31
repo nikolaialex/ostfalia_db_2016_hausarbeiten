@@ -27,6 +27,18 @@ Abb. 2 https://aphyr.com/data/posts/283/-037.jpg
 Durch dieses sogenannte "splt-brain" Szenario kommt es jetzt dazu, dass das C in CP verletzt wird. Der Zustand der Linearisierbarkeit wird nicht mehr erfüllt, da die Clientprozesse unterschiedliche Ergebnis bekommen, je nachdem in welchem Netzwerksegment sie sich befinden. 
 Beim Versuch diese Aufteilung der Datenbank wieder zu beheben, zeigt der Jepsen-Test das bei 2000 versuchten Schreibvorgängen 1998 von der verteilen Datenbank mit ACK bestätigt wurden, nach dem "healing" der Datenbank sich allerdings nur 872 erfolgreiche Schreibvorgänge befinden. Damit sind 1126 mit ACK bestätigte Schreibvorgänge verloren gegangen.
 ## MongoDB 2.4.3 [3]
+Für den MongoDB Test wird eine ähliche Konfiguration mit einem Datenbank-Master und mehreren Replikationsserver wie bei Redis betrachtet. 
+Der Jepsen-Test wir in unterschiedlichen Testmodis durchgeführt. 
+Beginnend mit einem "unsafe" Test bei dem die Replikation wie bei Redis asynchron erfolgt.
+Gefolgt von einem "mongo-replicas-safe" Test bei dem sichergestellt wird, dass mindestens zwei Replikationsserver der Datenbank die Operation erhalten haben, bevor ACK an den Client gesendet wird.
+Der abschließende Jespen-Test setzt dann vorraus, dass die Mehrheit der Datenbankknoten den Erhalt der Operation bestätigt.
+
+Bei "unsafe" verhält sich die MongoDB so, dass beim Teilausfall des Netzwerk einer der Replikationsserver für die Zeit des Teilausfalls die Aufgabe des Datenbank-Masters übernimmt. Nach Wiederherstellung des Netzwerkes übernimmt wieder der Ursprüngliche Datenbank-Master. Das Ergebnis der Jepsen-Test ist ernüchternd, von 6000 Operationen wurden 5700 mit einem ACK bestätigt, wovon in der Datenbank nach Wiederherstellung allerdings nur 3319 überlebt haben. Die 2381 verloren ACK innerhalb der Datenbank sorgen für einen Verlust von 42%.
+Der Grund hier hier wie schon beim Redis-Test, dass wegen der asynchronen Replikation noch nicht alle Operationen repliziert wurden.
+
+Die Erwartungen des "mongo-replicas-safe" liegen da um einiges höher, da zwei Replikationsserver den Schreibvorgang bestätigen müssen. Leider werden diese aber nicht erfüllt. Das Ergebnis des Jepsen-Tests sagt aus, das eine ähnlich hohe Zahl an verloren ACK innerhalb der Datenbank zu verzeichnen sind. Die Ursache dafür ist, dass der neugewählte Datenbank-Master die vorherigen schreibreplikationen des alten Datenbank-Masters noch nicht erhalten hat.
+
+Der letzte Test bringt dann endlich eine erhebliche Verbesserung. Dadurch das die Mehrheit der Replikatinssever die schreibenden Operationen an den Datenbank-Master erst bestätigen müssen ehe das ACK gesendet wird, kommt es auch im Falle des Teilausfall zu keinem großen Datenverlust, da der neue Datenbank-Master die vorherigen Schreiboperationen schon erhalten hat. Von den den 6000 Schreiboperationen werden wieder 5700 bestätigt, aber dieses mal gehen nur zwei bestätigte ACK verloren und es werden sogar 3 unbestätigte Schreiboperationen innerhalb der Datenbank gefunden. Dies Kennzeichnet ein wirkliches CP System aus.
 
 ## Riak [4]
 
