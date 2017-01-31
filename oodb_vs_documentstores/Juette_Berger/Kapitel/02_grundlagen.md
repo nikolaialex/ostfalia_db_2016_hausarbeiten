@@ -2,12 +2,12 @@
 # 2. Grundlagen
 
 Dieses Kapitel behandelt die grundlegenden Konzepte drei verschiedener Datenbanksysteme.
-Zu Beginn werden die RDBMS betrachtet, da diese aktuell am verbreitesten sind und die anderen Datenbanksysteme damit im weiteren verglichen werden.
-In Kapitel 2.2 werden die objektorientierten Datenbanken vorgestellt und in 2.3 die Dokumentdatenbanken.
+Zu Beginn werden die RDBMS betrachtet, da diese aktuell am verbreitetsten sind und die anderen Datenbanksysteme damit im weiteren verglichen werden.
+In Kapitel 2.2 werden die objektorientierten Datenbanken vorgestellt und in 2.3 die Dokumentendatenbanken.
 
 ## 2.1 Relationale Datenbankmanagementsysteme
 
-Das Unterkapitel 2.1 soll grundlegende Informationen zur Organisation und Speicherung von Daten nach dem relationalen Ansatz darlegen. Dazu werden das Entity Relationship- und das relationale Modell betrachtet. Es werden somit ausschließlich diejenigen Aspekte thematisiert, die eine Einflussnahme auf die Modellierung der Datenrepräsentation haben. Konkret bezieht sich dieses Kapitel auf die konzeptionelle und logische Ebene der Datenabbildung durch das RDBMS.    
+Das Unterkapitel 2.1 soll grundlegende Informationen zur Organisation und Speicherung von Daten nach dem relationalen Ansatz darlegen. Dazu werden das Entity Relationship- und das relationale Modell betrachtet. Es werden somit ausschließlich diejenigen Aspekte thematisiert, die eine Einflussnahme auf die Modellierung der Datenrepräsentation haben. Konkret bezieht sich dieses Kapitel auf die konzeptionelle und logische Ebene der Datenabbildung durch das RDBMS.
 
 Die Modellierung der Daten für eine relationale Abbildung erfolgt in drei Schritten. Diese bestehen aus der Datenanalyse, dem Entwurf des Entity Relationship-Modell und den Transfer in das relationale Modell. Das physische Modell dient der Beschreibung der Transition des konzeptionellen Datenmodells auf die Datenbankebene. Schlussendlich liegt das relationale Datenmodell in die DB-spezifische Ausprägung vor. (vgl. @schropp2004DBProjekt S. 6) Die Abbildung 1 stellt den Ablauf der Modellierungsschritte dar und ordnet den jeweiligen allgemeingültigen Ebenenbegriff des Datenbankmodells zu.
 
@@ -15,7 +15,7 @@ Die Modellierung der Daten für eine relationale Abbildung erfolgt in drei Schri
 
 ### 2.1.1	Das Entity Relationship Modell
 
-Das Entity Relationship-Modell (ERM) ist die initiale Abbildung der zu modellierenden Daten und deren Abhängigkeiten oder Zugehörigkeiten untereinander. Im Kontext des ER-Modells werden die Termini  
+Das Entity Relationship-Modell (ERM) ist die initiale Abbildung der zu modellierenden Daten und deren Abhängigkeiten oder Zugehörigkeiten untereinander. Im Kontext des ER-Modells werden die Termini
 
   *	Entität
   *	Entitätsmenge
@@ -56,16 +56,16 @@ Relationale Datenbankmanagementsysteme wurden im Jahr 1970 von Edgar Frank Codd 
 
 Das relationale Modell setzt sich aus Objekten, Operationen und Regeln zusammen. Zu den Objekten zählen beispielsweise Domains (Wertebereiche), Relationen (Tabellen), Attribute (Spalten), Tupel (Datensätze), Primary-Keys (Primärschlüssel) oder Foreign-Keys (Fremdschlüssel). Zentrale Regeln im Kontext des relationalen Modells sind die Entitätenintegrität und die referenzielle Integrität. Zu den Operationen gehören beispielsweise Restrictionens, Projections, Unions oder Joins. (vgl. @unterstein2012rdbms S. 30)
 
-Wie der Name des Modells bereits vermuten lässt, sieht es als Kernprinzip eine Speicherung von Informationen in Relationen (Tabellen) vor. Dieses Modell beruht auf mathematischen Grundprinzipien der Mengenlehre. So kann eine Relation als eine Teilmenge beschreiben werden. Eine Relation besteht aus Indizes die als Attribute bezeichnet werden. Diese besitzen wiederum Namen, um das mentale Modell des Menschen zu unterstützen. Diese Mengen können aus unterschiedlichen Elementen bestehen. Beispielhaft seien an dieser Stelle Zahlen, Zeichenketten oder Datumsangaben genannt. Hierbei wird der Begriff der Domäne verwendet. Eine Domäne ist der Wertebereich, aus dem Attribute ihre Werte beziehen können. Um die Daten in eine repräsentative und verständliche  Form zu bringen, werden Relationen in einer tabellarischen Form dargestellt. (vgl. @unterstein2012rdbms S. 30)
+Wie der Name des Modells bereits vermuten lässt, sieht es als Kernprinzip eine Speicherung von Informationen in Relationen (Tabellen) vor. Dieses Modell beruht auf mathematischen Grundprinzipien der Mengenlehre. So kann eine Relation als eine Teilmenge beschreiben werden. Eine Relation besteht aus Indizes die als Attribute bezeichnet werden. Diese besitzen wiederum Namen, um das mentale Modell des Menschen zu unterstützen. Diese Mengen können aus unterschiedlichen Elementen bestehen. Beispielhaft seien an dieser Stelle Zahlen, Zeichenketten oder Datumsangaben genannt. Hierbei wird der Begriff der Domäne verwendet. Eine Domäne ist der Wertebereich, aus dem Attribute ihre Werte beziehen können. Um die Daten in eine repräsentative und verständliche Form zu bringen, werden Relationen in einer tabellarischen Form dargestellt. (vgl. @unterstein2012rdbms S. 30)
 
-| TITEL | AUTOR | GENRE  | ISBN | DATUM |
+| TITEL | AUTOR | GENRE | ISBN | DATUM |
 | ------------- |-------------| -----| -----| -----|
 | Frequenz | Lincoln Child | Belletristik | 978-3805250955 | 22.07.2016 |
 | Der Schwarm | Frank Schätzing | Belletristik | 978-3596164530 | 01.11.2005 |
 | Die Zwölf | Justin Cronin | Belletristik | 978-3442469352 | 21.04.2014 |
 | Die Spiegelstadt | Justin Cronin | Belletristik | 978-3442311804 | 31.10.2016 |
 
-Tabelle 1:  Die Relation Buch
+Tabelle 1: Die Relation Buch
 
 Die Attribute/Spaltennamen der in der Tabelle 1 abgebildeten Relation Buch heißen TITEL, AUTOR, GENRE, ISBN und DATUM, diese bilden zusammen die Attributmenge der Relation. Eine Zeile ist ein Tupel/Datensatz, ein Attributwert bzw. ein Feld eines Datensatzes beinhaltet einen konkreten Wert. An dieser Stelle wird nochmals deutlich, dass sich eine Relation aus unterschiedlichen Datentypen der Attribute zusammensetzen kann.
 
@@ -89,12 +89,12 @@ Das relationale Datenmodell greift die Anforderung einer redundanzfreien Speiche
 
 Zur eindeutigen Identifikation von Tupeln/Datensätzen werden Primary Keys eingesetzt. Die Wahl des Primary Keys wird anhand der Charakteristik der Attribute gewählt. Ein Primary Key sollte eine entsprechende Effizienz besitzen, indem er nur aus wenigen Attributen besteht. Über die eindeutige Identifikation der Tupel mittels eines Primary Keys und den Primary Keys einer zweiten Relation lassen sich die darin abgelegten Informationen in eine Beziehung (Relation) bringen. (vgl. @unterstein2012rdbms S. 30ff)
 
-Wie bereits im Kapitel 2.1.1 erwähnt, können Beziehungen zwischen Entitäten bestehen. Dies gilt  konsequenterweise auch für Relationen, die Beziehungen über die Attributausprägungen realisieren. Das Konstrukt der Primär- und Fremdschlüssel ermöglicht Relationen miteinander zu verknüpfen und um im Fall einer Selektion, auf die Datenbestände der in einer Beziehung stehenden Relationen, zugreifen zu können. Ein Primärschlüssel muss einen Tupel in einer Relation eindeutig identifizieren können. Je nach Charakteristik der Datenabbildung können gewisse Entitäten bereits über ein eindeutiges Schlüsselattribut verfügen. Ein Fremdschlüssel in der Detailrelation bezieht sich auf die Schlüsselwerte des Primärschlüssels. Weiterhin bedingt die Charakteristik des Primärschlüssels gleichermaßen die Charakteristik des Sekundärschlüssels. Sollte der Primärschlüssel eine Kombination aus mehreren Attributen aufweisen, so ist dies auch beim Fremdschlüssel der Fall. Für eine Fremdschlüsselbeziehung wird die Eigenschaft der referenziellen Integrität gefordert. Gemäß dieser Anforderung muss der enthaltende Fremdschlüssel in der Primärtabelle als Primärschlüssel enthalten sein. Die Forderung der Eindeutigkeit für Primärschlüssel gilt nicht für die Fremdschlüssel, da mehre Datensätze einer Fremdtabelle einem Datensatz in einer Primärtabelle zugeordnet sein können. (vgl. @unterstein2012rdbms S. 31)
+Wie bereits im Kapitel 2.1.1 erwähnt, können Beziehungen zwischen Entitäten bestehen. Dies gilt konsequenterweise auch für Relationen, die Beziehungen über die Attributausprägungen realisieren. Das Konstrukt der Primär- und Fremdschlüssel ermöglicht Relationen miteinander zu verknüpfen und um im Fall einer Selektion, auf die Datenbestände der in einer Beziehung stehenden Relationen, zugreifen zu können. Ein Primärschlüssel muss einen Tupel in einer Relation eindeutig identifizieren können. Je nach Charakteristik der Datenabbildung können gewisse Entitäten bereits über ein eindeutiges Schlüsselattribut verfügen. Ein Fremdschlüssel in der Detailrelation bezieht sich auf die Schlüsselwerte des Primärschlüssels. Weiterhin bedingt die Charakteristik des Primärschlüssels gleichermaßen die Charakteristik des Sekundärschlüssels. Sollte der Primärschlüssel eine Kombination aus mehreren Attributen aufweisen, so ist dies auch beim Fremdschlüssel der Fall. Für eine Fremdschlüsselbeziehung wird die Eigenschaft der referenziellen Integrität gefordert. Gemäß dieser Anforderung muss der enthaltende Fremdschlüssel in der Primärtabelle als Primärschlüssel enthalten sein. Die Forderung der Eindeutigkeit für Primärschlüssel gilt nicht für die Fremdschlüssel, da mehre Datensätze einer Fremdtabelle einem Datensatz in einer Primärtabelle zugeordnet sein können. (vgl. @unterstein2012rdbms S. 31)
 
 ## 2.2 Objektorientierte Datenbankmanagementsysteme
 Bei den objektorientierten Datenbanken handelt es sich um Systeme, welche den Anspruch erheben, die Objekte aus der objektorientierten Programmierung (OOP), mit allen Eigenschaften und Vorteilen die diese besitzen, speichern zu können.
 Im folgenden Kapitel 2.2.1 werden zuerst die grundlegenden Konzepten der Objektorientierung beschrieben, da diese Konzepte sich bei den objektorientierten Datenbanken wiederfinden.
-In weiteren Verlauf beschreibt das Kapitel 2.2.3 f. die objektorientierten Datenbankmanagementsystemen (im folgenden OODBMS).
+Im weiteren Verlauf beschreiben die Kapitel 2.2.3 - 2.2.5 die objektorientierten Datenbankmanagementsystemen (im folgenden OODBMS).
 
 ### 2.2.1 Objektorientierung
 Unter einem **Objekt** wird im allgemeinen eine Einheit verstanden, welche aus Attributen und Methoden besteht.
@@ -108,8 +108,7 @@ Die Abbildung 4 zeigt die Klasse in der Notation eines UML Klassendiagramms.
 
 ![Modell einer Person](images/Person.png)
 
-<!-- Eigenschaten und Methoden -->
-Die konkrete Instanz einer Klasse heisst Objekt.
+Die konkrete Instanz einer Klasse heißt Objekt.
 Dieses kann die Werte zu seinen definierten Eigenschaften aufnehmen, welche für den Nutzungskontext wichtig sind.
 Die Charakterisierung eines Objektes erfolgt durch seine **Methoden**.
 Methoden beschreiben die Aktionen, welche mit einer Instanz durchgeführt werden können.
@@ -119,7 +118,6 @@ Der Zugriff wird über eigene Methoden bereitgestellt.
 In dem verwendeten Beispiel sind das die Get- und Set-Methoden.
 Damit können Einschränkungen durchgeführt werden, sodass bestimmte Eigenschaften nur lesbar sind oder nur gesetzt werden können. (vgl. @kuhnel2012visual Kap. 3)
 
-<!-- Abtrakte Klassen, Interfaces und Vererbung -->
 Um generische Klassen abbilden zu können gibt es **abstrakte* Klassen**, von denen sich keine Instanz erzeugen lässt.
 Eine passende abstrakte Klasse könnte beispielsweise das *Lebewesen* sein, welche allgemein gültige Attribute und Methoden definiert.
 Für die Realisierung von Schnittstellen eigenen sich **Interfaces**, welche nur den Kopf von Methoden definieren und die eigentliche Implementierung den Klassen überlassen.
@@ -133,14 +131,12 @@ Die Klasse *Person* erbt alle Eigenschaften und Methoden von *Lebewesen*.
 Dadurch ist es möglich Aktionen und Eigenschaften zu generalisieren.
 Durch die Verwendung eines Interfaces verpflichtet sich die abstrakte Klasse *Lebenwesen* dazu, selbst die definierten Methoden zu implementieren.
 
-<!-- Polymorphie und Überladung/Überschreiben von Methoden -->
 Daraus ergibt sich ein weiteres Prinzip der Objektorientierung.
 Eine erbende Klasse kann die Methoden der übergeordneten Klasse(n) überschreiben und dadurch ein angepasstes Verhalten implementieren.
 Beispielsweise bewegt sich ein Mensch auf zwei Beinen, ein Löwe aber auf vier Pfoten.
 Daneben gibt es das Prinzip der **Polymorphie**, welches besagt, dass es von einer Methode mit gleichem Namen verschiedene Ausprägungen geben kann.
 Diese unterscheiden sich durch ihre Parameter. (vgl. @kuhnel2012visual Kap. 4)
 
-<!-- Objektbeziehungen -->
 Neben der Modellierung einzelner Klassen müssen deren Beziehungen untereinander abgebildet werden.
 Dabei ergeben sich vier verschiedene Typen von Beziehungen die für die Speicherung in Objektdatenbanken wichtig sind.
 Bei 1:1 Beziehungen findet genau eine Referenz von Klasse 1 auf eine Klasse 2 statt.
@@ -149,7 +145,6 @@ Der zweite Typ sind 1:n Beziehungen bei denen die Klasse 1 auf n weitere Klassen
 Beide Typen können ebenfalls bedingt sein, wobei auch eine Referenz auf NULL möglich ist.
 Beziehungen lassen sich zusätzlich noch klassifizieren, dazu gehören verhaltensbezogene Beziehungen (Nachrichten oder Funktionsaufrufe) und strukturelle Beziehungen (Einschluss oder Vererbung). (vgl. @poschekdatenbanken S. 12f)
 
-<!--- Client-Server Programmierung ubd Übergang zu OOM --->
 Der Einsatz von objektorientierten Programmen ist sehr unterschiedlich.
 In Bereichen wie z. B. im Computer Aided Design (CAD) oder Multimedia-Anwendungen werden Objekte mit komplexen Strukturen erzeugt, die persistent gespeichert werden müssen.
 Heutzutage werden viele Client-Server basierte Anwendungen entwickelt, die Daten dauerhaft speichern müssen.
@@ -159,7 +154,7 @@ Häufig findet die Realisierung der Anwendung in einer objektorientierten Progra
 Dadurch entsteht ein Problem welches unter dem Begriff Objektrelationales Mapping (ORM) zusammengefasst wird und das im folgenden Kapitel genauer beschrieben wird.
 
 ### 2.2.2 Objektrelationales Mapping und Objektdatenbanken
-Eines der größeren Probleme als Benutzer einer objektorientierten Sprache ist, dass die verwendeten Objekte in eine relationalen Datenbank nicht adequat persistent gespeichert werden, da eine relationale Datenbank nur einen eigenen Pool aus Datentypen besitzt (siehe Kapitel 2.1.2).
+Eines der größeren Probleme als Benutzer einer objektorientierten Sprache ist, dass die verwendeten Objekte in eine relationalen Datenbank nicht adäquat persistent gespeichert werden, da eine relationale Datenbank nur einen eigenen Pool aus Datentypen besitzt (siehe Kapitel 2.1.2).
 Dieses Problem lässt sich durch mehrere Ansätze kompensieren:
 
   * Verzicht auf die Verwendung von Objekten in der Programmierung, was nicht dem objektorientierten Paradigma entsprechen.
@@ -175,12 +170,12 @@ Im Bereich Java ist das die Java-Persistance-API[^jpi], auf der ein Framework wi
 Eine bessere Lösung ist jedoch die Speicherung der verwendeten Objekte direkt in der Datenbank.
 In diesem Fall findet kein Verlust der Performance durch das Mapping der Daten statt, des weiteren lassen sich Informationen wie Vererbung oder Verknüpfungen zwischen den Objekten wesentlich besser hinterlegen.
 
-Bei der Verwendung eines OODBMS erfolgt der Zugriff auf die Daten in gleicher Weise, als würden diese im Speicher des Betriebsystems liegen.
+Bei der Verwendung eines OODBMS erfolgt der Zugriff auf die Daten in gleicher Weise, als würden diese im Speicher des Betriebssystems liegen.
 Dadurch werden weitere Layer wie Open Database Connectivity (ODBC), ActiveX Data Objects (ADO) oder Java Database Connectivity (JDBC) nicht benötigt.
 Die CURD-Abfragen (Create, Update, Read, Delete) können über Methoden direkt auf die Datenbank ausgeführt werden.
 Lediglich für das Suchen bestimmter Objekte nach Kriterien in den Attributen muss eine eigene Sprache bereitgestellt werden.
-Ein sehr generischer Ansatz hierfür ist beispielsweise die Verwendung von Lambda Expressions, welche in C# zu LINQ to Objects[^linq] geführt haben.
-Werden Objekte aus der Datenbank geholt, können diese im Modus Transient oder Mirror sein.
+Ein sehr generischer Ansatz hierfür ist beispielsweise die Verwendung von Lambda Expressions, welche in C# zu *LINQ to Objects*[^linq] geführt haben.
+Werden Objekte aus der Datenbank geholt, können diese im Modus *Transient* oder *Mirror* sein.
 Als Transient sind diese von der Datenbank entbunden, Änderungen wirken sich nur auf das Objekt im Speicher des Systems aus.
 Im Mirror Modus wirken sich Änderungen direkt auf das Objekt im Speicher und in der Datenbank aus. (vgl. @obasanjo2003exploration S. 2)
 
@@ -217,7 +212,7 @@ Eine OODBMS muss ebenfalls die ACID Prinzipien (Atomar, Konsistenz, Isolation un
 Für die Abfrage der Daten muss ggf. eine eigene Sprache bereitgestellt werden.
 Weitere Anforderungen wie Transaktionen, das Speichern und Abrufen großer Datenmengen, Erkennen von Deadlocks, Erzeugen von Backups sowie die Möglichkeit diese wieder einzuspielen muss ein OODBMS ebenfalls leisten.
 Das objektorientierten Datenbankmanifest gibt dreizehn Regeln an, welche Anforderungen ein OODBMS erfüllen muss.
-Diese Teilen sich in acht Regeln aus dem Bereich der Objektorientierung und fünf aus Datenbankgrundsätzen [vgl. @rutner2002implementing, @obasanjo2003exploration] und werden im folgenden ausführlicher vorgestellt.
+Diese Teilen sich in acht Regeln aus dem Bereich der Objektorientierung und fünf aus Datenbankgrundsätzen (vgl. @rutner2002implementing, @obasanjo2003exploration) und werden im folgenden ausführlicher vorgestellt.
 
 
   * **Acht Regeln der Objektorientierung**
@@ -225,8 +220,8 @@ Diese Teilen sich in acht Regeln aus dem Bereich der Objektorientierung und fün
      2. Jede Datenbankoperation muss **vollständig** oder gar nicht durchgeführt werden und kann in einer geeigneten Sprache ausgedrückt werden.
      3. Klassen können um weitere Attribute ergänzt werden. Die Möglichkeit der **Erweiterbarkeit** bezieht sich auf alle relevanten Objekte.
      4. **Einfach- und/oder Mehrfachvererbung** ist möglich. Eine Unterklasse kann die geerbte Klasse um eigene Methoden und Attribute erweitern.
-     5. Unterschliedliche Klassen, die eine Methode erben, können diese überschreiben und weitere gleichnamige Methoden mit unterschiedlichen Parametern hinzufügen. (**Polymorphie**)
-     6. Verwendung von **Datenkapselung** um Details der Implementierung zu verbergen. Der Zugriff auf Eigenschaften erfolgt nur über Methoden (Überlicherweise Get- und Set-Methoden).
+     5. Unterschiedliche Klassen, die eine Methode erben, können diese überschreiben und weitere gleichnamige Methoden mit unterschiedlichen Parametern hinzufügen. (**Polymorphie**)
+     6. Verwendung von **Datenkapselung** um Details der Implementierung zu verbergen. Der Zugriff auf Eigenschaften erfolgt nur über Methoden (Üblicherweise Get- und Set-Methoden).
      7. Ein OODBMS unterstützt **komplexe Objekte**. Das sind Objekte, deren Attribute nicht nur einfache Datentypen wie String, Integer oder Boolean sein können sondern wiederum aus anderen Objekten bestehen können.
      8. Jedes Objekt hat eine eigene **Objektidentität**, welche unabhängig von den Eigenschaftswerten ist. Eine solche ID wird wie bereits beschrieben als OID bezeichnet.
   * **Fünf Datenbankgrundsätze**
@@ -236,7 +231,7 @@ Diese Teilen sich in acht Regeln aus dem Bereich der Objektorientierung und fün
      4. Die Verwaltung von **großen Datenbeständen ist möglich**. Dazu gehören die Optimierung von Abfragen oder das Management von Indicies. Diese sollen unabhängig von Benutzerinteraktionen durchgeführt werden.
      5. Das **Wiederherstellen** des Ausgangszustands im Fehlerfall bei nicht abgeschlossenen Transaktionen ist möglich. Ggf. werden diese neu gestartet.
 
-<!--- OOD Modell --->
+
 Ein OODBMS kann in die zwei Teile "Struktur" und "Operation" eingeteilt werden.
 Der Strukturbereich beinhaltet die Objekte, deren Zustände, die Klassen, das Schema und die Vererbung.
 Im Operationsteil finden sich die Metaklassen, die Funktionen, Methoden, die Vererbung von Methoden sowie die Ausnahmen.
@@ -265,7 +260,7 @@ Im zweiten Fall geschieht das meist erst beim erneuten Zugriff auf die Daten.
 Werden Objekte verändert, so ist es wichtig die Historie zu verwalten.
 Die Darstellung der Versionen kann mittels eines Versionsgraphen erfolgen.
 In diesem ist auch gekennzeichnet, welche als die aktuelle Version behandelt wird, also das Objekt, welches bei einer Anfrage in dieser Version zurückgegeben wird.
-Eine andere Möglichkeit ist, eine zeitbezogene Versionierung durchzuführen. (z. B. Jede Stunde/Monat etc.)
+Eine andere Möglichkeit ist, eine zeitbezogene Versionierung (z. B. Jede Stunde/Monat etc.) durchzuführen.
 Werden diese mit einem Gültigkeitsstempel versehen, findet ein Aufräumungsprozess statt. (vgl. @poschekdatenbanken S. 18)
 
 ### 2.2.5 Zusammenfassung
@@ -279,8 +274,8 @@ Besonders unter den populären Programmiersprachen wie Java, PHP oder Python feh
 Weiterhin gibt es nur wenige Implementierungen von diesem Datenbanktyp.
 Beispiel von Objektdatenbanken sind db4o[^db4o], ZooDB[^zoodb] oder mcobject[^mcobject].
 
-## 2.3 Dokumentdatenbanken
-Dokumentdatenbanken gehören zum Typ der NoSQL (Not only SQL) Datenbanken.
+## 2.3 Dokumentendatenbanken
+Dokumentendatenbanken gehören zum Typ der NoSQL (Not only SQL) Datenbanken.
 Der englische Name ist nicht wie zu vermuten *document database*, sondern treffender *document store*, da diese Systeme für die Speicherung von Dokumenten optimiert sind.
 Dieser Datenbanktyp bietet den großen Vorteil der Schemafreiheit von *Key-Value Pairs* (Schlüssel/Werte-Paar) mit einer Möglichkeit zur strukturierten Speicherung von Daten.
 Bei den Daten handelt es sich um strukturierte Daten in Datensätzen, welche in diesem Kontext als Dokumente bezeichnet werden. (vgl. @meier2016nosql S. 230 ff)
@@ -288,16 +283,16 @@ Bei den Daten handelt es sich um strukturierte Daten in Datensätzen, welche in 
 Einsatzbereich sind meist spezielle Web-Dienste, welche horizontal skalierbar sein müssen.
 Dabei werden überwiegend verschiedene Rechner als Cluster betrieben, die Verteilung erfolgt über Sharding.
 Kurzzeitige Datenbankinkonsistenzen werden in Kauf genommen, da erst eine Verteilung der aktualisierten Daten auf alle Knoten erfolgen muss.
-Anwendung finden Dokumentdatenbanken besonders bei Social-Media-Plattformen oder suchintensiven Anwendungen.
+Anwendung finden Dokumentendatenbanken besonders bei Social-Media-Plattformen oder suchintensiven Anwendungen.
 
 Schemafrei bedeutet, dass nicht wie bei relationalen oder objektorientierten Datenbanken das Tabellen- oder Objektschema angegeben werden muss.
 Dokumente lassen sich ohne vorherige Definition eines Schemas einfügen.
 Dadurch wird auf Vorteile wie referenzielle Integrität oder Normalisierung verzichtet.
-Des Weiteren kann eine Dokumentdatenbank keine transaktionale Sicherheit gewährleisten, vielmehr wird nach dem Prinzip der schlussendlichen Konsistenz (eventual consistency) gearbeitet. (vgl. @redmond2012seven S. 317 ff)
+Des Weiteren kann eine Dokumentendatenbank keine transaktionale Sicherheit gewährleisten, vielmehr wird nach dem Prinzip der schlussendlichen Konsistenz (eventual consistency) gearbeitet. (vgl. @redmond2012seven S. 317 ff)
 Der Vorteil dieses Ansatzes ist eine sehr schnelle Verarbeitung der Daten, da die Replikation erst später erfolgt.
 
-Beispiele für bekannte Dokumentdatenbanken sind CouchDB[^couchdb], RavenDB[^ravendb] oder MongoDB[^mongodb].
-Die Datenbank CouchDB wird Beispielsweise bei dem Dokumentenmangementsystem d.3ecm[^d3] von d.velop als Proxy für die relatione Datenbank eingesetzt, um Suchanfragen schneller durchführen zu können.
+Beispiele für bekannte Dokumentendatenbanken sind CouchDB[^couchdb], RavenDB[^ravendb] oder MongoDB[^mongodb].
+Die Datenbank CouchDB wird Beispielsweise bei dem Dokumentenmangementsystem d.3ecm[^d3] von d.velop als Proxy für die relationale Datenbank eingesetzt, um Suchanfragen schneller durchführen zu können.
 Der eigentliche Datenbestand liegt hierbei in einer relationalen Microsoft SQL-Server Datenbank vor, die Metainformationen zu den Dokumenten werden für eine schnellere Suchmöglichkeit in der CouchDB vorgehalten.
 Durch diese Verknüpfung der beiden Systeme fallen die Nachteile der fehlenden Transaktionssicherheit oder der Normalisierung weg.
 Lediglich der Suchindex kann eine Inkonsistent zum vorhanden Datenbestand aufweisen.
@@ -330,12 +325,12 @@ Wie in dem Beispiel das Attribut *Kinder*, welches eine Liste von weiteren Objek
 Anders als bei relationalen und objektorientierten Datenbanken sind Referenzen auf andere Dokumente nicht möglich.
 Jedes Dokument ist eine in sich geschlossene Einheit.
 Neben den Daten eines Dokuments besitzt dieses eine eindeutige ID (Dokument-ID), welche über die gesamte Datenbank hinweg eindeutig ist.
-Der Einsatz von XML ist nicht auf Dokumentdatenbanken begrenzt, es existiert eine eigene Klasse von XML-Datenbanken, welche in dieser Ausarbeitung nicht weiter betrachtet werden.
+Der Einsatz von XML ist nicht auf Dokumentendatenbanken begrenzt, es existiert eine eigene Klasse von XML-Datenbanken, welche in dieser Ausarbeitung nicht weiter betrachtet werden.
 
 Innerhalb einer Dokumentendatenbank können die Dokumente mittels Listen, Tags, Metadaten oder Hierarchien gruppiert werden.
 
 ### 2.3.2 Abfragen der Datenbank
-Eine Dokumentdatenbank unterstützt die bekannten CRUD-Anfragen.
+Eine Dokumentendatenbank unterstützt die bekannten CRUD-Anfragen.
 Beim Eintragen von Dokumenten kann es spezifiziert sein, dass ein eindeutiger Key mit angegeben werden muss. Alternativ wird dieser Key von dem Datenbanksystem vergeben.
 Die Suche nach Dokumenten kann über den Key, nach Schlüsselworten aus dem Value-Bereich oder nach Metadaten erfolgen.
 Dafür stellt die Datenbank eine Programmierschnittstelle (z. B. RESTful) bereit, welche von der Programmiersprache verwendet wird.

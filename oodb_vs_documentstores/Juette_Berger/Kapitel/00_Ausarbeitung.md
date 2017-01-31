@@ -20,7 +20,7 @@
 [^ef]: https://www.asp.net/entity-framework
 [^sugar]: http://satyan.github.io/sugar/
 [^cern]: https://www.mongodb.com/customers/cern-cms
-
-<!-- Footer Heiko -->
+[^mvcef]: https://www.asp.net/mvc/overview/models-data
+[^vaadin]: https://vaadin.com/home
 [^oracle]: https://www.oracle.com/de/index.html
 [^mssql]: https://www.microsoft.com/de-de/

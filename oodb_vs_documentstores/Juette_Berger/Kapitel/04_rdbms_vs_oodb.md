@@ -1,7 +1,7 @@
 
 # 4. Gegenüberstellung RDBMS zu OODB
 
-Dieses Kapitel stellt Relationale Datenbanksysteme Objektorientierten Datenbanksystemen gegenüber. Dazu werden essentielle Charakteristiken beider Datenbanksystemansätze verglichen.
+Dieses Kapitel stellt relationale Datenbanksysteme den objektorientierten Datenbanksystemen gegenüber. Dazu werden essentielle Charakteristiken beider Datenbanksystemansätze verglichen.
 
 ## 4.1	Allgemeine Charakteristiken beider Datenbankkonzepte
 
@@ -18,7 +18,7 @@ Unabhängig von den unterschiedlichen konzeptionellen Ansätzen beider DBS, gibt
   *	Transaktionsmanagement
   *	Implementierung einer Abfragesprache zur Selektion oder Manipulation der Daten
 
-(vgl. @obasanjo2003exploration S. 528). Die essentiellen Unterschiede beider Datenbanktechnologien sind im Detail zu eruieren, was der primäre Betrachtungsgegenstand im nachfolgenden Kapitel ist.  
+(vgl. @obasanjo2003exploration S. 528). Die essentiellen Unterschiede beider Datenbanktechnologien sind im Detail zu eruieren, was der primäre Betrachtungsgegenstand im nachfolgenden Kapitel ist.
 
 ## 4.2	spezifische Unterschiede beider Datenbankkonzepte
 
@@ -46,8 +46,8 @@ Gegenüber den o.g. Datenbankmanagementsystemen existieren Objektrelationale Dat
   * Einsatz als Integrationsplattform
   * Plug-Ins
 
-In der Praxis ist es mittlerweile üblich, dass renommierte und am Markt etablierte Datenbankhersteller wie z.B. Oracle[^oracle] ihre Technologien nicht ausschließlich auf den relationalen Datenbankansatz ausrichten. Datenbanksysteme der Version 11g oder 12c können objektrelationale Daten speichern und bieten folglich mehr Möglichkeiten für eine Abbildung der Persistenz der Anwendungen oder Software-Systeme.  
-Wie dieses Kapitel darlegt, kann durch das Vergleichen der Spezifik beider Konzepte keine als generell vorteilig oder nachteilig eingestuft werden, was ein Konzept klar prädestinieren würde.  
+In der Praxis ist es mittlerweile üblich, dass renommierte und am Markt etablierte Datenbankhersteller wie z.B. Oracle[^oracle] ihre Technologien nicht ausschließlich auf den relationalen Datenbankansatz ausrichten. Datenbanksysteme der Version 11g oder 12c können objektrelationale Daten speichern und bieten folglich mehr Möglichkeiten für eine Abbildung der Persistenz der Anwendungen oder Software-Systeme.
+Wie dieses Kapitel darlegt, kann durch das Vergleichen der Spezifik beider Konzepte keine als generell vorteilig oder nachteilig eingestuft werden, was ein Konzept klar prädestinieren würde.
 
 ## 4.3	Vor und Nachteile beider Konzepte
 
@@ -59,12 +59,12 @@ Zunächst sind die pragmatisch gelagerten Aspekte beider Technologien gegenüber
 
 **Performance**
 
-Parallel zu den bereits durch die Konzeption ersichtlichen Unterschieden beider Technologien bedingen Betriebsaspekte über eine vorteilige oder nachteilige Bewertung. Die Performance ist für komplexe Anwendungssysteme ein entscheidender Faktor, bezogen auf die Präferenz eines Systems, um eine flüssiges Nutzungserlebnis der Software zu begünstigen. Eine Beurteilung der Performance für z.B. Lese- und Schreibzugriffe unterschiedlicher Datendimensionen erfordert, die Perspektive einer herstellerspezifischen Abstraktion zu verlassen. Damit ein grundlegender Eindruck der Leistungsfähigkeit beider Technologien gewonnen werden kann, wird auf das Ergebnis eines Performance-Vergleichs der Datenbanksysteme Db4o[^db4o] und SQL Server 2008[^mssql] Bezug genommen. Die Projektgruppe  @saxena2013performance hat essenzielle Aspekte der Lese- und Schreib-Performance einer Datenbank identifiziert und dazu korrespondierende Leistungsermittlungen durchgeführt. Es wurde die Reaktionszeit gemessen, Datenobjekte zu schreiben, abzurufen oder zu ändern. Hierbei wurden die genannten Datenbankoperationen aggregiert nach Testreihen durchgeführt und unterschiedlich viele Datenobjekte abgerufen. Die Abbildung 3 visualisiert die Reaktionszeit für die Schreiboperationen auf eine DB zusammen. Demnach weist DB4O eine höhere Reaktionszeit als der SQL Server auf. Auffällig ist die Zugriffskalierung des SQL Servers bei einer zunehmenden Anzahl an Datenobjekten ab ca. 30.000 Einheiten, welche sich der anfänglich größeren Verzögerung des DB4O-Systems annähert. Dieses Ergebnis lässt keine Schlussfolgerung zu, ob mit einer zunehmenden Anzahl an Datensätzen die Zugriffszeit des SQL Servers höher ist, als bei DB4O. (vgl. @saxena2013performance S. 6ff)  
+Parallel zu den bereits durch die Konzeption ersichtlichen Unterschieden beider Technologien bedingen Betriebsaspekte über eine vorteilige oder nachteilige Bewertung. Die Performance ist für komplexe Anwendungssysteme ein entscheidender Faktor, bezogen auf die Präferenz eines Systems, um eine flüssiges Nutzungserlebnis der Software zu begünstigen. Eine Beurteilung der Performance für z.B. Lese- und Schreibzugriffe unterschiedlicher Datendimensionen erfordert, die Perspektive einer herstellerspezifischen Abstraktion zu verlassen. Damit ein grundlegender Eindruck der Leistungsfähigkeit beider Technologien gewonnen werden kann, wird auf das Ergebnis eines Performance-Vergleichs der Datenbanksysteme db4o[^db4o] und SQL Server 2008[^mssql] Bezug genommen. Die Projektgruppe @saxena2013performance hat essenzielle Aspekte der Lese- und Schreib-Performance einer Datenbank identifiziert und dazu korrespondierende Leistungsermittlungen durchgeführt. Es wurde die Reaktionszeit gemessen, Datenobjekte zu schreiben, abzurufen oder zu ändern. Hierbei wurden die genannten Datenbankoperationen aggregiert nach Testreihen durchgeführt und unterschiedlich viele Datenobjekte abgerufen. Die Abbildung 3 visualisiert die Reaktionszeit für die Schreiboperationen auf eine DB zusammen. Demnach weist db4o eine höhere Reaktionszeit als der SQL Server auf. Auffällig ist die Zugriffskalierung des SQL Servers bei einer zunehmenden Anzahl an Datenobjekten ab ca. 30.000 Einheiten, welche sich der anfänglich größeren Verzögerung des db4o-Systems annähert. Dieses Ergebnis lässt keine Schlussfolgerung zu, ob mit einer zunehmenden Anzahl an Datensätzen die Zugriffszeit des SQL Servers höher ist, als bei db4o. (vgl. @saxena2013performance S. 6ff)
 
 ![Reaktionszeit beim Schreiben von Objekten (vgl. @saxena2013performance S. 8)](images/kap4_abb3_performance.png)
 
 ![Reaktionszeit beim Aktualisieren von Datenobjekten (vgl. @saxena2013performance S. 8)](images/kap4_abb4_performance.png)
 
-Ein deutlicheres Resultat zeigt die Abbildung 4 bezugnehmend auf die Reaktionszeit für das Updaten von Objekten: So besitzt der SQL Server bereits beim Ändern von 5000 Objekten schlechtere Zugriffszeiten als das DB4O-System. Der Performance-Unterschied nimmt mit der steigenden Anzahl an Datenobjekten weiter zu, sodass eine eklatante Differenz der Reaktionszeit entsteht. Ein ähnliches Ergebnis notiert die Projektgruppe für das Abrufen von Daten, wobei das RDBMS-System, der SQL-Server, abermals eine höhere Reaktionszeit aufweist. Diese Abhandlung soll keine generellen Konklusionen auf die Leistungsfähigkeit beider Technologien zulassen. Es soll lediglich andeuten, dass die zunächst angenommene bessere Performance eines RDBMS (aufgrund der suggerierten Prädestinenz in der Verwaltung großer Datenbestände) nicht der Realität entspricht und somit als Argument für diese Technologie entfällt. Daraus kann keine klare Präferenz für ein Datenbankkonzept abgeleitet werden, zumal die Leistungsfähigkeit direkt durch die Herstellerspezifik bedingt wird.
+Ein deutlicheres Resultat zeigt die Abbildung 4 bezugnehmend auf die Reaktionszeit für das Updaten von Objekten: So besitzt der SQL Server bereits beim Ändern von 5000 Objekten schlechtere Zugriffszeiten als das db4o-System. Der Performance-Unterschied nimmt mit der steigenden Anzahl an Datenobjekten weiter zu, sodass eine eklatante Differenz der Reaktionszeit entsteht. Ein ähnliches Ergebnis notiert die Projektgruppe für das Abrufen von Daten, wobei das RDBMS-System, der SQL-Server, abermals eine höhere Reaktionszeit aufweist. Diese Abhandlung soll keine generellen Konklusionen auf die Leistungsfähigkeit beider Technologien zulassen. Es soll lediglich andeuten, dass die zunächst angenommene bessere Performance eines RDBMS (aufgrund der suggerierten Prädestinenz in der Verwaltung großer Datenbestände) nicht der Realität entspricht und somit als Argument für diese Technologie entfällt. Daraus kann keine klare Präferenz für ein Datenbankkonzept abgeleitet werden, zumal die Leistungsfähigkeit direkt durch die Herstellerspezifik bedingt wird.
 
 Die Gegenüberstellung beider Systeme begründet nicht den Umstand, dass RDBMS eine höhere Verbreitung besitzen als OODBMS. Demnach existieren andere Ursachen und Rahmenbedingungen, welche die Bevorzugung von relationalen Datenbanksystemen begünstigen.
