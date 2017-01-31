@@ -1,4 +1,6 @@
 # Information
+Ausarbeitung von Heiko Berger und Fabian Jütte zum Thema OODB vs. Dokumentendatenbanken.
+
 Die Ausarbeitung ist für die Darstellung nach der Transformation mittels pandoc optimiert.
 Fußzeilen und Verweise auf das Literaturverzeichnis sind erst nach der Transformation in PDF oder Word vorhanden.
 
