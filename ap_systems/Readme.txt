@@ -19,6 +19,6 @@ Hier steht, welche Kapitel von welchem Gruppenmitglied bearbeitet wurden:
 3.5 SimpleDB - Benjamin Penz
 3.6 Dynamo - Benjamin Penz
 
-4 Zusammenfassung und Ausblich:
+4 Zusammenfassung und Ausblick:
 Tobias Ziolkowski: Absätze mit Cloud Computing, Facebook und CouchDB. 
 Benjamin Penz: Absätze mit Voldemort, SimpleDB, Dynamo und Rest des Fazits.
