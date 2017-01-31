@@ -30,3 +30,7 @@
 ###[Paxos im Produktiveinsatz(SK)](./28-Produktiveinsatz-von-Paxos)
 ###[Fazit(CK)](./29-Fazit)
 ###[Quellenverzeichnis](./30-Quellenverzeichnis)
+
+CK (Christian Kerker / 201621 FHL)
+SK (Stephan Kerker / 201605 FHL)
+IB (Ingo Bacher / 182326 FHL)

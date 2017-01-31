@@ -4,4 +4,4 @@ Hierzu müssen zunächst die Probleme der vorangegangenen Protokolle untersucht 
 Leslie Lamport entdeckte den Algorithmus Paxos in den späten 80er Jahren, beschrieb diesen 1990 in einer wissenschaftlichen Arbeit und reichte sie bei der „Transactions on Computer Systems“ ein [Lam01]. Nachdem er bereits Erfahrung mit dem Konsensproblem und byzantinischen Generälen gesammelt hatte, beschrieb er das Verfahren anhand eines Parlaments auf einer griechischen Insel.
 Lamports Arbeit wurde zunächst nicht verstanden, letztendlich trotzdem 1998  veröffentlicht. Nachdem der Algorithmus weiterhin ignoriert wurde, entschloss sich Lamport die Arbeit ins wissenschaftliche Englisch zu übersetzen und diese erneut im Jahre 2001 zu veröffentlichen [Lam02].
 
-Diese Arbeit wird heutzutage als der effizienteste Algorithmus zur Erzielung eines Konsenses in einem nachrichtenaustauschenden System angesehen.
+Diese Arbeit wird heutzutage als der effizienteste Algorithmus zur Erzielung eines Konsens in einem nachrichtenaustauschenden System angesehen.
