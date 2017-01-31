@@ -1,10 +1,10 @@
-## Hausarbeit im Modul Datenbanktechnologie
+## Hausarbeit im Modul Datenbanktechnologien
 
 Modulverantwortlicher: Herr Nikolai Alex
 
 Wintersemester 2016/ 2017
 
-Thema: **Eigenschaften, sowie Vor- und Nachteile von AP-Systemen**
+Thema: **Eigenschaften sowie Vor- und Nachteile von AP-Systemen**
 
 ---
 
@@ -22,7 +22,7 @@ Benjamin Penz
 
 E-Mail: bpenz@technik-emden.de
 
-Hochschule: Hochschule Emden
+Hochschule: Hochschule Emden/ Leer
 
 Matrikelnummer: 7001507
 
