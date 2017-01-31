@@ -13,7 +13,7 @@ Die von Dokumentendatenbanken verwendbaren Datenformate sind für den Menschen l
 
 Dem Nachteil des erhöhten Aufwandes zur Verwaltung der Daten innerhalb von Dokumenten-Datenbanken steht eine erhöhte Flexibilität hinsichtlich der Aufnahme beliebiger Strukturen der Attribut-Wert-Paar-Konstellationen gegenüber. Dadurch können Dokumentendatenbanken relativ unkritisch heterogene Datenbestände aufnehmen (siehe Kapitel 2.3). Eine OODB hingegen erfordert bei einer Einfüge-Operation eine dogmatische Einhaltung der vorhandenen Strukturen. Dies wird jedoch über bereitgestellten Methoden des Objektes realisiert, welche infolge der Datenkapselungen ausschließlich Manipulationen zulassen. Sind hierbei Anpassungen erforderlich, so müsste zum einen die Struktur und zum anderen der in der OODB enthaltene Datenbestand gleichermaßen angepasst werden (siehe Kapitel 2.2.1).  
 
-Objektorientierte Datenbanken können aus generischen Datentypen, wie beispielsweise Boolean-Werte, Integer oder Character, wiederum aus komplexen Objekten bestehen. Solche spezifischen Datentypen können durch Dokumentendatenbanken nur bedingt umgesetzt werden, indem hierarchische Verschachtelungen durch generische Datentypen komplexe Formen annehmen können (vgl. @meier2016nosql S. 230).  Neben der grundlegenden Eigenschaft von OODB Objekte abzubilden, folgen diese den dreizehn Regeln, nach Object-Oriented Database System Manifesto (vgl. @atkinson1989manifesto). Dokumentdatenbanken weisen im Vergleich zu OODB keine derartige Spezifik auf.
+Objektorientierte Datenbanken können aus generischen Datentypen, wie beispielsweise Boolean-Werte, Integer oder Character, wiederum aus komplexen Objekten bestehen. Solche spezifischen Datentypen können durch Dokumentendatenbanken nur bedingt umgesetzt werden, indem hierarchische Verschachtelungen durch generische Datentypen komplexe Formen annehmen können (vgl. @meier2016nosql S. 230). Neben der grundlegenden Eigenschaft von OODB Objekte abzubilden, folgen diese den dreizehn Regeln, nach Object-Oriented Database System Manifesto (vgl. @atkinson1989manifesto). Dokumentdatenbanken weisen im Vergleich zu OODB keine derartige Spezifik auf.
 
 Die Indizierung von Dokumentendatenbanken basiert auf Unique Key Einträgen (Einzigartigen Schlüsselwerten), welche ein Dokument zweifelsfrei adressieren. Diese können aus einer Zeichenkette bestehen, der wiederum auf eine URI oder einen Adresspfad bestehen (vgl. @nayak2013type S. 17). Die eindeutige ID für Objekte innerhalb einer OODB wird von dem System generiert. Dies geschieht transparent gegenüber dem Nutzer (vgl. @lee1995oodbdesign S. 5).
 
@@ -169,8 +169,7 @@ Werden beide Sprachkonstrukte gegenübergestellt, so wird deutlich, dass diese u
 * Suchen von Daten
 * Anlegen von Objekten
 
-. Dies ist nicht zuletzt auf die unterschiedliche Modellierung beider Datenbanken zurück zu führen. Inwiefern dich daraus Vor und Nachteile ergeben, obliegt erneut einer Beurteilung im Kontext eines Einsatzszenarios. Davon losgelöst, ist jedoch die Ähnlichkeit der OODB-Syntax zum SQL-Standard der RDBMS recht ähnlich, was zumindest dem Aspekt Erlernbarkeit zu Gute kommen kann.  
-
+. Dies ist nicht zuletzt auf die unterschiedliche Modellierung beider Datenbanken zurück zu führen. Inwiefern dich daraus Vor- und Nachteile ergeben, obliegt erneut einer Beurteilung im Kontext eines Einsatzszenarios. Davon losgelöst, ist jedoch die Ähnlichkeit der OODB-Syntax zum SQL-Standard der RDBMS recht ähnlich, was zumindest dem Aspekt der Erlernbarkeit zu Gute kommen kann.  
 
 ## 3.3 Performacevergleich OODB und Dokumentdatenbanken
 
@@ -181,7 +180,7 @@ Diese Auswertung zeigt, dass nicht das alleinige Konzept einer NoSQL-Datenbank z
 
 Eine weitere Erkenntnis ist, dass NoSQL-Datenbanken bei trivialen Operationen sehr schnell sein können, bei komplexeren Operationen diese aber im Verhältnis deutlich länger brauchen.
 
-Aufgrund mangelnder Performance-Vergleiche von OODB und DDB kann jedoch ein erneuter Vergleich von NoSQL-Datenbanken in der Form von OODB gegenüber relationalen Datenbanken eine ungefähre Einschützung liefern. Nach @saxena2013performance wurde eine Performance-Messung zwischen den beiden Datenbanksystemen DB4o und MS SQL-Server 2007 gezogen. Das Ergebnis bescheinigt in den Operationszenarien Ändern von Daten und Abfrage von Daten dem OODB-System einen Perfromance-Vorteil. Lediglich das Schreiben von Datenobjekten verdeutlichte, dass beide Datenbanksysteme ein annähernd gleiches Perofrmance-Verhalten erzielen konnten. (vgl. @saxena2013performance S. 6ff)
+Aufgrund mangelnder Performance-Vergleiche von OODB und DDB kann jedoch ein erneuter Vergleich von NoSQL-Datenbanken in der Form von OODB gegenüber relationalen Datenbanken eine ungefähre Einschützung liefern. Nach @saxena2013performance wurde eine Performance-Messung zwischen den beiden Datenbanksystemen DB4o und MS SQL-Server 2007 vollzogen. Das Ergebnis bescheinigt in den Operationszenarien Ändern von Daten und Abfrage von Daten dem OODB-System einen Perfromance-Vorteil. Lediglich das Schreiben von Datenobjekten verdeutlichte, dass beide Datenbanksysteme ein annähernd gleiches Perofrmance-Verhalten erzielen konnten. (vgl. @saxena2013performance S. 6ff)
 
 Der Vergleich deutet zumindest an, dass beide NoSQL-Technologien gegenüber RDBMS gegeneinander keine negativ behaftete Beurteilung zulassen und folglich einem System aus diesem Aspekt heraus keine Präferenz zugesprochen werden kann.    
 
