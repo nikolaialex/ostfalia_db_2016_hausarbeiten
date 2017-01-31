@@ -37,3 +37,9 @@ author:
      * Einrichtung des Clients
      * Definierung von Checkern
      * Auslösen von Fehlerfällen
+5. Ergebnisse verschiedener Datenbanktests mit Jepsen (von Michael Nicks)
+   * Postgres
+   * Redis
+   * MongoDB 2.4.3
+   * Riak
+6. Fazit (von Michael Nicks)
