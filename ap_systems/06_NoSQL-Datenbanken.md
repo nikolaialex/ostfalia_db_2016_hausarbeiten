@@ -16,14 +16,15 @@ liegen dem BASE-Prinzip zugrunde, nicht jedoch dem ACID-Prinzip. NoSQL-Systeme
 verfolgen damit das Konzept des Eventually Consistent.
 
 Es gibt verschiedene Arten von NoSQL-Datenbanken:
-•	Schlüssel-Wert Datenbanken: Die Werte der Daten werden über jeweils einen
+
+-	Schlüssel-Wert Datenbanken: Die Werte der Daten werden über jeweils einen
                   eindeutigen Schlüssel referenziert. Die Daten können sowohl auf der Festplatte 
                   als auch im Arbeitsspeicher vorgehalten werden.
-•	Dokumentenorientierte Datenbanken: Die Daten werden als Dokumente
+-	Dokumentenorientierte Datenbanken: Die Daten werden als Dokumente
                   abgespeichert, deren Formate durch die Datenbank erkannt werden kann. Die
                   Inhalte der Dokumente können ebenfalls verarbeitet werden.
-•	Spaltenorientierte Datenbank: Die Daten werden in Tabellen gespeichert, deren
+-	Spaltenorientierte Datenbank: Die Daten werden in Tabellen gespeichert, deren
                   Spalten dynamisch wachsen können. Für jede Spalte existiert dabei eine eigene
                   Datei.
-•	Graphdatenbank: Die Daten werden als Graph gespeichert, der aus Knoten für
+-	Graphdatenbank: Die Daten werden als Graph gespeichert, der aus Knoten für
                   die Datenobjekte und Kanten für die Beziehungen zwischen den Objekten besteht. 
