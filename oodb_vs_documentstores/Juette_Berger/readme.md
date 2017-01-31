@@ -8,7 +8,6 @@ Die Datei *00_Ausarbeitung.md* enthält nur Angaben zu den verwendeten Fußzeile
 Im Kapitel *07_literatur.md* ist lediglich die Überschrift definiert.
 
 Zum Umwandeln liegen die build Skripte (build.sh und build.bat) bereit.
-Allerdings ist die Transformation nicht in allen Fällen zufriedenstellend, sodass besonders Tabellen im PDF falsch dargestellt werden.
 
 ## Anteile
 Die Kapitel 1, 2.1, 4 und 6 sind von Herrn Berger erarbeitet.
