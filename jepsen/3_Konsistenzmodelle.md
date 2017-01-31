@@ -45,5 +45,3 @@ Aus der Annahme das es nur einen globalen Zustand gibt mit dem jeder Prozess kom
 ![Image of linearizability-complete-visibility](/jepsen/images/linearizability-complete-visibility.jpg)
 
 Abb. 6 https://aphyr.com/posts/313-linearizability-complete-visibility.jpg
-# TODO
-set-and-compare
