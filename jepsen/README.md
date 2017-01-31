@@ -30,7 +30,6 @@ author:
    * Testumgebung
      * Nötige Hardware
      * Einrichtung der Testumgebung
-     * Konfiguration für Client und Server
    * Automatisches Testen durch Jepsen 
      * Einrichtung der Datenbank
      * Einrichtung des Clients
