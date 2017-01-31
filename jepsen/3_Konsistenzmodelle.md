@@ -1,4 +1,4 @@
-# 2 Starke Konsistenzmodelle[2]
+# 2 Starke Konsistenzmodelle[1]
 Wir im vorherigen Kapitel schon erwähnt, kann eine Aufteilung des Netzes verschiedene Ursachen haben, die zur einer Verzögerung, Löschung, Verdopplung oder Neuordnung innerhalb der verteilten Datenbank führen. 
 ### Richtigkeit
 Um eine Richtigkeit zu beschreiben, wird von einem Zustand ausgegangen, der durch Operationen beeinflusst wird. Der Zustand kann hier durch eine Variable mit den Operationen lesen (r) und schreiben (w) beschrieben werden.
@@ -39,9 +39,14 @@ Abb. 5 https://aphyr.com/data/posts/313/finite-concurrency-bounds.jpg
 Wie in Abbildung 5 zu sehen ist bekommen wir so zwei maximal Fälle für die Grenzen bei der Verarbeitung einer Operation. Die erste Grenze ist das sofotige lesen einer Operation in der Datenbank ohne Zeitaufwand, wohingegen die zweite Grenze die sofortige Mitteilung des gelesenen Ergebnisses an den Prozess ohne Zeitaufwand darstellt.  
 Aus der Annahme das es nur einen globalen Zustand gibt mit dem jeder Prozess kommuniziert und annehmen das Operationen "atomar" stattfinden, so dass es keine zeitlichen Konflikte zwischen Prozessen gibt, lassen sich viele mögliche Verläufe ausschließen.
 
->Linearizability ... erfordert, dass die einheitliche Ordnung der Operationen der tatsächlichen chronologischen Reihenfolge entspricht und alle Requests so erscheinen, als würden sie anstelle eines Zeitintervalls an einem Zeitpunkt passieren.<[9]
+>Linearizability ... erfordert, dass die einheitliche Ordnung der Operationen der tatsächlichen chronologischen Reihenfolge entspricht und alle Requests so erscheinen, als würden sie anstelle eines Zeitintervalls an einem Zeitpunkt passieren.<[2]
 
 
 ![Image of linearizability-complete-visibility](/jepsen/images/linearizability-complete-visibility.jpg)
 
 Abb. 6 https://aphyr.com/posts/313-linearizability-complete-visibility.jpg
+
+___________________________________________________________________________
+
+[1] https://aphyr.com/posts/313-strong-consistency-models
+[2] https://de.wikipedia.org/wiki/Konsistenz_(Datenspeicherung)#Linearizability
