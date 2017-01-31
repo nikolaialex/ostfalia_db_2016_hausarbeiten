@@ -1,5 +1,6 @@
 # 2 Starke Konsistenzmodelle[1]
 Wir im vorherigen Kapitel schon erwähnt, kann eine Aufteilung des Netzes verschiedene Ursachen haben, die zur einer Verzögerung, Löschung, Verdopplung oder Neuordnung innerhalb der verteilten Datenbank führen. 
+
 ### Richtigkeit
 Um eine Richtigkeit zu beschreiben, wird von einem Zustand ausgegangen, der durch Operationen beeinflusst wird. Der Zustand kann hier durch eine Variable mit den Operationen lesen (r) und schreiben (w) beschrieben werden.
 ![Image of uniprocessor-history](/jepsen/images/uniprocessor-history.jpg)
@@ -16,6 +17,7 @@ Beim gleichzeitigen Verlauf haben zwei oder mehrere Prozesse Zugriff auf die Var
 Abb. 2 https://aphyr.com/data/posts/313/multiprocessor-history.jpg
 
 Aus Sicht des unteren Prozesses ergibt sich "ab" als gelesene Werte, wobei für den ersten gelesenen Wert "a" kein definierter Wert erwartet wird. Der obere Prozess erwartet beim lesen der Werte "aa" liest aber wie der untere Prozess "ab". Dies führt nach den bisherigen Regeln der Richtigkeit zu einer Verletzung des Konsistenzmodelles. Für das Modell des gleichzeitigen Verlaufs ist es daher notwendig den Begriff der Parallelität für das Konsistenzmodell zu beschreiben. Prozessen wird es erlaubt den Wert eines anderen Prozesses zu lesen. Somit teilen sich beide Prozesse die Zustände.
+
 ### Lichtkegel
 Jede Aktion (lesen/schreiben) die von einem Prozess innerhalb der CPU ausgelöst wird muss eine Distanz zurücklegen. Diese Distanzen können im Falles des Arbeitsspeichers einige Zentimeter sein, oder bei entfernten Datenbank auch mehrere tausend Kilometer betragen. Hieraus ergeben in anbetracht der annährend schnellen Übertragung mit Lichtgeschwindigkeit unterschiedlich hohe Signallaufzeiten.
 ![Image of lightcone-history](/jepsen/images/lightcone-history.jpg)
@@ -30,6 +32,7 @@ Abb. 4 https://aphyr.com/data/posts/313/concurrent-read.jpg
 
 In Abbildung 4 ist zu sehen das der untere Prozess eine sehr hohe Latenz zu haben scheint. Der untere Prozess erwartet, dass das Ergebnis der lesenden Operation "a" ist, bekommt als Ergebnis von der Datenbank aber "b". Dies geschieht, weil während der langen Signallaufzeit der lesenden Operation der obere Prozess aufgrund viel geringerer Signallaufzeiten den kompletten Zyklus von "w" bis "w'" durchlaufen hat, noch bevor die lesende Operation bei der Datenbank angekommen ist und verarbeitet werden konnte.
 Um dieses Verhalten mit dem Konsistenzmodell in einklang zu bringen müssen wir dieses weiter abschwächen, indem wir zulassen, dass Operationen eine gewisse Laufzeit haben und somit mehrdeutige Aufträge vorkommen können.
+
 ### Linearisierbarkeit
 Aufgrund der Tatsache, dass Nachrichten nicht in der Zeit zurückgesendet werden können, können die Anordnungen bei mehrdeutigen Aufträgen eingeschränkt werden.
 ![Image of finite-concurrency-bounds](/jepsen/images/finite-concurrency-bounds.jpg)
