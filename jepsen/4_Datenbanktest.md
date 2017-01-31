@@ -37,10 +37,10 @@ Zu diesen Bestandteilen zählen:
 ### Einrichtung des Clients
 Wichtig ist hier an erster Stelle die Definition der Operationen an die Datenbank, damit mittels des eingebauten Generators eine Liste von Operationen die abgearbeitet werden sollen generiert werden kann.
 Hier seien jetzt Definitionen für "read", "write" und "compare-and-set" (cas) aufgeführt:
-  ```(defn r   [_ _] {:type :invoke, :f :read, :value nil})
-     (defn w   [_ _] {:type :invoke, :f :write, :value (rand-int 5)})
-     (defn cas [_ _] {:type :invoke, :f :cas, :value [(rand-int 5) (rand-int 5)]})
-  ```
+  * (defn r   [_ _] {:type :invoke, :f :read, :value nil})  
+  * (defn w   [_ _] {:type :invoke, :f :write, :value (rand-int 5)})    
+  * (defn cas [_ _] {:type :invoke, :f :cas, :value [(rand-int 5) (rand-int 5)]})
+  
 Die Operation :read bekommt von der Datenbank ein :value welches durch den Test aber mit keinem Wert (nil) spezifiziert ist, den Wert nicht kennen ehe die Leseoperation durchgeführt wurde.
 Bei :write wird in diesem Fall eine zufällige Integerzahl zwischen 0 und 5 generiert, die in die Datenbank geschrieben werden soll.
 Bei :cas wird im Gegensatz zu :read zusätzlich der Zustand vor der schreibenden Operation mitbetrachtet, was einer genaueren Fallunterscheidung bedarf um festzustellen ob die Operation korrekt durchgeführt wurde.
