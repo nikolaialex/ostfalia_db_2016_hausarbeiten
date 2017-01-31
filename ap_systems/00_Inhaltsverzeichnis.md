@@ -1,4 +1,4 @@
-# Inhaltsverzeichnis
+# Gliederung
 
 1 Einleitung			
 
