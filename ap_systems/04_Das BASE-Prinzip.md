@@ -41,8 +41,7 @@ Konsistenzspektrums zu sehen, wobei die ‹berg‰nge flieﬂend sind.
 So gibt es Systeme, die sowohl das ACID-Prinzip als auch das
 BASE-Prinzip verfolgen.
 
-
-![Akzeptable Wartezeiten bei BASE-Datenbanken](https://github.com/TobiasZiolkowski/ostfalia_db_2016_hausarbeiten/blob/master/ap_systems/Bilder/Wartezeit Base.JPG)
+![Akzeptable Wartezeiten bei BASE-Datenbanken](https://github.com/TobiasZiolkowski/ostfalia_db_2016_hausarbeiten/blob/master/ap_systems/Bilder/Wartezeit%20BASE.jpg)
 **Abbildung 3:Akzeptable Wartezeite bei BASE-Datenbanken [FHK17]**
 
 Abbildung 3 verdeutlicht die Konsistenz ohne Sperren bei Anwendungen

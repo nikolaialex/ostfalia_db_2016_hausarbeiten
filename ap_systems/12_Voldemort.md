@@ -24,7 +24,7 @@ Die Cluster Topologie und die Speicherdefinitionen sind in jedem Knoten als Meta
 ist dazu ergänzend zu entnehmen, dass hierdurch ein separater Cache überflüssig wird und das
 Speichersystem dadurch sehr performant ist.
 
-![Voldemort-Architektur mit modularen Komponenten](https://github.com/TobiasZiolkowski/ostfalia_db_2016_hausarbeiten/blob/master/crdt/Bilder/Voldemort-Architektur.JPG)
+![Voldemort-Architektur mit modularen Komponenten](https://github.com/TobiasZiolkowski/ostfalia_db_2016_hausarbeiten/blob/master/ap_systems/Bilder/Voldemort-Architektur.jpg)
 **Abbildung 6: Voldemort-Architektur mit modularen Komponenten [SKL+12]**
 
 [SKL+12] erklären hier und im Folgenden, dass Voldemort über eine modulare Architektur verfügt, bei
@@ -45,7 +45,7 @@ Mechanism kommen bei Lese/Schreib Storage Engines zum Einsatz und behandeln dort
 inkonsistente Replikate. Das Routing Modul ist für die Schaffung von Replikaten und Partitionen
 zuständig.
 
-![Cluster-Topographie als Ring](https://github.com/TobiasZiolkowski/ostfalia_db_2016_hausarbeiten/blob/master/crdt/Bilder/Voldemort Cluster-Topographie.JPG)
+![Cluster-Topographie als Ring](https://github.com/TobiasZiolkowski/ostfalia_db_2016_hausarbeiten/blob/master/ap_systems/Bilder/Voldemort%20Cluster-Topographie.jpg)
 **Abbildung 6: Cluster-Topographie als Ring[SKL+12]**
 
 Auf Abbildung 6 ist eine einfache Ring Cluster Topographie dargestellt. Der Ring wird von Voldemort

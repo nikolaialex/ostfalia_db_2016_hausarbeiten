@@ -15,7 +15,7 @@ Transaktion dauerhaft gespeichert werden, selbst wenn die Datenbank Fehlern oder
 ausgesetzt ist. [LTS+17] führen an, dass das ACID-Prinzip schwer zu erreichen ist und dadurch
 aufrechterhalten wird, dass die Daten redundant auf vielen Servern verteilt sind.
 
-![Geschäftsgefährdende Wartezeiten bei ACID-Datenbanken](https://github.com/TobiasZiolkowski/ostfalia_db_2016_hausarbeiten/blob/master/ap_systems/Bilder/Wartezeiten ACID.JPG)
+![Geschäftsgefährdende Wartezeiten bei ACID-Datenbanken](https://github.com/TobiasZiolkowski/ostfalia_db_2016_hausarbeiten/blob/master/ap_systems/Bilder/Wartezeiten%20ACID.JPG)
 **Abbildung 2:Geschäftsgefährdende Wartezeiten bei ACID-Datenbanken [FHK17]**
 
 Abbildung 2 zeigt die Wartezeiten, die auftreten, wenn die Transaktionen TransC und TransD
