@@ -1,0 +1,5 @@
+# Fazit
+
+Verteilte Datenbanken und verteilte Systeme benötigen Mechanismen, um eine global konsistente Datenhaltung zu ermöglichen. Einfache Commit-Protokolle können in einer fehlerfreien Umgebung die ACID-Eigenschaften teilweise erfüllen. Jedoch ist eine fehlerfreie Umgebung nur in einer idealen Welt zu finden, daher müssen in der realen Welt möglichst alle möglichen Fehlerfälle betrachtet werden, um eine konsistente Datenhaltung in Verteilten Systemen zu gewährleisten. Paxos bietet einen fehlertoleranten Commit-Algorithmus auf Basis der Replikation. Im Gegensatz zum Two-Phase-Commit Protokoll stellt Paxis sicher, dass das Protokoll nicht durch einen fehlerhaften Teilnehmer blockieren kann. 
+
+Durch Paxos  wird es möglich, fehlertolerante Systeme, die sich prinzipiell asynchron verhalten, zu entwickeln. Neben den Anwendungen für Datenbanksysteme kann Paxos auch in sicherheitsrelevanten Systemen, beispielsweise in der Automobilindustrie, Flugzeugbau oder in der Medizintechnik eingesetzt werden, in denen kritische Systeme mehrfach auszulegen sind.

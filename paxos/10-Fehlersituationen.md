@@ -1,0 +1,5 @@
+Tritt in der Voting Phase ein Timeout bei einem oder mehreren Teilnehmern auf, verteilt der Koordinator eine „Abort“ Nachricht an alle verbliebenden Teilnehmer. Dies führt zu einem globalen „Abort“ der Transaktion.  
+  
+Befinden sich die Teilnehmer im „Ready“ Status, kennen diese die globale Entscheidung nicht. Dies wird auch „Unsicherheitsphase“ genannt. Stürzt der Koordinator ab, bevor dieser die globale Entscheidung an alle Teilnehmer verteilt hat, warten alle Teilnehmer, die keine „Commit“ oder „Abort“ Nachricht bekommen haben, auf eine Antwort. Dies führt zum Blockieren der Teilnehmer bis der Koordinator wieder erreichbar ist und die globale Antwort verteilt.  
+  
+Durch das Blockieren wird sichergestellt, dass unter keinen Umständen die Transaktion mit unterschiedlichen Ergebnissen durchgeführt wird und somit zu globalen Inkonsistenzen führt. Wenn der Koordinator jedoch nicht wieder in seinen alten Zustand zurückgeführt werden kann, ist es möglich, dass alle Teilnehmer in diesem blockierenden Zustand verbleiben. Somit können angeforderte und gesperrte Ressourcen nicht mehr freigegeben werden.
